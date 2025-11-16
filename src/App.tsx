@@ -1,10 +1,15 @@
 import { useState } from 'react';
+// import { useTranslation } from 'react-i18next';
 
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
+import i18nInit from './localization';
+
+i18nInit();
 
 function App() {
+	// const { t } = useTranslation();
 	const [count, setCount] = useState(0);
 
 	return (
