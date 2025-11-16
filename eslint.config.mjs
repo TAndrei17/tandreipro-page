@@ -10,20 +10,20 @@ import globals from 'globals';
 import config from './prettier.config.mjs';
 
 export default [
-	// Общие настройки файлов
+	// General file settings
 	{
 		files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
 		ignores: ['dist', 'node_modules', 'src/assets'],
 	},
 
-	// Настройки окружения
+	// Environment settings
 	{
 		languageOptions: {
 			globals: globals.browser,
 		},
 	},
 
-	// Базовые правила JS/React
+	// Base JS/React rules
 	pluginJs.configs.recommended,
 	pluginReact.configs.flat.recommended,
 	reactRefresh.configs.vite,
@@ -42,7 +42,7 @@ export default [
 		},
 	},
 
-	// Import и Prettier
+	// Import and Prettier
 	{
 		plugins: { import: importPlugin, prettier: prettierPlugin },
 		rules: {
@@ -55,6 +55,11 @@ export default [
 				},
 			],
 			'prettier/prettier': ['error', config],
+		},
+		settings: {
+			react: {
+				version: 'detect', // automatically detects the installed React version
+			},
 		},
 	},
 ];
