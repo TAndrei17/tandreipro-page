@@ -22,15 +22,11 @@ a:hover {
 	color: #535bf2;
 }
 
-html,
 body {
-	/* margin: 0;
-	display: flex;
-	place-items: center;
-	min-width: 320px;
-	min-height: 100vh; */
 	margin: 0;
 	padding: 0;
+	min-height: 100vh;
+	background: linear-gradient(135deg, #3a3a3a, #7a7eff);
 }
 
 h1 {

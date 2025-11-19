@@ -10,8 +10,8 @@ const i18nInit = async () => {
 		debug: true,
 		LogLevel: 'error',
 		resources,
-		lng: 'es',
-		fallbackLng: 'es',
+		lng: 'ru',
+		fallbackLng: 'ru',
 		interpolation: {
 			escapeValue: false,
 		},

@@ -1,34 +1,20 @@
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import viteLogo from '../../../public/vite.svg';
-import reactLogo from '../../assets/react.svg';
 import '../../App.css';
+import { useEffect } from 'react';
 
 const Home = () => {
-	const { i18n } = useTranslation();
+	const { t, i18n } = useTranslation();
 	const language = i18n.language;
-	const [count, setCount] = useState(0);
+
+	useEffect(() => {
+		document.title = t('browserTabDefault');
+	}, [t, language]);
 
 	return (
-		<>
-			<div>
-				<a href="https://vite.dev" target="_blank" rel="noreferrer">
-					<img src={viteLogo} className="logo" alt="Vite logo" />
-				</a>
-				<a href="https://react.dev" target="_blank" rel="noreferrer">
-					<img src={reactLogo} className="logo react" alt="React logo" />
-				</a>
-			</div>
-			<h1>Vite + React in {language.toUpperCase()}</h1>
-			<div className="card">
-				<button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-		</>
+		<div style={{ paddingTop: 140 }}>
+			<h1 style={{ color: 'white' }}>Vite + React in {language.toUpperCase()}</h1>
+		</div>
 	);
 };
 
