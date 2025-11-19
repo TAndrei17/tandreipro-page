@@ -1,6 +1,7 @@
 const ru = {
 	translation: {
-		start: 'Тест',
+		pageNotFound: 'Эта страница не существует',
+		toHome: 'Вернуться на главную',
 	},
 };
 

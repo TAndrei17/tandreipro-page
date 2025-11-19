@@ -1,6 +1,7 @@
 const es = {
 	translation: {
-		start: 'Una prueba',
+		pageNotFound: 'Esta página no existe',
+		toHome: 'Volver al inicio',
 	},
 };
 

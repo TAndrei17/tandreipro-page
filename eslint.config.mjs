@@ -47,6 +47,11 @@ export default [
 		plugins: { import: importPlugin, prettier: prettierPlugin },
 		rules: {
 			'react/react-in-jsx-scope': 'off',
+			'import/resolver': {
+				typescript: {
+					project: './tsconfig.json',
+				},
+			},
 			'import/order': [
 				'error',
 				{
