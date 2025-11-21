@@ -8,7 +8,7 @@ const Header = () => {
 	};
 
 	return (
-		<div className="header__container">
+		<header className="header__container">
 			<div
 				style={{
 					display: 'flex',
@@ -18,7 +18,7 @@ const Header = () => {
 				<button onClick={() => changeLanguage('es')}>ES</button>
 				<button onClick={() => changeLanguage('ru')}>RU</button>
 			</div>
-		</div>
+		</header>
 	);
 };
 

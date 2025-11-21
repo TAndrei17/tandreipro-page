@@ -4,9 +4,9 @@
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
-	color: #f0f0f0;
 }
 
+/* 404 */
 .not-found__code {
 	display: flex;
 	gap: 12px;
@@ -40,13 +40,11 @@
 
 .not-found__title {
 	font-size: 2.5rem;
-	color: #ffffff;
 	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .not-found__desc {
 	margin: 0 0 40px;
-	color: #e0e0e0;
 	max-width: 420px;
 	line-height: 1.5;
 }
@@ -54,7 +52,7 @@
 .not-found__button {
 	padding: 14px 28px;
 	background: #646cff;
-	color: #fff;
+	color: #ffffff;
 	border-radius: 8px;
 	text-decoration: none;
 	font-weight: 500;

@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next';
 
-import '../../App.css';
+import './styles/HomePage.css';
 import { useEffect } from 'react';
 
-const Home = () => {
+const HomePage = () => {
 	const { t, i18n } = useTranslation();
 	const language = i18n.language;
 
@@ -18,4 +18,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export default HomePage;
