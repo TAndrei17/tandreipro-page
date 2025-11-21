@@ -1,6 +1,6 @@
 import i18nInit from '@localization/index';
 import AppRoutes from '@routes/AppRoutes';
-import Header from '@components/common/Header';
+import Header from '@components/common/Header/Header';
 
 i18nInit();
 

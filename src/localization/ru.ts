@@ -5,6 +5,13 @@ const ru = {
 		pageNotFoundDescription: 'Страница, которую вы ищете, не существует или перемещена',
 
 		toHome: 'Вернуться на главную',
+
+		appHeader: {
+			changeLngAlt: 'Изменить язык сайта',
+			ru: 'Рус',
+			es: 'Esp',
+			en: 'Eng',
+		},
 	},
 };
 

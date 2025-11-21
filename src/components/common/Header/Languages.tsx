@@ -1,0 +1,49 @@
+import icons from '@constants/icons';
+import { useTranslation } from 'react-i18next';
+import './Header.css';
+import { useEffect, useState } from 'react';
+
+const Languages = () => {
+	const { t, i18n } = useTranslation();
+	const [lngButtons, setLngButtons] = useState<'open' | 'closed'>('closed');
+
+	useEffect(() => {
+		if (lngButtons === 'open') {
+			const timer = setTimeout(() => setLngButtons('closed'), 10000);
+			return () => clearTimeout(timer);
+		}
+	}, [lngButtons]);
+
+	const changeLanguage = (lng: string) => {
+		i18n.changeLanguage(lng);
+		setLngButtons('closed');
+	};
+
+	return (
+		<div className="languages__container">
+			{lngButtons === 'closed' ? (
+				<img
+					role="button"
+					className="languages__icon"
+					src={icons.languages}
+					onClick={() => setLngButtons('open')}
+					alt={t('appHeader.changeLngAlt')}
+				/>
+			) : (
+				<div className="languages__buttons" role="menu">
+					<button className="lang__button" role="menuitem" onClick={() => changeLanguage('en')}>
+						{t('appHeader.en')}
+					</button>
+					<button className="lang__button" role="menuitem" onClick={() => changeLanguage('es')}>
+						{t('appHeader.es')}
+					</button>
+					<button className="lang__button" role="menuitem" onClick={() => changeLanguage('ru')}>
+						{t('appHeader.ru')}
+					</button>
+				</div>
+			)}
+		</div>
+	);
+};
+
+export default Languages;

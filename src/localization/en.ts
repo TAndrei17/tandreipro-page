@@ -5,6 +5,13 @@ const en = {
 		pageNotFoundDescription: 'The page you are looking for does not exist or has been moved',
 
 		toHome: 'Back to Home',
+
+		appHeader: {
+			changeLngAlt: 'Change website language',
+			ru: 'Рус',
+			es: 'Esp',
+			en: 'Eng',
+		},
 	},
 };
 
