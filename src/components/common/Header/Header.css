@@ -1,6 +1,5 @@
 .header__container {
 	position: fixed;
-	inset: 0 0 auto auto; /* top:0; left:0; */
 	padding: 40px;
 	width: 100%;
 	display: flex;
@@ -14,11 +13,10 @@
 
 .languages__container {
 	display: flex;
-	height: 40px;
 }
 .languages__icon {
-	width: 40px;
-	height: 100%;
+	width: 35px;
+	height: 35px;
 	filter: brightness(0) invert(1);
 }
 
