@@ -8,7 +8,7 @@ const HomePage = () => {
 	const language = i18n.language;
 
 	useEffect(() => {
-		document.title = t('browserTabDefault');
+		document.title = t('browserTabs.browserTabDefault');
 	}, [t, language]);
 
 	return (

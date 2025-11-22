@@ -7,7 +7,7 @@ const NotFoundPage = () => {
 	const { t } = useTranslation();
 
 	useEffect(() => {
-		document.title = t('pageNotFound');
+		document.title = t('browserTabs.browserTabPageNotFound');
 	}, []);
 
 	return (
@@ -18,11 +18,11 @@ const NotFoundPage = () => {
 				<span>4</span>
 			</div>
 
-			<h1 className="not-found__title">{t('pageNotFound')}</h1>
+			<h1 className="not-found__title">{t('browserTabs.browserTabPageNotFound')}</h1>
 
 			<p className="not-found__desc">{t('pageNotFoundDescription')}</p>
 
-			<NavLink to="/" className="not-found__button">
+			<NavLink to="/" replace className="not-found__button">
 				{t('toHome')}
 			</NavLink>
 		</main>

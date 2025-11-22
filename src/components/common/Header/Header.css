@@ -1,23 +1,85 @@
 .header__container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 	position: fixed;
 	padding: 40px;
 	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
 	background: linear-gradient(135deg, #2c2c2c, #7a7eff);
 	color: #fff;
 	box-sizing: border-box;
 	z-index: 1000;
 }
 
+.header__logo {
+	height: 40px;
+	cursor: pointer;
+	transition:
+		transform 0.25s ease,
+		opacity 0.25s ease;
+	user-select: none;
+}
+.header__logo:hover {
+	transform: scale(1.06);
+	opacity: 0.92;
+}
+.header__logo:active {
+	transform: scale(0.96);
+	opacity: 0.85;
+}
+.header__logo:focus {
+	transform: scale(1.1);
+	opacity: 0.9;
+	outline: 2px solid whitesmoke;
+	outline-offset: 2px;
+	border-radius: 4px;
+}
+
+.header__nav {
+	display: flex;
+	align-items: center;
+	flex: 1;
+	padding-left: 20px;
+}
+.header__nav a {
+	color: white;
+	font-size: 20px;
+	padding-right: 20px;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+.header__nav a:hover {
+	color: #ffdd57;
+}
+.header__nav a:active {
+	color: #f0c000;
+}
+.header__nav a:focus {
+	color: #ffdd57;
+	outline: none;
+}
+
 .languages__container {
 	display: flex;
+	justify-content: flex-end;
 }
 .languages__icon {
-	width: 35px;
-	height: 35px;
+	width: 40px;
+	height: 40px;
 	filter: brightness(0) invert(1);
+	cursor: pointer;
+	transition:
+		transform 0.25s ease,
+		filter 0.25s ease;
+}
+.languages__icon:hover {
+	transform: scale(1.1);
+	filter: brightness(0.9) invert(1);
+}
+.languages__icon:focus {
+	outline: none;
+	transform: scale(1.1);
+	filter: brightness(1) invert(0);
 }
 
 .languages__buttons {

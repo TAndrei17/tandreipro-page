@@ -24,10 +24,17 @@ const Languages = () => {
 			{lngButtons === 'closed' ? (
 				<img
 					role="button"
+					tabIndex={0}
 					className="languages__icon"
 					src={icons.languages}
 					onClick={() => setLngButtons('open')}
 					alt={t('appHeader.changeLngAlt')}
+					onKeyDown={(e) => {
+						if (e.key === 'Enter' || e.key === ' ') {
+							e.preventDefault();
+							setLngButtons('open');
+						}
+					}}
 				/>
 			) : (
 				<div className="languages__buttons" role="menu">
