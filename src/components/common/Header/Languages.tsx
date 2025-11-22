@@ -2,9 +2,11 @@ import icons from '@constants/icons';
 import { useTranslation } from 'react-i18next';
 import './Header.css';
 import { useEffect, useState } from 'react';
+import useDeviceType from '@hooks/useDeviceType';
 
 const Languages = () => {
 	const { t, i18n } = useTranslation();
+	const { isMobile } = useDeviceType();
 	const [lngButtons, setLngButtons] = useState<'open' | 'closed'>('closed');
 
 	useEffect(() => {
@@ -37,7 +39,7 @@ const Languages = () => {
 					}}
 				/>
 			) : (
-				<div className="languages__buttons" role="menu">
+				<div className={isMobile ? 'languages__buttons_mobile' : 'languages__buttons'} role="menu">
 					<button className="lang__button" role="menuitem" onClick={() => changeLanguage('en')}>
 						{t('appHeader.en')}
 					</button>

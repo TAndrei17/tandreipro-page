@@ -18,9 +18,9 @@ const ru = {
 			aboutMe: 'Обо мне',
 			contact: 'Контакты',
 			changeLngAlt: 'Изменить язык сайта',
-			ru: 'Рус',
-			es: 'Esp',
-			en: 'Eng',
+			ru: 'РУ',
+			es: 'ES',
+			en: 'EN',
 		},
 	},
 };

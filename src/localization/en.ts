@@ -18,9 +18,9 @@ const en = {
 			aboutMe: 'About me',
 			contact: 'Contact',
 			changeLngAlt: 'Change website language',
-			ru: 'Рус',
-			es: 'Esp',
-			en: 'Eng',
+			ru: 'РУ',
+			es: 'ES',
+			en: 'EN',
 		},
 	},
 };

@@ -18,9 +18,9 @@ const es = {
 			aboutMe: 'Sobre mí',
 			contact: 'Contacto',
 			changeLngAlt: 'Cambiar el idioma del sitio web',
-			ru: 'Рус',
-			es: 'Esp',
-			en: 'Eng',
+			ru: 'РУ',
+			es: 'ES',
+			en: 'EN',
 		},
 	},
 };
