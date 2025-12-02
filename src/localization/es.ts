@@ -13,6 +13,8 @@ const es = {
 		toHome: 'Volver al inicio',
 
 		appHeader: {
+			logoAria: 'Inicio',
+			navAria: 'Navegación principal',
 			logoAlt: 'Logo del sitio web',
 			services: 'Servicios',
 			aboutMe: 'Sobre mí',

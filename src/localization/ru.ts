@@ -13,6 +13,7 @@ const ru = {
 		toHome: 'Вернуться на главную',
 
 		appHeader: {
+			logoAria: 'На главную',
 			logoAlt: 'Логотип сайта',
 			services: 'Услуги',
 			aboutMe: 'Обо мне',

@@ -13,6 +13,8 @@ const en = {
 		toHome: 'Back to Home',
 
 		appHeader: {
+			logoAria: 'Home',
+			navAria: 'Main navigation',
 			logoAlt: 'Website logo',
 			services: 'Services',
 			aboutMe: 'About me',
