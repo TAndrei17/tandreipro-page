@@ -1,43 +1,71 @@
+.header__container,
+.header__container *,
+.header__container *::before,
+.header__container *::after {
+	box-sizing: border-box;
+}
+
 .header__container {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	justify-content: space-between;
 	position: fixed;
 	padding: 40px;
 	width: 100%;
 	background: linear-gradient(90deg, #2c2c2c, var(--background-color));
 	color: #fff;
-	box-sizing: border-box;
 	z-index: 1000;
 }
 
+@media (max-width: 768px) {
+	.header__container {
+		padding: 20px;
+	}
+}
+
 .header__logo {
-	height: 40px;
+	all: unset;
+	display: inline-flex;
+	align-items: center;
 	cursor: pointer;
 	transition:
 		transform 0.25s ease,
 		opacity 0.25s ease;
-	user-select: none;
 }
-.header__logo:hover,
-.header__logo:focus {
-	transform: scale(1.06);
+
+.header__logo img {
+	height: 40px;
+	display: block;
+}
+
+.header__logo:hover {
+	transform: scale(1.1);
 	opacity: 0.92;
 }
 
-.header__nav {
+.header__logo:focus {
+	transform: scale(1.1);
+	opacity: 0.92;
+	outline: 2px solid #646cff;
+	outline-offset: 2px;
+}
+
+.header__nav,
+.header__nav_mobile {
 	display: flex;
-	align-items: center;
 	flex: 1;
+	align-items: center;
+}
+
+.header__nav {
 	padding-left: 20px;
 }
 
 .header__nav_mobile {
-	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
-	flex: 1;
 	padding-left: 40px;
 }
 
@@ -45,10 +73,16 @@
 .header__nav_mobile a {
 	color: white;
 	font-size: 20px;
-	padding-right: 20px;
 	text-decoration: none;
-	transition: color 0.3s ease;
+	transition:
+		color 0.3s ease,
+		transform 0.25s ease;
 }
+
+.header__nav a {
+	padding-right: 20px;
+}
+
 .header__nav_mobile a {
 	padding: 5px 20px 5px 0;
 }
@@ -67,7 +101,7 @@
 .header__nav a:focus,
 .header__nav_mobile a:focus {
 	color: #ffdd57;
-	outline: none;
+	outline-offset: 2px;
 }
 
 .languages__container {
@@ -83,22 +117,26 @@
 		transform 0.25s ease,
 		filter 0.25s ease;
 }
+
 .languages__icon:hover {
 	transform: scale(1.1);
 	filter: brightness(0.9) invert(1);
 }
+
 .languages__icon:focus {
-	outline: none;
+	outline: 2px solid #646cff;
+	outline-offset: 2px;
 	transform: scale(1.1);
 	filter: brightness(1) invert(0);
 }
 
-.languages__buttons {
+.languages__buttons,
+.languages__buttons_mobile {
 	display: flex;
 	gap: 5px;
 }
+
 .languages__buttons_mobile {
-	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	gap: 10px;
@@ -108,7 +146,7 @@
 	font-size: 16px;
 	font-weight: 500;
 	font-family: inherit;
-	padding: 0.5em 1em;
+	padding: 0.4em 1em;
 	background-color: #ffdd57;
 	color: #5058e6;
 	border: none;
@@ -120,16 +158,19 @@
 		transform 0.2s ease,
 		box-shadow 0.2s ease;
 }
+
 .lang__button:hover {
 	background-color: #f0c000;
 	color: #fff;
 	transform: translateY(-2px);
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
+
 .lang__button:active {
 	transform: translateY(0);
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
 .lang__button:focus {
 	outline: 3px solid #5058e6;
 	outline-offset: 2px;

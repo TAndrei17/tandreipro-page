@@ -26,11 +26,13 @@ const Languages = () => {
 			{lngButtons === 'closed' ? (
 				<img
 					role="button"
+					alt={t('appHeader.changeLngAlt')}
+					aria-haspopup="true"
+					aria-expanded={lngButtons !== 'closed'}
 					tabIndex={0}
 					className="languages__icon"
 					src={icons.languages}
 					onClick={() => setLngButtons('open')}
-					alt={t('appHeader.changeLngAlt')}
 					onKeyDown={(e) => {
 						if (e.key === 'Enter' || e.key === ' ') {
 							e.preventDefault();
