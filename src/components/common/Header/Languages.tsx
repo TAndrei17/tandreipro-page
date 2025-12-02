@@ -26,6 +26,7 @@ const Languages = () => {
 			{lngButtons === 'closed' ? (
 				<img
 					role="button"
+					title={t('appHeader.changeLngAlt')}
 					alt={t('appHeader.changeLngAlt')}
 					aria-haspopup="true"
 					aria-expanded={lngButtons !== 'closed'}
