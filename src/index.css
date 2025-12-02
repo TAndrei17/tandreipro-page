@@ -1,11 +1,14 @@
 :root {
+	--background-gray: #3a3a3a;
+	--background-color: #7a7eff;
+
 	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
 
 	color-scheme: light dark;
 	color: rgba(255, 255, 255, 0.87);
-	background-color: #3a3a3a;
+	background-color: var(--background-gray);
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -26,7 +29,7 @@ body {
 	margin: 0;
 	padding: 0;
 	min-height: 100vh;
-	background: linear-gradient(135deg, #3a3a3a, #7a7eff);
+	background: linear-gradient(135deg, var(--background-gray), var(--background-color));
 }
 
 h1 {
@@ -34,7 +37,7 @@ h1 {
 	line-height: 1.1;
 }
 
-button {
+.btn {
 	border-radius: 8px;
 	border: 1px solid transparent;
 	padding: 0.6em 1.2em;
@@ -45,11 +48,11 @@ button {
 	cursor: pointer;
 	transition: border-color 0.25s;
 }
-button:hover {
+.btn:hover {
 	border-color: #646cff;
 }
-button:focus,
-button:focus-visible {
+.btn:focus,
+.btn:focus-visible {
 	outline: 4px auto -webkit-focus-ring-color;
 }
 
@@ -60,7 +63,7 @@ button:focus-visible {
 	a:hover {
 		color: #747bff;
 	}
-	button {
+	.btn {
 		background-color: #f9f9f9;
 	}
 }

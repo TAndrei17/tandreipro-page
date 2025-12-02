@@ -5,7 +5,7 @@
 	position: fixed;
 	padding: 40px;
 	width: 100%;
-	background: linear-gradient(135deg, #2c2c2c, #7a7eff);
+	background: linear-gradient(90deg, #2c2c2c, var(--background-color));
 	color: #fff;
 	box-sizing: border-box;
 	z-index: 1000;
@@ -19,13 +19,10 @@
 		opacity 0.25s ease;
 	user-select: none;
 }
-.header__logo:hover {
+.header__logo:hover,
+.header__logo:focus {
 	transform: scale(1.06);
 	opacity: 0.92;
-}
-.header__logo:focus {
-	transform: scale(1.1);
-	opacity: 0.9;
 }
 
 .header__nav {
@@ -58,6 +55,7 @@
 
 .header__nav a:hover,
 .header__nav_mobile a:hover {
+	transform: scale(1.05);
 	color: #ffdd57;
 }
 
@@ -112,7 +110,7 @@
 	font-family: inherit;
 	padding: 0.5em 1em;
 	background-color: #ffdd57;
-	color: #000;
+	color: #5058e6;
 	border: none;
 	border-radius: 6px;
 	cursor: pointer;

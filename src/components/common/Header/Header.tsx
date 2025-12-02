@@ -12,19 +12,10 @@ const Header = () => {
 
 	return (
 		<header className="header__container">
-			<div
-				className="header__logo"
-				role="button"
-				tabIndex={0}
-				onClick={() => navigate('/', { replace: true })}
-				onKeyDown={(e) => {
-					if (e.key === 'Enter' || e.key === ' ') {
-						e.preventDefault();
-						navigate('/', { replace: true });
-					}
-				}}>
+			<button className="header__logo btn-reset" onClick={() => navigate('/', { replace: true })}>
 				<img src={icons.pageLogo} alt={t('appHeader.logoAlt')} />
-			</div>
+			</button>
+
 			<nav className={isMobile ? 'header__nav_mobile' : 'header__nav'}>
 				<NavLink to="/services">{t('appHeader.services')}</NavLink>
 				<NavLink to="/about">{t('appHeader.aboutMe')}</NavLink>
