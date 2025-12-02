@@ -14,6 +14,7 @@ const ru = {
 
 		appHeader: {
 			logoAria: 'На главную',
+			navAria: 'Основная навигация',
 			logoAlt: 'Логотип сайта',
 			services: 'Услуги',
 			aboutMe: 'Обо мне',
