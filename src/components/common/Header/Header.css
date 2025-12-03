@@ -101,7 +101,7 @@
 .header__nav a:focus,
 .header__nav_mobile a:focus {
 	color: #ffdd57;
-	outline-offset: 2px;
+	outline: none;
 }
 
 .languages__container {
