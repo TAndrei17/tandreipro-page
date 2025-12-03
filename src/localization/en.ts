@@ -24,6 +24,14 @@ const en = {
 			es: 'ES',
 			en: 'EN',
 		},
+
+		home: {
+			webSectionSubtitle: 'I create',
+			webSectionTitle: 'Websites',
+			webSectionDescription:
+				'Modern, fast and visually appealing websites — from landing pages to large-scale projects.',
+			webSectionButton: 'Learn more',
+		},
 	},
 };
 

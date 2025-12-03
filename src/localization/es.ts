@@ -24,6 +24,14 @@ const es = {
 			es: 'ES',
 			en: 'EN',
 		},
+
+		home: {
+			webSectionSubtitle: 'Creo',
+			webSectionTitle: 'Sitios web',
+			webSectionDescription:
+				'Sitios web modernos, rápidos y visualmente atractivos, desde landing pages hasta proyectos de gran escala.',
+			webSectionButton: 'Saber más',
+		},
 	},
 };
 

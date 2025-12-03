@@ -24,6 +24,14 @@ const ru = {
 			es: 'ES',
 			en: 'EN',
 		},
+
+		home: {
+			webSectionSubtitle: 'Создаю',
+			webSectionTitle: 'Сайты',
+			webSectionDescription:
+				'Современные, быстрые и визуально привлекательные сайты — от лендингов до крупных проектов.',
+			webSectionButton: 'Узнать больше',
+		},
 	},
 };
 
