@@ -17,6 +17,7 @@ const Languages = () => {
 	}, [lngButtons]);
 
 	const changeLanguage = (lng: string) => {
+		localStorage.setItem('userLang', lng);
 		i18n.changeLanguage(lng);
 		setLngButtons('closed');
 	};

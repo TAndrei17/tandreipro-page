@@ -4,10 +4,12 @@ import { BrowserRouter } from 'react-router';
 
 import './index.css';
 import App from './App.tsx';
+import ScrollToHash from '@components/common/ScrollToHash.tsx';
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
 		<BrowserRouter>
+			<ScrollToHash />
 			<App />
 		</BrowserRouter>
 	</StrictMode>

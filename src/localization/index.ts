@@ -3,6 +3,22 @@ import { initReactI18next } from 'react-i18next';
 
 import resources from './resources';
 
+const SUPPORTED_LANGS = new Set(['es', 'en', 'ru']);
+const DEFAULT_LANG = 'es';
+
+const getInitialLang = (): string => {
+	const userLang = localStorage.getItem('userLang');
+	const systemLang = navigator.language.slice(0, 2);
+
+	if (userLang && SUPPORTED_LANGS.has(userLang)) {
+		return userLang;
+	}
+	if (SUPPORTED_LANGS.has(systemLang)) {
+		return systemLang;
+	}
+	return DEFAULT_LANG;
+};
+
 const i18n = i18next.createInstance();
 
 const i18nInit = async () => {
@@ -10,8 +26,8 @@ const i18nInit = async () => {
 		debug: true,
 		LogLevel: 'error',
 		resources,
-		lng: 'ru',
-		fallbackLng: 'ru',
+		lng: getInitialLang(),
+		fallbackLng: DEFAULT_LANG,
 		interpolation: {
 			escapeValue: false,
 		},

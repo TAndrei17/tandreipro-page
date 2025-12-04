@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import './SectionStyles.css';
+import ButtonRight from '@components/common/UI/ButtonRight';
+import { useNavigate } from 'react-router';
 
 type SectionType = {
 	title: string;
@@ -19,7 +21,16 @@ const HomeSection = ({
 	reverse = false,
 }: SectionType) => {
 	const { t } = useTranslation('translation', { keyPrefix: 'home' });
+	const navigate = useNavigate();
 	const buttonTitle = buttonText ? buttonText : t('sectionButton');
+
+	const navigateToServices: VoidFunction = () => {
+		// здесь нужно будет добавить якоря для перехода к конкретному месту страницы
+		// navigate('/services#web');
+		// якорь - это id в компоненте (id='web')
+		// Сам по себе React Router не скроллит к элементу с id="web". Нужно добавить логику скролла.
+		navigate('/services');
+	};
 
 	return (
 		<section className={`section ${reverse ? 'section-reverse' : ''}`}>
@@ -28,7 +39,11 @@ const HomeSection = ({
 				<h1 className="section-title">{title}</h1>
 				<p className="section-desc">{description}</p>
 
-				<button className="section-btn">{buttonTitle}</button>
+				<ButtonRight
+					className={'section-btn'}
+					onClick={navigateToServices}
+					buttonTitle={buttonTitle}
+				/>
 			</div>
 
 			<div className="section-image-wrapper">

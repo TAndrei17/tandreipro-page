@@ -28,12 +28,12 @@ const en = {
 		home: {
 			sectionButton: 'Learn more',
 
-			webSectionSubtitle: 'I create',
+			webSectionSubtitle: 'Create',
 			webSectionTitle: 'Websites',
 			webSectionDescription:
 				'Modern, fast and visually appealing websites — from landing pages to large-scale projects.',
 
-			mobileSectionSubtitle: 'I develop',
+			mobileSectionSubtitle: 'Develop',
 			mobileSectionTitle: 'Mobile Applications',
 			mobileSectionDescription:
 				'Fast, stable, and user-friendly iOS and Android applications tailored to your needs.',
