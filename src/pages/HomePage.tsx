@@ -3,8 +3,10 @@ import { useTranslation } from 'react-i18next';
 import './styles/HomePage.css';
 import { useEffect } from 'react';
 import HomeSection from '@components/home/HomeSection';
+import useDeviceType from '@hooks/useDeviceType';
 
 const HomePage = () => {
+	const { isMobile } = useDeviceType();
 	const { t, i18n } = useTranslation('translation', { keyPrefix: 'home' });
 	const language = i18n.language;
 
@@ -23,7 +25,7 @@ const HomePage = () => {
 				title={t('mobileSectionTitle')}
 				subtitle={t('mobileSectionSubtitle')}
 				description={t('mobileSectionDescription')}
-				reverse
+				reverse={!isMobile}
 			/>
 			<HomeSection
 				title={t('maintainSectionTitle')}
