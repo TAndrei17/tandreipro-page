@@ -26,11 +26,22 @@ const en = {
 		},
 
 		home: {
+			sectionButton: 'Learn more',
+
 			webSectionSubtitle: 'I create',
 			webSectionTitle: 'Websites',
 			webSectionDescription:
 				'Modern, fast and visually appealing websites — from landing pages to large-scale projects.',
-			webSectionButton: 'Learn more',
+
+			mobileSectionSubtitle: 'I develop',
+			mobileSectionTitle: 'Mobile Applications',
+			mobileSectionDescription:
+				'Fast, stable, and user-friendly iOS and Android applications tailored to your needs.',
+
+			maintainSectionSubtitle: 'Maintain',
+			maintainSectionTitle: 'Existing Projects',
+			maintainSectionDescription:
+				'Websites built with React and apps on React Native — I update the design, fix bugs, and refresh the project to keep it modern and user-friendly.',
 		},
 	},
 };

@@ -26,11 +26,22 @@ const es = {
 		},
 
 		home: {
+			sectionButton: 'Saber más',
+
 			webSectionSubtitle: 'Creo',
 			webSectionTitle: 'Sitios web',
 			webSectionDescription:
 				'Sitios web modernos, rápidos y visualmente atractivos, desde landing pages hasta proyectos de gran escala.',
-			webSectionButton: 'Saber más',
+
+			mobileSectionSubtitle: 'Desarrollo',
+			mobileSectionTitle: 'Aplicaciones Móviles',
+			mobileSectionDescription:
+				'Aplicaciones para iOS y Android rápidas, estables y fáciles de usar, adaptadas a tus necesidades.',
+
+			maintainSectionSubtitle: 'Mantengo',
+			maintainSectionTitle: 'Proyectos Existentes',
+			maintainSectionDescription:
+				'Sitios web en React y aplicaciones en React Native — actualizo el diseño, corrijo errores y refresco el proyecto para mantenerlo moderno y fácil de usar.',
 		},
 	},
 };

@@ -26,11 +26,22 @@ const ru = {
 		},
 
 		home: {
+			sectionButton: 'Узнать больше',
+
 			webSectionSubtitle: 'Создаю',
 			webSectionTitle: 'Сайты',
 			webSectionDescription:
 				'Современные, быстрые и визуально привлекательные сайты — от лендингов до крупных проектов.',
-			webSectionButton: 'Узнать больше',
+
+			mobileSectionSubtitle: 'Разрабатываю',
+			mobileSectionTitle: 'Мобильные приложения',
+			mobileSectionDescription:
+				'Быстрые, стабильные и удобные приложения для iOS и Android под ваши задачи.',
+
+			maintainSectionSubtitle: 'Поддерживаю',
+			maintainSectionTitle: 'Готовые проекты',
+			maintainSectionDescription:
+				'Сайты на React, приложения на React Native — обновлю дизайн, исправлю ошибки, освежу проект.',
 		},
 	},
 };
