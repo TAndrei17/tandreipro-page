@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 
 import './styles/HomePage.css';
 import { useEffect } from 'react';
-import HomeSection from '@components/home/Section';
+import HomeSection from '@components/home/HomeSection';
 
 const HomePage = () => {
 	const { t, i18n } = useTranslation('translation', { keyPrefix: 'home' });
