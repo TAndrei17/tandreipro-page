@@ -2,19 +2,34 @@ import { useTranslation } from 'react-i18next';
 
 import './styles/HomePage.css';
 import { useEffect } from 'react';
-import WebSection from '@components/home/WebSection';
+import HomeSection from '@components/home/Section';
 
 const HomePage = () => {
-	const { t, i18n } = useTranslation();
+	const { t, i18n } = useTranslation('translation', { keyPrefix: 'home' });
 	const language = i18n.language;
 
 	useEffect(() => {
-		document.title = t('browserTabs.browserTabDefault');
+		document.title = i18n.t('browserTabs.browserTabDefault');
 	}, [t, language]);
 
 	return (
 		<div className={'home-page'}>
-			<WebSection />
+			<HomeSection
+				title={t('webSectionTitle')}
+				subtitle={t('webSectionSubtitle')}
+				description={t('webSectionDescription')}
+			/>
+			<HomeSection
+				title={t('mobileSectionTitle')}
+				subtitle={t('mobileSectionSubtitle')}
+				description={t('mobileSectionDescription')}
+				reverse
+			/>
+			<HomeSection
+				title={t('maintainSectionTitle')}
+				subtitle={t('maintainSectionSubtitle')}
+				description={t('maintainSectionDescription')}
+			/>
 		</div>
 	);
 };
