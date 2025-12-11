@@ -36,7 +36,7 @@ const es = {
 			shopSectionSubtitle: 'Lanzando',
 			shopSectionTitle: 'Tiendas en línea',
 			shopSectionDescription:
-				'T iendas en línea escalables: gestión de productos e inventario, pagos sencillos, base de clientes y herramientas que ayudan a aumentar las ventas.',
+				'Tiendas en línea escalables: gestión de productos e inventario, pagos sencillos, base de clientes y herramientas que ayudan a aumentar las ventas.',
 
 			mobileSectionSubtitle: 'Desarrollando',
 			mobileSectionTitle: 'Aplicaciones móviles',

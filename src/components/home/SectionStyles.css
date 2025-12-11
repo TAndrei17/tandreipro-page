@@ -11,8 +11,16 @@
 	flex-direction: row-reverse;
 }
 
-.section-content {
+.section-content,
+.section-content-reverse {
 	max-width: 800px;
+}
+.section-content-reverse {
+	max-width: 600px;
+	/* display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	text-align: right; */
 }
 
 .section-subtitle {

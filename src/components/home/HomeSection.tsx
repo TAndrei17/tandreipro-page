@@ -34,7 +34,7 @@ const HomeSection = ({
 
 	return (
 		<section className={`section ${reverse ? 'section-reverse' : ''}`}>
-			<div className="section-content">
+			<div className={reverse ? 'section-content-reverse' : 'section-content'}>
 				<h3 className="section-subtitle">{subtitle}</h3>
 				<h2
 					className="section-title"
