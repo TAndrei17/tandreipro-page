@@ -31,6 +31,19 @@
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	transition:
+		color 0.3s,
+		transform 0.3s;
+}
+.section-title:hover,
+.section-title:focus {
+	transform: translateY(-3px);
+	-webkit-text-fill-color: #ffdd57;
+	background: none;
+}
+
+.section-title:focus {
+	outline: none;
 }
 
 .section-desc {
