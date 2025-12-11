@@ -36,14 +36,14 @@ const HomeSection = ({
 		<section className={`section ${reverse ? 'section-reverse' : ''}`}>
 			<div className="section-content">
 				<h3 className="section-subtitle">{subtitle}</h3>
-				<h1
+				<h2
 					className="section-title"
 					onClick={navigateToServices}
 					role="button"
 					tabIndex={0}
 					onKeyDown={(e) => e.key === 'Enter' && navigateToServices()}>
 					{title}
-				</h1>
+				</h2>
 				<p className="section-desc">{description}</p>
 
 				<ButtonRight

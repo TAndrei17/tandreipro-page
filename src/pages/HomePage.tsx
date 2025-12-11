@@ -16,28 +16,30 @@ const HomePage = () => {
 
 	return (
 		<div className={'home-page'}>
-			<HomeSection
-				title={t('webSectionTitle')}
-				subtitle={t('webSectionSubtitle')}
-				description={t('webSectionDescription')}
-			/>
-			<HomeSection
-				title={t('shopSectionTitle')}
-				subtitle={t('shopSectionSubtitle')}
-				description={t('shopSectionDescription')}
-				reverse={!isMobile}
-			/>
-			<HomeSection
-				title={t('mobileSectionTitle')}
-				subtitle={t('mobileSectionSubtitle')}
-				description={t('mobileSectionDescription')}
-			/>
-			<HomeSection
-				title={t('maintainSectionTitle')}
-				subtitle={t('maintainSectionSubtitle')}
-				description={t('maintainSectionDescription')}
-				reverse={!isMobile}
-			/>
+			<main>
+				<HomeSection
+					title={t('webSectionTitle')}
+					subtitle={t('webSectionSubtitle')}
+					description={t('webSectionDescription')}
+				/>
+				<HomeSection
+					title={t('shopSectionTitle')}
+					subtitle={t('shopSectionSubtitle')}
+					description={t('shopSectionDescription')}
+					reverse={!isMobile}
+				/>
+				<HomeSection
+					title={t('mobileSectionTitle')}
+					subtitle={t('mobileSectionSubtitle')}
+					description={t('mobileSectionDescription')}
+				/>
+				<HomeSection
+					title={t('maintainSectionTitle')}
+					subtitle={t('maintainSectionSubtitle')}
+					description={t('maintainSectionDescription')}
+					reverse={!isMobile}
+				/>
+			</main>
 		</div>
 	);
 };
