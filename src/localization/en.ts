@@ -26,22 +26,27 @@ const en = {
 		},
 
 		home: {
-			sectionButton: 'Learn more',
+			sectionButton: 'Learn More',
 
-			webSectionSubtitle: 'Create',
+			webSectionSubtitle: 'Creating',
 			webSectionTitle: 'Websites',
 			webSectionDescription:
-				'Modern, fast and visually appealing websites — from landing pages to large-scale projects.',
+				'Modern, fast, and visually striking websites — from sleek landing pages to large-scale projects.',
 
-			mobileSectionSubtitle: 'Develop',
-			mobileSectionTitle: 'Mobile Applications',
+			shopSectionSubtitle: 'Launching',
+			shopSectionTitle: 'Online Stores',
+			shopSectionDescription:
+				'Scalable online stores: manage products and inventory, easy payments, customer database, and tools that help boost sales.',
+
+			mobileSectionSubtitle: 'Developing',
+			mobileSectionTitle: 'Mobile Apps',
 			mobileSectionDescription:
-				'Fast, stable, and user-friendly iOS and Android applications tailored to your needs.',
+				'Fast, stable, and user-friendly apps for iOS and Android — tailored for any business needs.',
 
-			maintainSectionSubtitle: 'Maintain',
+			maintainSectionSubtitle: 'Maintaining',
 			maintainSectionTitle: 'Existing Projects',
 			maintainSectionDescription:
-				'Websites built with React and apps on React Native — I update the design, fix bugs, and refresh the project to keep it modern and user-friendly.',
+				'React websites and React Native apps — refresh the design, fix issues, and bring the project up to date.',
 		},
 	},
 };

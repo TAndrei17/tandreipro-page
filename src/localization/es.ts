@@ -28,20 +28,25 @@ const es = {
 		home: {
 			sectionButton: 'Saber más',
 
-			webSectionSubtitle: 'Creo',
+			webSectionSubtitle: 'Creando',
 			webSectionTitle: 'Sitios web',
 			webSectionDescription:
-				'Sitios web modernos, rápidos y visualmente atractivos, desde landing pages hasta proyectos de gran escala.',
+				'Sitios web modernos, rápidos y visualmente impactantes — desde landing pages elegantes hasta proyectos a gran escala.',
 
-			mobileSectionSubtitle: 'Desarrollo',
-			mobileSectionTitle: 'Aplicaciones Móviles',
+			shopSectionSubtitle: 'Lanzando',
+			shopSectionTitle: 'Tiendas en línea',
+			shopSectionDescription:
+				'T iendas en línea escalables: gestión de productos e inventario, pagos sencillos, base de clientes y herramientas que ayudan a aumentar las ventas.',
+
+			mobileSectionSubtitle: 'Desarrollando',
+			mobileSectionTitle: 'Aplicaciones móviles',
 			mobileSectionDescription:
-				'Aplicaciones para iOS y Android rápidas, estables y fáciles de usar, adaptadas a tus necesidades.',
+				'Aplicaciones rápidas, estables y fáciles de usar para iOS y Android — adaptadas a cualquier necesidad de tu negocio.',
 
-			maintainSectionSubtitle: 'Mantengo',
-			maintainSectionTitle: 'Proyectos Existentes',
+			maintainSectionSubtitle: 'Manteniendo',
+			maintainSectionTitle: 'Proyectos existentes',
 			maintainSectionDescription:
-				'Sitios web en React y aplicaciones en React Native — actualizo el diseño, corrijo errores y refresco el proyecto para mantenerlo moderno y fácil de usar.',
+				'Sitios web en React y aplicaciones en React Native — actualizo el diseño, corrijo errores y pongo el proyecto al día.',
 		},
 	},
 };
