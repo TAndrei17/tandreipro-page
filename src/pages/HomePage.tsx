@@ -22,15 +22,21 @@ const HomePage = () => {
 				description={t('webSectionDescription')}
 			/>
 			<HomeSection
+				title={t('shopSectionTitle')}
+				subtitle={t('shopSectionSubtitle')}
+				description={t('shopSectionDescription')}
+				reverse={!isMobile}
+			/>
+			<HomeSection
 				title={t('mobileSectionTitle')}
 				subtitle={t('mobileSectionSubtitle')}
 				description={t('mobileSectionDescription')}
-				reverse={!isMobile}
 			/>
 			<HomeSection
 				title={t('maintainSectionTitle')}
 				subtitle={t('maintainSectionSubtitle')}
 				description={t('maintainSectionDescription')}
+				reverse={!isMobile}
 			/>
 		</div>
 	);
