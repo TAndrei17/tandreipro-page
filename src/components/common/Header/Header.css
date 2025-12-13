@@ -111,8 +111,8 @@
 	justify-content: flex-end;
 }
 .languages__icon {
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
 	filter: brightness(0) invert(1);
 	cursor: pointer;
 	transition:
@@ -120,16 +120,11 @@
 		filter 0.25s ease;
 }
 
-.languages__icon:hover {
-	transform: scale(1.1);
-	filter: brightness(0.9) invert(1);
-}
-
+.languages__icon:hover,
 .languages__icon:focus {
-	outline: 2px solid #646cff;
-	outline-offset: 2px;
-	transform: scale(1.1);
-	filter: brightness(1) invert(0);
+	transform: scale(1.2);
+	filter: brightness(0.9) invert(0.8);
+	outline: none;
 }
 
 .languages__buttons,
@@ -148,32 +143,22 @@
 	font-size: 16px;
 	font-weight: 500;
 	font-family: inherit;
-	padding: 0.4em 1em;
-	background-color: #ffdd57;
-	color: #5058e6;
+	padding: 0.4em 0.6em;
+	background: transparent;
+	color: #fff;
 	border: none;
-	border-radius: 6px;
 	cursor: pointer;
 	transition:
 		background-color 0.3s ease,
 		color 0.3s ease,
 		transform 0.2s ease,
 		box-shadow 0.2s ease;
-}
-
-.lang__button:hover {
-	background-color: #f0c000;
-	color: #fff;
-	transform: translateY(-2px);
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.lang__button:active {
-	transform: translateY(0);
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
+.lang__button:hover,
 .lang__button:focus {
-	outline: 3px solid #5058e6;
-	outline-offset: 2px;
+	color: #ffdd57;
+	transform: translateY(-2px);
+	outline: none;
 }
