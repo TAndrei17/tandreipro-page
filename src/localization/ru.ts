@@ -20,6 +20,7 @@ const ru = {
 			aboutMe: 'Обо мне',
 			contact: 'Контакты',
 			changeLngAlt: 'Изменить язык сайта',
+			openNavAlt: 'Открыть навигацию сайта',
 			ru: 'РУ',
 			es: 'ES',
 			en: 'EN',

@@ -23,6 +23,7 @@
 @media (max-width: 768px) {
 	.header__container {
 		padding: 20px;
+		max-height: 160px;
 	}
 }
 
@@ -104,6 +105,14 @@
 .header__nav_mobile a:focus {
 	color: #ffdd57;
 	outline: none;
+}
+
+.icons__container_mobile {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
 }
 
 .languages__container {

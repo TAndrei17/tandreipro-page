@@ -20,6 +20,7 @@ const en = {
 			aboutMe: 'About me',
 			contact: 'Contact',
 			changeLngAlt: 'Change website language',
+			openNavAlt: 'Open website navigation',
 			ru: 'РУ',
 			es: 'ES',
 			en: 'EN',
