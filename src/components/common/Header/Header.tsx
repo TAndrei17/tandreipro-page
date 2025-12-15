@@ -20,11 +20,23 @@ const Header = () => {
 	const [lngButtons, setLngButtons] = useState<'open' | 'closed'>('closed');
 
 	const headerRef = useRef<HTMLElement>(null);
-	useLayoutEffect(() => {
+	const updateHeaderHeight = () => {
 		if (headerRef.current) {
-			setSiteHeaderHeight(headerRef.current.getBoundingClientRect().height);
+			setSiteHeaderHeight?.(headerRef.current.getBoundingClientRect().height);
 		}
-	}, [menu, setSiteHeaderHeight, lngButtons, setLngButtons]);
+	};
+
+	useLayoutEffect(() => {
+		// пересчет высоты заголовка при монтировании
+		updateHeaderHeight();
+
+		// пересчет высоты заголовка при изменении размеров окна
+		window.addEventListener('resize', updateHeaderHeight);
+
+		return () => {
+			window.removeEventListener('resize', updateHeaderHeight);
+		};
+	}, [menu, lngButtons, setSiteHeaderHeight]);
 
 	const navLinks = [
 		{ to: '/services', label: t('appHeader.services') },
