@@ -17,7 +17,7 @@ const ServicesPage = () => {
 	}, [t, language]);
 
 	return (
-		<div style={{ paddingTop: siteHeaderHeight + (isMobile ? 40 : 60) }}>
+		<div style={{ paddingTop: siteHeaderHeight + (isMobile ? 20 : 30) }}>
 			<ServicesList bookmark={activeServiceBookmark} setBookmark={setActiveServiceBookmark} />
 		</div>
 	);
