@@ -49,6 +49,13 @@ const es = {
 			maintainSectionDescription:
 				'Sitios web en React y aplicaciones en React Native — actualizo el diseño, corrijo errores y pongo el proyecto al día.',
 		},
+
+		services: {
+			web: 'Sitios web',
+			shop: 'Tiendas en línea',
+			mobile: 'Aplicaciones móviles',
+			maintain: 'Apoyo a proyectos',
+		},
 	},
 };
 

@@ -49,6 +49,13 @@ const en = {
 			maintainSectionDescription:
 				'React websites and React Native apps — refresh the design, fix issues, and bring the project up to date.',
 		},
+
+		services: {
+			web: 'Websites',
+			shop: 'Online Stores',
+			mobile: 'Mobile Apps',
+			maintain: 'Project Support',
+		},
 	},
 };
 
