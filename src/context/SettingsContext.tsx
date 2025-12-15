@@ -1,15 +1,17 @@
 import { createContext, useContext, useState, type Dispatch, type SetStateAction } from 'react';
 
 type Settings = {
-	siteHeaderHeight: number | null;
-	setSiteHeaderHeight?: Dispatch<SetStateAction<number>>;
-	activeServiceBookmark: number | null;
-	setActiveServiceBookmark?: Dispatch<SetStateAction<number>>;
+	siteHeaderHeight: number;
+	setSiteHeaderHeight: Dispatch<SetStateAction<number>> | VoidFunction;
+	activeServiceBookmark: number;
+	setActiveServiceBookmark: Dispatch<SetStateAction<number>> | VoidFunction;
 };
 
 const SettingsContext = createContext<Settings>({
-	siteHeaderHeight: null,
-	activeServiceBookmark: null,
+	siteHeaderHeight: 0,
+	setSiteHeaderHeight: () => {},
+	activeServiceBookmark: 0,
+	setActiveServiceBookmark: () => {},
 });
 
 const SettingsProvider = ({ children }: { children: React.ReactNode }) => {

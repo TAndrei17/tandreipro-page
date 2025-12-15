@@ -4,18 +4,20 @@ import './styles/HomePage.css';
 import { useEffect } from 'react';
 import HomeSection from '@components/home/HomeSection';
 import useDeviceType from '@hooks/useDeviceType';
+import { useSiteHeaderHeight } from '@context/SettingsContext';
 
 const HomePage = () => {
 	const { isMobile } = useDeviceType();
 	const { t, i18n } = useTranslation('translation', { keyPrefix: 'home' });
 	const language = i18n.language;
+	const { siteHeaderHeight } = useSiteHeaderHeight();
 
 	useEffect(() => {
 		document.title = i18n.t('browserTabs.browserTabDefault');
 	}, [t, language]);
 
 	return (
-		<div className={'home-page'}>
+		<div style={{ paddingTop: siteHeaderHeight + 10 }}>
 			<main>
 				<HomeSection
 					title={t('webSectionTitle')}

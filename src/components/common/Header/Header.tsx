@@ -4,16 +4,25 @@ import './Header.css';
 import Languages from './Languages';
 import icons from '@constants/icons';
 import useDeviceType from '@hooks/useDeviceType';
-import { useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
+import { useSiteHeaderHeight } from '@context/SettingsContext';
 
 const Header = () => {
 	const { t } = useTranslation();
 	const navigate = useNavigate();
 	const { isMobile } = useDeviceType();
-	const [menu, setMenu] = useState<'open' | 'closed'>('closed');
+	const { setSiteHeaderHeight } = useSiteHeaderHeight();
 
+	const [menu, setMenu] = useState<'open' | 'closed'>('closed');
 	const closeMenu = () => setMenu('closed');
 	const openMenu = () => setMenu('open');
+
+	const headerRef = useRef<HTMLElement>(null);
+	useLayoutEffect(() => {
+		if (headerRef.current) {
+			setSiteHeaderHeight(headerRef.current.getBoundingClientRect().height);
+		}
+	}, [menu, setSiteHeaderHeight]);
 
 	const navLinks = [
 		{ to: '/services', label: t('appHeader.services') },
@@ -32,7 +41,7 @@ const Header = () => {
 	);
 
 	return (
-		<header className="header__container">
+		<header ref={headerRef} className="header__container">
 			<button
 				className="header__logo"
 				aria-label={t('appHeader.logoAria')}
