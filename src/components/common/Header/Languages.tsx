@@ -1,13 +1,18 @@
 import icons from '@constants/icons';
 import { useTranslation } from 'react-i18next';
 import './Header.css';
-import { useEffect, useState } from 'react';
+import { useEffect, type Dispatch, type SetStateAction } from 'react';
 import useDeviceType from '@hooks/useDeviceType';
 
-const Languages = () => {
+const Languages = ({
+	lngButtons,
+	setLngButtons,
+}: {
+	lngButtons: 'open' | 'closed';
+	setLngButtons: Dispatch<SetStateAction<'open' | 'closed'>>;
+}) => {
 	const { t, i18n } = useTranslation();
 	const { isMobile } = useDeviceType();
-	const [lngButtons, setLngButtons] = useState<'open' | 'closed'>('closed');
 
 	useEffect(() => {
 		if (lngButtons === 'open') {

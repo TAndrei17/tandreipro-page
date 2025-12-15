@@ -17,12 +17,14 @@ const Header = () => {
 	const closeMenu = () => setMenu('closed');
 	const openMenu = () => setMenu('open');
 
+	const [lngButtons, setLngButtons] = useState<'open' | 'closed'>('closed');
+
 	const headerRef = useRef<HTMLElement>(null);
 	useLayoutEffect(() => {
 		if (headerRef.current) {
 			setSiteHeaderHeight(headerRef.current.getBoundingClientRect().height);
 		}
-	}, [menu, setSiteHeaderHeight]);
+	}, [menu, setSiteHeaderHeight, lngButtons, setLngButtons]);
 
 	const navLinks = [
 		{ to: '/services', label: t('appHeader.services') },
@@ -78,12 +80,12 @@ const Header = () => {
 
 					{menu === 'open' && renderNav('header__nav_mobile', closeMenu)}
 
-					<Languages />
+					<Languages lngButtons={lngButtons} setLngButtons={setLngButtons} />
 				</div>
 			) : (
 				<>
 					{renderNav('header__nav')}
-					<Languages />
+					<Languages lngButtons={lngButtons} setLngButtons={setLngButtons} />
 				</>
 			)}
 		</header>
