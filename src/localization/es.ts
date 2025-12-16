@@ -36,6 +36,20 @@ const es = {
 			shop: 'Tiendas en línea',
 			mobile: 'Aplicaciones móviles',
 			maintain: 'Apoyo a proyectos',
+
+			helpTitle: 'Cómo puedo ayudar a tu negocio',
+			targetClientsTitle: 'Para quién es mi trabajo',
+			tasksTitle: 'Tareas que resolveremos juntos',
+			whyWorkWithMeTitle: 'Por qué es conveniente trabajar conmigo',
+
+			webHelp:
+				'Crearé un sitio web adaptado a tus necesidades: página de aterrizaje, sitio tipo tarjeta de presentación o portafolio. Será tu oficina en línea: un lugar donde los clientes te conocen, ven tu valor y se comunican fácilmente.',
+			webClients:
+				'Para emprendedores individuales — profesores, bloggers, entrenadores y vendedores. También para pequeñas y medianas empresas que necesitan un sitio web claro y ordenado, fácil de usar y actualizar, sin complejidad innecesaria y enfocado en resultados.',
+			webTasks:
+				'Te ayudo a establecer tu presencia en línea, organizar la información para que los clientes encuentren rápidamente lo más importante, mostrar el valor de tu oferta y facilitar el contacto de los clientes contigo.',
+			webWhyMe:
+				'Asumo la responsabilidad del proyecto, explico las soluciones en términos simples y estoy siempre disponible en todas las etapas del trabajo. Puedes estar seguro de que tu sitio web estará listo y funcionará como se planeó.',
 		},
 
 		entites: {
