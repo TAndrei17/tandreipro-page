@@ -21,7 +21,10 @@ const ServicesList = ({
 			{servises.map((item, index) => (
 				<div
 					key={index}
+					role="button"
+					tabIndex={0}
 					onClick={() => setBookmark(index)}
+					onKeyDown={(e) => e.key === 'Enter' && setBookmark(index)}
 					className={`services-bookmark ${index === bookmark ? 'active-bookmark' : ''}`}>
 					{item}
 				</div>
