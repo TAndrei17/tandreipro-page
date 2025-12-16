@@ -2,15 +2,7 @@ import { useTranslation } from 'react-i18next';
 import './SectionStyle.css';
 import createServiceList from '@constants/services';
 
-const ServiceSection = ({
-	id,
-	bookmark,
-	title,
-}: {
-	id: number;
-	bookmark: number;
-	title: string;
-}) => {
+const ServiceSection = ({ id, bookmark }: { id: number; bookmark: number }) => {
 	const { t } = useTranslation();
 	const sectionId = id.toString();
 	const services = createServiceList(t);
