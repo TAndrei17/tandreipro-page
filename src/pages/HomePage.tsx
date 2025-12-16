@@ -5,42 +5,34 @@ import { useEffect } from 'react';
 import HomeSection from '@components/home/HomeSection';
 import useDeviceType from '@hooks/useDeviceType';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
+import createServiceList from '@constants/services';
 
 const HomePage = () => {
 	const { isMobile } = useDeviceType();
-	const { t, i18n } = useTranslation('translation', { keyPrefix: 'home' });
+	const { t, i18n } = useTranslation();
 	const language = i18n.language;
 	const { siteHeaderHeight } = useSiteHeaderHeight();
+	const services = createServiceList(t);
 
 	useEffect(() => {
-		document.title = i18n.t('browserTabs.browserTabDefault');
+		document.title = t('browserTabs.browserTabDefault');
 	}, [t, language]);
 
 	return (
 		<div style={{ paddingTop: siteHeaderHeight + 10 }}>
 			<main>
-				<HomeSection
-					title={t('webSectionTitle')}
-					subtitle={t('webSectionSubtitle')}
-					description={t('webSectionDescription')}
-				/>
-				<HomeSection
-					title={t('shopSectionTitle')}
-					subtitle={t('shopSectionSubtitle')}
-					description={t('shopSectionDescription')}
-					reverse={!isMobile}
-				/>
-				<HomeSection
-					title={t('mobileSectionTitle')}
-					subtitle={t('mobileSectionSubtitle')}
-					description={t('mobileSectionDescription')}
-				/>
-				<HomeSection
-					title={t('maintainSectionTitle')}
-					subtitle={t('maintainSectionSubtitle')}
-					description={t('maintainSectionDescription')}
-					reverse={!isMobile}
-				/>
+				{services.map((service, index) => {
+					return (
+						<HomeSection
+							key={service.id}
+							id={service.id}
+							title={service.title}
+							subtitle={service.subtitle}
+							description={service.description}
+							reverse={index % 2 !== 0 && !isMobile}
+						/>
+					);
+				})}
 			</main>
 		</div>
 	);

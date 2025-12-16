@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next';
 import './styles/ServicesPage.css';
 import { useActiveServiceBookmark, useSiteHeaderHeight } from '@context/SettingsContext';
 import useDeviceType from '@hooks/useDeviceType';
+import ServiceSection from '@components/services/ServiceSection';
+import createServiceList from '@constants/services';
 
 const ServicesPage = () => {
 	const { t, i18n } = useTranslation();
@@ -11,6 +13,7 @@ const ServicesPage = () => {
 	const { isMobile } = useDeviceType();
 	const { siteHeaderHeight } = useSiteHeaderHeight();
 	const { activeServiceBookmark, setActiveServiceBookmark } = useActiveServiceBookmark();
+	const services = createServiceList(t);
 
 	useEffect(() => {
 		document.title = t('browserTabs.browserTabServices');
@@ -19,6 +22,19 @@ const ServicesPage = () => {
 	return (
 		<div style={{ paddingTop: siteHeaderHeight + (isMobile ? 20 : 30) }}>
 			<ServicesList bookmark={activeServiceBookmark} setBookmark={setActiveServiceBookmark} />
+
+			<main>
+				{services.map((service) => {
+					return (
+						<ServiceSection
+							key={service.id}
+							id={service.id}
+							title={service.title}
+							bookmark={activeServiceBookmark}
+						/>
+					);
+				})}
+			</main>
 		</div>
 	);
 };

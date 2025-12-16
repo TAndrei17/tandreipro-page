@@ -2,8 +2,10 @@ import { useTranslation } from 'react-i18next';
 import './SectionStyles.css';
 import ButtonRight from '@components/common/UI/ButtonRight';
 import { useNavigate } from 'react-router';
+import { useActiveServiceBookmark } from '@context/SettingsContext';
 
 type SectionType = {
+	id: number;
 	title: string;
 	subtitle: string;
 	description: string;
@@ -13,6 +15,7 @@ type SectionType = {
 };
 
 const HomeSection = ({
+	id,
 	title,
 	subtitle,
 	description,
@@ -23,12 +26,10 @@ const HomeSection = ({
 	const { t } = useTranslation('translation', { keyPrefix: 'home' });
 	const navigate = useNavigate();
 	const buttonTitle = buttonText ? buttonText : t('sectionButton');
+	const { setActiveServiceBookmark } = useActiveServiceBookmark();
 
 	const navigateToServices: VoidFunction = () => {
-		// здесь нужно будет добавить якоря для перехода к конкретному месту страницы
-		// navigate('/services#web');
-		// якорь - это id в компоненте (id='web')
-		// Сам по себе React Router не скроллит к элементу с id="web". Здесь логика скролла - ScrollToHash
+		setActiveServiceBookmark(id);
 		navigate('/services');
 	};
 
