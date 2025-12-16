@@ -13,22 +13,28 @@ const ServicesList = ({
 	bookmark: number;
 	setBookmark: Dispatch<SetStateAction<number>>;
 }) => {
-	const { t } = useTranslation('translation', { keyPrefix: 'services' });
+	const { t, i18n } = useTranslation('translation', { keyPrefix: 'services' });
 	const servises = list(t);
 
 	return (
 		<div className={'services-list'}>
-			{servises.map((item, index) => (
-				<div
-					key={index}
-					role="button"
-					tabIndex={0}
-					onClick={() => setBookmark(index)}
-					onKeyDown={(e) => e.key === 'Enter' && setBookmark(index)}
-					className={`services-bookmark ${index === bookmark ? 'active-bookmark' : ''}`}>
-					{item}
-				</div>
-			))}
+			{servises.map((item, index) => {
+				const isActiveItem = index === bookmark;
+
+				return (
+					<div
+						key={index}
+						role="button"
+						tabIndex={0}
+						onClick={() => setBookmark(index)}
+						onKeyDown={(e) => e.key === 'Enter' && setBookmark(index)}
+						className={`services-bookmark ${isActiveItem ? 'active-bookmark' : ''}`}
+						aria-label={i18n.t('open')}
+						title={isActiveItem ? '' : i18n.t('open')}>
+						{item}
+					</div>
+				);
+			})}
 		</div>
 	);
 };

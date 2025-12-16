@@ -11,6 +11,8 @@ const es = {
 		pageNotFoundDescription: 'La página que buscas no existe o ha sido movida',
 		toHome: 'Volver al inicio',
 
+		open: 'Abrir',
+
 		appHeader: {
 			logoAria: 'Inicio',
 			navAria: 'Navegación principal',

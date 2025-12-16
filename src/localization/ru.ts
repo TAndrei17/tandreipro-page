@@ -11,6 +11,8 @@ const ru = {
 		pageNotFoundDescription: 'Страница, которую вы ищете, не существует или перемещена',
 		toHome: 'Вернуться на главную',
 
+		open: 'Открыть',
+
 		appHeader: {
 			logoAria: 'На главную',
 			navAria: 'Основная навигация',

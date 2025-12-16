@@ -11,6 +11,8 @@ const en = {
 		pageNotFoundDescription: 'The page you are looking for does not exist or has been moved',
 		toHome: 'Back to Home',
 
+		open: 'Open',
+
 		appHeader: {
 			logoAria: 'Home',
 			navAria: 'Main navigation',
