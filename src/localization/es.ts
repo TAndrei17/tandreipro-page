@@ -9,7 +9,6 @@ const es = {
 		},
 
 		pageNotFoundDescription: 'La página que buscas no existe o ha sido movida',
-
 		toHome: 'Volver al inicio',
 
 		appHeader: {
@@ -28,7 +27,16 @@ const es = {
 
 		home: {
 			sectionButton: 'Saber más',
+		},
 
+		services: {
+			web: 'Sitios web',
+			shop: 'Tiendas en línea',
+			mobile: 'Aplicaciones móviles',
+			maintain: 'Apoyo a proyectos',
+		},
+
+		entites: {
 			webSectionSubtitle: 'Creando',
 			webSectionTitle: 'Sitios web',
 			webSectionDescription:
@@ -48,13 +56,6 @@ const es = {
 			maintainSectionTitle: 'Proyectos existentes',
 			maintainSectionDescription:
 				'Sitios web en React y aplicaciones en React Native — actualizo el diseño, corrijo errores y pongo el proyecto al día.',
-		},
-
-		services: {
-			web: 'Sitios web',
-			shop: 'Tiendas en línea',
-			mobile: 'Aplicaciones móviles',
-			maintain: 'Apoyo a proyectos',
 		},
 	},
 };

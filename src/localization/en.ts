@@ -9,7 +9,6 @@ const en = {
 		},
 
 		pageNotFoundDescription: 'The page you are looking for does not exist or has been moved',
-
 		toHome: 'Back to Home',
 
 		appHeader: {
@@ -28,7 +27,16 @@ const en = {
 
 		home: {
 			sectionButton: 'Learn More',
+		},
 
+		services: {
+			web: 'Websites',
+			shop: 'Online Stores',
+			mobile: 'Mobile Apps',
+			maintain: 'Project Support',
+		},
+
+		entites: {
 			webSectionSubtitle: 'Creating',
 			webSectionTitle: 'Websites',
 			webSectionDescription:
@@ -48,13 +56,6 @@ const en = {
 			maintainSectionTitle: 'Existing Projects',
 			maintainSectionDescription:
 				'React websites and React Native apps — refresh the design, fix issues, and bring the project up to date.',
-		},
-
-		services: {
-			web: 'Websites',
-			shop: 'Online Stores',
-			mobile: 'Mobile Apps',
-			maintain: 'Project Support',
 		},
 	},
 };

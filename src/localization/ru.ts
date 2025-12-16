@@ -9,7 +9,6 @@ const ru = {
 		},
 
 		pageNotFoundDescription: 'Страница, которую вы ищете, не существует или перемещена',
-
 		toHome: 'Вернуться на главную',
 
 		appHeader: {
@@ -28,7 +27,16 @@ const ru = {
 
 		home: {
 			sectionButton: 'Узнать больше',
+		},
 
+		services: {
+			web: 'Сайты',
+			shop: 'Онлайн-магазины',
+			mobile: 'Мобильные приложения',
+			maintain: 'Поддержка проектов',
+		},
+
+		entites: {
 			webSectionSubtitle: 'Создаю',
 			webSectionTitle: 'Сайты',
 			webSectionDescription:
@@ -48,13 +56,6 @@ const ru = {
 			maintainSectionTitle: 'Готовые проекты',
 			maintainSectionDescription:
 				'Сайты на React и приложения на React Native — обновлю дизайн, исправлю ошибки и приведу проект в актуальную форму.',
-		},
-
-		services: {
-			web: 'Сайты',
-			shop: 'Онлайн-магазины',
-			mobile: 'Мобильные приложения',
-			maintain: 'Поддержка проектов',
 		},
 	},
 };
