@@ -1,10 +1,18 @@
 import { type TFunction } from 'i18next';
+import icons from './icons';
 
 type Service = {
 	id: number;
 	title: string;
 	subtitle: string;
 	description: string;
+	article?: {
+		help: string;
+		clients: string;
+		tasks: string;
+		me: string;
+	};
+	icon?: string;
 };
 
 const createServiceList = (t: TFunction): Service[] => [
@@ -13,6 +21,13 @@ const createServiceList = (t: TFunction): Service[] => [
 		title: t('entites.webSectionTitle'),
 		subtitle: t('entites.webSectionSubtitle'),
 		description: t('entites.webSectionDescription'),
+		article: {
+			help: t('services.webHelp'),
+			clients: t('services.webClients'),
+			tasks: t('services.webTasks'),
+			me: t('services.webWhyMe'),
+		},
+		icon: icons.pageBrowser,
 	},
 
 	{
