@@ -35,6 +35,7 @@ const createServiceList = (t: TFunction): Service[] => [
 		title: t('entites.shopSectionTitle'),
 		subtitle: t('entites.shopSectionSubtitle'),
 		description: t('entites.shopSectionDescription'),
+		icon: icons.onlineStore,
 	},
 
 	{
@@ -42,6 +43,7 @@ const createServiceList = (t: TFunction): Service[] => [
 		title: t('entites.mobileSectionTitle'),
 		subtitle: t('entites.mobileSectionSubtitle'),
 		description: t('entites.mobileSectionDescription'),
+		icon: icons.smartphone,
 	},
 
 	{
@@ -49,6 +51,7 @@ const createServiceList = (t: TFunction): Service[] => [
 		title: t('entites.maintainSectionTitle'),
 		subtitle: t('entites.maintainSectionSubtitle'),
 		description: t('entites.maintainSectionDescription'),
+		icon: icons.project,
 	},
 ];
 
