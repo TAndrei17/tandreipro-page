@@ -1,33 +1,41 @@
 import { useTranslation } from 'react-i18next';
 import './SectionStyle.css';
-import createServiceList from '@constants/services';
+import { type Service } from '@constants/services';
 
-const ServiceSection = ({ id, bookmark }: { id: number; bookmark: number }) => {
+const ServiceSection = ({
+	service,
+	bookmark,
+	children,
+}: {
+	service: Service;
+	bookmark: number;
+	children?: React.ReactNode;
+}) => {
 	const { t } = useTranslation();
-	const sectionId = id.toString();
-	const services = createServiceList(t);
 
-	if (id !== bookmark) {
+	if (service.id !== bookmark) {
 		return null;
 	}
 
 	return (
-		<section id={sectionId} className={'service-section'}>
+		<section className={'service-section'}>
 			<article className={'service-article'}>
 				<h2 className={'service-header-2'}>{t('services.helpTitle')}</h2>
 				<div className="service-icon-container">
-					<img src={services[id].icon} className={'service-icon'} />
-					<p className={'service-info'}>{services[id].article?.help}</p>
+					<img src={service.icon} className={'service-icon'} />
+					<p className={'service-info'}>{service.article?.help}</p>
 				</div>
 
+				{children}
+
 				<h2 className={'service-header-2'}>{t('services.targetClientsTitle')}</h2>
-				<p className={'service-info'}>{services[id].article?.clients}</p>
+				<p className={'service-info'}>{service.article?.clients}</p>
 
 				<h2 className={'service-header-2'}>{t('services.tasksTitle')}</h2>
-				<p className={'service-info'}>{services[id].article?.tasks}</p>
+				<p className={'service-info'}>{service.article?.tasks}</p>
 
 				<h2 className={'service-header-2'}>{t('services.whyWorkWithMeTitle')}</h2>
-				<p className={'service-info'}>{services[id].article?.me}</p>
+				<p className={'service-info'}>{service.article?.me}</p>
 			</article>
 		</section>
 	);

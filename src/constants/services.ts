@@ -1,7 +1,7 @@
 import { type TFunction } from 'i18next';
 import icons from './icons';
 
-type Service = {
+export type Service = {
 	id: number;
 	title: string;
 	subtitle: string;
