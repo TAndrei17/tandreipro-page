@@ -51,7 +51,7 @@ const createServiceList = (t: TFunction): Service[] => [
 		title: t('entites.maintainSectionTitle'),
 		subtitle: t('entites.maintainSectionSubtitle'),
 		description: t('entites.maintainSectionDescription'),
-		icon: icons.project,
+		icon: icons.maintenance,
 	},
 ];
 
