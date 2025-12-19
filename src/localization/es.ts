@@ -37,19 +37,19 @@ const es = {
 			mobile: 'Aplicaciones móviles',
 			maintain: 'Apoyo a proyectos',
 
-			helpTitle: 'Cómo puedo ayudar a tu negocio',
-			targetClientsTitle: 'Para quién es mi trabajo',
-			tasksTitle: 'Tareas que resolveremos juntos',
-			whyWorkWithMeTitle: 'Por qué es conveniente trabajar conmigo',
+			helpTitle: 'Cómo Ayudo',
+			targetClientsTitle: 'A Quién Puedo Ayudar',
+			tasksTitle: 'Qué Podemos Resolver Juntos',
+			whyWorkWithMeTitle: 'Por Qué Elegirme',
 
 			webHelp:
-				'Crearé un sitio web adaptado a tus necesidades: página de aterrizaje, sitio tipo tarjeta de presentación o portafolio. Será tu oficina en línea: un lugar donde los clientes te conocen, ven tu valor y se comunican fácilmente.',
+				'Crearé un sitio web adaptado a tus objetivos: una landing page, un sitio web corporativo o un portafolio.\n\nEl sitio se convertirá en tu oficina online, un lugar donde los clientes podrán conocerte y ponerse en contacto contigo rápidamente.',
 			webClients:
-				'Para emprendedores individuales — profesores, bloggers, entrenadores y vendedores. También para pequeñas y medianas empresas que necesitan un sitio web claro y ordenado, fácil de usar y actualizar, sin complejidad innecesaria y enfocado en resultados.',
+				'Colaboro con profesionales independientes, autónomos y empresas.\n\nSi tienes un blog y quieres reunir tus redes sociales en un solo lugar — hagamos un sitio web de una sola página con tu portafolio. ¿Tienes un salón de manicura y buscas clientes? — un sitio web personal te ayudará. ¿Has abierto una fábrica de ventanas? — cuéntaselo a tus clientes en el sitio web de tu empresa.',
 			webTasks:
-				'Te ayudo a establecer tu presencia en línea, organizar la información para que los clientes encuentren rápidamente lo más importante, mostrar el valor de tu oferta y facilitar el contacto de los clientes contigo.',
+				'Tienes un negocio y quieres darte a conocer en Internet. Necesitas un servicio para que los clientes puedan reservar citas o planeas mantener un blog en tu propia plataforma — estas tareas se pueden resolver con un sitio web personal.',
 			webWhyMe:
-				'Asumo la responsabilidad del proyecto, explico las soluciones en términos simples y estoy siempre disponible en todas las etapas del trabajo. Puedes estar seguro de que tu sitio web estará listo y funcionará como se planeó.',
+				'Asumo toda la responsabilidad del proyecto, explico las decisiones de manera sencilla y estoy siempre disponible en todas las etapas del trabajo. Puedes estar seguro de que tu sitio web estará listo y funcionará exactamente como se planeó.',
 		},
 
 		entites: {

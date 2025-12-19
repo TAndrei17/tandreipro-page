@@ -37,19 +37,19 @@ const en = {
 			mobile: 'Mobile Apps',
 			maintain: 'Project Support',
 
-			helpTitle: 'How I can help your business',
-			targetClientsTitle: 'Who my work is for',
-			tasksTitle: 'Tasks we will solve together',
-			whyWorkWithMeTitle: 'Why it is convenient to work with me',
+			helpTitle: 'How I Help',
+			targetClientsTitle: 'Who I Can Help',
+			tasksTitle: 'What We Can Solve Together',
+			whyWorkWithMeTitle: 'Why Choose Me',
 
 			webHelp:
-				'I will create a website tailored to your needs — landing page, business card site, or portfolio. It will become your online office: a place where clients get to know you, see your value, and easily get in touch.',
+				'I will create a website tailored to your goals: a landing page, a business card website, or a portfolio.\n\nThe site will become your online office — a place where clients can get to know you and contact you quickly.',
 			webClients:
-				'For individual entrepreneurs — teachers, bloggers, coaches, and sellers. Also for small and medium businesses that need a clear and neat website, easy to use and update, without unnecessary complexity and focused on results.',
+				"I collaborate with freelancers, individual entrepreneurs, and companies.\n\nIf you run a blog and want to gather your social media in one place — let's create a one-page website with your portfolio. Do you have a manicure salon and are looking for clients — a personal website will help you. Have you opened a window manufacturing factory — tell your clients about it on your company website.",
 			webTasks:
-				'I help you establish your presence online, organize information so clients quickly find the key points, showcase the value of your offer, and simplify the path for clients to contact you.',
+				'You run a business and want to establish your presence online. You need a service for client appointment booking or you plan to run a blog on your own platform — these tasks can be solved with a personal website.',
 			webWhyMe:
-				'I take responsibility for the project, explain solutions in simple terms, and stay in touch at every stage. You can be confident that your website will be ready and work as intended.',
+				'I take full responsibility for the project, explain decisions in simple terms, and am always available at every stage of the work. You can be sure that your website will be ready and function exactly as intended.',
 		},
 
 		entites: {
