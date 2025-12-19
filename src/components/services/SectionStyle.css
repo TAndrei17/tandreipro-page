@@ -59,12 +59,13 @@
 	margin-bottom: 0.6em;
 	color: #ffffff;
 	position: relative;
+	display: inline-block;
 }
 
 .service-header-2::after {
 	content: '';
 	display: block;
-	width: 35%;
+	width: 100%;
 	height: 4px;
 	background: #646cff;
 	border-radius: 2px;
