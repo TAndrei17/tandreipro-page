@@ -22,7 +22,7 @@
 	justify-content: center;
 
 	text-align: center;
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 500;
 
 	padding: 16px;
@@ -40,10 +40,12 @@
 	transition:
 		transform 0.3s ease,
 		box-shadow 0.3s ease,
-		background 0.3s ease;
+		background 0.3s ease,
+		font-size 0.3s ease;
 }
 
 .services-bookmark.active-bookmark {
+	font-size: 26px;
 	background: linear-gradient(135deg, rgba(255, 221, 87, 0.2), rgba(255, 255, 255, 0.08));
 	border-color: #ffdd57;
 	box-shadow:
