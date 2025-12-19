@@ -35,6 +35,12 @@ const createServiceList = (t: TFunction): Service[] => [
 		title: t('entites.shopSectionTitle'),
 		subtitle: t('entites.shopSectionSubtitle'),
 		description: t('entites.shopSectionDescription'),
+		article: {
+			help: t('services.shopHelp'),
+			clients: t('services.shopClients'),
+			tasks: t('services.shopTasks'),
+			me: t('services.shopWhyMe'),
+		},
 		icon: icons.onlineStore,
 	},
 

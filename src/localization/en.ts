@@ -50,6 +50,15 @@ const en = {
 				'You run a business and want to establish your presence online, you need a service for client appointment booking or you plan to run a blog on your own platform — these tasks can be solved with a personal website.',
 			webWhyMe:
 				'I take full responsibility for the project, explain decisions in simple terms, and am always available at every stage of the work. You can be sure that your website will be ready and function exactly as intended.',
+
+			shopHelp:
+				'I will create a functional website for an online store: prepare the design, set it up, and publish it online.\n\nI will help you launch an online store for selling products and services on a modern and user-friendly e-commerce platform.\n\nYou will get a store that is ready to use, easy to manage, and easy to scale.',
+			shopClients:
+				'I work with independent professionals, entrepreneurs, and businesses.\n\nIf you have a small business and want to sell products or services online, but a full launch seems too expensive, I will help you find a simple and affordable solution. I will create an online store that works and can grow without large upfront investments.',
+			shopTasks:
+				'Even the most user-friendly e-commerce platforms require time and technical knowledge: setup, layout, styling, and service integrations.\n\nI take care of this work so you can focus on your business and sales instead of technical details.',
+			shopWhyMe:
+				'I take full responsibility for the project, explain decisions in simple terms, and am always available at every stage of the work.',
 		},
 
 		entites: {

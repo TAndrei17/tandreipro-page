@@ -50,6 +50,15 @@ const es = {
 				'Tienes un negocio y quieres darte a conocer en Internet, necesitas un servicio para que los clientes puedan reservar citas o planeas mantener un blog en tu propia plataforma — estas tareas se pueden resolver con un sitio web personal.',
 			webWhyMe:
 				'Asumo toda la responsabilidad del proyecto, explico las decisiones de manera sencilla y estoy siempre disponible en todas las etapas del trabajo. Puedes estar seguro de que tu sitio web estará listo y funcionará exactamente como se planeó.',
+
+			shopHelp:
+				'Crearé un sitio web funcional para una tienda online: prepararé el diseño, lo configuraré y lo publicaré en internet.\n\nTe ayudaré a lanzar una tienda online para vender productos y servicios en una plataforma de e-commerce moderna y fácil de usar.\n\nObtendrás una tienda lista para funcionar, fácil de gestionar y de escalar.',
+			shopClients:
+				'Trabajo con profesionales independientes, autónomos y empresas.\n\nSi tienes un pequeño negocio y quieres vender productos o servicios en línea, pero un lanzamiento completo parece demasiado costoso, te ayudaré a encontrar una solución simple y accesible. Crearé una tienda online que funcione y pueda crecer sin grandes inversiones iniciales.',
+			shopTasks:
+				'Incluso las plataformas de e-commerce más fáciles de usar requieren tiempo y conocimientos técnicos: configuración, maquetación, estilos e integración de servicios.\n\nYo me encargo de este trabajo para que puedas centrarte en tu negocio y en las ventas, y no en los detalles técnicos.',
+			shopWhyMe:
+				'Asumo toda la responsabilidad del proyecto, explico las decisiones de manera sencilla y estoy siempre disponible en todas las etapas del trabajo.',
 		},
 
 		entites: {
