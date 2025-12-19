@@ -47,7 +47,7 @@ const es = {
 			webClients:
 				'Colaboro con profesionales independientes, autónomos y empresas.\n\nSi tienes un blog y quieres reunir tus redes sociales en un solo lugar — hagamos un sitio web de una sola página con tu portafolio. ¿Tienes un salón de manicura y buscas clientes? — un sitio web personal te ayudará. ¿Has abierto una fábrica de ventanas? — cuéntaselo a tus clientes en el sitio web de tu empresa.',
 			webTasks:
-				'Tienes un negocio y quieres darte a conocer en Internet. Necesitas un servicio para que los clientes puedan reservar citas o planeas mantener un blog en tu propia plataforma — estas tareas se pueden resolver con un sitio web personal.',
+				'Tienes un negocio y quieres darte a conocer en Internet, necesitas un servicio para que los clientes puedan reservar citas o planeas mantener un blog en tu propia plataforma — estas tareas se pueden resolver con un sitio web personal.',
 			webWhyMe:
 				'Asumo toda la responsabilidad del proyecto, explico las decisiones de manera sencilla y estoy siempre disponible en todas las etapas del trabajo. Puedes estar seguro de que tu sitio web estará listo y funcionará exactamente como se planeó.',
 		},

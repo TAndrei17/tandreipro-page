@@ -47,7 +47,7 @@ const en = {
 			webClients:
 				"I collaborate with freelancers, individual entrepreneurs, and companies.\n\nIf you run a blog and want to gather your social media in one place — let's create a one-page website with your portfolio. Do you have a manicure salon and are looking for clients — a personal website will help you. Have you opened a window manufacturing factory — tell your clients about it on your company website.",
 			webTasks:
-				'You run a business and want to establish your presence online. You need a service for client appointment booking or you plan to run a blog on your own platform — these tasks can be solved with a personal website.',
+				'You run a business and want to establish your presence online, you need a service for client appointment booking or you plan to run a blog on your own platform — these tasks can be solved with a personal website.',
 			webWhyMe:
 				'I take full responsibility for the project, explain decisions in simple terms, and am always available at every stage of the work. You can be sure that your website will be ready and function exactly as intended.',
 		},
