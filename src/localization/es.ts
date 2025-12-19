@@ -43,7 +43,7 @@ const es = {
 			whyWorkWithMeTitle: 'Por Qué Elegirme',
 
 			webHelp:
-				'Crearé un sitio web adaptado a tus objetivos: una landing page, un sitio web corporativo o un portafolio.\n\nEl sitio se convertirá en tu oficina online, un lugar donde los clientes podrán conocerte y ponerse en contacto contigo rápidamente.',
+				'Crearé un sitio web adaptado a tus objetivos: una landing page, un sitio web corporativo o un portafolio.\n\nEl sitio se convertirá en tu oficina online, un lugar donde los clientes podrán conocerte y ponerse en contacto contigo rápidamente.\n\nSitios web adaptativos — se ven igual de bien en ordenadores y teléfonos. Reduzca esta ventana y observe cómo funciona todo.',
 			webClients:
 				'Colaboro con profesionales independientes, autónomos y empresas.\n\nSi tienes un blog y quieres reunir tus redes sociales en un solo lugar — hagamos un sitio web de una sola página con tu portafolio. ¿Tienes un salón de manicura y buscas clientes? — un sitio web personal te ayudará. ¿Has abierto una fábrica de ventanas? — cuéntaselo a tus clientes en el sitio web de tu empresa.',
 			webTasks:

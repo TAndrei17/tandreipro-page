@@ -43,7 +43,7 @@ const en = {
 			whyWorkWithMeTitle: 'Why Choose Me',
 
 			webHelp:
-				'I will create a website tailored to your goals: a landing page, a business card website, or a portfolio.\n\nThe site will become your online office — a place where clients can get to know you and contact you quickly.',
+				'I will create a website tailored to your goals: a landing page, a business card website, or a portfolio.\n\nThe site will become your online office — a place where clients can get to know you and contact you quickly.\n\nResponsive websites — they look equally neat on both computers and phones. Resize this window and see how everything works.',
 			webClients:
 				"I collaborate with freelancers, individual entrepreneurs, and companies.\n\nIf you run a blog and want to gather your social media in one place — let's create a one-page website with your portfolio. Do you have a manicure salon and are looking for clients — a personal website will help you. Have you opened a window manufacturing factory — tell your clients about it on your company website.",
 			webTasks:
