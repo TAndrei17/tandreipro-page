@@ -59,6 +59,14 @@ const es = {
 				'Incluso las plataformas de e-commerce más fáciles de usar requieren tiempo y conocimientos técnicos: configuración, maquetación, estilos e integración de servicios.\n\nYo me encargo de este trabajo para que puedas centrarte en tu negocio y en las ventas, y no en los detalles técnicos.',
 			shopWhyMe:
 				'Asumo toda la responsabilidad del proyecto, explico las decisiones de manera sencilla y estoy siempre disponible en todas las etapas del trabajo.',
+
+			mobileHelp:
+				'Crearé una aplicación móvil para iOS y Android y la publicaré en App Store y Google Play.\n\nCon la aplicación, puedes: gestionar fácilmente a tu equipo y clientes; registrar el tiempo de trabajo y las tareas; recibir reservas y pedidos directamente desde el teléfono.\n\nTodas las funciones de tu negocio — en una sola aplicación conveniente.',
+			mobileClients:
+				'Trabajo con profesionales independientes, emprendedores y empresas. Si es necesario, puedo unirme a su equipo para crear la versión móvil de su servicio.\n\nUna aplicación móvil ayudará a su pequeña empresa a gestionar fácilmente al personal y las tareas — todo en un solo lugar.',
+			mobileTasks: '',
+			mobileWhyMe:
+				'Asumo toda la responsabilidad del proyecto, explico las decisiones de manera sencilla y estoy siempre disponible en todas las etapas del trabajo.',
 		},
 
 		entites: {

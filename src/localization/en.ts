@@ -59,6 +59,14 @@ const en = {
 				'Even the most user-friendly e-commerce platforms require time and technical knowledge: setup, layout, styling, and service integrations.\n\nI take care of this work so you can focus on your business and sales instead of technical details.',
 			shopWhyMe:
 				'I take full responsibility for the project, explain decisions in simple terms, and am always available at every stage of the work.',
+
+			mobileHelp:
+				'Create a mobile app for iOS and Android and publish it on the App Store and Google Play.\n\nWith the app, you can: easily manage your team and clients; track working hours and tasks; accept bookings and orders directly from a smartphone.\n\nAll your business functions — in one convenient app.',
+			mobileClients:
+				'I work with individual specialists, entrepreneurs, and companies. If needed, I can join your team to create a mobile version of your service.\n\nA mobile app will help your small company easily manage staff and tasks — all in one place.',
+			mobileTasks: '',
+			mobileWhyMe:
+				'I take full responsibility for the project, explain decisions in simple terms, and am always available at every stage of the work.',
 		},
 
 		entites: {
