@@ -49,6 +49,12 @@ const createServiceList = (t: TFunction): Service[] => [
 		title: t('entites.mobileSectionTitle'),
 		subtitle: t('entites.mobileSectionSubtitle'),
 		description: t('entites.mobileSectionDescription'),
+		article: {
+			help: t('services.mobileHelp'),
+			clients: t('services.mobileClients'),
+			tasks: t('services.mobileTasks'),
+			me: t('services.mobileWhyMe'),
+		},
 		icon: icons.smartphone,
 	},
 

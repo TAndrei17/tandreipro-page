@@ -20,7 +20,11 @@ const ServiceSection = ({
 	return (
 		<section className={'service-section'}>
 			<article className={'service-article'}>
-				<h2 className={'service-header-2'}>{t('services.helpTitle')}</h2>
+				{service.article?.help && service.article?.help.length > 0 ? (
+					<h2 className={'service-header-2'}>{t('services.helpTitle')}</h2>
+				) : (
+					<></>
+				)}
 				<div className="service-icon-container">
 					<img src={service.icon} className={'service-icon'} />
 					<p className={'service-info'}>{service.article?.help}</p>
@@ -28,13 +32,25 @@ const ServiceSection = ({
 
 				{children}
 
-				<h2 className={'service-header-2'}>{t('services.targetClientsTitle')}</h2>
+				{service.article?.clients && service.article?.clients.length > 0 ? (
+					<h2 className={'service-header-2'}>{t('services.targetClientsTitle')}</h2>
+				) : (
+					<></>
+				)}
 				<p className={'service-info'}>{service.article?.clients}</p>
 
-				<h2 className={'service-header-2'}>{t('services.tasksTitle')}</h2>
+				{service.article?.tasks && service.article?.tasks.length > 0 ? (
+					<h2 className={'service-header-2'}>{t('services.tasksTitle')}</h2>
+				) : (
+					<></>
+				)}
 				<p className={'service-info'}>{service.article?.tasks}</p>
 
-				<h2 className={'service-header-2'}>{t('services.whyWorkWithMeTitle')}</h2>
+				{service.article?.me && service.article?.me.length > 0 ? (
+					<h2 className={'service-header-2'}>{t('services.whyWorkWithMeTitle')}</h2>
+				) : (
+					<></>
+				)}
 				<p className={'service-info'}>{service.article?.me}</p>
 			</article>
 		</section>
