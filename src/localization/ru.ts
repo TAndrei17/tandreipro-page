@@ -85,7 +85,7 @@ const ru = {
 				'Фронтенд-разработчик с 3 годами опыта. Занимаюсь созданием и поддержкой веб- и мобильных приложений с использованием React, React Native, Expo и TypeScript.',
 			skillsTitle: 'Навыки',
 			projectsTitle: 'Личные проекты',
-			positionTitle: 'Предпочитаемые позиции',
+			positionTitle: 'Сотрудничество по найму',
 		},
 
 		entites: {

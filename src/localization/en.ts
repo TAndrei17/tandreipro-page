@@ -85,7 +85,7 @@ const en = {
 				'Frontend Developer with 3 years of experience. Developing and maintaining web and mobile applications using React, React Native, Expo and TypeScript.',
 			skillsTitle: '',
 			projectsTitle: '',
-			positionTitle: '',
+			positionTitle: 'Employment Collaboration',
 		},
 
 		entites: {

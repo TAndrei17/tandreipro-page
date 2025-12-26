@@ -85,7 +85,7 @@ const es = {
 				'Desarrollador Frontend con 3 años de experiencia. Desarrollo y mantenimiento de aplicaciones web y móviles utilizando React, React Native, Expo y TypeScript.',
 			skillsTitle: '',
 			projectsTitle: '',
-			positionTitle: '',
+			positionTitle: 'Colaboración en contratación',
 		},
 
 		entites: {
