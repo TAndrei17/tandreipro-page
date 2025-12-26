@@ -4,7 +4,7 @@ import './AboutMeStyle.css';
 
 const AboutMeSection = ({ data }: { data: Personal }) => {
 	return (
-		<div className="aboutMe-container">
+		<div className="aboutMe-container" style={data.id === 0 ? {} : { marginTop: 10 }}>
 			<img src={icons.checkPoint} className="checkPoint-icon" />
 			<div className="content-container">
 				<h2 className="aboutMe-title">{data.title}</h2>
