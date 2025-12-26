@@ -79,6 +79,15 @@ const en = {
 				'I take full responsibility for the project, explain decisions in simple terms, and am always available at every stage of the work.',
 		},
 
+		personal: {
+			summaryTitle: 'Professional Summary',
+			summaryDesc:
+				'Frontend Developer with 3 years of experience. Developing and maintaining web and mobile applications using React, React Native, Expo and TypeScript.',
+			skillsTitle: '',
+			projectsTitle: '',
+			positionTitle: '',
+		},
+
 		entites: {
 			webSectionSubtitle: 'Creating',
 			webSectionTitle: 'Websites',

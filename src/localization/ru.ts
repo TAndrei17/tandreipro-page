@@ -79,6 +79,15 @@ const ru = {
 				'Беру ответственность за проект, объясняю решения простым языком и всегда на связи на всех этапах работы.',
 		},
 
+		personal: {
+			summaryTitle: 'Профессиональное резюме',
+			summaryDesc:
+				'Фронтенд-разработчик с 3 годами опыта. Занимаюсь созданием и поддержкой веб- и мобильных приложений с использованием React, React Native, Expo и TypeScript.',
+			skillsTitle: 'Навыки',
+			projectsTitle: 'Личные проекты',
+			positionTitle: 'Предпочитаемые позиции',
+		},
+
 		entites: {
 			webSectionSubtitle: 'Создаю',
 			webSectionTitle: 'Сайты',

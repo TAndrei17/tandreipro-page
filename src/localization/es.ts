@@ -79,6 +79,15 @@ const es = {
 				'Asumo toda la responsabilidad del proyecto, explico las decisiones de manera sencilla y estoy siempre disponible en todas las etapas del trabajo.',
 		},
 
+		personal: {
+			summaryTitle: 'Resumen profesional',
+			summaryDesc:
+				'Desarrollador Frontend con 3 años de experiencia. Desarrollo y mantenimiento de aplicaciones web y móviles utilizando React, React Native, Expo y TypeScript.',
+			skillsTitle: '',
+			projectsTitle: '',
+			positionTitle: '',
+		},
+
 		entites: {
 			webSectionSubtitle: 'Creando',
 			webSectionTitle: 'Sitios web',
