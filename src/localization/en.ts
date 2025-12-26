@@ -64,8 +64,18 @@ const en = {
 				'Create a mobile app for iOS and Android and publish it on the App Store and Google Play.\n\nWith the app, you can: easily manage your team and clients; track working hours and tasks; accept bookings and orders directly from a smartphone.\n\nAll your business functions — in one convenient app.',
 			mobileClients:
 				'I work with individual specialists, entrepreneurs, and companies. If needed, I can join your team to create a mobile version of your service.\n\nA mobile app will help your small company easily manage staff and tasks — all in one place.',
-			mobileTasks: '',
+			mobileTasks:
+				'I help turn your idea into a convenient mobile app that solves business tasks and brings value.\n\nTogether, we will understand your project goals, look at your processes, and find the best solution for you. I take care of the analysis, design, and launch of the app so it helps your business grow and develop.',
 			mobileWhyMe:
+				'I take full responsibility for the project, explain decisions in simple terms, and am always available at every stage of the work.',
+
+			maintenanceHelp:
+				'I take care of the support and maintenance of your website or mobile app.\n\nLaunching a project is only the beginning. Like any home, a website or app needs care: fixing small issues, making updates, and improving how it looks or works. I make sure everything runs smoothly, stays up to date, and does not break over time.',
+			maintenanceClients:
+				'I help freelancers, entrepreneurs, and companies take care of their websites and apps.\n\nIf you already have a project, I will look at how it works and honestly tell you if I can take it on for support and further development.',
+			maintenanceTasks:
+				'We take care of your website or app together. I handle all the technical issues: fix errors, update features and design, and ensure security and stability. This way, you can focus on growing your business without worrying about technical problems.\n\nTogether, we analyze what works well and what can be improved so that your website or app remains user-friendly, up-to-date, and helps your business grow.',
+			maintenanceWhyMe:
 				'I take full responsibility for the project, explain decisions in simple terms, and am always available at every stage of the work.',
 		},
 

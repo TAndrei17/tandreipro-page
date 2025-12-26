@@ -64,8 +64,18 @@ const es = {
 				'Crearé una aplicación móvil para iOS y Android y la publicaré en App Store y Google Play.\n\nCon la aplicación, puedes: gestionar fácilmente a tu equipo y clientes; registrar el tiempo de trabajo y las tareas; recibir reservas y pedidos directamente desde el teléfono.\n\nTodas las funciones de tu negocio — en una sola aplicación conveniente.',
 			mobileClients:
 				'Trabajo con profesionales independientes, emprendedores y empresas. Si es necesario, puedo unirme a su equipo para crear la versión móvil de su servicio.\n\nUna aplicación móvil ayudará a su pequeña empresa a gestionar fácilmente al personal y las tareas — todo en un solo lugar.',
-			mobileTasks: '',
+			mobileTasks:
+				'Te ayudo a convertir tu idea en una aplicación móvil cómoda que resuelve las tareas del negocio y aporta valor.\n\nJuntos analizaremos los objetivos de tu proyecto, revisaremos los procesos y encontraremos la mejor solución para ti. Me encargo del análisis, el diseño y el lanzamiento de la aplicación para que ayude a tu negocio a crecer y desarrollarse.',
 			mobileWhyMe:
+				'Asumo toda la responsabilidad del proyecto, explico las decisiones de manera sencilla y estoy siempre disponible en todas las etapas del trabajo.',
+
+			maintenanceHelp:
+				'Me encargo del soporte y mantenimiento de tu sitio web o aplicación móvil.\n\nLanzar un proyecto es solo el comienzo. Como cualquier casa, un sitio web o una aplicación necesitan cuidado: corregir pequeños problemas, hacer actualizaciones y mejorar su aspecto o funcionamiento. Me aseguro de que todo funcione bien, se mantenga actualizado y no se rompa con el tiempo.',
+			maintenanceClients:
+				'Ayudo a profesionales independientes, emprendedores y empresas a cuidar sus sitios web y aplicaciones.\n\nSi ya tienes un proyecto, lo revisaré y te diré sinceramente si puedo encargarme de su soporte y desarrollo.',
+			maintenanceTasks:
+				'Nos ocupamos juntos de tu sitio web o aplicación. Me encargo de todos los asuntos técnicos: corrijo errores, actualizo funciones y diseño, y aseguro la seguridad y estabilidad. Así puedes centrarte en hacer crecer tu negocio sin preocuparte por problemas técnicos.\n\nJuntos analizamos lo que funciona bien y lo que se puede mejorar para que tu sitio web o aplicación siga siendo fácil de usar, moderno y ayude a que tu negocio crezca.',
+			maintenanceWhyMe:
 				'Asumo toda la responsabilidad del proyecto, explico las decisiones de manera sencilla y estoy siempre disponible en todas las etapas del trabajo.',
 		},
 
