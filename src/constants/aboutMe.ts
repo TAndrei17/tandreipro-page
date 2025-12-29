@@ -16,6 +16,7 @@ const createPersonalList = (t: TFunction): Personal[] => [
 	{ id: 1, title: t('personal.skillsTitle'), description: '' },
 	{ id: 2, title: t('personal.projectsTitle'), description: '' },
 	{ id: 3, title: t('personal.positionTitle'), description: '' },
+	{ id: 4, title: t('personal.teamTitle'), description: '' },
 ];
 
 export default createPersonalList;

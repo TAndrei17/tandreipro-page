@@ -86,6 +86,7 @@ const ru = {
 			skillsTitle: 'Навыки',
 			projectsTitle: 'Личные проекты',
 			positionTitle: 'Сотрудничество по найму',
+			teamTitle: 'Работа в команде',
 		},
 
 		entites: {

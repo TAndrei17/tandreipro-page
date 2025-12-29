@@ -1,4 +1,4 @@
-import AboutMeSection from '@components/aboutMe/aboutMeSection';
+import AboutMeSection from '@components/aboutMe/AboutMeSection';
 import createPersonalList from '@constants/aboutMe';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
 import { useEffect } from 'react';
