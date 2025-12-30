@@ -1,3 +1,5 @@
+import { summaryTextEs } from '@assets/articles/summary';
+
 const es = {
 	translation: {
 		browserTabs: {
@@ -81,9 +83,9 @@ const es = {
 
 		personal: {
 			summaryTitle: 'Resumen profesional',
-			summaryDesc:
-				'Desarrollador Frontend con 3 años de experiencia. Desarrollo y mantenimiento de aplicaciones web y móviles utilizando React, React Native, Expo y TypeScript.',
+			summaryDesc: summaryTextEs,
 			skillsTitle: 'Habilidades',
+			skillsDesc: '',
 			projectsTitle: 'Proyectos personales',
 			positionTitle: 'Colaboración en contratación',
 			teamTitle: 'Trabajo en equipo',

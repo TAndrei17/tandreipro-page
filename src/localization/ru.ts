@@ -1,3 +1,6 @@
+import skillsText from '@assets/articles/skills';
+import { summaryTextRu } from '@assets/articles/summary';
+
 const ru = {
 	translation: {
 		browserTabs: {
@@ -81,9 +84,9 @@ const ru = {
 
 		personal: {
 			summaryTitle: 'Профессиональное резюме',
-			summaryDesc:
-				'Фронтенд-разработчик с 3 годами опыта. Занимаюсь созданием и поддержкой веб- и мобильных приложений с использованием React, React Native, Expo и TypeScript.',
+			summaryDesc: summaryTextRu,
 			skillsTitle: 'Навыки',
+			skillsDesc: skillsText,
 			projectsTitle: 'Личные проекты',
 			positionTitle: 'Сотрудничество по найму',
 			teamTitle: 'Работа в команде',
