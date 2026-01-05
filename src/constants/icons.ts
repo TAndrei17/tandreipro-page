@@ -6,11 +6,7 @@ import smartphone from '@assets/icons/smartphone.png';
 import maintenance from '@assets/icons/maintenance.png';
 import checkPoint from '@assets/icons/check-point.png';
 
-smartphone;
-import pageLogo from '@assets/page-logo_40px.svg';
-
 const icons = {
-	pageLogo,
 	languages,
 	burgerMenu,
 	pageBrowser,
