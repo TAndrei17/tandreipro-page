@@ -5,14 +5,14 @@ import { useEffect } from 'react';
 import HomeSection from '@components/home/HomeSection';
 import useDeviceType from '@hooks/useDeviceType';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
-import createServiceList from '@constants/services';
+import getServiceList from '@constants/getServiceList';
 
 const HomePage = () => {
 	const { isMobile } = useDeviceType();
 	const { t, i18n } = useTranslation();
 	const language = i18n.language;
 	const { siteHeaderHeight } = useSiteHeaderHeight();
-	const services = createServiceList(t);
+	const services = getServiceList(t);
 
 	useEffect(() => {
 		document.title = t('browserTabs.browserTabDefault');

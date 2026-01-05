@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import './SectionStyle.css';
-import { type Service } from '@constants/services';
+import { type Service } from '@constants/getServiceList';
 
 const ServiceSection = ({
 	service,

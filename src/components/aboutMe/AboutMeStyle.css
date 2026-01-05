@@ -54,6 +54,23 @@
 	line-height: 1.6;
 }
 
+.icons-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.service-article-icon {
+	max-height: 150px;
+	max-width: 150px;
+}
+
+/* .aboutMe-description li {
+	margin-bottom: 6px;
+	line-height: 1.6;
+} */
+
 @media (max-width: 600px) {
 	.aboutMe-container {
 		flex-direction: column;

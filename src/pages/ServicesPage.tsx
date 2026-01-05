@@ -5,7 +5,7 @@ import './styles/ServicesPage.css';
 import { useActiveServiceBookmark, useSiteHeaderHeight } from '@context/SettingsContext';
 import useDeviceType from '@hooks/useDeviceType';
 import ServiceSection from '@components/services/ServiceSection';
-import createServiceList, { type Service } from '@constants/services';
+import getServiceList, { type Service } from '@constants/getServiceList';
 
 const ServicesPage = () => {
 	const { t, i18n } = useTranslation();
@@ -13,7 +13,7 @@ const ServicesPage = () => {
 	const { isMobile } = useDeviceType();
 	const { siteHeaderHeight } = useSiteHeaderHeight();
 	const { activeServiceBookmark, setActiveServiceBookmark } = useActiveServiceBookmark();
-	const services: Service[] = createServiceList(t);
+	const services: Service[] = getServiceList(t);
 
 	useEffect(() => {
 		document.title = t('browserTabs.browserTabServices');

@@ -6,6 +6,7 @@ import icons from '@constants/icons';
 import useDeviceType from '@hooks/useDeviceType';
 import { useLayoutEffect, useRef, useState } from 'react';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
+import logos from '@constants/logos';
 
 const Header = () => {
 	const { t } = useTranslation();
@@ -65,7 +66,7 @@ const Header = () => {
 					closeMenu();
 					e.currentTarget.blur();
 				}}>
-				<img src={icons.pageLogo} alt={t('appHeader.logoAlt')} />
+				<img src={logos.pageLogo} alt={t('appHeader.logoAlt')} />
 			</button>
 
 			{isMobile ? (
