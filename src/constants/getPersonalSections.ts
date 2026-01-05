@@ -7,7 +7,7 @@ export type Personal = {
 	list?: string[];
 };
 
-const createPersonalList = (t: TFunction): Personal[] => [
+const getPersonalSections = (t: TFunction): Personal[] => [
 	{
 		id: 0,
 		title: t('personal.summaryTitle'),
@@ -19,4 +19,4 @@ const createPersonalList = (t: TFunction): Personal[] => [
 	{ id: 4, title: t('personal.teamTitle'), description: '' },
 ];
 
-export default createPersonalList;
+export default getPersonalSections;

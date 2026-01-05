@@ -15,7 +15,7 @@ export type Service = {
 	icon?: string;
 };
 
-const createServiceList = (t: TFunction): Service[] => [
+const getServiceList = (t: TFunction): Service[] => [
 	{
 		id: 0,
 		title: t('entites.webSectionTitle'),
@@ -73,4 +73,4 @@ const createServiceList = (t: TFunction): Service[] => [
 	},
 ];
 
-export default createServiceList;
+export default getServiceList;
