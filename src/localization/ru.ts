@@ -1,4 +1,4 @@
-import skillsText from '@assets/articles/skills';
+import { skillsTextRu } from '@assets/articles/skills';
 import { summaryTextRu } from '@assets/articles/summary';
 
 const ru = {
@@ -86,7 +86,7 @@ const ru = {
 			summaryTitle: 'Профессиональное резюме',
 			summaryDesc: summaryTextRu,
 			skillsTitle: 'Навыки',
-			skillsDesc: skillsText,
+			skillsDesc: skillsTextRu,
 			projectsTitle: 'Личные проекты',
 			positionTitle: 'Сотрудничество по найму',
 			teamTitle: 'Работа в команде',

@@ -1,4 +1,5 @@
 import { summaryTextEs } from '@assets/articles/summary';
+import { skillsTextEs } from '@assets/articles/skills';
 
 const es = {
 	translation: {
@@ -85,7 +86,7 @@ const es = {
 			summaryTitle: 'Resumen profesional',
 			summaryDesc: summaryTextEs,
 			skillsTitle: 'Habilidades',
-			skillsDesc: '',
+			skillsDesc: skillsTextEs,
 			projectsTitle: 'Proyectos personales',
 			positionTitle: 'Colaboración en contratación',
 			teamTitle: 'Trabajo en equipo',

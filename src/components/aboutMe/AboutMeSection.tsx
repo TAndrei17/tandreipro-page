@@ -4,6 +4,10 @@ import './AboutMeStyle.css';
 import Markdown from 'react-markdown';
 
 const AboutMeSection = ({ data, children }: { data: Personal; children?: React.ReactNode }) => {
+	if (data.description.length < 1) {
+		return <></>;
+	}
+
 	return (
 		<div className="aboutMe-container" style={data.id === 0 ? {} : { marginTop: 10 }}>
 			<img src={icons.checkPoint} className="checkPoint-icon" />
