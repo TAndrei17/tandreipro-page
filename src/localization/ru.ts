@@ -1,3 +1,4 @@
+import { positionTextRu } from '@assets/articles/position';
 import { skillsTextRu } from '@assets/articles/skills';
 import { summaryTextRu } from '@assets/articles/summary';
 import { teamWorkTextRu } from '@assets/articles/team';
@@ -90,6 +91,7 @@ const ru = {
 			skillsDesc: skillsTextRu,
 			projectsTitle: 'Личные проекты',
 			positionTitle: 'Сотрудничество по найму',
+			positionDesc: positionTextRu,
 			teamTitle: 'Работа в команде',
 			teamDesc: teamWorkTextRu,
 		},
