@@ -1,5 +1,6 @@
 import { summaryTextEs } from '@assets/articles/summary';
 import { skillsTextEs } from '@assets/articles/skills';
+import { teamWorkTextEs } from '@assets/articles/team';
 
 const es = {
 	translation: {
@@ -90,6 +91,7 @@ const es = {
 			projectsTitle: 'Proyectos personales',
 			positionTitle: 'Colaboración en contratación',
 			teamTitle: 'Trabajo en equipo',
+			teamDesc: teamWorkTextEs,
 		},
 
 		entites: {

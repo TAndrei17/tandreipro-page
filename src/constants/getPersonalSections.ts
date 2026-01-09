@@ -16,7 +16,7 @@ const getPersonalSections = (t: TFunction): Personal[] => [
 	{ id: 1, title: t('personal.skillsTitle'), description: t('personal.skillsDesc') },
 	{ id: 2, title: t('personal.projectsTitle'), description: '' },
 	{ id: 3, title: t('personal.positionTitle'), description: '' },
-	{ id: 4, title: t('personal.teamTitle'), description: '' },
+	{ id: 4, title: t('personal.teamTitle'), description: t('personal.teamDesc') },
 ];
 
 export default getPersonalSections;
