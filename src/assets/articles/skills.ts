@@ -34,8 +34,7 @@ const skillsTextRu = `### Frontend-разработка
 ### Публикация приложений
 
 - Публикация и обновление мобильных приложений в Google Play
-- Работа с TestFlight и Transporter для iOS-приложений
-  `;
+- Работа с TestFlight и Transporter для iOS-приложений`;
 
 const skillsTextEn = `### Frontend Development
 
