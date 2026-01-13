@@ -20,7 +20,7 @@ const ServicesPage = () => {
 	}, [t, language]);
 
 	return (
-		<div style={{ paddingTop: siteHeaderHeight + (isMobile ? 20 : 30) }}>
+		<div style={{ paddingTop: siteHeaderHeight + (isMobile ? 10 : 5) }}>
 			<ServicesList bookmark={activeServiceBookmark} setBookmark={setActiveServiceBookmark} />
 
 			<main>
