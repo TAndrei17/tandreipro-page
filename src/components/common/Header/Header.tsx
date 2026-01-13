@@ -4,7 +4,7 @@ import './Header.css';
 import Languages from './Languages';
 import icons from '@constants/icons';
 import useDeviceType from '@hooks/useDeviceType';
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
 import logos from '@constants/logos';
 
@@ -38,6 +38,13 @@ const Header = () => {
 			window.removeEventListener('resize', updateHeaderHeight);
 		};
 	}, [menu, lngButtons, setSiteHeaderHeight]);
+
+	useEffect(() => {
+		if (menu === 'open') {
+			const timer = setTimeout(() => setMenu('closed'), 10000);
+			return () => clearTimeout(timer);
+		}
+	}, [menu]);
 
 	const navLinks = [
 		{ to: '/services', label: t('appHeader.services') },
