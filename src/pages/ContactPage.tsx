@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 const PHONE = import.meta.env.VITE_PHONE;
 const EMAIL = import.meta.env.VITE_EMAIL;
 const TELEGRAM = import.meta.env.VITE_TELEGRAM;
+const WHATSAPP = import.meta.env.VITE_WHATSAPP;
 const LINKEDIN = import.meta.env.VITE_LINKEDIN;
 
 const ContactPage = () => {
@@ -15,10 +16,10 @@ const ContactPage = () => {
 	useEffect(() => {
 		document.title = t('browserTabs.browserTabContact');
 	}, [t, language]);
+
 	return (
 		<div style={{ paddingTop: siteHeaderHeight + 10 }}>
-			<p>Со мной можно связаться в любое время удобным для вас способом...</p>
-			<p>Мой второй публичный телефон... (надо сделать)</p>
+			<p>{t('contact.contactDesc')}</p>
 			<p>
 				Телефон: <a href={`tel:${PHONE.replace(/\s+/g, '')}`}>{PHONE}</a>
 			</p>
@@ -29,6 +30,15 @@ const ContactPage = () => {
 				Telegram:{' '}
 				<a href={`https://t.me/${TELEGRAM}`} target="_blank" rel="noopener noreferrer">
 					@{TELEGRAM}
+				</a>
+			</p>
+			<p>
+				WhatsApp:{' '}
+				<a
+					href={`https://wa.me/${WHATSAPP.replace(/[^\d]/g, '')}`}
+					target="_blank"
+					rel="noopener noreferrer">
+					{WHATSAPP}
 				</a>
 			</p>
 			<p>
