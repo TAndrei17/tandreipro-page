@@ -2,6 +2,7 @@ import { summaryTextEs } from '@assets/articles/summary';
 import { skillsTextEs } from '@assets/articles/skills';
 import { teamWorkTextEs } from '@assets/articles/team';
 import { positionTextEs } from '@assets/articles/position';
+import { contactTextEs } from '@assets/articles/contact';
 
 const es = {
 	translation: {
@@ -94,6 +95,10 @@ const es = {
 			positionDesc: positionTextEs,
 			teamTitle: 'Trabajo en equipo',
 			teamDesc: teamWorkTextEs,
+		},
+
+		contact: {
+			contactDesc: contactTextEs,
 		},
 
 		entites: {

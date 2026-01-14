@@ -2,6 +2,7 @@ import { summaryTextEn } from '@assets/articles/summary';
 import { skillsTextEn } from '@assets/articles/skills';
 import { teamWorkTextEn } from '@assets/articles/team';
 import { positionTextEn } from '@assets/articles/position';
+import { contactTextEn } from '@assets/articles/contact';
 
 const en = {
 	translation: {
@@ -94,6 +95,10 @@ const en = {
 			positionDesc: positionTextEn,
 			teamTitle: 'Teamwork',
 			teamDesc: teamWorkTextEn,
+		},
+
+		contact: {
+			contactDesc: contactTextEn,
 		},
 
 		entites: {

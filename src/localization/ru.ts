@@ -1,3 +1,4 @@
+import { contactTextRu } from '@assets/articles/contact';
 import { positionTextRu } from '@assets/articles/position';
 import { skillsTextRu } from '@assets/articles/skills';
 import { summaryTextRu } from '@assets/articles/summary';
@@ -94,6 +95,10 @@ const ru = {
 			positionDesc: positionTextRu,
 			teamTitle: 'Работа в команде',
 			teamDesc: teamWorkTextRu,
+		},
+
+		contact: {
+			contactDesc: contactTextRu,
 		},
 
 		entites: {
