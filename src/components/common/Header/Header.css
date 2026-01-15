@@ -52,6 +52,8 @@
 	opacity: 0.92;
 	outline: 2px solid #646cff;
 	outline-offset: 2px;
+	border-radius: 2px;
+	padding: 2px 3px;
 }
 
 .header__nav,

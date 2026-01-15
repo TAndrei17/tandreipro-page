@@ -75,4 +75,6 @@
 .contact-row a:focus {
 	outline: 2px solid #0077ff;
 	outline-offset: 2px;
+	border-radius: 2px;
+	padding: 0 10px;
 }

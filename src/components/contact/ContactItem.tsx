@@ -19,7 +19,7 @@ const ContactItem = ({ label, value, type, logo, itemProp }: ContactItemProps) =
 					{type === 'telegram' || type === 'linkedIn' ? `@${value}` : value}
 				</a>
 				<span onClick={() => (window.location.href = createUrl(value, type))}>
-					<img src={logo} alt={label} className="contact-logo" />
+					<img src={logo} alt={label} title={label} className="contact-logo" />
 				</span>
 			</div>
 		</dd>
