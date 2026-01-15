@@ -25,47 +25,45 @@ const ContactPage = () => {
 			<main>
 				<section className={'service-section'}>
 					<div className={'service-article'}>
-						<p>{t('contact.contactDesc')}</p>
+						<p className={'contact-intro'}>{t('contact.contactIntro')}</p>
 
 						<address itemScope itemType="https://schema.org/Person">
-							<dl>
-								<dl>
-									<ContactItem
-										label="Телефон"
-										value={PHONE}
-										type="phone"
-										logo={logos.phoneLogo}
-										itemProp="telephone"
-									/>
-									<ContactItem
-										label="Email"
-										value={EMAIL}
-										type="email"
-										logo={logos.emailLogo}
-										itemProp="email"
-									/>
-									<ContactItem
-										label="Telegram"
-										value={TELEGRAM}
-										type="telegram"
-										logo={logos.telegramLogo}
-										itemProp="sameAs"
-									/>
-									<ContactItem
-										label="WhatsApp"
-										value={WHATSAPP}
-										type="whatsApp"
-										logo={logos.whatsAppLogo}
-										itemProp="sameAs"
-									/>
-									<ContactItem
-										label="LinkedIn"
-										value={LINKEDIN}
-										type="linkedIn"
-										logo={logos.linkedInLogo}
-										itemProp="sameAs"
-									/>
-								</dl>
+							<dl className={'contact-container'}>
+								<ContactItem
+									label={t('contact.phone')}
+									value={PHONE}
+									type="phone"
+									logo={logos.phoneLogo}
+									itemProp="telephone"
+								/>
+								<ContactItem
+									label={t('contact.whatsApp')}
+									value={WHATSAPP}
+									type="whatsApp"
+									logo={logos.whatsAppLogo}
+									itemProp="sameAs"
+								/>
+								<ContactItem
+									label={t('contact.telegram')}
+									value={TELEGRAM}
+									type="telegram"
+									logo={logos.telegramLogo}
+									itemProp="sameAs"
+								/>
+								<ContactItem
+									label={t('contact.email')}
+									value={EMAIL}
+									type="email"
+									logo={logos.emailLogo}
+									itemProp="email"
+								/>
+								<ContactItem
+									label={t('contact.linkedIn')}
+									value={LINKEDIN}
+									type="linkedIn"
+									logo={logos.linkedInLogo}
+									itemProp="sameAs"
+								/>
 							</dl>
 						</address>
 					</div>

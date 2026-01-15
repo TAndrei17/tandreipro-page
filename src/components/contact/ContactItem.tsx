@@ -12,11 +12,11 @@ type ContactItemProps = {
 
 const ContactItem = ({ label, value, type, logo, itemProp }: ContactItemProps) => (
 	<>
-		<dt>{label}</dt>
-		<dd>
+		<dt className={'contact-label'}>{label}</dt>
+		<dd className={'contact-data'}>
 			<div className="contact-row">
 				<a href={createUrl(value, type)} itemProp={itemProp}>
-					{type === 'telegram' ? `@${value}` : value}
+					{type === 'telegram' || type === 'linkedIn' ? `@${value}` : value}
 				</a>
 				<span onClick={() => (window.location.href = createUrl(value, type))}>
 					<img src={logo} alt={label} className="contact-logo" />

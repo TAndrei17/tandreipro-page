@@ -2,12 +2,77 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	gap: 20px;
+	gap: 16px;
 	width: 100%;
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.contact-row a {
+	font-size: 1.2rem;
+	color: aquamarine;
+	text-decoration: none;
+	transition:
+		transform 0.2s ease,
+		color 0.2s ease;
+}
+
+.contact-row a:hover,
+.contact-row a:focus {
+	color: #0077ff;
+	transform: scale(1.05);
+	outline: none;
 }
 
 .contact-logo {
 	width: 50px;
 	height: 50px;
 	cursor: pointer;
+	transition:
+		transform 0.2s ease,
+		filter 0.2s ease;
+	border-radius: 8px;
+}
+
+.contact-logo:hover,
+.contact-logo:focus {
+	transform: scale(1.15);
+	filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+	outline: none;
+}
+
+.contact-label {
+	font-size: 1rem;
+	font-weight: 500;
+	margin-bottom: 4px;
+}
+
+.contact-data {
+	margin: 0;
+}
+
+@media (max-width: 768px) {
+	.contact-row {
+		gap: 4px;
+	}
+
+	.contact-logo {
+		width: 40px;
+		height: 40px;
+	}
+
+	.contact-row a {
+		font-size: 0.95rem;
+	}
+
+	.contact-label {
+		font-size: 0.95rem;
+	}
+}
+
+.contact-logo:focus,
+.contact-row a:focus {
+	outline: 2px solid #0077ff;
+	outline-offset: 2px;
 }

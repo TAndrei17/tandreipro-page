@@ -9,10 +9,10 @@ const createUrl = (contact: string, type: ContactType): string => {
 
 	const urlMap: Record<ContactType, string> = {
 		phone: `tel:${sanitized}`,
-		whatsApp: `https://wa.me/${sanitized}`,
 		email: `mailto:${contact}`,
+		whatsApp: `https://wa.me/${sanitized}`,
 		telegram: `https://t.me/${contact}`,
-		linkedIn: contact,
+		linkedIn: `https://www.linkedin.com/in/${contact}`,
 	};
 
 	return urlMap[type] ?? '';
