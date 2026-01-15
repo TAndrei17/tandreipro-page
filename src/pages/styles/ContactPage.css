@@ -1,0 +1,13 @@
+dl {
+	display: grid;
+	grid-template-columns: max-content 1fr;
+	gap: 16px 32px;
+}
+
+dt {
+	font-weight: 600;
+}
+
+dd {
+	margin: 0;
+}

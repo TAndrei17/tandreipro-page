@@ -16,6 +16,7 @@ const AboutMePage = () => {
 	useEffect(() => {
 		document.title = t('browserTabs.browserTabAboutMe');
 	}, [t, language]);
+
 	return (
 		<div style={{ paddingTop: siteHeaderHeight + 10 }}>
 			<main>

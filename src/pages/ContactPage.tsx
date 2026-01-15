@@ -1,6 +1,9 @@
 import { useSiteHeaderHeight } from '@context/SettingsContext';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import './styles/ContactPage.css';
+import logos from '@constants/logos';
+import ContactItem from '@components/contact/ContactItem';
 
 const PHONE = import.meta.env.VITE_PHONE;
 const EMAIL = import.meta.env.VITE_EMAIL;
@@ -19,34 +22,55 @@ const ContactPage = () => {
 
 	return (
 		<div style={{ paddingTop: siteHeaderHeight + 10 }}>
-			<p>{t('contact.contactDesc')}</p>
-			<p>
-				Телефон: <a href={`tel:${PHONE.replace(/\s+/g, '')}`}>{PHONE}</a>
-			</p>
-			<p>
-				Email: <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
-			</p>
-			<p>
-				Telegram:{' '}
-				<a href={`https://t.me/${TELEGRAM}`} target="_blank" rel="noopener noreferrer">
-					@{TELEGRAM}
-				</a>
-			</p>
-			<p>
-				WhatsApp:{' '}
-				<a
-					href={`https://wa.me/${WHATSAPP.replace(/[^\d]/g, '')}`}
-					target="_blank"
-					rel="noopener noreferrer">
-					{WHATSAPP}
-				</a>
-			</p>
-			<p>
-				LinkedIn:{' '}
-				<a href={LINKEDIN} target="_blank" rel="noopener noreferrer">
-					{LINKEDIN}
-				</a>
-			</p>
+			<main>
+				<section className={'service-section'}>
+					<div className={'service-article'}>
+						<p>{t('contact.contactDesc')}</p>
+
+						<address itemScope itemType="https://schema.org/Person">
+							<dl>
+								<dl>
+									<ContactItem
+										label="Телефон"
+										value={PHONE}
+										type="phone"
+										logo={logos.phoneLogo}
+										itemProp="telephone"
+									/>
+									<ContactItem
+										label="Email"
+										value={EMAIL}
+										type="email"
+										logo={logos.emailLogo}
+										itemProp="email"
+									/>
+									<ContactItem
+										label="Telegram"
+										value={TELEGRAM}
+										type="telegram"
+										logo={logos.telegramLogo}
+										itemProp="sameAs"
+									/>
+									<ContactItem
+										label="WhatsApp"
+										value={WHATSAPP}
+										type="whatsApp"
+										logo={logos.whatsAppLogo}
+										itemProp="sameAs"
+									/>
+									<ContactItem
+										label="LinkedIn"
+										value={LINKEDIN}
+										type="linkedIn"
+										logo={logos.linkedInLogo}
+										itemProp="sameAs"
+									/>
+								</dl>
+							</dl>
+						</address>
+					</div>
+				</section>
+			</main>
 		</div>
 	);
 };
