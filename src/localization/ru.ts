@@ -98,7 +98,12 @@ const ru = {
 		},
 
 		contact: {
-			contactDesc: contactTextRu,
+			contactIntro: contactTextRu,
+			phone: 'Телефон',
+			whatsApp: 'WhatsApp',
+			telegram: 'Telegram',
+			email: 'Электронная почта',
+			linkedIn: 'LinkedIn',
 		},
 
 		entites: {

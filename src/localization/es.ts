@@ -98,7 +98,12 @@ const es = {
 		},
 
 		contact: {
-			contactDesc: contactTextEs,
+			contactIntro: contactTextEs,
+			phone: 'Teléfono',
+			whatsApp: 'WhatsApp',
+			telegram: 'Telegram',
+			email: 'Correo electrónico',
+			linkedIn: 'LinkedIn',
 		},
 
 		entites: {
