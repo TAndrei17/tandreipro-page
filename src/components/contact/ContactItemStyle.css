@@ -11,6 +11,7 @@
 
 .contact-row a {
 	font-size: 1.2rem;
+	font-style: normal;
 	color: aquamarine;
 	text-decoration: none;
 	transition:
@@ -44,6 +45,7 @@
 
 .contact-label {
 	font-size: 1rem;
+	font-style: normal;
 	font-weight: 500;
 	margin-bottom: 4px;
 }
