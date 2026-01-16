@@ -12,6 +12,7 @@ type SectionType = {
 	buttonText?: string;
 	image?: string;
 	reverse?: boolean;
+	style?: React.CSSProperties;
 };
 
 const HomeSection = ({
@@ -22,6 +23,7 @@ const HomeSection = ({
 	buttonText,
 	image,
 	reverse = false,
+	style,
 }: SectionType) => {
 	const { t } = useTranslation('translation', { keyPrefix: 'home' });
 	const navigate = useNavigate();
@@ -34,7 +36,7 @@ const HomeSection = ({
 	};
 
 	return (
-		<section className={`section ${reverse ? 'section-reverse' : ''}`}>
+		<section className={`section ${reverse ? 'section-reverse' : ''}`} style={style}>
 			<div className={reverse ? 'section-content-reverse' : 'section-content'}>
 				<h3 className="section-subtitle">{subtitle}</h3>
 				<h2

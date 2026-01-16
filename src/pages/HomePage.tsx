@@ -31,6 +31,7 @@ const HomePage = () => {
 							description={service.description}
 							image={service.image}
 							reverse={index % 2 !== 0 && !isMobile}
+							style={index > 0 ? { marginTop: 50 } : {}}
 						/>
 					);
 				})}
