@@ -1,5 +1,6 @@
 import { type TFunction } from 'i18next';
 import icons from './icons';
+import images from './images';
 
 export type Service = {
 	id: number;
@@ -13,6 +14,7 @@ export type Service = {
 		me: string;
 	};
 	icon?: string;
+	image?: string;
 };
 
 const getServiceList = (t: TFunction): Service[] => [
@@ -28,6 +30,7 @@ const getServiceList = (t: TFunction): Service[] => [
 			me: t('services.webWhyMe'),
 		},
 		icon: icons.pageBrowser,
+		image: images.webSite,
 	},
 
 	{
@@ -42,6 +45,7 @@ const getServiceList = (t: TFunction): Service[] => [
 			me: t('services.shopWhyMe'),
 		},
 		icon: icons.onlineStore,
+		image: images.shop,
 	},
 
 	{
@@ -56,6 +60,7 @@ const getServiceList = (t: TFunction): Service[] => [
 			me: t('services.mobileWhyMe'),
 		},
 		icon: icons.smartphone,
+		image: images.apps,
 	},
 
 	{
@@ -70,6 +75,7 @@ const getServiceList = (t: TFunction): Service[] => [
 			me: t('services.maintenanceWhyMe'),
 		},
 		icon: icons.maintenance,
+		image: images.code,
 	},
 ];
 

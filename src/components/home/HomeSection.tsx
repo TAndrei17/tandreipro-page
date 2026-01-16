@@ -10,7 +10,7 @@ type SectionType = {
 	subtitle: string;
 	description: string;
 	buttonText?: string;
-	image?: React.ReactNode;
+	image?: string;
 	reverse?: boolean;
 };
 
@@ -55,7 +55,7 @@ const HomeSection = ({
 			</div>
 
 			<div className="section-image-wrapper">
-				<div className="section-image-placeholder">{image}</div>
+				<img src={image} className="section-image" />
 			</div>
 		</section>
 	);
