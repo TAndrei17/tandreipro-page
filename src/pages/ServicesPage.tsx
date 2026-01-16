@@ -20,15 +20,21 @@ const ServicesPage = () => {
 	}, [t, language]);
 
 	return (
-		<div style={{ paddingTop: siteHeaderHeight + (isMobile ? 10 : 5) }}>
-			<ServicesList bookmark={activeServiceBookmark} setBookmark={setActiveServiceBookmark} />
-
+		<div style={{ paddingTop: siteHeaderHeight + (isMobile ? 5 : 0) }}>
 			<main>
-				{services.map((service) => {
-					return (
-						<ServiceSection key={service.id} service={service} bookmark={activeServiceBookmark} />
-					);
-				})}
+				<section className={'page-header'}>
+					<h1>{t('appHeader.services')}</h1>
+				</section>
+
+				<ServicesList bookmark={activeServiceBookmark} setBookmark={setActiveServiceBookmark} />
+
+				<section className={'page-section'}>
+					{services.map((service) => {
+						return (
+							<ServiceSection key={service.id} service={service} bookmark={activeServiceBookmark} />
+						);
+					})}
+				</section>
 			</main>
 		</div>
 	);

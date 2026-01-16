@@ -5,6 +5,7 @@ import getTechStackIcons from '@constants/getTechStackIcons';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import './styles/CommonStyles.css';
 
 const AboutMePage = () => {
 	const { t, i18n } = useTranslation();
@@ -18,9 +19,13 @@ const AboutMePage = () => {
 	}, [t, language]);
 
 	return (
-		<div style={{ paddingTop: siteHeaderHeight + 10 }}>
+		<div style={{ paddingTop: siteHeaderHeight }}>
 			<main>
-				<section className={'service-section'}>
+				<section className={'page-header'}>
+					<h1>{t('appHeader.aboutMe')}</h1>
+				</section>
+
+				<section className={'page-section'}>
 					<article className={'service-article'}>
 						{personalDataList.map((item) => {
 							if (item.title === t('personal.summaryTitle')) {

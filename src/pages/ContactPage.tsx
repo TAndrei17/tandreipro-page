@@ -21,9 +21,13 @@ const ContactPage = () => {
 	}, [t, language]);
 
 	return (
-		<div style={{ paddingTop: siteHeaderHeight + 10 }}>
+		<div style={{ paddingTop: siteHeaderHeight }}>
 			<main>
-				<section className={'service-section'}>
+				<section className="page-header">
+					<h1>{t('appHeader.contact')}</h1>
+				</section>
+
+				<section className={'page-section'}>
 					<div className={'service-article'}>
 						<p className={'contact-intro'}>{t('contact.contactIntro')}</p>
 
