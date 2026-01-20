@@ -10,6 +10,10 @@ import emailLogo from '@assets/logos/email-logo.png';
 import whatsAppLogo from '@assets/logos/whatsApp-logo.png';
 import telegramLogo from '@assets/logos/telegram-logo.png';
 import linkedInLogo from '@assets/logos/linkedIn-logo.png';
+import gitLogo from '@assets/logos/git-logo.png';
+import gitHubLogo from '@assets/logos/gitHub-logo.png';
+import eslintLogo from '@assets/logos/eslint-logo.svg';
+import prettierLogo from '@assets/logos/prettier-logo.svg';
 
 const logos = {
 	pageLogo,
@@ -24,6 +28,10 @@ const logos = {
 	whatsAppLogo,
 	telegramLogo,
 	linkedInLogo,
+	gitLogo,
+	gitHubLogo,
+	eslintLogo,
+	prettierLogo,
 };
 
 export default logos;

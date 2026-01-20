@@ -29,11 +29,6 @@ const getTechStackIcons = (): StackIcon[] => {
 			title: 'React-logo',
 			logo: logos.reactLogo,
 		},
-		{
-			id: 5,
-			title: 'Expo-logo',
-			logo: logos.expoLogo,
-		},
 	];
 };
 
