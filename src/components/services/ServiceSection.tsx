@@ -43,7 +43,12 @@ const ServiceSection = ({
 			) : (
 				<></>
 			)}
-			<p className={'service-info'}>{service.article?.tasks}</p>
+			<div className="service-icon-container image-block">
+				<p className="service-info">{service.article?.tasks}</p>
+				<div className="service-image-wrapper">
+					<img src={service.image} className="service-image" />
+				</div>
+			</div>
 
 			{service.article?.me && service.article?.me.length > 0 ? (
 				<h2 className={'service-header-2'}>{t('services.whyWorkWithMeTitle')}</h2>

@@ -6,13 +6,15 @@ import { useSiteHeaderHeight } from '@context/SettingsContext';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/CommonStyles.css';
+import getToolIcons from '@constants/getToolIcons';
 
 const AboutMePage = () => {
 	const { t, i18n } = useTranslation();
 	const language = i18n.language;
 	const { siteHeaderHeight } = useSiteHeaderHeight();
 	const personalDataList = getPersonalSections(t);
-	const iconsList = getTechStackIcons();
+	const techStackIconList = getTechStackIcons();
+	const toolsIconsList = getToolIcons();
 
 	useEffect(() => {
 		document.title = t('browserTabs.browserTabAboutMe');
@@ -31,7 +33,15 @@ const AboutMePage = () => {
 							if (item.title === t('personal.summaryTitle')) {
 								return (
 									<AboutMeSection key={item.id} data={item}>
-										<IconsList icons={iconsList} />
+										<IconsList icons={techStackIconList} />
+									</AboutMeSection>
+								);
+							}
+
+							if (item.title === t('personal.skillsTitle')) {
+								return (
+									<AboutMeSection key={item.id} data={item}>
+										<IconsList icons={toolsIconsList} />
 									</AboutMeSection>
 								);
 							}
