@@ -28,7 +28,7 @@ const skillsTextRu = `### Frontend-разработка
 
 ### DevOps и деплой
 
-- Деплой и поддержка приложений на платформе Railway
+- Деплой и поддержка приложений на платформах Cloudflare, Railway, GitHub, Expo и пр.
 - Настройка API-прокси и взаимодействие с внешними сервисами
 
 ### Публикация приложений
@@ -66,7 +66,7 @@ const skillsTextEn = `### Frontend Development
 
 ### DevOps and Deployment
 
-- Deployment and maintenance of applications on the Railway platform
+- Deployment and maintenance of applications on platforms like Cloudflare, Railway, GitHub, Expo, etc.
 - API proxy configuration and integration with external services
 
 ### Application Publishing
@@ -105,7 +105,7 @@ const skillsTextEs = `### Desarrollo Frontend
 
 ### DevOps y Despliegue
 
-- Despliegue y mantenimiento de aplicaciones en la plataforma Railway
+- Despliegue y mantenimiento de aplicaciones en plataformas como Cloudflare, Railway, GitHub, Expo, etc.
 - Configuración de proxies de API e integración con servicios externos
 
 ### Publicación de Aplicaciones

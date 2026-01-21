@@ -55,7 +55,7 @@ const es = {
 			webTasks:
 				'Tienes un negocio y quieres darte a conocer en Internet, necesitas un servicio para que los clientes puedan reservar citas o planeas mantener un blog en tu propia plataforma — estas tareas se pueden resolver con un sitio web personal.',
 			webWhyMe:
-				'Asumo toda la responsabilidad del proyecto, explico las decisiones de manera sencilla y estoy siempre disponible en todas las etapas del trabajo. Puedes estar seguro de que tu sitio web estará listo y funcionará exactamente como se planeó.',
+				'Asumo la responsabilidad total del proyecto, explico las decisiones en términos sencillos y estoy en contacto en todas las etapas del trabajo. Puede estar seguro de que su sitio web estará listo y funcionará tal como se planeó. Mis precios son accesibles, y no solo crearé su sitio web, sino que también lo publicaré en internet. Estoy dispuesto a tener en cuenta sus preferencias de diseño y prestar atención a sus necesidades.',
 
 			shopHelp:
 				'Crearé un sitio web funcional para una tienda online: prepararé el diseño, lo configuraré y lo publicaré en internet.\n\nTe ayudaré a lanzar una tienda online para vender productos y servicios en una plataforma de e-commerce moderna y fácil de usar.\n\nObtendrás una tienda lista para funcionar, fácil de gestionar y de escalar.',
@@ -64,7 +64,7 @@ const es = {
 			shopTasks:
 				'Incluso las plataformas de e-commerce más fáciles de usar requieren tiempo y conocimientos técnicos: configuración, maquetación, estilos e integración de servicios.\n\nYo me encargo de este trabajo para que puedas centrarte en tu negocio y en las ventas, y no en los detalles técnicos.',
 			shopWhyMe:
-				'Asumo toda la responsabilidad del proyecto, explico las decisiones de manera sencilla y estoy siempre disponible en todas las etapas del trabajo.',
+				'Asumo la responsabilidad total del proyecto, explico las decisiones en términos sencillos y estoy en contacto en todas las etapas del trabajo. Mis precios son accesibles y los plazos de desarrollo son rápidos. Puede estar seguro de que su tienda online estará lista y funcionará tal como se planeó.',
 
 			mobileHelp:
 				'Crearé una aplicación móvil para iOS y Android y la publicaré en App Store y Google Play.\n\nCon la aplicación, puedes: gestionar fácilmente a tu equipo y clientes; registrar el tiempo de trabajo y las tareas; recibir reservas y pedidos directamente desde el teléfono.\n\nTodas las funciones de tu negocio — en una sola aplicación conveniente.',
@@ -73,7 +73,7 @@ const es = {
 			mobileTasks:
 				'Te ayudo a convertir tu idea en una aplicación móvil cómoda que resuelve las tareas del negocio y aporta valor.\n\nJuntos analizaremos los objetivos de tu proyecto, revisaremos los procesos y encontraremos la mejor solución para ti. Me encargo del análisis, el diseño y el lanzamiento de la aplicación para que ayude a tu negocio a crecer y desarrollarse.',
 			mobileWhyMe:
-				'Asumo toda la responsabilidad del proyecto, explico las decisiones de manera sencilla y estoy siempre disponible en todas las etapas del trabajo.',
+				'Asumo la responsabilidad total del proyecto, explico las decisiones en términos sencillos y estoy en contacto en todas las etapas del trabajo. Puede estar seguro de que su aplicación móvil estará lista y funcionará tal como se planeó. Mis precios son accesibles, y no solo desarrollaré la aplicación, sino que también la publicaré en internet. Estoy dispuesto a tener en cuenta sus preferencias de diseño y prestar atención a sus necesidades.',
 
 			maintenanceHelp:
 				'Me encargo del soporte y mantenimiento de tu sitio web o aplicación móvil.\n\nLanzar un proyecto es solo el comienzo. Como cualquier casa, un sitio web o una aplicación necesitan cuidado: corregir pequeños problemas, hacer actualizaciones y mejorar su aspecto o funcionamiento. Me aseguro de que todo funcione bien, se mantenga actualizado y no se rompa con el tiempo.',

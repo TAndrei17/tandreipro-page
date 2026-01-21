@@ -55,7 +55,7 @@ const en = {
 			webTasks:
 				'You run a business and want to establish your presence online, you need a service for client appointment booking or you plan to run a blog on your own platform — these tasks can be solved with a personal website.',
 			webWhyMe:
-				'I take full responsibility for the project, explain decisions in simple terms, and am always available at every stage of the work. You can be sure that your website will be ready and function exactly as intended.',
+				'I take full responsibility for the project, explain decisions in simple terms, and stay in touch at every stage of the work. You can be sure your website will be ready and function exactly as intended. My prices are affordable, and I will not only build your website but also deploy it online. I am ready to consider your design preferences and pay close attention to your needs.',
 
 			shopHelp:
 				'I will create a functional website for an online store: prepare the design, set it up, and publish it online.\n\nI will help you launch an online store for selling products and services on a modern and user-friendly e-commerce platform.\n\nYou will get a store that is ready to use, easy to manage, and easy to scale.',
@@ -64,7 +64,7 @@ const en = {
 			shopTasks:
 				'Even the most user-friendly e-commerce platforms require time and technical knowledge: setup, layout, styling, and service integrations.\n\nI take care of this work so you can focus on your business and sales instead of technical details.',
 			shopWhyMe:
-				'I take full responsibility for the project, explain decisions in simple terms, and am always available at every stage of the work.',
+				'I take full responsibility for the project, explain decisions in simple terms, and stay in touch at every stage of the work. My prices are affordable, and the development timeline is fast. You can be sure your online store will be ready and will function exactly as intended.',
 
 			mobileHelp:
 				'Create a mobile app for iOS and Android and publish it on the App Store and Google Play.\n\nWith the app, you can: easily manage your team and clients; track working hours and tasks; accept bookings and orders directly from a smartphone.\n\nAll your business functions — in one convenient app.',
@@ -73,7 +73,7 @@ const en = {
 			mobileTasks:
 				'I help turn your idea into a convenient mobile app that solves business tasks and brings value.\n\nTogether, we will understand your project goals, look at your processes, and find the best solution for you. I take care of the analysis, design, and launch of the app so it helps your business grow and develop.',
 			mobileWhyMe:
-				'I take full responsibility for the project, explain decisions in simple terms, and am always available at every stage of the work.',
+				'I take full responsibility for the project, explain decisions in simple terms, and stay in touch at every stage of the work. You can be sure your mobile app will be ready and function exactly as intended. My prices are affordable, and I will not only develop the app but also deploy it online. I am ready to consider your design preferences and pay close attention to your needs.',
 
 			maintenanceHelp:
 				'I take care of the support and maintenance of your website or mobile app.\n\nLaunching a project is only the beginning. Like any home, a website or app needs care: fixing small issues, making updates, and improving how it looks or works. I make sure everything runs smoothly, stays up to date, and does not break over time.',
