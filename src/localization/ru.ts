@@ -104,7 +104,7 @@ const ru = {
 			phone: 'Телефон',
 			whatsApp: 'WhatsApp',
 			telegram: 'Telegram',
-			email: 'Электронная почта',
+			email: 'Электронная\nпочта',
 			linkedIn: 'LinkedIn',
 		},
 

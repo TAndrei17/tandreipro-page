@@ -117,4 +117,24 @@
 		justify-content: flex-start;
 		width: 100%;
 	}
+
+	.section-title {
+		line-height: 1.2;
+
+		/* защита от скролла */
+		font-size: clamp(36px, 8vw, 96px);
+		max-width: 100%;
+		overflow-wrap: break-word;
+		word-break: break-word;
+	}
+
+	.section-content,
+	.section-content-reverse {
+		max-width: 100%;
+	}
+
+	.section-desc {
+		margin-top: 20px;
+		max-width: 100%;
+	}
 }

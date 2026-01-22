@@ -36,11 +36,18 @@
 	border-radius: 8px;
 }
 
-.contact-logo:hover,
+.contact-logo:hover {
+	transform: scale(1.15);
+	filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
 .contact-logo:focus {
 	transform: scale(1.15);
 	filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
-	outline: none;
+	outline: 2px solid #0077ff;
+	outline-offset: 2px;
+	border-radius: 2px;
+	padding: 0 10px;
 }
 
 .contact-label {
@@ -52,6 +59,7 @@
 
 .contact-data {
 	margin: 0;
+	margin-inline-start: 0;
 }
 
 @media (max-width: 768px) {
@@ -69,14 +77,7 @@
 	}
 
 	.contact-label {
+		white-space: pre-line;
 		font-size: 0.95rem;
 	}
-}
-
-.contact-logo:focus,
-.contact-row a:focus {
-	outline: 2px solid #0077ff;
-	outline-offset: 2px;
-	border-radius: 2px;
-	padding: 0 10px;
 }
