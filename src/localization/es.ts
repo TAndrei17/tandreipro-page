@@ -104,7 +104,7 @@ const es = {
 			phone: 'Teléfono',
 			whatsApp: 'WhatsApp',
 			telegram: 'Telegram',
-			email: 'Correo electrónico',
+			email: 'Correo\nelectrónico',
 			linkedIn: 'LinkedIn',
 		},
 
