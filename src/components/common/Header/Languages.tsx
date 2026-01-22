@@ -49,11 +49,11 @@ const Languages = ({
 				/>
 			) : (
 				<div className={isMobile ? 'languages__buttons_mobile' : 'languages__buttons'} role="menu">
-					<button className="lang__button" role="menuitem" onClick={() => changeLanguage('en')}>
-						{t('appHeader.en')}
-					</button>
 					<button className="lang__button" role="menuitem" onClick={() => changeLanguage('es')}>
 						{t('appHeader.es')}
+					</button>
+					<button className="lang__button" role="menuitem" onClick={() => changeLanguage('en')}>
+						{t('appHeader.en')}
 					</button>
 					<button className="lang__button" role="menuitem" onClick={() => changeLanguage('ru')}>
 						{t('appHeader.ru')}
