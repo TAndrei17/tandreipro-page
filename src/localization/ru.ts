@@ -1,4 +1,5 @@
 import { contactTextRu } from '@assets/articles/contact';
+import { legalTextRu } from '@assets/articles/legal';
 import { positionTextRu } from '@assets/articles/position';
 import { skillsTextRu } from '@assets/articles/skills';
 import { summaryTextRu } from '@assets/articles/summary';
@@ -12,6 +13,7 @@ const ru = {
 			browserTabServices: 'Андрей Трунькин | Услуги',
 			browserTabAboutMe: 'Андрей Трунькин | Обо мне',
 			browserTabContact: 'Андрей Трунькин | Контакты',
+			browserTabLegal: 'Андрей Трунькин | Правовая информация',
 		},
 
 		pageNotFoundDescription: 'Страница, которую вы ищете, не существует или перемещена',
@@ -104,6 +106,11 @@ const ru = {
 			telegram: 'Telegram',
 			email: 'Электронная почта',
 			linkedIn: 'LinkedIn',
+		},
+
+		legal: {
+			title: 'Правовая информация',
+			terms: legalTextRu,
 		},
 
 		entites: {

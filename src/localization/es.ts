@@ -3,6 +3,7 @@ import { skillsTextEs } from '@assets/articles/skills';
 import { teamWorkTextEs } from '@assets/articles/team';
 import { positionTextEs } from '@assets/articles/position';
 import { contactTextEs } from '@assets/articles/contact';
+import { legalTextEs } from '@assets/articles/legal';
 
 const es = {
 	translation: {
@@ -12,6 +13,7 @@ const es = {
 			browserTabServices: 'Andrei Trunkin | Servicios',
 			browserTabAboutMe: 'Andrei Trunkin | Sobre mí',
 			browserTabContact: 'Andrei Trunkin | Contacto',
+			browserTabLegal: 'Andrei Trunkin | Aviso Legal',
 		},
 
 		pageNotFoundDescription: 'La página que buscas no existe o ha sido movida',
@@ -104,6 +106,11 @@ const es = {
 			telegram: 'Telegram',
 			email: 'Correo electrónico',
 			linkedIn: 'LinkedIn',
+		},
+
+		legal: {
+			title: 'Aviso Legal y Política de Privacidad',
+			terms: legalTextEs,
 		},
 
 		entites: {
