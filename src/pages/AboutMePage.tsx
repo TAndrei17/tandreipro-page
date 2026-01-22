@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/CommonStyles.css';
 import getToolIcons from '@constants/getToolIcons';
+import { Link } from 'react-router';
 
 const AboutMePage = () => {
 	const { t, i18n } = useTranslation();
@@ -51,6 +52,10 @@ const AboutMePage = () => {
 					</article>
 				</section>
 			</main>
+
+			<div className="legal-micro-link">
+				<Link to="/legal">{t('legal.title')}</Link>
+			</div>
 		</div>
 	);
 };

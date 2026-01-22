@@ -6,6 +6,7 @@ import { useActiveServiceBookmark, useSiteHeaderHeight } from '@context/Settings
 import useDeviceType from '@hooks/useDeviceType';
 import ServiceSection from '@components/services/ServiceSection';
 import getServiceList, { type Service } from '@constants/getServiceList';
+import { Link } from 'react-router';
 
 const ServicesPage = () => {
 	const { t, i18n } = useTranslation();
@@ -36,6 +37,10 @@ const ServicesPage = () => {
 					})}
 				</section>
 			</main>
+
+			<div className="legal-micro-link">
+				<Link to="/legal">{t('legal.title')}</Link>
+			</div>
 		</div>
 	);
 };

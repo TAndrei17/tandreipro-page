@@ -1,11 +1,10 @@
 import { useTranslation } from 'react-i18next';
-
-import './styles/HomePage.css';
 import { useEffect } from 'react';
 import HomeSection from '@components/home/HomeSection';
 import useDeviceType from '@hooks/useDeviceType';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
 import getServiceList from '@constants/getServiceList';
+import { Link } from 'react-router';
 
 const HomePage = () => {
 	const { isMobile } = useDeviceType();
@@ -36,6 +35,10 @@ const HomePage = () => {
 					);
 				})}
 			</main>
+
+			<div className="legal-micro-link">
+				<Link to="/legal">{t('legal.title')}</Link>
+			</div>
 		</div>
 	);
 };
