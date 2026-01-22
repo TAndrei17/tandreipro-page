@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next';
 import './styles/ContactPage.css';
 import logos from '@constants/logos';
 import ContactItem from '@components/contact/ContactItem';
+import { Link } from 'react-router';
+import images from '@constants/images';
 
 const PHONE = import.meta.env.VITE_PHONE;
 const EMAIL = import.meta.env.VITE_EMAIL;
@@ -29,7 +31,10 @@ const ContactPage = () => {
 
 				<section className={'page-section'}>
 					<div className={'service-article'}>
-						<p className={'contact-intro'}>{t('contact.contactIntro')}</p>
+						<div className="contact-intro-container">
+							<img src={images.tandrei} alt="Tandrei" className={'contact-image'} />
+							<p className={'contact-intro'}>{t('contact.contactIntro')}</p>
+						</div>
 
 						<address itemScope itemType="https://schema.org/Person">
 							<dl className={'contact-container'}>
@@ -73,6 +78,10 @@ const ContactPage = () => {
 					</div>
 				</section>
 			</main>
+
+			<div className="legal-micro-link">
+				<Link to="/legal">{t('legal.title')}</Link>
+			</div>
 		</div>
 	);
 };
