@@ -4,7 +4,7 @@ const legalTextEn = `
 This website is owned by:
 
 - **Name:** Andrei Trunkin  
-- **Email:** tandreipro@outlook.com  
+- **Email:** [tandreipro@outlook.com](mailto:tandreipro@outlook.com)
 - **Place of activity:** Spain  
 
 ## Purpose
@@ -84,7 +84,7 @@ const legalTextEs = `
 Este sitio web es titularidad de:
 
 - **Nombre:** Andrei Trunkin  
-- **Email de contacto:** tandreipro@outlook.com  
+- **Email:** [tandreipro@outlook.com](mailto:tandreipro@outlook.com)  
 - **Lugar de actividad:** España  
 
 ## Objeto
@@ -164,7 +164,7 @@ const legalTextRu = `
 Данный сайт является собственностью:
 
 - **Имя:** Андрей Трунькин  
-- **Электронная почта:** tandreipro@outlook.com  
+- **Email:** [tandreipro@outlook.com](mailto:tandreipro@outlook.com)  
 - **Место деятельности:** Испания  
 
 ## Цель
