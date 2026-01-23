@@ -20,13 +20,6 @@
 	z-index: 1000;
 }
 
-@media (max-width: 768px) {
-	.header__container {
-		padding: 20px;
-		max-height: 160px;
-	}
-}
-
 .header__logo {
 	all: unset;
 	display: inline-flex;
@@ -59,8 +52,8 @@
 .header__nav,
 .header__nav_mobile {
 	display: flex;
-	flex: 1;
 	align-items: center;
+	flex: 1;
 }
 
 .header__nav {
@@ -69,8 +62,12 @@
 
 .header__nav_mobile {
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: flex-end;
 	justify-content: center;
+
+	opacity: 0;
+	transform: translateY(30px);
+	animation: fadeInUp 0.8s ease-out forwards 0.2s;
 }
 
 .header__nav a,
@@ -125,28 +122,37 @@
 	height: 30px;
 	filter: brightness(0) invert(1);
 	cursor: pointer;
-	transition:
-		transform 0.25s ease,
-		filter 0.25s ease;
+
+	opacity: 0;
+	transform: translateX(20px);
+	animation: fadeInLeft 0.8s ease-out forwards 0.2s;
+
+	transition: filter 0.25s ease;
 }
 
 .languages__icon:hover,
 .languages__icon:focus {
-	transform: scale(1.2);
 	filter: brightness(0.9) invert(0.8);
 	outline: none;
 }
 
-.languages__buttons,
-.languages__buttons_mobile {
+.languages__buttons {
 	display: flex;
 	gap: 5px;
+	opacity: 0;
+	transform: translateX(30px);
+	animation: fadeInLeft 0.8s ease-out forwards 0.2s;
 }
 
 .languages__buttons_mobile {
+	display: flex;
 	flex-direction: column;
+	align-items: center;
 	justify-content: space-between;
 	gap: 10px;
+	opacity: 0;
+	transform: translateY(30px);
+	animation: fadeInUp 0.8s ease-out forwards 0.2s;
 }
 
 .lang__button {
@@ -171,4 +177,37 @@
 	color: #ffdd57;
 	transform: translateY(-2px);
 	outline: none;
+}
+
+@media (max-width: 768px) {
+	.header__container {
+		padding: 20px;
+		min-height: 160px;
+		max-height: 200px;
+	}
+
+	.languages__container {
+		min-width: 40px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.languages__icon {
+		transform: translateY(20px);
+		animation: fadeInUp 0.8s ease-out forwards 0.2s;
+	}
+}
+
+@keyframes fadeInUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeInLeft {
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
