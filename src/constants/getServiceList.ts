@@ -30,7 +30,7 @@ const getServiceList = (t: TFunction): Service[] => [
 			me: t('services.webWhyMe'),
 		},
 		icon: icons.pageBrowser,
-		image: images.webSite,
+		image: images.code,
 	},
 
 	{
@@ -75,7 +75,7 @@ const getServiceList = (t: TFunction): Service[] => [
 			me: t('services.maintenanceWhyMe'),
 		},
 		icon: icons.maintenance,
-		image: images.code,
+		image: images.webSite,
 	},
 ];
 
