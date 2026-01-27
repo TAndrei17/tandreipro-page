@@ -20,9 +20,16 @@ const LegalPage = () => {
 					<h1>{t('legal.title')}</h1>
 				</section>
 
-				<section className={'page-section'}>
-					<div className={'service-article'}>
-						<Markdown>{t('legal.terms')}</Markdown>
+				<section className="page-section">
+					<div className="service-article">
+						<Markdown
+							components={{
+								a: ({ node, ...props }) => (
+									<a {...props} target="_blank" rel="noopener noreferrer" />
+								),
+							}}>
+							{t('legal.terms')}
+						</Markdown>
 					</div>
 				</section>
 			</main>
