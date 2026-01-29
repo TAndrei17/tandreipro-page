@@ -1,3 +1,5 @@
+[![Maintainability](https://qlty.sh/gh/TAndrei17/projects/tandreipro-page/maintainability.svg)](https://qlty.sh/gh/TAndrei17/projects/tandreipro-page)
+
 # Sitio personal – Desarrollador Frontend – Andrei Trunkin
 
 Sitio personal (currículum) del desarrollador frontend Andrei Trunkin.  
