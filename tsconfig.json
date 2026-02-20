@@ -12,6 +12,7 @@
 			"@localization/*": ["localization/*"],
 			"@pages/*": ["pages/*"],
 			"@routes/*": ["routes/*"],
+			"@store/*": ["store/*"],
 			"@utils/*": ["utils/*"]
 		}
 	}
