@@ -10,6 +10,7 @@
 			"@constants/*": ["constants/*"],
 			"@hooks/*": ["hooks/*"],
 			"@localization/*": ["localization/*"],
+			"@models/*": ["models/*"],
 			"@pages/*": ["pages/*"],
 			"@routes/*": ["routes/*"],
 			"@store/*": ["store/*"],
