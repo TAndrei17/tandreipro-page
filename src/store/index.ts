@@ -2,7 +2,7 @@ import { configureStore /* Tuple */ } from '@reduxjs/toolkit';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { listenerMiddleware } from './middlewares/listenerMiddleware.js';
-import siteReducer from '../store/site/siteSlice.js';
+import appReducer from './app/appSlice.js';
 import logger from './middlewares/logger.js';
 
 const ENV = import.meta.env.DEV;
@@ -14,7 +14,7 @@ if (ENV) {
 
 const store = configureStore({
 	reducer: {
-		site: siteReducer,
+		app: appReducer,
 	},
 
 	// https://redux-toolkit.js.org/api/getDefaultMiddleware#intended-usage

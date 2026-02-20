@@ -2,16 +2,16 @@ import AppRoutes from '@routes/AppRoutes';
 import Header from '@components/common/Header/Header';
 import SettingsProvider from '@context/SettingsContext';
 import { useEffect } from 'react';
-import { startSite } from '@store/site/siteSlice';
+import { startApp } from '@store/app/appSlice';
 import { useAppDispatch, useAppSelector } from '@store/index';
 
 function App() {
 	const dispatch = useAppDispatch();
-	const status = useAppSelector((state) => state.site.status);
+	const status = useAppSelector((state) => state.app.status);
 
 	useEffect(() => {
 		if (status === 'idle') {
-			dispatch(startSite());
+			dispatch(startApp());
 		}
 	}, []);
 
