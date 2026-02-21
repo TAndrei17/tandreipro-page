@@ -6,6 +6,7 @@ import logos from '@constants/logos';
 import ContactItem from '@components/contact/ContactItem';
 import { Link } from 'react-router';
 import images from '@constants/images';
+import ContactForm from '@components/contact/ContactForm';
 
 const PHONE = import.meta.env.VITE_PHONE;
 const EMAIL = import.meta.env.VITE_EMAIL;
@@ -75,6 +76,10 @@ const ContactPage = () => {
 								/>
 							</dl>
 						</address>
+
+						<div className="contact-form-container">
+							<ContactForm />
+						</div>
 					</div>
 				</section>
 			</main>

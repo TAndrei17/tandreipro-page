@@ -12,7 +12,7 @@ export interface QuestionUserRequest {
 	name: string;
 	email: string;
 	question: string;
-	captchaToken: string;
+	captchaToken?: string | null;
 }
 
 export interface QuestionUserResponse {

@@ -47,3 +47,10 @@
 		font-size: 16px;
 	}
 }
+
+.contact-form-container {
+	width: 100%;
+	margin-top: 2em;
+	display: flex;
+	justify-content: center;
+}
