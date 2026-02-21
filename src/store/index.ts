@@ -7,6 +7,7 @@ import logger from './middlewares/logger';
 import appReducer from './app/appSlice';
 import questionsPublicReducer from './questionsPublic/questionsPublicSlice';
 import questionUserReducer from './questionUser/questionUserSlice';
+import tagsReducer from './tags/tagsSlice';
 
 const ENV = import.meta.env.DEV;
 const middlewares = [listenerMiddleware.middleware];
@@ -20,6 +21,7 @@ const store = configureStore({
 		app: appReducer,
 		questionsPublic: questionsPublicReducer,
 		questionUser: questionUserReducer,
+		tags: tagsReducer,
 	},
 
 	// https://redux-toolkit.js.org/api/getDefaultMiddleware#intended-usage

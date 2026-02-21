@@ -1,6 +1,9 @@
 import { createListenerMiddleware } from '@reduxjs/toolkit';
 
 import type { AppDispatch, RootState } from '../index';
+import { startApp } from '@store/app/appSlice';
+import { getQuestionsPublic } from '@store/questionsPublic/services';
+import { getTags } from '@store/tags/services';
 
 export const listenerMiddleware = createListenerMiddleware();
 export const startAppListening = listenerMiddleware.startListening.withTypes<
@@ -8,8 +11,11 @@ export const startAppListening = listenerMiddleware.startListening.withTypes<
 	AppDispatch
 >();
 
-// Get favorite podcasts from AsyncStorage after app start
-/* startAppListening({
+// Get approved questions after app start
+startAppListening({
 	actionCreator: startApp,
-	effect: async (_, { getState, dispatch }) => {},
-}); */
+	effect: async (_, { dispatch }) => {
+		dispatch(getQuestionsPublic());
+		dispatch(getTags());
+	},
+});
