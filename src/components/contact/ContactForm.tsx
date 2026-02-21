@@ -75,7 +75,7 @@ const ContactForm = () => {
 
 					<div className="form-group">
 						<label htmlFor="question">{t('question')}</label>
-						<Field as="textarea" name="question" className="form-textarea" />
+						<Field as="textarea" name="question" className="form-textarea" rows={12} />
 						<ErrorMessage name="question" component="div" className="form-error" />
 					</div>
 
