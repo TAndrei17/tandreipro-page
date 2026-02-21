@@ -1,25 +1,22 @@
 .contact-form {
 	width: 100%;
-	max-width: 100%;
 	padding: 2em;
 	border-radius: 16px;
-
-	/* Светлый прозрачный фон */
-	background: rgba(255, 255, 255, 0.05); /* почти прозрачный белый для легкого свечения */
+	background: rgba(255, 255, 255, 0.05);
 	backdrop-filter: blur(12px);
-
-	/* Мягкая тень */
 	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
 	color: #fff;
-
 	animation: fadeInUp 0.8s forwards 0.4s;
 	transition:
 		transform 0.3s ease,
 		box-shadow 0.3s ease;
+}
+
+.contact-form .form-title {
+	text-align: center;
 }
 
 .contact-form .form-group {
@@ -41,6 +38,8 @@
 	font-size: 1rem;
 	background: rgba(255, 255, 255, 0.05);
 	color: #fff;
+	font-family: 'Inter', sans-serif;
+	font-size: 1.2rem;
 	transition:
 		border 0.2s ease,
 		box-shadow 0.2s ease;
@@ -59,7 +58,7 @@
 }
 
 .contact-form .form-error {
-	color: #ff6b6b; /* красный для ошибок */
+	color: #ff6b6b;
 	font-size: 0.875rem;
 }
 
@@ -70,21 +69,19 @@
 	font-weight: 600;
 	border-radius: 8px;
 	border: none;
-
 	background: rgba(255, 255, 255, 0.12);
 	backdrop-filter: blur(6px);
-
 	color: #fff;
 	cursor: pointer;
-	transition: 0.3s;
 	display: flex;
-	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	gap: 5px;
+	transition: 0.3s;
 }
 
-.contact-form .form-submit:hover {
+.contact-form .form-submit:hover,
+.contact-form .form-submit:focus {
 	background: rgba(255, 255, 255, 0.25);
 	transform: translateY(-3px);
 	color: #ffdd57;

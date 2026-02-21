@@ -17,7 +17,8 @@ const SITE_KEY = ENV_DEV
 const ContactForm = () => {
 	const dispatch = useAppDispatch();
 	const recaptchaRef = useRef<ReCAPTCHA>(null);
-	const { t, i18n } = useTranslation();
+	const { t, i18n } = useTranslation('translation', { keyPrefix: 'contact.form' });
+	const { t: tvalidation } = useTranslation('translation', { keyPrefix: 'contact.errors' });
 	const lng = i18n.language;
 
 	const initialValues: QuestionUserRequest = {
@@ -26,7 +27,7 @@ const ContactForm = () => {
 		question: '',
 	};
 
-	const validationSchema = createQuestionValidationSchema(t);
+	const validationSchema = createQuestionValidationSchema(tvalidation);
 
 	const onSubmit = async (values: QuestionUserRequest, { setSubmitting, resetForm }: any) => {
 		try {
@@ -55,30 +56,40 @@ const ContactForm = () => {
 		<Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
 			{({ isSubmitting }) => (
 				<Form className="contact-form">
-					<h2>Задайте ваш вопрос</h2>
+					<section className="page-header">
+						<h2>{t('title')}</h2>
+					</section>
+
 					<div className="form-group">
-						<label htmlFor="name">{t('contact.form.name')}</label>
+						<label htmlFor="name">{t('name')}</label>
 						<Field name="name" className="form-input" />
 						<ErrorMessage name="name" component="div" className="form-error" />
 					</div>
 
 					<div className="form-group">
-						<label htmlFor="email">{t('contact.form.email')}</label>
+						<label htmlFor="email">{t('email')}</label>
 						<Field type="email" name="email" className="form-input" />
 						<ErrorMessage name="email" component="div" className="form-error" />
 					</div>
 
 					<div className="form-group">
-						<label htmlFor="question">{t('contact.form.question')}</label>
+						<label htmlFor="question">{t('question')}</label>
 						<Field as="textarea" name="question" className="form-textarea" />
 						<ErrorMessage name="question" component="div" className="form-error" />
 					</div>
 
 					<button type="submit" className="form-submit" disabled={isSubmitting}>
-						{t('contact.form.submit')}
+						{t('submit')}
 					</button>
 
-					<ReCAPTCHA ref={recaptchaRef} sitekey={SITE_KEY} size="invisible" hl={lng} />
+					<ReCAPTCHA
+						key={lng}
+						ref={recaptchaRef}
+						sitekey={SITE_KEY}
+						size="invisible"
+						hl={lng}
+						badge={'inline'}
+					/>
 				</Form>
 			)}
 		</Formik>
