@@ -42,8 +42,10 @@ You may request the deletion or correction of your data by contacting [tandreipr
 
 ## Cookies
 
-This website uses **Google reCAPTCHA v2** to protect the contact form from spam.  
-reCAPTCHA may set cookies and collect technical data (IP, browser information) solely to verify that the form is submitted by a human.  
+This website uses **Google reCAPTCHA v2** to protect the contact form from spam.
+
+reCAPTCHA may set cookies and collect technical data (IP, browser information) solely to verify that the form is submitted by a human.
+
 Data is not used for marketing or newsletters.
 
 ## Third-Party Services
@@ -126,8 +128,10 @@ Puede solicitar la eliminación o corrección de sus datos escribiendo a [tandre
 
 ## Cookies
 
-Este sitio web utiliza **Google reCAPTCHA v2** para proteger el formulario de contacto contra el spam.  
-reCAPTCHA puede establecer cookies y recopilar datos técnicos (IP, información del navegador) únicamente para verificar que el formulario lo completa un ser humano.  
+Este sitio web utiliza **Google reCAPTCHA v2** para proteger el formulario de contacto contra el spam.
+
+reCAPTCHA puede establecer cookies y recopilar datos técnicos (IP, información del navegador) únicamente para verificar que el formulario lo completa un ser humano.
+
 Los datos no se utilizan para marketing o boletines.
 
 ## Servicios de terceros
@@ -210,8 +214,10 @@ const legalTextRu = `
 
 ## Cookies
 
-Этот сайт использует **Google reCAPTCHA v2** для защиты формы обратной связи от спама.  
-reCAPTCHA может устанавливать cookies и собирать технические данные (IP, браузерные данные) исключительно для проверки, что форму заполняет человек.  
+Этот сайт использует **Google reCAPTCHA v2** для защиты формы обратной связи от спама.
+
+reCAPTCHA может устанавливать cookies и собирать технические данные (IP, браузерные данные) исключительно для проверки, что форму заполняет человек.
+
 Данные не используются для маркетинга или рассылок.
 
 ## Сервисы третьих сторон
