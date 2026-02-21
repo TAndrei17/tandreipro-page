@@ -8,12 +8,11 @@ import type { PublicAllTagsResponse, Tag } from '@models/Tag';
 export const getTags = createAsyncThunk<Tag[], void, { state: RootState }>(
 	'tags/gettags',
 	async () => {
-		// Fetch approved questions
 		const url = '/public/tags';
 		const { data } = await api.get<PublicAllTagsResponse>(url);
 
 		if (!data.data) {
-			throw new Error('Tags not found'); // добавить переводы
+			throw new Error('Tags not found');
 		}
 
 		return data.data;

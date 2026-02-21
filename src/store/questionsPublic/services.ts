@@ -9,12 +9,11 @@ import type { QuestionsPublicResponse } from '@models/QuestionsPublic';
 export const getQuestionsPublic = createAsyncThunk<Question[], void, { state: RootState }>(
 	'questionsPublic/getQuestionsPublic',
 	async () => {
-		// Fetch approved questions
 		const url = '/public/questions';
 		const { data } = await api.get<QuestionsPublicResponse>(url);
 
 		if (!data.data) {
-			throw new Error('Questions not found'); // добавить переводы
+			throw new Error('Questions not found');
 		}
 
 		return data.data;
