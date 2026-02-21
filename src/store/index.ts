@@ -9,10 +9,10 @@ import questionsPublicReducer from './questionsPublic/questionsPublicSlice';
 import questionUserReducer from './questionUser/questionUserSlice';
 import tagsReducer from './tags/tagsSlice';
 
-const ENV = import.meta.env.DEV;
+const ENV_DEV = import.meta.env.DEV;
 const middlewares = [listenerMiddleware.middleware];
 
-if (ENV) {
+if (ENV_DEV) {
 	middlewares.push(logger);
 }
 
