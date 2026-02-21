@@ -106,6 +106,26 @@ const en = {
 			telegram: 'Telegram',
 			email: 'Email',
 			linkedIn: 'LinkedIn',
+
+			form: {
+				name: 'Name',
+				email: 'Email',
+				question: 'Question',
+				submit: 'Submit',
+			},
+
+			errors: {
+				nameRequire: 'Please enter your name',
+				nameMin: 'Name is too short',
+				nameMax: 'Name is too long',
+
+				emailRequire: 'Please enter your email address',
+				emailIncorrect: 'Please enter a valid email address',
+
+				questionRequire: 'Please enter your question',
+				questionMin: 'The question is too short (minimum 10 characters)',
+				questionMax: 'The question is too long (maximum 2000 characters)',
+			},
 		},
 
 		legal: {

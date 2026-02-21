@@ -106,6 +106,26 @@ const es = {
 			telegram: 'Telegram',
 			email: 'Correo\nelectrónico',
 			linkedIn: 'LinkedIn',
+
+			form: {
+				name: 'Nombre',
+				email: 'Correo electrónico',
+				question: 'Pregunta',
+				submit: 'Enviar',
+			},
+
+			errors: {
+				nameRequire: 'Por favor, introduce tu nombre',
+				nameMin: 'El nombre es demasiado corto',
+				nameMax: 'El nombre es demasiado largo',
+
+				emailRequire: 'Por favor, introduce tu correo electrónico',
+				emailIncorrect: 'Introduce una dirección de correo electrónico válida',
+
+				questionRequire: 'Por favor, escribe tu pregunta',
+				questionMin: 'La pregunta es demasiado corta (mínimo 10 caracteres)',
+				questionMax: 'La pregunta es demasiado larga (máximo 2000 caracteres)',
+			},
 		},
 
 		legal: {
