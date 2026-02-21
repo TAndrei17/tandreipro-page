@@ -32,15 +32,19 @@ The owner reserves the right to modify the content of the website at any time an
 
 All content of the website, including texts, design, source code, and graphic elements, is the property of the website owner or is used under the appropriate license, and is protected by applicable intellectual property legislation.
 
-## Personal Data Protection
+## Data Protection and Privacy Policy
 
-This website does not collect users' personal data directly.  
+Through the website’s contact form, you can provide your name, email address, and submit a question. The data is used **only to respond to your request**.
 
-There are no contact forms, private areas, or registration systems on the website.
+Email addresses **are not published**. Questions and answers may be posted on the website **anonymously**, without personal information. Data **is not shared with third parties** and **is not used for marketing or newsletters**.
+
+You may request the deletion or correction of your data by contacting [tandreipro@outlook.com](mailto:tandreipro@outlook.com).
 
 ## Cookies
 
-This website **does not use cookies or similar tracking technologies**
+This website uses **Google reCAPTCHA v2** to protect the contact form from spam.  
+reCAPTCHA may set cookies and collect technical data (IP, browser information) solely to verify that the form is submitted by a human.  
+Data is not used for marketing or newsletters.
 
 ## Third-Party Services
 
@@ -112,15 +116,19 @@ El titular se reserva el derecho a modificar el contenido del sitio web en cualq
 
 Todos los contenidos del sitio web, incluyendo textos, diseño, código fuente y elementos gráficos, son titularidad del propietario del sitio web o se utilizan con la correspondiente licencia, y están protegidos por la normativa vigente en materia de propiedad intelectual.
 
-## Protección de datos personales
+## Protección de datos y política de privacidad
 
-Este sitio web no recopila datos personales de los usuarios de forma directa.  
+A través del formulario de contacto del sitio web, puede proporcionar su nombre, dirección de correo electrónico y enviar una pregunta. Los datos se utilizan **únicamente para responder a su consulta**.
 
-No existen formularios de contacto, áreas privadas ni sistemas de registro.
+Las direcciones de correo electrónico **no se publican**. Las preguntas y respuestas pueden publicarse en el sitio web **de forma anónima**, sin información personal. Los datos **no se comparten con terceros** y **no se utilizan para marketing o boletines**.
+
+Puede solicitar la eliminación o corrección de sus datos escribiendo a [tandreipro@outlook.com](mailto:tandreipro@outlook.com).
 
 ## Cookies
 
-Este sitio web **no utiliza cookies ni tecnologías de seguimiento similares**
+Este sitio web utiliza **Google reCAPTCHA v2** para proteger el formulario de contacto contra el spam.  
+reCAPTCHA puede establecer cookies y recopilar datos técnicos (IP, información del navegador) únicamente para verificar que el formulario lo completa un ser humano.  
+Los datos no se utilizan para marketing o boletines.
 
 ## Servicios de terceros
 
@@ -192,15 +200,19 @@ const legalTextRu = `
 
 Все материалы сайта, включая тексты, дизайн, исходный код и графические элементы, являются собственностью владельца сайта или используются на основании соответствующей лицензии и защищены действующим законодательством о интеллектуальной собственности.
 
-## Защита персональных данных
+## Защита персональных данных и политика конфиденциальности
 
-Данный сайт не собирает персональные данные пользователей напрямую.  
+Через форму обратной связи на сайте вы можете указать имя, электронную почту и задать вопрос. Данные используются только для ответа на ваш запрос.
 
-На сайте отсутствуют формы обратной связи, приватные зоны и системы регистрации.
+Электронная почта не публикуется. Вопросы и ответы могут быть размещены на сайте анонимно, без личной информации. Данные не передаются третьим лицам и не используются для рассылок или маркетинга.
+
+Вы можете запросить удаление или исправление ваших данных, написав на [tandreipro@outlook.com](mailto:tandreipro@outlook.com).
 
 ## Cookies
 
-Данный сайт **не использует cookies и аналогичные технологии отслеживания**
+Этот сайт использует **Google reCAPTCHA v2** для защиты формы обратной связи от спама.  
+reCAPTCHA может устанавливать cookies и собирать технические данные (IP, браузерные данные) исключительно для проверки, что форму заполняет человек.  
+Данные не используются для маркетинга или рассылок.
 
 ## Сервисы третьих сторон
 
