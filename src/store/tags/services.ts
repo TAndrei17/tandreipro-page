@@ -6,7 +6,7 @@ import api from '../../api';
 import type { PublicAllTagsResponse, Tag } from '@models/Tag';
 
 export const getTags = createAsyncThunk<Tag[], void, { state: RootState }>(
-	'tags/gettags',
+	'tags/getTags',
 	async () => {
 		const url = '/public/tags';
 		const { data } = await api.get<PublicAllTagsResponse>(url);
