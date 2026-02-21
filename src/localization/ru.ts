@@ -108,6 +108,7 @@ const ru = {
 			linkedIn: 'LinkedIn',
 
 			form: {
+				title: 'Задайте ваш вопрос',
 				name: 'Имя',
 				email: 'Электронная почта',
 				question: 'Вопрос',

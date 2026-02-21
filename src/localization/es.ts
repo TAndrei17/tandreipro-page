@@ -108,6 +108,7 @@ const es = {
 			linkedIn: 'LinkedIn',
 
 			form: {
+				title: 'Haz tu pregunta',
 				name: 'Nombre',
 				email: 'Correo electrónico',
 				question: 'Pregunta',
