@@ -1,7 +1,9 @@
 import { createEntityAdapter, createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction, SerializedError } from '@reduxjs/toolkit';
-import type { QuestionUser } from 'models/Question';
+
 import { postQuestionUser } from './services';
+
+import type { QuestionUser } from 'models/Question';
 
 export const questionUserAdapter = createEntityAdapter<QuestionUser>();
 

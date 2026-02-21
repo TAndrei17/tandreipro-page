@@ -1,12 +1,13 @@
-import ServicesList from '@components/services/ServicesList';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router';
+
+import ServiceSection from '@components/services/ServiceSection';
+import ServicesList from '@components/services/ServicesList';
 import './styles/ServicesPage.css';
+import getServiceList, { type Service } from '@constants/getServiceList';
 import { useActiveServiceBookmark, useSiteHeaderHeight } from '@context/SettingsContext';
 import useDeviceType from '@hooks/useDeviceType';
-import ServiceSection from '@components/services/ServiceSection';
-import getServiceList, { type Service } from '@constants/getServiceList';
-import { Link } from 'react-router';
 
 const ServicesPage = () => {
 	const { t, i18n } = useTranslation();

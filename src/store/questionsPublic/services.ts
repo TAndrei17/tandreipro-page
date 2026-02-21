@@ -1,10 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-import type { RootState } from 'store';
-
 import api from '../../api';
+
 import type { Question } from '@models/Question';
 import type { QuestionsPublicResponse } from '@models/QuestionsPublic';
+import type { RootState } from 'store';
 
 export const getQuestionsPublic = createAsyncThunk<Question[], void, { state: RootState }>(
 	'questionsPublic/getQuestionsPublic',

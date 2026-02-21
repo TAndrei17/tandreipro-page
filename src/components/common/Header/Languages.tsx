@@ -1,7 +1,8 @@
-import icons from '@constants/icons';
-import { useTranslation } from 'react-i18next';
-import './Header.css';
 import { useEffect, type Dispatch, type SetStateAction } from 'react';
+import { useTranslation } from 'react-i18next';
+
+import icons from '@constants/icons';
+import './Header.css';
 import useDeviceType from '@hooks/useDeviceType';
 
 const Languages = ({

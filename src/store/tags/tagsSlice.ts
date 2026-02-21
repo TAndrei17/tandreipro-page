@@ -1,7 +1,9 @@
 import { createEntityAdapter, createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction, SerializedError } from '@reduxjs/toolkit';
-import type { Tag } from '@models/Tag';
+
 import { getTags } from './services';
+
+import type { Tag } from '@models/Tag';
 
 export const tagsAdapter = createEntityAdapter<Tag>();
 

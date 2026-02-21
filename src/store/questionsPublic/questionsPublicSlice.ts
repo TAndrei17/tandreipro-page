@@ -1,7 +1,9 @@
 import { createEntityAdapter, createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction, SerializedError } from '@reduxjs/toolkit';
-import type { Question } from 'models/Question';
+
 import { getQuestionsPublic } from './services';
+
+import type { Question } from 'models/Question';
 
 export const questionsPublicAdapter = createEntityAdapter<Question>();
 

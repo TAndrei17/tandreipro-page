@@ -7,64 +7,106 @@ import pluginReact from 'eslint-plugin-react';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import globals from 'globals';
 
-import config from './prettier.config.mjs';
+import prettierConfig from './prettier.config.mjs';
 
 export default [
-	// General file settings
+	// Общие настройки
+	{
+		ignores: ['dist/**', 'node_modules/**', 'src/assets/**'],
+	},
 	{
 		files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
-		ignores: ['dist', 'node_modules', 'src/assets'],
 	},
 
-	// Environment settings
 	{
 		languageOptions: {
 			globals: globals.browser,
 		},
 	},
 
-	// Base JS/React rules
+	// Базовые правила JS / React
 	pluginJs.configs.recommended,
 	pluginReact.configs.flat.recommended,
 	reactRefresh.configs.vite,
 
-	// TypeScript
+	// TypeScript — React приложение (src)
 	{
-		files: ['**/*.{ts,tsx}'],
+		files: ['src/**/*.{ts,tsx}'],
 		languageOptions: {
 			parser: tsParser,
-			parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
+			parserOptions: {
+				project: './tsconfig.app.json',
+				tsconfigRootDir: import.meta.dirname,
+				ecmaVersion: 'latest',
+				sourceType: 'module',
+			},
 		},
-		plugins: { '@typescript-eslint': tsPlugin },
+		plugins: {
+			'@typescript-eslint': tsPlugin,
+		},
 		rules: {
+			// обязательно для TS
+			'no-undef': 'off',
+
 			'@typescript-eslint/no-unused-vars': 'error',
 			'@typescript-eslint/no-require-imports': 'off',
 		},
 	},
 
-	// Import and Prettier
+	// TypeScript — Node / Vite
 	{
-		plugins: { import: importPlugin, prettier: prettierPlugin },
+		files: ['vite.config.ts'],
+		languageOptions: {
+			parser: tsParser,
+			parserOptions: {
+				project: './tsconfig.node.json',
+				tsconfigRootDir: import.meta.dirname,
+				ecmaVersion: 'latest',
+				sourceType: 'module',
+			},
+		},
+		plugins: {
+			'@typescript-eslint': tsPlugin,
+		},
 		rules: {
-			'react/react-in-jsx-scope': 'off',
+			'no-undef': 'off',
+		},
+	},
+
+	// Import / Prettier / React settings
+	{
+		plugins: {
+			import: importPlugin,
+			prettier: prettierPlugin,
+		},
+		settings: {
+			react: {
+				version: 'detect',
+			},
 			'import/resolver': {
 				typescript: {
-					project: './tsconfig.json',
+					project: './tsconfig.app.json',
 				},
 			},
+		},
+		rules: {
+			// React
+			'react/react-in-jsx-scope': 'off',
+
+			// Imports
 			'import/order': [
 				'error',
 				{
 					'newlines-between': 'always',
-					alphabetize: { order: 'asc', caseInsensitive: true },
+					alphabetize: {
+						order: 'asc',
+						caseInsensitive: true,
+					},
 				},
 			],
-			'prettier/prettier': ['error', config],
-		},
-		settings: {
-			react: {
-				version: 'detect', // automatically detects the installed React version
-			},
+
+			// Prettier
+			'prettier/prettier': ['error', prettierConfig],
 		},
 	},
 ];

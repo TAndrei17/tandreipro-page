@@ -1,7 +1,9 @@
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './SectionStyles.css';
-import ButtonRight from '@components/common/UI/ButtonRight';
 import { useNavigate } from 'react-router';
+
+import ButtonRight from '@components/common/UI/ButtonRight';
 import { useActiveServiceBookmark } from '@context/SettingsContext';
 
 type SectionType = {

@@ -1,6 +1,7 @@
 import { createListenerMiddleware } from '@reduxjs/toolkit';
 
 import type { AppDispatch, RootState } from '../index';
+
 import { startApp } from '@store/app/appSlice';
 import { getQuestionsPublic } from '@store/questionsPublic/services';
 import { getTags } from '@store/tags/services';

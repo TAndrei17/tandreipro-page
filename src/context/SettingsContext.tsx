@@ -1,3 +1,4 @@
+import React from 'react';
 import { createContext, useContext, useState, type Dispatch, type SetStateAction } from 'react';
 
 type Settings = {
@@ -42,4 +43,5 @@ const useActiveServiceBookmark = () => {
 };
 
 export default SettingsProvider;
+// eslint-disable-next-line react-refresh/only-export-components
 export { useSiteHeaderHeight, useActiveServiceBookmark };

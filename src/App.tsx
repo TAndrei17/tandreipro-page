@@ -1,7 +1,8 @@
-import AppRoutes from '@routes/AppRoutes';
+import { useEffect } from 'react';
+
 import Header from '@components/common/Header/Header';
 import SettingsProvider from '@context/SettingsContext';
-import { useEffect } from 'react';
+import AppRoutes from '@routes/AppRoutes';
 import { startApp } from '@store/app/appSlice';
 import { useAppDispatch, useAppSelector } from '@store/index';
 

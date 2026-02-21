@@ -1,7 +1,7 @@
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router';
 import './styles/NotFoundPage.css';
-import { useEffect } from 'react';
 import { Link } from 'react-router';
 
 const NotFoundPage = () => {

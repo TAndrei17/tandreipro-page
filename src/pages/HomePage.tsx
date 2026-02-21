@@ -1,10 +1,11 @@
-import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
-import HomeSection from '@components/home/HomeSection';
-import useDeviceType from '@hooks/useDeviceType';
-import { useSiteHeaderHeight } from '@context/SettingsContext';
-import getServiceList from '@constants/getServiceList';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router';
+
+import HomeSection from '@components/home/HomeSection';
+import getServiceList from '@constants/getServiceList';
+import { useSiteHeaderHeight } from '@context/SettingsContext';
+import useDeviceType from '@hooks/useDeviceType';
 
 const HomePage = () => {
 	const { isMobile } = useDeviceType();

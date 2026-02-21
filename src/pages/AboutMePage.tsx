@@ -1,13 +1,14 @@
+import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router';
+
 import AboutMeSection from '@components/aboutMe/AboutMeSection';
 import IconsList from '@components/aboutMe/IconsList';
 import getPersonalSections from '@constants/getPersonalSections';
 import getTechStackIcons from '@constants/getTechStackIcons';
-import { useSiteHeaderHeight } from '@context/SettingsContext';
-import { useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import './styles/CommonStyles.css';
 import getToolIcons from '@constants/getToolIcons';
-import { Link } from 'react-router';
+import { useSiteHeaderHeight } from '@context/SettingsContext';
+import './styles/CommonStyles.css';
 
 const AboutMePage = () => {
 	const { t, i18n } = useTranslation();

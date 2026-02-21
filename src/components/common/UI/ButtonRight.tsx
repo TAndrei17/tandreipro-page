@@ -20,18 +20,18 @@ const ButtonRight = ({
 					d="M4 4 L16 16 L4 28"
 					fill="none"
 					stroke="currentColor"
-					stroke-width="3"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeWidth="3"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 				/>
 
 				<path
 					d="M16 4 L28 16 L16 28"
 					fill="none"
 					stroke="currentColor"
-					stroke-width="3"
-					stroke-linecap="round"
-					stroke-linejoin="round"
+					strokeWidth="3"
+					strokeLinecap="round"
+					strokeLinejoin="round"
 				/>
 			</svg>
 		</button>

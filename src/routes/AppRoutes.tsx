@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
 
-import NotFoundPage from '@pages/NotFoundPage';
-import HomePage from '@pages/HomePage';
 import AboutMePage from '@pages/AboutMePage';
-import ServicesPage from '@pages/ServicesPage';
 import ContactPage from '@pages/ContactPage';
+import HomePage from '@pages/HomePage';
 import LegalPage from '@pages/LegalPage';
+import NotFoundPage from '@pages/NotFoundPage';
+import ServicesPage from '@pages/ServicesPage';
 
 export default function AppRoutes() {
 	return (

@@ -1,8 +1,11 @@
-import { useSiteHeaderHeight } from '@context/SettingsContext';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-unused-vars */
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/ContactPage.css';
 import Markdown from 'react-markdown';
+
+import { useSiteHeaderHeight } from '@context/SettingsContext';
 
 const LegalPage = () => {
 	const { siteHeaderHeight } = useSiteHeaderHeight();

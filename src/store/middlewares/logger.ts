@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Middleware } from '@reduxjs/toolkit';
 
 const logger: Middleware = (store) => (next) => (action: any) => {

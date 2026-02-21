@@ -1,4 +1,5 @@
 import { type TFunction } from 'i18next';
+
 import icons from './icons';
 import images from './images';
 

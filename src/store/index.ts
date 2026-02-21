@@ -1,10 +1,9 @@
 import { configureStore /* Tuple */ } from '@reduxjs/toolkit';
 import { useDispatch, useSelector } from 'react-redux';
 
+import appReducer from './app/appSlice';
 import { listenerMiddleware } from './middlewares/listenerMiddleware';
 import logger from './middlewares/logger';
-
-import appReducer from './app/appSlice';
 import questionsPublicReducer from './questionsPublic/questionsPublicSlice';
 import questionUserReducer from './questionUser/questionUserSlice';
 import tagsReducer from './tags/tagsSlice';

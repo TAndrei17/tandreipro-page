@@ -1,12 +1,14 @@
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink, useNavigate } from 'react-router';
+
 import './Header.css';
 import Languages from './Languages';
+
 import icons from '@constants/icons';
-import useDeviceType from '@hooks/useDeviceType';
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { useSiteHeaderHeight } from '@context/SettingsContext';
 import logos from '@constants/logos';
+import { useSiteHeaderHeight } from '@context/SettingsContext';
+import useDeviceType from '@hooks/useDeviceType';
 
 const Header = () => {
 	const { t } = useTranslation();

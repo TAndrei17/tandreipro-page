@@ -1,9 +1,9 @@
-import { summaryTextEs } from '@assets/articles/summary';
-import { skillsTextEs } from '@assets/articles/skills';
-import { teamWorkTextEs } from '@assets/articles/team';
-import { positionTextEs } from '@assets/articles/position';
 import { contactTextEs } from '@assets/articles/contact';
 import { legalTextEs } from '@assets/articles/legal';
+import { positionTextEs } from '@assets/articles/position';
+import { skillsTextEs } from '@assets/articles/skills';
+import { summaryTextEs } from '@assets/articles/summary';
+import { teamWorkTextEs } from '@assets/articles/team';
 
 const es = {
 	translation: {
