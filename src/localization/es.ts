@@ -37,6 +37,8 @@ const es = {
 
 		home: {
 			sectionButton: 'Saber más',
+			cookieAlert: 'Este sitio utiliza cookies para proteger contra bots (reCAPTCHA)',
+			cookieApprove: 'Vale',
 		},
 
 		services: {

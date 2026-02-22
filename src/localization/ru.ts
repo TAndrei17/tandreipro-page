@@ -37,6 +37,8 @@ const ru = {
 
 		home: {
 			sectionButton: 'Узнать больше',
+			cookieAlert: 'Сайт использует cookies для защиты от ботов (reCAPTCHA)',
+			cookieApprove: 'Хорошо',
 		},
 
 		services: {
