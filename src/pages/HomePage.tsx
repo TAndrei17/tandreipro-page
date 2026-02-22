@@ -5,6 +5,7 @@ import { Link } from 'react-router';
 import HomeSection from '@components/home/HomeSection';
 import getServiceList from '@constants/getServiceList';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
+import { useAlertCookie } from '@hooks/useAlertCookie';
 import useDeviceType from '@hooks/useDeviceType';
 
 const HomePage = () => {
@@ -17,6 +18,8 @@ const HomePage = () => {
 	useEffect(() => {
 		document.title = t('browserTabs.browserTabDefault');
 	}, [t, language]);
+
+	useAlertCookie();
 
 	return (
 		<div style={{ paddingTop: siteHeaderHeight + 10 }}>
