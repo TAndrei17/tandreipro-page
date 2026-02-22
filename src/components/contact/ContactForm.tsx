@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import type { QuestionUserRequest } from '@models/Question';
 import { useAppDispatch } from '@store/index';
 import { postQuestionUser } from '@store/questionUser/services';
+import createAlert from '@utils/createAlert';
 import { createQuestionValidationSchema } from '@utils/createContactFormValidation';
 import './ContactFormStyle.css';
 
@@ -46,10 +47,13 @@ const ContactForm = () => {
 				})
 			).unwrap();
 
+			createAlert('success', t('submitSuccess'));
 			resetForm();
-			recaptchaRef.current?.reset();
+		} catch {
+			createAlert('error', tvalidation('submitFail'));
 		} finally {
 			setSubmitting(false);
+			recaptchaRef.current?.reset();
 		}
 	};
 
@@ -89,7 +93,7 @@ const ContactForm = () => {
 						sitekey={SITE_KEY}
 						size="invisible"
 						hl={lng}
-						badge={'inline'}
+						badge={'bottomleft'}
 					/>
 				</Form>
 			)}

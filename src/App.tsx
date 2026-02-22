@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { ToastContainer } from 'react-toastify';
 
 import Header from '@components/common/Header/Header';
 import SettingsProvider from '@context/SettingsContext';
@@ -20,6 +21,7 @@ function App() {
 		<SettingsProvider>
 			<Header />
 			<AppRoutes />
+			<ToastContainer />
 		</SettingsProvider>
 	);
 }
