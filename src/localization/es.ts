@@ -114,6 +114,7 @@ const es = {
 				name: 'Nombre',
 				email: 'Correo electrónico',
 				question: 'Pregunta',
+				check: 'Verificar que no soy un robot',
 				submit: 'Enviar',
 				submitSuccess: 'Tu pregunta ha sido enviada con éxito',
 			},

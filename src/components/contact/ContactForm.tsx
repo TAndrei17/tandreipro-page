@@ -1,5 +1,5 @@
 import { Form, Formik, Field, ErrorMessage } from 'formik';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useTranslation } from 'react-i18next';
 
@@ -23,6 +23,9 @@ const ContactForm = () => {
 	const { t: tvalidation } = useTranslation('translation', { keyPrefix: 'contact.errors' });
 	const lng = i18n.language;
 
+	const [showCaptcha, setShowCaptcha] = useState(false);
+	const [captchaValue, setCaptchaValue] = useState<string | null>(null);
+
 	const initialValues: QuestionUserRequest = {
 		name: '',
 		email: '',
@@ -31,19 +34,22 @@ const ContactForm = () => {
 
 	const validationSchema = createQuestionValidationSchema(tvalidation);
 
+	const handleCaptchaChange = (value: string | null) => {
+		setCaptchaValue(value);
+	};
+
 	const onSubmit = async (values: QuestionUserRequest, { setSubmitting, resetForm }: any) => {
+		if (!captchaValue) {
+			// Если капча ещё не пройдена, показать её
+			setShowCaptcha(true);
+			return;
+		}
+
 		try {
-			const captchaToken = await recaptchaRef.current?.executeAsync();
-
-			if (!captchaToken) {
-				console.error('CAPTCHA not solved');
-				return;
-			}
-
 			await dispatch(
 				postQuestionUser({
 					...values,
-					captchaToken,
+					captchaToken: captchaValue,
 				})
 			).unwrap();
 
@@ -54,12 +60,14 @@ const ContactForm = () => {
 		} finally {
 			setSubmitting(false);
 			recaptchaRef.current?.reset();
+			setCaptchaValue(null);
+			setShowCaptcha(false);
 		}
 	};
 
 	return (
 		<Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
-			{({ isSubmitting }) => (
+			{({ isSubmitting, handleSubmit }) => (
 				<Form className="contact-form">
 					<section className="page-header">
 						<h2>{t('title')}</h2>
@@ -83,18 +91,25 @@ const ContactForm = () => {
 						<ErrorMessage name="question" component="div" className="form-error" />
 					</div>
 
-					<button type="submit" className="form-submit" disabled={isSubmitting}>
-						{t('submit')}
+					<button
+						type="button"
+						className="form-submit"
+						disabled={isSubmitting}
+						onClick={() => handleSubmit()}>
+						{showCaptcha ? t('submit') : t('check')}
 					</button>
 
-					<ReCAPTCHA
-						key={lng}
-						ref={recaptchaRef}
-						sitekey={SITE_KEY}
-						size="invisible"
-						hl={lng}
-						badge={'bottomleft'}
-					/>
+					{showCaptcha && (
+						<ReCAPTCHA
+							key={lng}
+							ref={recaptchaRef}
+							sitekey={SITE_KEY}
+							size="normal"
+							hl={lng}
+							badge={'bottomleft'}
+							onChange={handleCaptchaChange}
+						/>
+					)}
 				</Form>
 			)}
 		</Formik>

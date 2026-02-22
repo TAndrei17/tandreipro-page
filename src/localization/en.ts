@@ -114,6 +114,7 @@ const en = {
 				name: 'Name',
 				email: 'Email',
 				question: 'Question',
+				check: "Verify I'm not a robot",
 				submit: 'Submit',
 				submitSuccess: 'Your question has been successfully submitted',
 			},
