@@ -113,6 +113,7 @@ const en = {
 				email: 'Email',
 				question: 'Question',
 				submit: 'Submit',
+				submitSuccess: 'Your question has been successfully submitted',
 			},
 
 			errors: {
@@ -126,6 +127,8 @@ const en = {
 				questionRequire: 'Please enter your question',
 				questionMin: 'The question is too short (minimum 10 characters)',
 				questionMax: 'The question is too long (maximum 2000 characters)',
+
+				submitFail: 'Failed to send the question. Please try again.',
 			},
 		},
 

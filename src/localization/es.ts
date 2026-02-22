@@ -113,6 +113,7 @@ const es = {
 				email: 'Correo electrónico',
 				question: 'Pregunta',
 				submit: 'Enviar',
+				submitSuccess: 'Tu pregunta ha sido enviada con éxito',
 			},
 
 			errors: {
@@ -126,6 +127,8 @@ const es = {
 				questionRequire: 'Por favor, escribe tu pregunta',
 				questionMin: 'La pregunta es demasiado corta (mínimo 10 caracteres)',
 				questionMax: 'La pregunta es demasiado larga (máximo 2000 caracteres)',
+
+				submitFail: 'No se pudo enviar la pregunta. Inténtalo de nuevo.',
 			},
 		},
 
