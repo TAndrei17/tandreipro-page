@@ -34,11 +34,15 @@ All content of the website, including texts, design, source code, and graphic el
 
 ## Data Protection and Privacy Policy
 
-Through the website’s contact form, you can provide your name, email address, and submit a question. The data is used **only to respond to your request**.
+Through the contact form on the website in the "Contacts" section, you can submit a question and provide your name and email address. This information is used **only to respond to your inquiry**.
 
-Email addresses **are not published**. Questions and answers may be posted on the website **anonymously**, without personal information. Data **is not shared with third parties** and **is not used for marketing or newsletters**.
+Your name and question may be published on the website **only with your explicit consent**. Your email address **will not be published**. All questions are moderated before publication to ensure accuracy and compliance with the site rules.
 
-You may request the deletion or correction of your data by contacting [tandreipro@outlook.com](mailto:tandreipro@outlook.com).
+By submitting the form, you give your **explicit consent for the processing of your personal data** and for the **publication of your name and question** via the required checkbox in the form. Without your active consent, the data **will not be submitted**.
+
+No data is **shared with third parties** and **is not used for marketing purposes**.
+
+You may request the **deletion or correction of your data** at any time by contacting [tandreipro@outlook.com](mailto:tandreipro@outlook.com).
 
 ## Cookies
 
@@ -118,13 +122,17 @@ El titular se reserva el derecho a modificar el contenido del sitio web en cualq
 
 Todos los contenidos del sitio web, incluyendo textos, diseño, código fuente y elementos gráficos, son titularidad del propietario del sitio web o se utilizan con la correspondiente licencia, y están protegidos por la normativa vigente en materia de propiedad intelectual.
 
-## Protección de datos y política de privacidad
+## Protección de Datos y Política de Privacidad
 
-A través del formulario de contacto del sitio web, puede proporcionar su nombre, dirección de correo electrónico y enviar una pregunta. Los datos se utilizan **únicamente para responder a su consulta**.
+A través del formulario de contacto en la sección "Contactos" del sitio web, puede enviar una pregunta y proporcionar su nombre y dirección de correo electrónico. Esta información se utiliza **únicamente para responder a su consulta**.
 
-Las direcciones de correo electrónico **no se publican**. Las preguntas y respuestas pueden publicarse en el sitio web **de forma anónima**, sin información personal. Los datos **no se comparten con terceros** y **no se utilizan para marketing o boletines**.
+Su nombre y pregunta pueden publicarse en el sitio web **solo con su consentimiento explícito**. Su dirección de correo electrónico **no se publicará**. Todas las preguntas se moderan antes de su publicación para garantizar la exactitud y el cumplimiento de las normas del sitio.
 
-Puede solicitar la eliminación o corrección de sus datos escribiendo a [tandreipro@outlook.com](mailto:tandreipro@outlook.com).
+Al enviar el formulario, usted otorga su **consentimiento explícito para el tratamiento de sus datos personales** y para la **publicación de su nombre y pregunta** a través de la casilla de verificación obligatoria en el formulario. Sin su consentimiento activo, los datos **no se enviarán**.
+
+Ningún dato se **comparte con terceros** y **no se utiliza con fines de marketing**.
+
+Puede solicitar en cualquier momento la **eliminación o corrección de sus datos** escribiendo a [tandreipro@outlook.com](mailto:tandreipro@outlook.com).
 
 ## Cookies
 
@@ -206,11 +214,15 @@ const legalTextRu = `
 
 ## Защита персональных данных и политика конфиденциальности
 
-Через форму обратной связи на сайте вы можете указать имя, электронную почту и задать вопрос. Данные используются только для ответа на ваш запрос.
+Через форму обратной связи на сайте в разделе «Контакты» вы можете задать вопрос, указать имя и электронную почту. Эти данные используются **только для ответа на ваш запрос**.
 
-Электронная почта не публикуется. Вопросы и ответы могут быть размещены на сайте анонимно, без личной информации. Данные не передаются третьим лицам и не используются для рассылок или маркетинга.
+Ваше имя и вопрос могут быть опубликованы на сайте **только с вашего явного согласия**. Электронная почта **не публикуется**. Все вопросы проходят модерацию перед публикацией, чтобы обеспечить корректность и соответствие правилам сайта.
 
-Вы можете запросить удаление или исправление ваших данных, написав на [tandreipro@outlook.com](mailto:tandreipro@outlook.com).
+Вы даете ваше явное согласие на **обработку персональных данных** и на **публикацию имени и вопроса** через обязательный чекбокс в форме. Без вашего активного согласия данные **не отправляются**.
+
+Никакие данные **не передаются третьим лицам** и **не используются для рассылок или маркетинга**.
+
+Вы можете в любой момент запросить **удаление или исправление своих данных**, написав на [tandreipro@outlook.com](mailto:tandreipro@outlook.com).
 
 ## Cookies
 
