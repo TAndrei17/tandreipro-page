@@ -128,8 +128,8 @@ const es = {
 				emailIncorrect: 'Introduce una dirección de correo electrónico válida',
 
 				questionRequire: 'Por favor, escribe tu pregunta',
-				questionMin: 'La pregunta es demasiado corta (mínimo 10 caracteres)',
-				questionMax: 'La pregunta es demasiado larga (máximo 2000 caracteres)',
+				questionMin: 'La pregunta es demasiado corta (mínimo {{count}} caracteres)',
+				questionMax: 'La pregunta es demasiado larga (máximo {{count}} caracteres)',
 
 				submitFail: 'No se pudo enviar la pregunta. Inténtalo de nuevo.',
 			},

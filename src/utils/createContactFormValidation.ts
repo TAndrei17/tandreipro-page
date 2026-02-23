@@ -9,6 +9,6 @@ export const createQuestionValidationSchema = (t: TFunction) =>
 
 		question: Yup.string()
 			.required(t('questionRequire'))
-			.min(10, t('questionMin'))
-			.max(2000, t('questionMax')),
+			.min(10, t('questionMin', { count: 10 }))
+			.max(2000, t('questionMax', { count: 2000 })),
 	});

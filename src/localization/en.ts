@@ -128,8 +128,8 @@ const en = {
 				emailIncorrect: 'Please enter a valid email address',
 
 				questionRequire: 'Please enter your question',
-				questionMin: 'The question is too short (minimum 10 characters)',
-				questionMax: 'The question is too long (maximum 2000 characters)',
+				questionMin: 'The question is too short (minimum {{count}} characters)',
+				questionMax: 'The question is too long (maximum {{count}} characters)',
 
 				submitFail: 'Failed to send the question. Please try again.',
 			},
