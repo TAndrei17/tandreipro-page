@@ -114,6 +114,8 @@ const en = {
 				name: 'Name',
 				email: 'Email',
 				question: 'Question',
+				consent:
+					'I give my consent for the processing of my personal data and the publication of my name and question on this website',
 				check: "Verify I'm not a robot",
 				submit: 'Submit',
 				submitSuccess: 'Your question has been successfully submitted',
@@ -130,6 +132,8 @@ const en = {
 				questionRequire: 'Please enter your question',
 				questionMin: 'The question is too short (minimum {{count}} characters)',
 				questionMax: 'The question is too long (maximum {{count}} characters)',
+
+				consentFail: 'Consent for the processing of personal data is required',
 
 				submitFail: 'Failed to send the question. Please try again.',
 			},

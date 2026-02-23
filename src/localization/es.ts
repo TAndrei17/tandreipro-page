@@ -114,6 +114,8 @@ const es = {
 				name: 'Nombre',
 				email: 'Correo electrónico',
 				question: 'Pregunta',
+				consent:
+					'Doy mi consentimiento para el tratamiento de mis datos personales y la publicación de mi nombre y pregunta en este sitio web',
 				check: 'Verificar que no soy un robot',
 				submit: 'Enviar',
 				submitSuccess: 'Tu pregunta ha sido enviada con éxito',
@@ -130,6 +132,8 @@ const es = {
 				questionRequire: 'Por favor, escribe tu pregunta',
 				questionMin: 'La pregunta es demasiado corta (mínimo {{count}} caracteres)',
 				questionMax: 'La pregunta es demasiado larga (máximo {{count}} caracteres)',
+
+				consentFail: 'Se requiere consentimiento para el tratamiento de datos personales',
 
 				submitFail: 'No se pudo enviar la pregunta. Inténtalo de nuevo.',
 			},
