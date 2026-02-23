@@ -11,4 +11,6 @@ export const createQuestionValidationSchema = (t: TFunction) =>
 			.required(t('questionRequire'))
 			.min(10, t('questionMin', { count: 10 }))
 			.max(2000, t('questionMax', { count: 2000 })),
+
+		consent: Yup.boolean().oneOf([true], t('consentFail')),
 	});

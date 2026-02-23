@@ -30,6 +30,7 @@ const ContactForm = () => {
 		name: '',
 		email: '',
 		question: '',
+		consent: false,
 	};
 
 	const validationSchema = createQuestionValidationSchema(tvalidation);
@@ -42,6 +43,11 @@ const ContactForm = () => {
 		if (!captchaValue) {
 			// Если капча ещё не пройдена, показать её
 			setShowCaptcha(true);
+			return;
+		}
+
+		if (!values.consent) {
+			createAlert('error', tvalidation('submitFail'));
 			return;
 		}
 
@@ -113,6 +119,29 @@ const ContactForm = () => {
 								</div>
 							)}
 						</ErrorMessage>
+					</div>
+
+					<div className="form-group">
+						<Field name="consent">
+							{({ field, meta }: any) => (
+								<>
+									<div className="checkbox-wrapper">
+										<input
+											type="checkbox"
+											id="consent"
+											{...field}
+											aria-describedby="consent-error"
+										/>
+										<label htmlFor="consent">{t('consent')}</label>
+									</div>
+									{meta.touched && meta.error && (
+										<div id="consent-error" className="form-error" role="alert">
+											{meta.error}
+										</div>
+									)}
+								</>
+							)}
+						</Field>
 					</div>
 
 					<button type="submit" className="form-submit" disabled={isSubmitting}>

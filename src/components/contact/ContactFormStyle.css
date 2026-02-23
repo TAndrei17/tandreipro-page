@@ -92,6 +92,13 @@
 	cursor: not-allowed;
 }
 
+.checkbox-wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 8px;
+}
+
 @media (max-width: 768px) {
 	.parent-container {
 		padding: 0 1em;
