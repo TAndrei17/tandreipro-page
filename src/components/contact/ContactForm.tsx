@@ -123,13 +123,15 @@ const ContactForm = () => {
 
 					<div className="form-group">
 						<Field name="consent">
-							{({ field, meta }: any) => (
+							{({ field, form, meta }: any) => (
 								<>
 									<div className="checkbox-wrapper">
 										<input
 											type="checkbox"
 											id="consent"
 											{...field}
+											checked={field.value}
+											onChange={(e) => form.setFieldValue('consent', e.target.checked)}
 											aria-describedby="consent-error"
 										/>
 										<label htmlFor="consent">{t('consent')}</label>
