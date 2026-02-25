@@ -113,12 +113,16 @@ const es = {
 				title: 'Haz tu pregunta',
 				name: 'Nombre',
 				email: 'Correo electrónico',
+				password: 'Contraseña',
 				question: 'Pregunta',
 				consent:
 					'Doy mi consentimiento para el tratamiento de mis datos personales y la publicación de mi nombre y pregunta en este sitio web',
 				check: 'Verificar que no soy un robot',
+
 				submit: 'Enviar',
 				submitSuccess: 'Tu pregunta ha sido enviada con éxito',
+
+				loginSuccess: 'Inicio de sesión exitoso',
 			},
 
 			errors: {
@@ -135,7 +139,20 @@ const es = {
 
 				consentFail: 'Se requiere consentimiento para el tratamiento de datos personales',
 
-				submitFail: 'No se pudo enviar la pregunta. Inténtalo de nuevo.',
+				passwordRequire: 'Por favor, ingrese una contraseña',
+				passwordMin: 'La contraseña debe tener al menos {{count}} caracteres',
+				passwordLowercase: 'La contraseña debe contener al menos una letra minúscula',
+				passwordUppercase: 'La contraseña debe contener al menos una letra mayúscula',
+				passwordNumber: 'La contraseña debe contener al menos un número',
+				passwordSpecial: 'La contraseña debe contener al menos un carácter especial',
+
+				submitFail: 'No se pudo enviar la pregunta. Inténtalo de nuevo',
+				loginFail: 'Error al iniciar sesión. Por favor, inténtalo de nuevo',
+			},
+
+			modal: {
+				login: 'Iniciar sesión',
+				closeModal: 'Cerrar',
 			},
 		},
 

@@ -113,12 +113,16 @@ const en = {
 				title: 'Ask your question',
 				name: 'Name',
 				email: 'Email',
+				password: 'Password',
 				question: 'Question',
 				consent:
 					'I give my consent for the processing of my personal data and the publication of my name and question on this website',
 				check: "Verify I'm not a robot",
+
 				submit: 'Submit',
 				submitSuccess: 'Your question has been successfully submitted',
+
+				loginSuccess: 'Login successful',
 			},
 
 			errors: {
@@ -135,7 +139,20 @@ const en = {
 
 				consentFail: 'Consent for the processing of personal data is required',
 
-				submitFail: 'Failed to send the question. Please try again.',
+				passwordRequire: 'Please enter a password',
+				passwordMin: 'Password must be at least {{count}} characters long',
+				passwordLowercase: 'Password must contain at least one lowercase letter',
+				passwordUppercase: 'Password must contain at least one uppercase letter',
+				passwordNumber: 'Password must contain at least one number',
+				passwordSpecial: 'Password must contain at least one special character',
+
+				submitFail: 'Failed to send the question. Please try again',
+				loginFail: 'Login failed. Please try again',
+			},
+
+			modal: {
+				login: 'Log in',
+				closeModal: 'Close',
 			},
 		},
 
