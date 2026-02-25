@@ -1,5 +1,6 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import Modal from 'react-modal';
 import { Provider as StoreProvider } from 'react-redux';
 import { BrowserRouter } from 'react-router';
 
@@ -11,6 +12,9 @@ import i18nInit from '@localization/index';
 import store from '@store/index';
 
 i18nInit();
+
+// Bind modal to the root element for accessibility
+Modal.setAppElement('#root');
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>

@@ -5,6 +5,7 @@ import { Link } from 'react-router';
 
 import ContactForm from '@components/contact/ContactForm';
 import ContactItem from '@components/contact/ContactItem';
+import ModalLogin from '@components/Modals/ModalLogIn';
 import images from '@constants/images';
 import logos from '@constants/logos';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
@@ -87,6 +88,7 @@ const ContactPage = () => {
 
 			<div className="legal-micro-link">
 				<Link to="/legal">{t('legal.title')}</Link>
+				<ModalLogin />
 			</div>
 		</div>
 	);
