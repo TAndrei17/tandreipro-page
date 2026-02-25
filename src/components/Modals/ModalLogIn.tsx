@@ -7,6 +7,8 @@ import './ModalLogin.css';
 
 import useDeviceType from '@hooks/useDeviceType';
 import type { AuthRequest } from '@models/Auth';
+import { useAppDispatch } from '@store/index';
+import { login } from '@store/user/services';
 import createAlert from '@utils/createAlert';
 import { createLoginValidationSchema } from '@utils/validation/createLoginFormValidation';
 
@@ -35,6 +37,7 @@ const SITE_KEY = ENV_DEV
 	: (import.meta.env.VITE_SITE_KEY as string);
 
 const ModalLogin = () => {
+	const dispatch = useAppDispatch();
 	const { t: tModal, i18n } = useTranslation('translation', { keyPrefix: 'contact.modal' });
 	const { t: tForm } = useTranslation('translation', { keyPrefix: 'contact.form' });
 	const { t: tErrors } = useTranslation('translation', { keyPrefix: 'contact.errors' });
@@ -64,6 +67,12 @@ const ModalLogin = () => {
 		}
 
 		try {
+			await dispatch(
+				login({
+					...values,
+					captchaToken: captchaValue,
+				})
+			).unwrap();
 			createAlert('success', tForm('loginSuccess'));
 			resetForm();
 		} catch {

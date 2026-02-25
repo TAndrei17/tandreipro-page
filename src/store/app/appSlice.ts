@@ -1,9 +1,9 @@
 // Slice for interacting with listenerMiddleware
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
-import { login, logout } from '@store/user/services';
 
 import type { AuthStatus } from '@models/Auth';
 import type { User } from '@models/User';
+import { login, logout } from '@store/user/services';
 
 type AppStatus = 'idle' | 'started';
 
