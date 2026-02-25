@@ -1,6 +1,7 @@
 import type { RootState } from '../index';
 
-const selectQuestionUser = (state: RootState) => state.questionUser.entities;
-const selectQuestionUserStatus = (state: RootState) => state.questionUser.loadingStatus;
+import { questionUserAdapter } from './questionUserSlice';
 
-export { selectQuestionUser, selectQuestionUserStatus };
+export const questionUserSelectors = questionUserAdapter.getSelectors<RootState>(
+	(state) => state.questionUser
+);
