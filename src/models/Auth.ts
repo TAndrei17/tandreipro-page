@@ -8,7 +8,6 @@ export type AuthRequest = {
 
 export type AuthResponse = {
 	success: boolean;
-	id: number;
-	name: string;
-	role: AuthStatus;
+	message: string;
+	data?: { id: number; name: string; role: 'user' | 'admin' };
 };

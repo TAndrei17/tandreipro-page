@@ -11,11 +11,11 @@ export const login = createAsyncThunk<User[], AuthRequest, { state: RootState }>
 	async (params): Promise<User[]> => {
 		const { data } = await api.post<AuthResponse>('/auth/login', params);
 
-		if (!data || !data.success) {
+		if (!data.data || !data.success) {
 			throw new Error('Authentication failed');
 		}
 
-		const { id, name, role } = data;
+		const { id, name, role } = data.data;
 
 		return [
 			{
