@@ -112,4 +112,8 @@
 		width: 100%;
 		text-align: center;
 	}
+
+	.checkbox-wrapper label {
+		font-size: 0.8em;
+	}
 }
