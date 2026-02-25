@@ -1,7 +1,7 @@
 import type { RootState } from '../index';
 
-const selectQuestionsPublic = (state: RootState) => state.questionsPublic.entities;
-const selectQuestionsPublicIds = (state: RootState) => state.questionsPublic.ids;
-const selectQuestionsPublicStatus = (state: RootState) => state.questionsPublic.loadingStatus;
+import { questionsPublicAdapter } from './questionsPublicSlice';
 
-export { selectQuestionsPublic, selectQuestionsPublicIds, selectQuestionsPublicStatus };
+export const questionsPublicSelectors = questionsPublicAdapter.getSelectors<RootState>(
+	(state) => state.questionsPublic
+);
