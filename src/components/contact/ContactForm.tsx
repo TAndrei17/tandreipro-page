@@ -7,7 +7,7 @@ import type { QuestionUserRequest } from '@models/Question';
 import { useAppDispatch } from '@store/index';
 import { postQuestionUser } from '@store/questionUser/services';
 import createAlert from '@utils/createAlert';
-import { createQuestionValidationSchema } from '@utils/createContactFormValidation';
+import { createQuestionValidationSchema } from '@utils/validation/createContactFormValidation';
 import './ContactFormStyle.css';
 
 const ENV_DEV = import.meta.env.DEV;
