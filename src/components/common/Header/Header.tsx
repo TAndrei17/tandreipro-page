@@ -8,12 +8,14 @@ import Languages from './Languages';
 import icons from '@constants/icons';
 import logos from '@constants/logos';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
+import useAuthStatus from '@hooks/useAuthStatus';
 import useDeviceType from '@hooks/useDeviceType';
 
 const Header = () => {
 	const { t } = useTranslation();
 	const navigate = useNavigate();
 	const { isMobile } = useDeviceType();
+	const auth = useAuthStatus();
 	const { setSiteHeaderHeight } = useSiteHeaderHeight();
 
 	const [menu, setMenu] = useState<'open' | 'closed'>('closed');
@@ -52,15 +54,24 @@ const Header = () => {
 		{ to: '/services', label: t('appHeader.services') },
 		{ to: '/about', label: t('appHeader.aboutMe') },
 		{ to: '/contact', label: t('appHeader.contact') },
+		{ to: '/dashboard', label: t('appHeader.dashboard') },
 	];
 
 	const renderNav = (className: string, onLinkClick?: () => void) => (
 		<nav className={className} aria-label={t('appHeader.navAria')}>
-			{navLinks.map(({ to, label }) => (
-				<NavLink key={to} to={to} onClick={onLinkClick}>
-					{label}
-				</NavLink>
-			))}
+			{navLinks.map(({ to, label }) => {
+				if (to === '/dashboard' && auth !== 'admin') {
+					return;
+				}
+
+				return (
+					<>
+						<NavLink key={to} to={to} onClick={onLinkClick}>
+							{label}
+						</NavLink>
+					</>
+				);
+			})}
 		</nav>
 	);
 

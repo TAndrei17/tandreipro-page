@@ -14,6 +14,7 @@ const ru = {
 			browserTabAboutMe: 'Андрей Трунькин | Обо мне',
 			browserTabContact: 'Андрей Трунькин | Контакты',
 			browserTabLegal: 'Андрей Трунькин | Правовая информация',
+			browserTabDashboard: 'AT| Панель управления',
 		},
 
 		pageNotFoundDescription: 'Страница, которую вы ищете, не существует или перемещена',
@@ -28,6 +29,7 @@ const ru = {
 			services: 'Услуги',
 			aboutMe: 'Обо мне',
 			contact: 'Контакты',
+			dashboard: 'Панель управления',
 			changeLngAlt: 'Изменить язык сайта',
 			openNavAlt: 'Открыть навигацию сайта',
 			ru: 'РУ',

@@ -14,6 +14,7 @@ const es = {
 			browserTabAboutMe: 'Andrei Trunkin | Sobre mí',
 			browserTabContact: 'Andrei Trunkin | Contacto',
 			browserTabLegal: 'Andrei Trunkin | Aviso Legal',
+			browserTabDashboard: 'AT | Panel de control',
 		},
 
 		pageNotFoundDescription: 'La página que buscas no existe o ha sido movida',
@@ -28,6 +29,7 @@ const es = {
 			services: 'Servicios',
 			aboutMe: 'Sobre mí',
 			contact: 'Contacto',
+			dashboard: 'Panel de control',
 			changeLngAlt: 'Cambiar el idioma del sitio web',
 			openNavAlt: 'Abrir la navegación del sitio web',
 			ru: 'РУ',

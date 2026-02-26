@@ -14,6 +14,7 @@ const en = {
 			browserTabAboutMe: 'Andrei Trunkin | About Me',
 			browserTabContact: 'Andrei Trunkin | Contact',
 			browserTabLegal: 'Andrei Trunkin | Legal & Privacy',
+			browserTabDashboard: 'AT | Dashboard',
 		},
 
 		pageNotFoundDescription: 'The page you are looking for does not exist or has been moved',
@@ -28,6 +29,7 @@ const en = {
 			services: 'Services',
 			aboutMe: 'About me',
 			contact: 'Contact',
+			dashboard: 'Dashboard',
 			changeLngAlt: 'Change website language',
 			openNavAlt: 'Open website navigation',
 			ru: 'РУ',
