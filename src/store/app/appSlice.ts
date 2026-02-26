@@ -3,7 +3,7 @@ import { createSlice, type PayloadAction } from '@reduxjs/toolkit';
 
 import type { AuthStatus } from '@models/Auth';
 import type { User } from '@models/User';
-import { login, logout } from '@store/user/services';
+import { checkAuth, login, logout } from '@store/user/services';
 
 type AppStatus = 'idle' | 'started';
 
@@ -30,6 +30,13 @@ const appSlice = createSlice({
 			.addCase(login.fulfilled, (state, action: PayloadAction<User[]>) => {
 				const user = action.payload[0];
 				state.auth = user?.role ?? 'guest';
+			})
+			.addCase(checkAuth.fulfilled, (state, action: PayloadAction<User[]>) => {
+				const user = action.payload[0];
+				state.auth = user?.role ?? 'guest';
+			})
+			.addCase(checkAuth.rejected, (state) => {
+				state.auth = 'guest';
 			})
 			.addCase(logout.fulfilled, (state) => {
 				state.auth = 'guest';

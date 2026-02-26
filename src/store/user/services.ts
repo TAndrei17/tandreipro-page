@@ -30,6 +30,30 @@ export const login = createAsyncThunk<User[], AuthRequest, { state: RootState }>
 	}
 );
 
+export const checkAuth = createAsyncThunk<User[], void, { state: RootState }>(
+	'user/checkAuth',
+	async (): Promise<User[]> => {
+		const { data } = await api.get<AuthResponse>('/auth/me');
+
+		if (!data.data || !data.success) {
+			throw new Error('Authentication failed');
+		}
+
+		const { id, name, role } = data.data;
+
+		return [
+			{
+				id,
+				name,
+				role,
+			},
+		];
+	},
+	{
+		condition: (_, { getState }) => getState().user.loadingStatus !== 'loading',
+	}
+);
+
 export const logout = createAsyncThunk<void, void, { state: RootState }>(
 	'user/logout',
 	async (): Promise<void> => {

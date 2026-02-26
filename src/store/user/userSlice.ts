@@ -1,7 +1,7 @@
 import { createEntityAdapter, createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction, SerializedError } from '@reduxjs/toolkit';
 
-import { login, logout } from './services';
+import { checkAuth, login, logout } from './services';
 
 import type { User } from '@models/User';
 
@@ -31,6 +31,20 @@ const userSlice = createSlice({
 				state.error = null;
 			})
 			.addCase(login.rejected, (state, action) => {
+				state.loadingStatus = 'failed';
+				state.error = action.error;
+			})
+
+			.addCase(checkAuth.pending, (state) => {
+				state.loadingStatus = 'loading';
+				state.error = null;
+			})
+			.addCase(checkAuth.fulfilled, (state, action: PayloadAction<User[]>) => {
+				userAdapter.setAll(state, action.payload);
+				state.loadingStatus = 'idle';
+				state.error = null;
+			})
+			.addCase(checkAuth.rejected, (state, action) => {
 				state.loadingStatus = 'failed';
 				state.error = action.error;
 			})

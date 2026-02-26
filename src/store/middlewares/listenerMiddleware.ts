@@ -5,6 +5,7 @@ import type { AppDispatch, RootState } from '../index';
 import { startApp } from '@store/app/appSlice';
 import { getQuestionsPublic } from '@store/questionsPublic/services';
 import { getTags } from '@store/tags/services';
+import { checkAuth } from '@store/user/services';
 
 export const listenerMiddleware = createListenerMiddleware();
 export const startAppListening = listenerMiddleware.startListening.withTypes<
@@ -16,6 +17,7 @@ export const startAppListening = listenerMiddleware.startListening.withTypes<
 startAppListening({
 	actionCreator: startApp,
 	effect: async (_, { dispatch }) => {
+		dispatch(checkAuth());
 		dispatch(getQuestionsPublic());
 		dispatch(getTags());
 	},
