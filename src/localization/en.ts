@@ -152,7 +152,9 @@ const en = {
 
 			modal: {
 				login: 'Log in',
-				closeModal: 'Close',
+				logout: 'Logout',
+				logoutSuccess: 'Session successfully ended',
+				logoutFail: 'Failed to end the session',
 			},
 		},
 

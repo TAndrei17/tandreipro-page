@@ -152,9 +152,13 @@ const ru = {
 
 			modal: {
 				login: 'Войти',
-				closeModal: 'Закрыть',
+				logout: 'Выйти',
+				logoutSuccess: 'Сессия успешно завершена',
+				logoutFail: 'Не удалось завершить сессию',
 			},
 		},
+
+		dashboard: {},
 
 		legal: {
 			title: 'Правовая информация',

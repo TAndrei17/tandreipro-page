@@ -152,7 +152,9 @@ const es = {
 
 			modal: {
 				login: 'Iniciar sesión',
-				closeModal: 'Cerrar',
+				logout: 'Cerrar sesión',
+				logoutSuccess: 'Sesión cerrada con éxito',
+				logoutFail: 'No se pudo cerrar la sesión',
 			},
 		},
 
