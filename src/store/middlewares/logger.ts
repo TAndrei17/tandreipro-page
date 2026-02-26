@@ -38,7 +38,6 @@ const logger: Middleware = (store) => (next) => (action: any) => {
 				'LOGIN: Auth status:',
 				authState
 			);
-			console.log('Auth', JSON.stringify(appState.auth, null, 2));
 			break;
 
 		case 'user/checkAuth/rejected':
@@ -48,7 +47,15 @@ const logger: Middleware = (store) => (next) => (action: any) => {
 				'LOGIN: Auth status:',
 				authState
 			);
-			console.log('Auth', JSON.stringify(appState.auth, null, 2));
+			break;
+
+		case 'user/logout/fulfilled':
+			console.log(
+				'LOGIN: User in the state:',
+				JSON.stringify(userState, null, 2),
+				'LOGIN: Auth status:',
+				authState
+			);
 			break;
 	}
 	console.groupEnd();

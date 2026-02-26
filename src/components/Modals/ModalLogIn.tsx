@@ -4,11 +4,13 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { useTranslation } from 'react-i18next';
 import Modal from 'react-modal';
 import './ModalLogin.css';
+import { useNavigate } from 'react-router';
 
+import useAuthStatus from '@hooks/useAuthStatus';
 import useDeviceType from '@hooks/useDeviceType';
 import type { AuthRequest } from '@models/Auth';
 import { useAppDispatch } from '@store/index';
-import { login } from '@store/user/services';
+import { login, logout } from '@store/user/services';
 import createAlert from '@utils/createAlert';
 import { createLoginValidationSchema } from '@utils/validation/createLoginFormValidation';
 
@@ -38,6 +40,7 @@ const SITE_KEY = ENV_DEV
 
 const ModalLogin = () => {
 	const dispatch = useAppDispatch();
+	const navigate = useNavigate();
 	const { t: tModal, i18n } = useTranslation('translation', { keyPrefix: 'contact.modal' });
 	const { t: tForm } = useTranslation('translation', { keyPrefix: 'contact.form' });
 	const { t: tErrors } = useTranslation('translation', { keyPrefix: 'contact.errors' });
@@ -45,6 +48,7 @@ const ModalLogin = () => {
 
 	const recaptchaRef = useRef<ReCAPTCHA>(null);
 	const { isMobile } = useDeviceType();
+	const whoami = useAuthStatus();
 
 	const [showCaptcha, setShowCaptcha] = useState(false);
 	const [captchaValue, setCaptchaValue] = useState<string | null>(null);
@@ -58,6 +62,20 @@ const ModalLogin = () => {
 
 	const handleCaptchaChange = (value: string | null) => {
 		setCaptchaValue(value);
+	};
+
+	const openSession = async () => {
+		if (whoami === 'guest') {
+			setIsOpen(true);
+			return;
+		}
+
+		try {
+			await dispatch(logout()).unwrap();
+			createAlert('success', tModal('logoutSuccess'));
+		} catch {
+			createAlert('error', tModal('logoutFail'));
+		}
 	};
 
 	const onSubmit = async (values: AuthRequest, { setSubmitting, resetForm }: any) => {
@@ -75,6 +93,8 @@ const ModalLogin = () => {
 			).unwrap();
 			createAlert('success', tForm('loginSuccess'));
 			resetForm();
+
+			navigate('/dashboard');
 		} catch {
 			createAlert('error', tErrors('loginFail'));
 		} finally {
@@ -82,6 +102,7 @@ const ModalLogin = () => {
 			recaptchaRef.current?.reset();
 			setCaptchaValue(null);
 			setShowCaptcha(false);
+			setIsOpen(false);
 		}
 	};
 
@@ -89,8 +110,8 @@ const ModalLogin = () => {
 
 	return (
 		<>
-			<span className="modal-login-link" onClick={() => setIsOpen(true)}>
-				{tModal('login')}
+			<span className="modal-login-link" onClick={openSession}>
+				{whoami === 'guest' ? tModal('login') : tModal('logout')}
 			</span>
 
 			<Modal isOpen={isOpen} onRequestClose={() => setIsOpen(false)} style={customStyles}>
