@@ -33,7 +33,8 @@ const customStyles = {
 	},
 };
 
-const ENV_DEV = import.meta.env.DEV;
+const ENV_DEV = import.meta.env.VITE_APP_ENV === 'development';
+
 const SITE_KEY = ENV_DEV
 	? (import.meta.env.VITE_SITE_KEY_DEV as string)
 	: (import.meta.env.VITE_SITE_KEY as string);

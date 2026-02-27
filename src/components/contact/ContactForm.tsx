@@ -10,7 +10,7 @@ import createAlert from '@utils/createAlert';
 import { createQuestionValidationSchema } from '@utils/validation/createContactFormValidation';
 import './ContactFormStyle.css';
 
-const ENV_DEV = import.meta.env.DEV;
+const ENV_DEV = import.meta.env.VITE_APP_ENV === 'development';
 
 const SITE_KEY = ENV_DEV
 	? (import.meta.env.VITE_SITE_KEY_DEV as string)
