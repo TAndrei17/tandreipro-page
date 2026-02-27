@@ -160,7 +160,13 @@ const ru = {
 			},
 		},
 
-		dashboard: {},
+		dashboard: {
+			nav: {
+				admin: 'Администратор',
+				questions: 'Вопросы',
+				tags: 'Теги',
+			},
+		},
 
 		legal: {
 			title: 'Правовая информация',

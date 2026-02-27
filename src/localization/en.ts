@@ -160,6 +160,14 @@ const en = {
 			},
 		},
 
+		dashboard: {
+			nav: {
+				admin: 'Administrator',
+				questions: 'Questions',
+				tags: 'Tags',
+			},
+		},
+
 		legal: {
 			title: 'Legal & Privacy',
 			terms: legalTextEn,

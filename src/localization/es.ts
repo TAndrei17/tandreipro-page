@@ -160,6 +160,14 @@ const es = {
 			},
 		},
 
+		dashboard: {
+			nav: {
+				admin: 'Administrador',
+				questions: 'Preguntas',
+				tags: 'Etiquetas',
+			},
+		},
+
 		legal: {
 			title: 'Aviso Legal y Política de Privacidad',
 			terms: legalTextEs,
