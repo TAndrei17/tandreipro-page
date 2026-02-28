@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import appReducer from './app/appSlice';
 import { listenerMiddleware } from './middlewares/listenerMiddleware';
 import logger from './middlewares/logger';
+import questionsAdminReducer from './questionsAdmin/questionsAdminSlice';
 import questionsPublicReducer from './questionsPublic/questionsPublicSlice';
 import questionUserReducer from './questionUser/questionUserSlice';
 import tagsReducer from './tags/tagsSlice';
@@ -20,6 +21,7 @@ const store = configureStore({
 	reducer: {
 		app: appReducer,
 		questionsPublic: questionsPublicReducer,
+		questionsAdmin: questionsAdminReducer,
 		questionUser: questionUserReducer,
 		tags: tagsReducer,
 		user: userReducer,
