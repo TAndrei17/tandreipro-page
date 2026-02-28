@@ -166,6 +166,11 @@ const ru = {
 				questions: 'Вопросы',
 				tags: 'Теги',
 			},
+			content: {
+				name: 'Активный пользователь',
+				role: 'Роль',
+				id: 'ID',
+			},
 		},
 
 		legal: {

@@ -166,6 +166,11 @@ const es = {
 				questions: 'Preguntas',
 				tags: 'Etiquetas',
 			},
+			content: {
+				name: 'Usuario activo',
+				role: 'Rol',
+				id: 'ID',
+			},
 		},
 
 		legal: {
