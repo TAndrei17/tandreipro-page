@@ -9,6 +9,7 @@ const logger: Middleware = (store) => (next) => (action: any) => {
 	const authState = store.getState().app.auth;
 	const tagsState = store.getState().tags;
 	const userState = store.getState().user;
+	const questionAdminState = store.getState().questionsAdmin;
 
 	console.group(`Getting data for store. Action '${type}'`);
 
@@ -56,6 +57,10 @@ const logger: Middleware = (store) => (next) => (action: any) => {
 				'LOGIN: Auth status:',
 				authState
 			);
+			break;
+
+		case 'questionsAdmin/getQuestionsAdmin/fulfilled':
+			console.log('Questions in the admin state:', JSON.stringify(questionAdminState, null, 2));
 			break;
 	}
 	console.groupEnd();
