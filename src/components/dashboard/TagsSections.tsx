@@ -6,7 +6,9 @@ const TagsSection = () => {
 
 	return (
 		<section id={tNav('tags')}>
-			<h2 className={'dashboard-section-header'}>{tNav('tags')}</h2>
+			<div className={'dashboard-section-content'}>
+				<h2 className={'dashboard-section-header'}>{tNav('tags')}</h2>
+			</div>
 		</section>
 	);
 };
