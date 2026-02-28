@@ -32,12 +32,9 @@ const DashboardPage = () => {
 				<DashboardNav active={active} setActive={setActive} />
 
 				<main className="content">
-					{sections.map((section, index) => {
-						if (index === active) {
-							return <div key={index}>{section.component}</div>;
-						}
-						return <></>;
-					})}
+					{sections.map((section, index) =>
+						active === sections.indexOf(section) ? <div key={index}>{section.component}</div> : null
+					)}
 				</main>
 			</div>
 		</div>

@@ -6,9 +6,8 @@ import { userSelectors } from '@store/user/selectors';
 
 const AdminSection = () => {
 	const { t } = useTranslation('translation', { keyPrefix: 'dashboard' });
-	const [id] = useAppSelector(userSelectors.selectIds);
-	const adminData = useAppSelector(userSelectors.selectEntities);
-	const admin = adminData[id];
+	const adminData = useAppSelector(userSelectors.selectAll);
+	const admin = adminData[0];
 
 	return (
 		<section id={t('nav.admin')}>
