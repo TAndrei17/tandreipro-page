@@ -1,9 +1,12 @@
+import { useTranslation } from 'react-i18next';
+
 import icons from '@constants/icons';
 import type { QuestionDeleteRequest } from '@models/questionsAdmin';
 import { useAppDispatch } from '@store/index';
 import { deleteQuestionAdmin } from '@store/questionsAdmin/services';
 import createAlert from '@utils/createAlert';
 import type { Question } from 'models/Question';
+
 import './styles/QuestionAdminCard.css';
 
 type QuestionCardProps = {
@@ -12,13 +15,15 @@ type QuestionCardProps = {
 
 const QuestionAdminCard = ({ question }: QuestionCardProps) => {
 	const dispatch = useAppDispatch();
+	const { t } = useTranslation('translation', { keyPrefix: 'dashboard.questions' });
 
-	const deleteQuestion = (id: QuestionDeleteRequest): void => {
+	const deleteQuestion = async (request: QuestionDeleteRequest): Promise<void> => {
+		const id = request.id;
 		try {
-			dispatch(deleteQuestionAdmin(id));
-			createAlert('success', 'Вопрос успешно удален');
+			await dispatch(deleteQuestionAdmin(request));
+			createAlert('success', t('deleteSuccess', { count: id }));
 		} catch {
-			createAlert('error', 'Не удалось удалить вопрос');
+			createAlert('error', t('deleteFail', { count: id }));
 		}
 	};
 
