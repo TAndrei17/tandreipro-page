@@ -1,7 +1,7 @@
 import { createEntityAdapter, createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction, SerializedError } from '@reduxjs/toolkit';
 
-import { deleteQuestionAdmin, getQuestionsAdmin } from './services';
+import { deleteAllQuestionsAdmin, deleteQuestionAdmin, getQuestionsAdmin } from './services';
 
 import type { Question } from 'models/Question';
 
@@ -10,10 +10,12 @@ export const questionsAdminAdapter = createEntityAdapter<Question>();
 const initialState = questionsAdminAdapter.getInitialState<{
 	loadingStatus: 'idle' | 'loading' | 'failed';
 	deletingStatus: 'idle' | 'loading' | 'failed';
+	deletingAllStatus: 'idle' | 'loading' | 'failed';
 	error: SerializedError | null;
 }>({
 	loadingStatus: 'idle',
 	deletingStatus: 'idle',
+	deletingAllStatus: 'idle',
 	error: null,
 });
 
@@ -29,6 +31,7 @@ const questionsAdminSlice = createSlice({
 	},
 	extraReducers: (builder) => {
 		builder
+			// GET ONE
 			.addCase(getQuestionsAdmin.pending, (state) => {
 				state.loadingStatus = 'loading';
 				state.error = null;
@@ -43,6 +46,7 @@ const questionsAdminSlice = createSlice({
 				state.error = action.error;
 			})
 
+			// DELETE ONE
 			.addCase(deleteQuestionAdmin.pending, (state) => {
 				state.deletingStatus = 'loading';
 				state.error = null;
@@ -55,6 +59,21 @@ const questionsAdminSlice = createSlice({
 			})
 			.addCase(deleteQuestionAdmin.rejected, (state, action) => {
 				state.deletingStatus = 'failed';
+				state.error = action.error;
+			})
+
+			// DELETE ALL
+			.addCase(deleteAllQuestionsAdmin.pending, (state) => {
+				state.deletingAllStatus = 'loading';
+				state.error = null;
+			})
+			.addCase(deleteAllQuestionsAdmin.fulfilled, (state) => {
+				questionsAdminAdapter.removeAll(state);
+				state.deletingAllStatus = 'idle';
+				state.error = null;
+			})
+			.addCase(deleteAllQuestionsAdmin.rejected, (state, action) => {
+				state.deletingAllStatus = 'failed';
 				state.error = action.error;
 			});
 	},

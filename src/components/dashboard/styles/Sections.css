@@ -6,6 +6,59 @@
 	box-sizing: border-box;
 }
 
+.dashboard-section-header-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.delete-questions-button {
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+	padding: 12px 20px;
+	background: #ffdd57;
+	color: #333;
+	font-weight: 600;
+	font-size: 16px;
+	border: none;
+	border-radius: 12px;
+	cursor: pointer;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	transition:
+		transform 0.1s ease,
+		box-shadow 0.1s ease,
+		background 0.2s ease;
+}
+
+.delete-questions-button:hover {
+	background: #ffcf33;
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+	transform: translateY(-1px);
+}
+
+.delete-questions-button:active {
+	transform: translateY(1px) scale(0.97);
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.delete-questions-button:focus-visible {
+	outline: 3px solid #4c9ffe;
+	outline-offset: 3px;
+}
+
+.delete-questions-trash {
+	width: 35px;
+	height: 35px;
+	padding: 0;
+	transition: transform 0.2s ease;
+}
+
+.delete-questions-button:hover .delete-questions-trash {
+	transform: rotate(-20deg) scale(1.1);
+}
+
 .dashboard-section-header {
 	line-height: 0;
 }

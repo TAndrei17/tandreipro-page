@@ -17,17 +17,17 @@ const AdminSection = () => {
 				<div className="admin-card">
 					<div className="admin-info">
 						<div className="admin-field">
-							<span className="label">{t('content.name')}</span>
+							<span className="label">{t('admin.name')}</span>
 							<span className="value">{admin.name}</span>
 						</div>
 
 						<div className="admin-field">
-							<span className="label">{t('content.role')}</span>
+							<span className="label">{t('admin.role')}</span>
 							<span className="value">{admin.role}</span>
 						</div>
 
 						<div className="admin-field">
-							<span className="label">{t('content.id')}</span>
+							<span className="label">{t('admin.id')}</span>
 							<span className="value">{admin.id}</span>
 						</div>
 					</div>

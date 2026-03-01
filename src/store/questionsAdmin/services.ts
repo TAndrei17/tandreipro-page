@@ -24,6 +24,18 @@ export const getQuestionsAdmin = createAsyncThunk<Question[], void, { state: Roo
 	}
 );
 
+export const deleteAllQuestionsAdmin = createAsyncThunk<void, void, { state: RootState }>(
+	'questionsAdmin/deleteAllQuestionsAdmin',
+	async () => {
+		const url = '/admin/questions';
+		await api.delete(url);
+		return;
+	},
+	{
+		condition: (_, { getState }) => getState().questionsAdmin.deletingAllStatus !== 'loading',
+	}
+);
+
 export const deleteQuestionAdmin = createAsyncThunk<
 	number,
 	QuestionDeleteRequest,
