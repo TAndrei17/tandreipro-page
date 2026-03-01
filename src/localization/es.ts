@@ -55,13 +55,26 @@ const es = {
 			whyWorkWithMeTitle: 'Por Qué Elegirme',
 
 			webHelp:
-				'Crearé un sitio web adaptado a tus objetivos: una landing page, un sitio web corporativo o un portafolio.\n\nEl sitio se convertirá en tu oficina online, un lugar donde los clientes podrán conocerte y ponerse en contacto contigo rápidamente.\n\nSitios web adaptativos — se ven igual de bien en ordenadores y teléfonos. Reduzca esta ventana y observe cómo funciona todo.',
+				'Creo sitios web para negocios y profesionales: landing pages, sitios de presentación y portafolios.\n' +
+				'Los visitantes ven a qué te dedicas, consultan ejemplos de tu trabajo y pueden ponerse en contacto contigo.',
+
 			webClients:
-				'Colaboro con profesionales independientes, autónomos y empresas.\n\nSi tienes un blog y quieres reunir tus redes sociales en un solo lugar — hagamos un sitio web de una sola página con tu portafolio. ¿Tienes un salón de manicura y buscas clientes? — un sitio web personal te ayudará. ¿Has abierto una fábrica de ventanas? — cuéntaselo a tus clientes en el sitio web de tu empresa.',
+				'Trabajo con especialistas independientes, emprendedores y empresas.\n' +
+				'Si ofreces servicios, desarrollas una marca personal o estás iniciando un negocio — crearé un sitio web para ayudar a atraer clientes.',
+
 			webTasks:
-				'Tienes un negocio y quieres darte a conocer en Internet, necesitas un servicio para que los clientes puedan reservar citas o planeas mantener un blog en tu propia plataforma — estas tareas se pueden resolver con un sitio web personal.',
+				'Resolvemos tareas relacionadas con la captación y gestión de tu audiencia.\n' +
+				'– Mostrar tus servicios, precios y ejemplos de trabajos.\n' +
+				'– Organizar la recepción de solicitudes y consultas.\n' +
+				'– Configurar la reserva en línea de tus servicios.\n' +
+				'– Crear una sección para publicar artículos y novedades.\n' +
+				'– Hacer el sitio web multilingüe para usuarios en distintos idiomas.',
+
 			webWhyMe:
-				'Asumo la responsabilidad total del proyecto, explico las decisiones en términos sencillos y estoy en contacto en todas las etapas del trabajo. Puede estar seguro de que su sitio web estará listo y funcionará tal como se planeó. Mis precios son accesibles, y no solo crearé su sitio web, sino que también lo publicaré en internet. Estoy dispuesto a tener en cuenta sus preferencias de diseño y prestar atención a sus necesidades.',
+				'Gestiono el proyecto desde la idea hasta el lanzamiento.\n' +
+				'Construyo el sitio web, lo alojaré en internet y configuro la indexación en Google. ' +
+				'Estructuro el sitio de manera clara y con un marcado correcto — los motores de búsqueda indexan las páginas correctamente.\n' +
+				'Explico las decisiones en lenguaje sencillo y muestro cómo utilizar el sitio después del lanzamiento.',
 
 			shopHelp:
 				'Crearé un sitio web funcional para una tienda online: prepararé el diseño, lo configuraré y lo publicaré en internet.\n\nTe ayudaré a lanzar una tienda online para vender productos y servicios en una plataforma de e-commerce moderna y fácil de usar.\n\nObtendrás una tienda lista para funcionar, fácil de gestionar y de escalar.',

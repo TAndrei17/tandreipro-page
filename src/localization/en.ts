@@ -55,13 +55,26 @@ const en = {
 			whyWorkWithMeTitle: 'Why Choose Me',
 
 			webHelp:
-				'I will create a website tailored to your goals: a landing page, a business card website, or a portfolio.\n\nThe site will become your online office — a place where clients can get to know you and contact you quickly.\n\nResponsive websites — they look equally neat on both computers and phones. Resize this window and see how everything works.',
+				'I create websites for businesses and professionals: landing pages, business card sites, and portfolios.\n' +
+				'Visitors see what you do, view examples of your work, and can get in touch with you.',
+
 			webClients:
-				"I collaborate with freelancers, individual entrepreneurs, and companies.\n\nIf you run a blog and want to gather your social media in one place — let's create a one-page website with your portfolio. Do you have a manicure salon and are looking for clients — a personal website will help you. Have you opened a window manufacturing factory — tell your clients about it on your company website.",
+				'I work with independent specialists, entrepreneurs, and companies.\n' +
+				'If you provide services, develop a personal brand, or are starting a business — I will create a website to help attract clients.',
+
 			webTasks:
-				'You run a business and want to establish your presence online, you need a service for client appointment booking or you plan to run a blog on your own platform — these tasks can be solved with a personal website.',
+				'We solve tasks related to attracting and managing your audience.\n' +
+				'– Showcase your services, prices, and work examples.\n' +
+				'– Organize the reception of inquiries and requests.\n' +
+				'– Set up online booking for your services.\n' +
+				'– Configure a section for publishing articles and updates.\n' +
+				'– Make the website multilingual for users in different languages.',
+
 			webWhyMe:
-				'I take full responsibility for the project, explain decisions in simple terms, and stay in touch at every stage of the work. You can be sure your website will be ready and function exactly as intended. My prices are affordable, and I will not only build your website but also deploy it online. I am ready to consider your design preferences and pay close attention to your needs.',
+				'I manage the project from idea to launch.\n' +
+				'I build the website, host it online, and set up Google indexing. ' +
+				'I structure the site clearly and with proper markup — search engines correctly index the pages.\n' +
+				'I explain decisions in plain language and show how to use the site after launch.',
 
 			shopHelp:
 				'I will create a functional website for an online store: prepare the design, set it up, and publish it online.\n\nI will help you launch an online store for selling products and services on a modern and user-friendly e-commerce platform.\n\nYou will get a store that is ready to use, easy to manage, and easy to scale.',
