@@ -77,13 +77,21 @@ const es = {
 				'Explico las decisiones en lenguaje sencillo y muestro cómo utilizar el sitio después del lanzamiento.',
 
 			shopHelp:
-				'Crearé un sitio web funcional para una tienda online: prepararé el diseño, lo configuraré y lo publicaré en internet.\n\nTe ayudaré a lanzar una tienda online para vender productos y servicios en una plataforma de e-commerce moderna y fácil de usar.\n\nObtendrás una tienda lista para funcionar, fácil de gestionar y de escalar.',
+				'Creo sitios web para tiendas en línea: diseño, configuración de la plataforma y alojamiento.\n' +
+				'Recibirás una tienda lista para vender productos y servicios en una plataforma e-commerce fácil de usar, sencilla de gestionar y escalar.',
+
 			shopClients:
-				'Trabajo con profesionales independientes, autónomos y empresas.\n\nSi tienes un pequeño negocio y quieres vender productos o servicios en línea, pero un lanzamiento completo parece demasiado costoso, te ayudaré a encontrar una solución simple y accesible. Crearé una tienda online que funcione y pueda crecer sin grandes inversiones iniciales.',
+				'Trabajo con especialistas independientes, emprendedores y empresas.\n' +
+				'Si tienes un pequeño negocio y quieres vender en línea sin grandes inversiones iniciales — creo una tienda que funciona de inmediato y puede crecer junto con tu negocio.',
+
 			shopTasks:
-				'Incluso las plataformas de e-commerce más fáciles de usar requieren tiempo y conocimientos técnicos: configuración, maquetación, estilos e integración de servicios.\n\nYo me encargo de este trabajo para que puedas centrarte en tu negocio y en las ventas, y no en los detalles técnicos.',
+				'Configurar una tienda online requiere tiempo y conocimientos técnicos: maquetación, estilización, configuración de la plataforma e integración de servicios.\n' +
+				'Me encargo de estas tareas para que puedas concentrarte en las ventas y en hacer crecer tu tienda.',
+
 			shopWhyMe:
-				'Asumo la responsabilidad total del proyecto, explico las decisiones en términos sencillos y estoy en contacto en todas las etapas del trabajo. Mis precios son accesibles y los plazos de desarrollo son rápidos. Puede estar seguro de que su tienda online estará lista y funcionará tal como se planeó.',
+				'Gestiono el proyecto desde la idea hasta el lanzamiento.\n' +
+				'Explico las decisiones en lenguaje sencillo y muestro cómo manejar la tienda después del lanzamiento.\n' +
+				'Plazos rápidos, precios transparentes y la tienda funciona desde el primer día.',
 
 			mobileHelp:
 				'Crearé una aplicación móvil para iOS y Android y la publicaré en App Store y Google Play.\n\nCon la aplicación, puedes: gestionar fácilmente a tu equipo y clientes; registrar el tiempo de trabajo y las tareas; recibir reservas y pedidos directamente desde el teléfono.\n\nTodas las funciones de tu negocio — en una sola aplicación conveniente.',
@@ -96,10 +104,14 @@ const es = {
 
 			maintenanceHelp:
 				'Me encargo del soporte y mantenimiento de tu sitio web o aplicación móvil.\n\nLanzar un proyecto es solo el comienzo. Como cualquier casa, un sitio web o una aplicación necesitan cuidado: corregir pequeños problemas, hacer actualizaciones y mejorar su aspecto o funcionamiento. Me aseguro de que todo funcione bien, se mantenga actualizado y no se rompa con el tiempo.',
+
 			maintenanceClients:
 				'Ayudo a profesionales independientes, emprendedores y empresas a cuidar sus sitios web y aplicaciones.\n\nSi ya tienes un proyecto, lo revisaré y te diré sinceramente si puedo encargarme de su soporte y desarrollo.',
+
 			maintenanceTasks:
-				'Nos ocupamos juntos de tu sitio web o aplicación. Me encargo de todos los asuntos técnicos: corrijo errores, actualizo funciones y diseño, y aseguro la seguridad y estabilidad. Así puedes centrarte en hacer crecer tu negocio sin preocuparte por problemas técnicos.\n\nJuntos analizamos lo que funciona bien y lo que se puede mejorar para que tu sitio web o aplicación siga siendo fácil de usar, moderno y ayude a que tu negocio crezca.',
+				'Nos ocupamos juntos de tu sitio web o aplicación. Me encargo de todos los asuntos técnicos: corrijo errores, actualizo funciones y diseño, y aseguro la seguridad y estabilidad. Así puedes centrarte en hacer crecer tu negocio sin preocuparte por problemas técnicos.\n' +
+				'Juntos analizamos lo que funciona bien y lo que se puede mejorar para que tu sitio web o aplicación siga siendo fácil de usar, moderno y ayude a que tu negocio crezca.',
+
 			maintenanceWhyMe:
 				'Asumo toda la responsabilidad del proyecto, explico las decisiones de manera sencilla y estoy siempre disponible en todas las etapas del trabajo.',
 		},
