@@ -6,8 +6,7 @@ import QuestionAdminCard from './QuestionAdminCard';
 import icons from '@constants/icons';
 import { useAppDispatch, useAppSelector } from '@store/index';
 import { questionsAdminSelectors } from '@store/questionsAdmin/selectors';
-import { deleteAllQuestionsAdmin } from '@store/questionsAdmin/services';
-import createAlert from '@utils/createAlert';
+import deleteAllQuestions from '@utils/deleteAllQuestions';
 
 const QuestionsSection = () => {
 	const dispatch = useAppDispatch();
@@ -15,13 +14,8 @@ const QuestionsSection = () => {
 	const { t: tQuestions } = useTranslation('translation', { keyPrefix: 'dashboard.questions' });
 	const questionsAdmin = useAppSelector(questionsAdminSelectors.selectAll);
 
-	const deleteAllQuestions = async () => {
-		try {
-			await dispatch(deleteAllQuestionsAdmin());
-			createAlert('success', tQuestions('deleteAllSuccess'));
-		} catch {
-			createAlert('error', tQuestions('deleteAllfail'));
-		}
+	const handleDeleteAll = async () => {
+		await deleteAllQuestions(dispatch, tQuestions);
 	};
 
 	return (
@@ -33,13 +27,11 @@ const QuestionsSection = () => {
 						role="button"
 						tabIndex={0}
 						className="delete-questions-button"
-						onClick={() => {
-							deleteAllQuestions();
-						}}
+						onClick={handleDeleteAll}
 						onKeyDown={(e) => {
 							if (e.key === 'Enter' || e.key === ' ') {
 								e.preventDefault();
-								deleteAllQuestions();
+								handleDeleteAll();
 							}
 						}}>
 						{tQuestions('deleteAll')}

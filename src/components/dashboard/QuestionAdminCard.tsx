@@ -3,10 +3,9 @@ import { useTranslation } from 'react-i18next';
 import icons from '@constants/icons';
 import type { QuestionDeleteRequest } from '@models/questionsAdmin';
 import { useAppDispatch } from '@store/index';
-import { deleteQuestionAdmin, updateQuestionAdmin } from '@store/questionsAdmin/services';
-import createAlert from '@utils/createAlert';
+import deleteQuestion from '@utils/deleteQuestion';
+import updateQuestionStatus from '@utils/updateQuestion';
 import type { Question } from 'models/Question';
-
 import './styles/QuestionAdminCard.css';
 
 type QuestionCardProps = {
@@ -17,27 +16,12 @@ const QuestionAdminCard = ({ question }: QuestionCardProps) => {
 	const dispatch = useAppDispatch();
 	const { t } = useTranslation('translation', { keyPrefix: 'dashboard.questions' });
 
-	const deleteQuestion = async (request: QuestionDeleteRequest): Promise<void> => {
-		const id = request.id;
-		try {
-			await dispatch(deleteQuestionAdmin(request));
-			createAlert('success', t('deleteSuccess', { count: id }));
-		} catch {
-			createAlert('error', t('deleteFail', { count: id }));
-		}
+	const handleDelete = async (request: QuestionDeleteRequest) => {
+		await deleteQuestion(request, dispatch, t);
 	};
 
-	const updateQuestionStatus = async (id: number, status: boolean) => {
-		const newStatus = !status;
-		try {
-			await dispatch(updateQuestionAdmin({ id, approved: newStatus }));
-			createAlert(
-				newStatus ? 'success' : 'info',
-				t(newStatus ? 'updateStatusTrue' : 'updateStatusFalse', { count: id })
-			);
-		} catch {
-			createAlert('error', t('updateStatusFail'));
-		}
+	const handleStatus = async (id: number, status: boolean) => {
+		await updateQuestionStatus(id, status, dispatch, t);
 	};
 
 	return (
@@ -46,7 +30,7 @@ const QuestionAdminCard = ({ question }: QuestionCardProps) => {
 				<span className="question-id">#{question.id}</span>
 				<div className={'question-status-container'}>
 					<span
-						onClick={() => updateQuestionStatus(question.id, question.approved)}
+						onClick={() => handleStatus(question.id, question.approved)}
 						className={`question-status ${question.approved ? 'approved' : 'pending'}`}>
 						{question.approved ? 'Approved' : 'Pending'}
 					</span>
@@ -55,12 +39,12 @@ const QuestionAdminCard = ({ question }: QuestionCardProps) => {
 						tabIndex={0}
 						className="question-button"
 						onClick={() => {
-							deleteQuestion({ id: question.id });
+							handleDelete({ id: question.id });
 						}}
 						onKeyDown={(e) => {
 							if (e.key === 'Enter' || e.key === ' ') {
 								e.preventDefault();
-								deleteQuestion({ id: question.id });
+								handleDelete({ id: question.id });
 							}
 						}}>
 						<img
