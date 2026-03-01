@@ -14,3 +14,12 @@ export interface QuestionsAdminResponse {
 	total?: number;
 	totalPages?: number;
 }
+
+export interface QuestionDeleteRequest {
+	id: number;
+}
+
+export interface QuestionDeleteResponse {
+	success: boolean;
+	message: string;
+}

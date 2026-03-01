@@ -1,4 +1,8 @@
 import icons from '@constants/icons';
+import type { QuestionDeleteRequest } from '@models/questionsAdmin';
+import { useAppDispatch } from '@store/index';
+import { deleteQuestionAdmin } from '@store/questionsAdmin/services';
+import createAlert from '@utils/createAlert';
 import type { Question } from 'models/Question';
 import './styles/QuestionAdminCard.css';
 
@@ -7,6 +11,17 @@ type QuestionCardProps = {
 };
 
 const QuestionAdminCard = ({ question }: QuestionCardProps) => {
+	const dispatch = useAppDispatch();
+
+	const deleteQuestion = (id: QuestionDeleteRequest): void => {
+		try {
+			dispatch(deleteQuestionAdmin(id));
+			createAlert('success', 'Вопрос успешно удален');
+		} catch {
+			createAlert('error', 'Не удалось удалить вопрос');
+		}
+	};
+
 	return (
 		<div className="question-card">
 			<div className="question-header">
@@ -15,7 +30,26 @@ const QuestionAdminCard = ({ question }: QuestionCardProps) => {
 					<span className={`question-status ${question.approved ? 'approved' : 'pending'}`}>
 						{question.approved ? 'Approved' : 'Pending'}
 					</span>
-					<img src={icons.deleteIcon} alt={'trash'} title={'trash'} className={'question-trash'} />
+					<span
+						role="button"
+						tabIndex={0}
+						className="question-button"
+						onClick={() => {
+							deleteQuestion({ id: question.id });
+						}}
+						onKeyDown={(e) => {
+							if (e.key === 'Enter' || e.key === ' ') {
+								e.preventDefault();
+								deleteQuestion({ id: question.id });
+							}
+						}}>
+						<img
+							src={icons.deleteIcon}
+							alt={'trash'}
+							title={'trash'}
+							className={'question-trash'}
+						/>
+					</span>
 				</div>
 			</div>
 
