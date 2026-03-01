@@ -202,6 +202,9 @@ const en = {
 				id: 'ID',
 			},
 			questions: {
+				updateStatusTrue: 'Question {{count}} is visible to everyone',
+				updateStatusFalse: 'Only the administrator can see question {{count}}',
+				updateStatusFail: 'Failed to change the status',
 				deleteSuccess: 'Question {{count}} deleted successfully',
 				deleteFail: 'Failed to delete question {{count}}',
 				deleteAll: 'Delete all questions',

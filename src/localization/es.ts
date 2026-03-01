@@ -197,6 +197,9 @@ const es = {
 				id: 'ID',
 			},
 			questions: {
+				updateStatusTrue: 'La pregunta {{count}} es visible para todos',
+				updateStatusFalse: 'Sólo el administrador puede ver la pregunta {{count}}',
+				updateStatusFail: 'No se pudo cambiar el estado',
 				deleteSuccess: 'La pregunta {{count}} se eliminó correctamente',
 				deleteFail: 'No se pudo eliminar la pregunta {{count}}',
 				deleteAll: 'Eliminar todas las preguntas',

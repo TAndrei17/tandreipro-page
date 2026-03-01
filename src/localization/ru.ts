@@ -207,6 +207,9 @@ const ru = {
 				id: 'ID',
 			},
 			questions: {
+				updateStatusTrue: 'Вопрос {{count}} открыт для всех',
+				updateStatusFalse: 'Только администратор видит вопрос {{count}}',
+				updateStatusFail: 'Не удалось изменить статус',
 				deleteSuccess: 'Вопрос {{count}} успешно удален',
 				deleteFail: 'Не удалось удалить вопрос {{count}}',
 				deleteAll: 'Удалить все вопросы',
