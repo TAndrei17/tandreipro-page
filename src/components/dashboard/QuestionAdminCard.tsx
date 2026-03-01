@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import icons from '@constants/icons';
 import type { QuestionDeleteRequest } from '@models/questionsAdmin';
 import { useAppDispatch } from '@store/index';
-import { deleteQuestionAdmin } from '@store/questionsAdmin/services';
+import { deleteQuestionAdmin, updateQuestionAdmin } from '@store/questionsAdmin/services';
 import createAlert from '@utils/createAlert';
 import type { Question } from 'models/Question';
 
@@ -27,12 +27,27 @@ const QuestionAdminCard = ({ question }: QuestionCardProps) => {
 		}
 	};
 
+	const updateQuestionStatus = async (id: number, status: boolean) => {
+		const newStatus = !status;
+		try {
+			await dispatch(updateQuestionAdmin({ id, approved: newStatus }));
+			createAlert(
+				newStatus ? 'success' : 'info',
+				t(newStatus ? 'updateStatusTrue' : 'updateStatusFalse', { count: id })
+			);
+		} catch {
+			createAlert('error', t('updateStatusFail'));
+		}
+	};
+
 	return (
 		<div className="question-card">
 			<div className="question-header">
 				<span className="question-id">#{question.id}</span>
 				<div className={'question-status-container'}>
-					<span className={`question-status ${question.approved ? 'approved' : 'pending'}`}>
+					<span
+						onClick={() => updateQuestionStatus(question.id, question.approved)}
+						className={`question-status ${question.approved ? 'approved' : 'pending'}`}>
 						{question.approved ? 'Approved' : 'Pending'}
 					</span>
 					<span

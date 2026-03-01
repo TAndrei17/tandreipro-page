@@ -41,23 +41,51 @@
 	gap: 6px;
 }
 
+/* Базовая анимация для статуса */
 .question-status {
 	font-size: 12px;
 	font-weight: 600;
 	padding: 4px 10px;
 	border-radius: 12px;
 	text-transform: uppercase;
+	cursor: pointer;
+	transition:
+		transform 0.15s ease,
+		box-shadow 0.15s ease,
+		background 0.2s ease,
+		color 0.2s ease;
 }
 
+/* Approved */
 .question-status.approved {
 	background-color: #ffdd57;
 	color: #000;
 }
+.question-status.approved:hover {
+	background-color: #ffd233; /* чуть ярче */
+	transform: translateY(-2px) scale(1.05); /* лёгкое “поднятие” */
+	box-shadow: 0 4px 12px rgba(255, 221, 87, 0.3); /* мягкая тень */
+}
+.question-status.approved:active {
+	transform: translateY(1px) scale(0.97); /* эффект нажатия */
+	box-shadow: 0 2px 6px rgba(255, 221, 87, 0.2);
+}
 
+/* Pending */
 .question-status.pending {
 	border: 1px solid #ffdd57;
 	color: #ffdd57;
 	background: transparent;
+}
+.question-status.pending:hover {
+	background: rgba(255, 221, 87, 0.1); /* лёгкий фон при hover */
+	transform: translateY(-2px) scale(1.05);
+	box-shadow: 0 4px 12px rgba(255, 221, 87, 0.2);
+}
+.question-status.pending:active {
+	background: rgba(255, 221, 87, 0.15); /* чуть ярче при клике */
+	transform: translateY(1px) scale(0.97);
+	box-shadow: 0 2px 6px rgba(255, 221, 87, 0.15);
 }
 
 .question-button {
