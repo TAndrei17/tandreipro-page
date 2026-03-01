@@ -1,7 +1,12 @@
 import { createEntityAdapter, createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction, SerializedError } from '@reduxjs/toolkit';
 
-import { deleteAllQuestionsAdmin, deleteQuestionAdmin, getQuestionsAdmin } from './services';
+import {
+	deleteAllQuestionsAdmin,
+	deleteQuestionAdmin,
+	getQuestionsAdmin,
+	updateQuestionAdmin,
+} from './services';
 
 import type { Question } from 'models/Question';
 
@@ -11,11 +16,13 @@ const initialState = questionsAdminAdapter.getInitialState<{
 	loadingStatus: 'idle' | 'loading' | 'failed';
 	deletingStatus: 'idle' | 'loading' | 'failed';
 	deletingAllStatus: 'idle' | 'loading' | 'failed';
+	updatingStatus: 'idle' | 'loading' | 'failed';
 	error: SerializedError | null;
 }>({
 	loadingStatus: 'idle',
 	deletingStatus: 'idle',
 	deletingAllStatus: 'idle',
+	updatingStatus: 'idle',
 	error: null,
 });
 
@@ -74,6 +81,28 @@ const questionsAdminSlice = createSlice({
 			})
 			.addCase(deleteAllQuestionsAdmin.rejected, (state, action) => {
 				state.deletingAllStatus = 'failed';
+				state.error = action.error;
+			})
+
+			// UPDATE QUESTION
+			.addCase(updateQuestionAdmin.pending, (state) => {
+				state.updatingStatus = 'loading';
+				state.error = null;
+			})
+			.addCase(
+				updateQuestionAdmin.fulfilled,
+				(state, action: PayloadAction<{ id: number; changes: Partial<Omit<Question, 'id'>> }>) => {
+					const { id, changes } = action.payload;
+					questionsAdminAdapter.updateOne(state, {
+						id,
+						changes,
+					});
+					state.updatingStatus = 'idle';
+					state.error = null;
+				}
+			)
+			.addCase(updateQuestionAdmin.rejected, (state, action) => {
+				state.updatingStatus = 'failed';
 				state.error = action.error;
 			});
 	},

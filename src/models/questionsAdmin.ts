@@ -23,3 +23,15 @@ export interface QuestionDeleteResponse {
 	success: boolean;
 	message: string;
 }
+
+export interface AllQuestionsDeleteResponse {
+	success: boolean;
+	message: string;
+}
+
+export type AdminQuestionUpdateRequest = Partial<Omit<Question, 'id'>> & { id: number };
+
+export interface AdminQuestionUpdateResponse {
+	success: boolean;
+	message: string;
+}

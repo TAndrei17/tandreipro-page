@@ -3,7 +3,13 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import api from '../../api';
 
 import type { Question } from '@models/Question';
-import type { QuestionDeleteRequest } from '@models/questionsAdmin';
+import type {
+	AdminQuestionUpdateRequest,
+	AdminQuestionUpdateResponse,
+	AllQuestionsDeleteResponse,
+	QuestionDeleteRequest,
+	QuestionDeleteResponse,
+} from '@models/questionsAdmin';
 import type { QuestionsPublicResponse } from '@models/QuestionsPublic';
 import type { RootState } from 'store';
 
@@ -28,7 +34,12 @@ export const deleteAllQuestionsAdmin = createAsyncThunk<void, void, { state: Roo
 	'questionsAdmin/deleteAllQuestionsAdmin',
 	async () => {
 		const url = '/admin/questions';
-		await api.delete(url);
+		const { data } = await api.delete<AllQuestionsDeleteResponse>(url);
+
+		if (!data.success) {
+			throw new Error('Failed to delete questions');
+		}
+
 		return;
 	},
 	{
@@ -45,10 +56,36 @@ export const deleteQuestionAdmin = createAsyncThunk<
 	async (params) => {
 		const { id } = params;
 		const url = `/admin/questions/${id}`;
-		await api.delete(url);
+		const { data } = await api.delete<QuestionDeleteResponse>(url);
+
+		if (!data.success) {
+			throw new Error('Failed to delete question');
+		}
+
 		return id;
 	},
 	{
 		condition: (_, { getState }) => getState().questionsAdmin.deletingStatus !== 'loading',
+	}
+);
+
+export const updateQuestionAdmin = createAsyncThunk<
+	{ id: number; changes: Partial<Omit<Question, 'id'>> },
+	AdminQuestionUpdateRequest,
+	{ state: RootState }
+>(
+	'questionsAdmin/updateQuestionAdmin',
+	async ({ id, ...changes }) => {
+		const url = `/admin/questions/${id}`;
+		const { data } = await api.patch<AdminQuestionUpdateResponse>(url, changes);
+
+		if (!data.success) {
+			throw new Error('Failed to update the question');
+		}
+
+		return { id, changes };
+	},
+	{
+		condition: (_, { getState }) => getState().questionsAdmin.updatingStatus !== 'loading',
 	}
 );
