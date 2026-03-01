@@ -201,10 +201,17 @@ const ru = {
 				questions: 'Вопросы',
 				tags: 'Теги',
 			},
-			content: {
+			admin: {
 				name: 'Активный пользователь',
 				role: 'Роль',
 				id: 'ID',
+			},
+			questions: {
+				deleteSuccess: 'Вопрос {{count}} успешно удален',
+				deleteFail: 'Не удалось удалить вопрос {{count}}',
+				deleteAll: 'Удалить все вопросы',
+				deleteAllSuccess: 'Все вопросы успешно удалены',
+				deleteAllFail: 'Не удалось удалить вопросы',
 			},
 		},
 

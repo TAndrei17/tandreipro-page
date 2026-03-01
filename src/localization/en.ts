@@ -196,10 +196,17 @@ const en = {
 				questions: 'Questions',
 				tags: 'Tags',
 			},
-			content: {
+			admin: {
 				name: 'Active User',
 				role: 'Role',
 				id: 'ID',
+			},
+			questions: {
+				deleteSuccess: 'Question {{count}} deleted successfully',
+				deleteFail: 'Failed to delete question {{count}}',
+				deleteAll: 'Delete all questions',
+				deleteAllSuccess: 'All questions deleted successfully',
+				deleteAllFail: 'Failed to delete questions',
 			},
 		},
 

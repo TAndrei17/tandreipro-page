@@ -191,10 +191,17 @@ const es = {
 				questions: 'Preguntas',
 				tags: 'Etiquetas',
 			},
-			content: {
+			admin: {
 				name: 'Usuario activo',
 				role: 'Rol',
 				id: 'ID',
+			},
+			questions: {
+				deleteSuccess: 'La pregunta {{count}} se eliminó correctamente',
+				deleteFail: 'No se pudo eliminar la pregunta {{count}}',
+				deleteAll: 'Eliminar todas las preguntas',
+				deleteAllSuccess: 'Todas las preguntas se eliminaron correctamente',
+				deleteAllFail: 'No se pudieron eliminar las preguntas',
 			},
 		},
 
