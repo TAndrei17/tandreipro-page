@@ -5,7 +5,7 @@ import icons from '@constants/icons';
 import type { QuestionDeleteRequest } from '@models/questionsAdmin';
 import { useAppDispatch } from '@store/index';
 import deleteQuestion from '@utils/deleteQuestion';
-import updateQuestionStatus from '@utils/updateQuestion';
+import updateQuestionStatus from '@utils/updateQuestionStatus';
 import type { Question } from 'models/Question';
 import './styles/QuestionAdminCard.css';
 
