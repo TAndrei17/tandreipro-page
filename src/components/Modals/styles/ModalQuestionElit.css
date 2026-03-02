@@ -1,0 +1,127 @@
+.modal-question-form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 22px;
+	color: #fff;
+	animation: fadeInUp 0.6s ease forwards;
+}
+
+.modal-question-header {
+	text-align: center;
+}
+
+.modal-question-title {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 1.4rem;
+	font-weight: 600;
+}
+
+/* Groups */
+.modal-question-group {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.modal-question-group label {
+	font-weight: 500;
+	font-size: 0.95rem;
+	opacity: 0.9;
+}
+
+/* Inputs */
+.modal-question-input,
+.modal-question-textarea {
+	padding: 12px 16px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 12px;
+	font-size: 1rem;
+	background: rgba(255, 255, 255, 0.06);
+	color: #fff;
+	font-family: 'Inter', sans-serif;
+	transition:
+		border 0.2s ease,
+		box-shadow 0.2s ease,
+		background 0.2s ease;
+}
+
+.modal-question-input:focus,
+.modal-question-textarea:focus {
+	border-color: #7a7eff;
+	box-shadow: 0 0 0 3px rgba(122, 126, 255, 0.25);
+	background: rgba(255, 255, 255, 0.1);
+	outline: none;
+}
+
+.modal-question-textarea {
+	min-height: 140px;
+	resize: vertical;
+}
+
+/* Buttons */
+.modal-question-actions {
+	display: flex;
+	gap: 14px;
+	margin-top: 20px;
+}
+
+/* Base button */
+.modal-question-btn {
+	flex: 1;
+	padding: 14px 20px;
+	font-weight: 600;
+	font-size: 0.95rem;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.25s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Save button */
+.modal-question-btn--save {
+	background: linear-gradient(135deg, #646cff, #7a7eff);
+	color: #fff;
+	box-shadow: 0 4px 14px rgba(100, 108, 255, 0.35);
+}
+
+.modal-question-btn--save:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 6px 20px rgba(100, 108, 255, 0.5);
+}
+
+/* Cancel button */
+.modal-question-btn--cancel {
+	background: rgba(255, 255, 255, 0.12);
+	backdrop-filter: blur(6px);
+	color: #fff;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.modal-question-btn--cancel:hover {
+	transform: translateY(-3px);
+	background: rgba(255, 255, 255, 0.2);
+}
+
+/* Disabled */
+.modal-question-btn:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+	transform: none;
+	box-shadow: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.modal-question-actions {
+		flex-direction: column;
+	}
+
+	.modal-question-btn {
+		width: 100%;
+	}
+}

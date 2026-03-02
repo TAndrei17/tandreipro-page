@@ -3,7 +3,7 @@ import { useRef, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useTranslation } from 'react-i18next';
 import Modal from 'react-modal';
-import './ModalLogin.css';
+import './styles/ModalLogin.css';
 import { useNavigate } from 'react-router';
 
 import useAuthStatus from '@hooks/useAuthStatus';

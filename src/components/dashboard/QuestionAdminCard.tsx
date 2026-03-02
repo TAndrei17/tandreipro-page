@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { type Dispatch, type SetStateAction } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import icons from '@constants/icons';
@@ -11,9 +11,10 @@ import './styles/QuestionAdminCard.css';
 
 type QuestionCardProps = {
 	question: Question;
+	editQuestion: Dispatch<SetStateAction<Question | null>>;
 };
 
-const QuestionAdminCard = ({ question }: QuestionCardProps) => {
+const QuestionAdminCard = ({ question, editQuestion }: QuestionCardProps) => {
 	const dispatch = useAppDispatch();
 	const { t } = useTranslation('translation', { keyPrefix: 'dashboard.questions' });
 
@@ -30,6 +31,9 @@ const QuestionAdminCard = ({ question }: QuestionCardProps) => {
 			<div className="question-header">
 				<span className="question-id">#{question.id}</span>
 				<div className={'question-status-container'}>
+					<span onClick={() => editQuestion(question)} className={'question-status pending'}>
+						{t('edit')}
+					</span>
 					<span
 						onClick={() => handleStatus(question.id, question.approved)}
 						className={`question-status ${question.approved ? 'approved' : 'pending'}`}>
