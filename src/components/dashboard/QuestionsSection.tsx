@@ -19,7 +19,7 @@ const QuestionsSection = () => {
 	};
 
 	return (
-		<section id={tNav('questions')} className={'dashboard-section'}>
+		<section id={'questions'} className={'dashboard-section'}>
 			<div className={'dashboard-section-content'}>
 				<div className={'dashboard-section-header-container'}>
 					<h2 className={'dashboard-section-header'}>{tNav('questions')}</h2>
@@ -46,20 +46,7 @@ const QuestionsSection = () => {
 
 				<div className={'dashboard-questions-container'}>
 					{questionsAdmin.map((item) => {
-						return (
-							<QuestionAdminCard
-								key={item.id}
-								question={{
-									id: item.id,
-									name: item.name,
-									email: item.email,
-									content: item.content,
-									approved: item.approved,
-									tags: item.tags,
-									created_at: item.created_at,
-								}}
-							/>
-						);
+						return <QuestionAdminCard key={item.id} question={item} />;
 					})}
 				</div>
 			</div>

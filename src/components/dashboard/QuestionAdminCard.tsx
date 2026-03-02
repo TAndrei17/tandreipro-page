@@ -1,3 +1,4 @@
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 import icons from '@constants/icons';
@@ -78,4 +79,4 @@ const QuestionAdminCard = ({ question }: QuestionCardProps) => {
 	);
 };
 
-export default QuestionAdminCard;
+export default React.memo(QuestionAdminCard);

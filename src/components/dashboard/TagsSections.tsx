@@ -5,7 +5,7 @@ const TagsSection = () => {
 	const { t: tNav } = useTranslation('translation', { keyPrefix: 'dashboard.nav' });
 
 	return (
-		<section id={tNav('tags')}>
+		<section id={'tags'}>
 			<div className={'dashboard-section-content'}>
 				<h2 className={'dashboard-section-header'}>{tNav('tags')}</h2>
 			</div>

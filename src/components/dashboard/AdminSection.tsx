@@ -10,7 +10,7 @@ const AdminSection = () => {
 	const admin = adminData[0];
 
 	return (
-		<section id={t('nav.admin')}>
+		<section id={'admin'}>
 			<div className={'dashboard-section-content'}>
 				<h2 className={'dashboard-section-header'}>{t('nav.admin')}</h2>
 
