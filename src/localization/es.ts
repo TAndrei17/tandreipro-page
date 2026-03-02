@@ -214,6 +214,11 @@ const es = {
 				nothingChanged: 'No se realizaron cambios',
 				updateDataFail: 'No se pudo actualizar la pregunta {{count}}',
 			},
+
+			tags: {
+				createTag: 'Crear etiqueta',
+				deleteTag: 'Eliminar etiqueta',
+			},
 		},
 
 		legal: {

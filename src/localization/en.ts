@@ -219,6 +219,11 @@ const en = {
 				nothingChanged: 'No changes were made',
 				updateDataFail: 'Failed to update question {{count}}',
 			},
+
+			tags: {
+				createTag: 'Create Tag',
+				deleteTag: 'Delete Tag',
+			},
 		},
 
 		legal: {

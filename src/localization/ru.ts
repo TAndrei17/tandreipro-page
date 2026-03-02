@@ -224,6 +224,11 @@ const ru = {
 				nothingChanged: 'Данные не поменялись',
 				updateDataFail: 'Не удалось обновить вопрос {{count}}',
 			},
+
+			tags: {
+				createTag: 'Создать тег',
+				deleteTag: 'Удалить тег',
+			},
 		},
 
 		legal: {
