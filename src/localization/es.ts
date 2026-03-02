@@ -150,6 +150,8 @@ const es = {
 				submitSuccess: 'Tu pregunta ha sido enviada con éxito',
 
 				loginSuccess: 'Inicio de sesión exitoso',
+				save: 'Guardar',
+				cancel: 'Cancelar',
 			},
 
 			errors: {
@@ -182,6 +184,7 @@ const es = {
 				logout: 'Cerrar sesión',
 				logoutSuccess: 'Sesión cerrada con éxito',
 				logoutFail: 'No se pudo cerrar la sesión',
+				editQuestion: 'Moderación de la pregunta',
 			},
 		},
 
@@ -205,6 +208,7 @@ const es = {
 				deleteAll: 'Eliminar todas las preguntas',
 				deleteAllSuccess: 'Todas las preguntas se eliminaron correctamente',
 				deleteAllFail: 'No se pudieron eliminar las preguntas',
+				edit: 'Editar',
 			},
 		},
 

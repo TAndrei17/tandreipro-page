@@ -160,6 +160,8 @@ const ru = {
 				submitSuccess: 'Ваш вопрос успешно отравлен',
 
 				loginSuccess: 'Авторизация прошла успешно',
+				save: 'Сохранить',
+				cancel: 'Отменить',
 			},
 
 			errors: {
@@ -192,6 +194,7 @@ const ru = {
 				logout: 'Выйти',
 				logoutSuccess: 'Сессия успешно завершена',
 				logoutFail: 'Не удалось завершить сессию',
+				editQuestion: 'Модерация вопроса',
 			},
 		},
 
@@ -215,6 +218,7 @@ const ru = {
 				deleteAll: 'Удалить все вопросы',
 				deleteAllSuccess: 'Все вопросы успешно удалены',
 				deleteAllFail: 'Не удалось удалить вопросы',
+				edit: 'Редактировать',
 			},
 		},
 

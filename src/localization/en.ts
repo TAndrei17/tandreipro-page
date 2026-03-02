@@ -155,6 +155,8 @@ const en = {
 				submitSuccess: 'Your question has been successfully submitted',
 
 				loginSuccess: 'Login successful',
+				save: 'Save',
+				cancel: 'Cancel',
 			},
 
 			errors: {
@@ -187,6 +189,7 @@ const en = {
 				logout: 'Logout',
 				logoutSuccess: 'Session successfully ended',
 				logoutFail: 'Failed to end the session',
+				editQuestion: 'Question Moderation',
 			},
 		},
 
@@ -210,6 +213,7 @@ const en = {
 				deleteAll: 'Delete all questions',
 				deleteAllSuccess: 'All questions deleted successfully',
 				deleteAllFail: 'Failed to delete questions',
+				edit: 'Edit',
 			},
 		},
 
