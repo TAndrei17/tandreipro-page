@@ -1,4 +1,5 @@
-.modal-login-link {
+/* Универсальные ссылки */
+.modal-window-link {
 	display: inline-block;
 	color: inherit;
 	text-decoration: none;
@@ -8,15 +9,15 @@
 		transform 0.3s ease;
 }
 
-.modal-login-link:hover,
-.modal-login-link:focus {
+.modal-window-link:hover,
+.modal-window-link:focus {
 	cursor: pointer;
 	transform: translateY(-3px);
 	color: #ffdd57;
 }
 
-/* Modal Login Form */
-.modal-login-form {
+/* Modal Form */
+.modal-window-form {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -28,24 +29,24 @@
 		box-shadow 0.3s ease;
 }
 
-.modal-login-form .modal-login-title {
+.modal-window-title {
 	text-align: center;
 	text-transform: uppercase;
 }
 
-.modal-login-form .modal-login-group {
+.modal-window-group {
 	display: flex;
 	flex-direction: column;
 	gap: 6px;
 }
 
-.modal-login-form label {
+.modal-window-form label {
 	font-weight: 500;
 	font-size: 1rem;
 }
 
-.modal-login-form .modal-login-input,
-.modal-login-form .modal-login-textarea {
+.modal-window-input,
+.modal-window-textarea {
 	padding: 12px 16px;
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	border-radius: 12px;
@@ -58,24 +59,24 @@
 		box-shadow 0.2s ease;
 }
 
-.modal-login-form .modal-login-input:focus,
-.modal-login-form .modal-login-textarea:focus {
+.modal-window-input:focus,
+.modal-window-textarea:focus {
 	border-color: #646cff;
 	box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.2);
 	outline: none;
 }
 
-.modal-login-form .modal-login-textarea {
+.modal-window-textarea {
 	min-height: 120px;
 	resize: vertical;
 }
 
-.modal-login-form .modal-login-error {
+.modal-window-error {
 	color: #ff6b6b;
 	font-size: 0.875rem;
 }
 
-.modal-login-form .modal-login-submit {
+.modal-window-submit {
 	margin-top: 40px;
 	padding: 16px 32px;
 	font-size: clamp(14px, 1.5vw, 20px);
@@ -93,19 +94,19 @@
 	transition: 0.3s;
 }
 
-.modal-login-form .modal-login-submit:hover,
-.modal-login-form .modal-login-submit:focus {
+.modal-window-submit:hover,
+.modal-window-submit:focus {
 	background: rgba(255, 255, 255, 0.25);
 	transform: translateY(-3px);
 	color: #ffdd57;
 }
 
-.modal-login-form .modal-login-submit:disabled {
+.modal-window-submit:disabled {
 	background-color: #999;
 	cursor: not-allowed;
 }
 
-.modal-login-checkbox-wrapper {
+.modal-window-checkbox-wrapper {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -113,12 +114,12 @@
 }
 
 @media (max-width: 768px) {
-	.modal-login-form .modal-login-submit {
+	.modal-window-submit {
 		width: 100%;
 		text-align: center;
 	}
 
-	.modal-login-checkbox-wrapper label {
+	.modal-window-checkbox-wrapper label {
 		font-size: 0.8em;
 	}
 }

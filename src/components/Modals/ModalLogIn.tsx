@@ -3,7 +3,7 @@ import { useRef, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useTranslation } from 'react-i18next';
 import Modal from 'react-modal';
-import './styles/ModalLogin.css';
+import './styles/ModalWindow.css';
 import { useNavigate } from 'react-router';
 
 import useAuthStatus from '@hooks/useAuthStatus';
@@ -28,7 +28,7 @@ const customStyles = {
 		marginRight: '-50%',
 		transform: 'translate(-50%, -50%)',
 		width: '50%',
-		borderRadius: '6px',
+		borderRadius: '12px',
 		background: 'linear-gradient(135deg, #3a3a3a, #7a7eff)',
 	},
 };
@@ -111,7 +111,7 @@ const ModalLogin = () => {
 
 	return (
 		<>
-			<span className="modal-login-link" onClick={openSession}>
+			<span className="modal-window-link" onClick={openSession}>
 				{whoami === 'guest' ? tModal('login') : tModal('logout')}
 			</span>
 
@@ -121,45 +121,45 @@ const ModalLogin = () => {
 					validationSchema={validationSchema}
 					onSubmit={onSubmit}>
 					{({ isSubmitting }) => (
-						<Form className="modal-login-form">
+						<Form className="modal-window-form">
 							<section className="page-header">
-								<h2 className="modal-login-title">{tModal('login')}</h2>
+								<h2 className="modal-window-title">{tModal('login')}</h2>
 							</section>
 
-							<div className="modal-login-group">
+							<div className="modal-window-group">
 								<label htmlFor="email">{tForm('email')}</label>
-								<Field id="email" type="email" name="email" className="modal-login-input" />
+								<Field id="email" type="email" name="email" className="modal-window-input" />
 								<ErrorMessage name="email">
 									{(msg) => (
-										<div className="modal-login-error" role="alert">
+										<div className="modal-window-error" role="alert">
 											{msg}
 										</div>
 									)}
 								</ErrorMessage>
 							</div>
 
-							<div className="modal-login-group">
+							<div className="modal-window-group">
 								<label htmlFor="password">{tForm('password')}</label>
 								<Field
 									id="password"
 									type="password"
 									name="password"
-									className="modal-login-input"
+									className="modal-window-input"
 								/>
 								<ErrorMessage name="password">
 									{(msg) => (
-										<div className="modal-login-error" role="alert">
+										<div className="modal-window-error" role="alert">
 											{msg}
 										</div>
 									)}
 								</ErrorMessage>
 							</div>
 
-							<button type="submit" className="modal-login-submit" disabled={isSubmitting}>
+							<button type="submit" className="modal-window-submit" disabled={isSubmitting}>
 								{showCaptcha ? tForm('submit') : tForm('check')}
 							</button>
 
-							<div className="modal-login-group">
+							<div className="modal-window-group">
 								{showCaptcha && (
 									<ReCAPTCHA
 										key={lng}
