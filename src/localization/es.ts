@@ -209,6 +209,10 @@ const es = {
 				deleteAllSuccess: 'Todas las preguntas se eliminaron correctamente',
 				deleteAllFail: 'No se pudieron eliminar las preguntas',
 				edit: 'Editar',
+
+				updateDataTrue: 'Pregunta {{count}} actualizada',
+				nothingChanged: 'No se realizaron cambios',
+				updateDataFail: 'No se pudo actualizar la pregunta {{count}}',
 			},
 		},
 

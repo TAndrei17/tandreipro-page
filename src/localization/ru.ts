@@ -219,6 +219,10 @@ const ru = {
 				deleteAllSuccess: 'Все вопросы успешно удалены',
 				deleteAllFail: 'Не удалось удалить вопросы',
 				edit: 'Редактировать',
+
+				updateDataTrue: 'Вопрос {{count}} обновлен',
+				nothingChanged: 'Данные не поменялись',
+				updateDataFail: 'Не удалось обновить вопрос {{count}}',
 			},
 		},
 
