@@ -228,6 +228,15 @@ const ru = {
 			tags: {
 				createTag: 'Создать тег',
 				deleteTag: 'Удалить тег',
+				createTagSuccess: 'Тег создан',
+				createTagFail: 'Не удалось создать тег',
+				deleteTagSuccess: 'Тег удален',
+				deleteTagFail: 'Не удалось удалить тег',
+
+				tagRequire: 'Пожалуйста, создай тег',
+				tagNoSpaces: 'Тег не должен содержать пробелы',
+				tagLabel: 'Новый тег',
+				tagSubmit: 'Создать',
 			},
 		},
 

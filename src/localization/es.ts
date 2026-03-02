@@ -218,6 +218,15 @@ const es = {
 			tags: {
 				createTag: 'Crear etiqueta',
 				deleteTag: 'Eliminar etiqueta',
+				createTagSuccess: 'Etiqueta creada',
+				createTagFail: 'No se pudo crear la etiqueta',
+				deleteTagSuccess: 'Etiqueta eliminada',
+				deleteTagFail: 'No se pudo eliminar la etiqueta',
+
+				tagRequire: 'Por favor, crea una etiqueta',
+				tagNoSpaces: 'La etiqueta no debe contener espacios',
+				tagLabel: 'Nueva etiqueta',
+				tagSubmit: 'Crear',
 			},
 		},
 

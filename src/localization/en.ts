@@ -223,6 +223,15 @@ const en = {
 			tags: {
 				createTag: 'Create Tag',
 				deleteTag: 'Delete Tag',
+				createTagSuccess: 'Tag created',
+				createTagFail: 'Failed to create tag',
+				deleteTagSuccess: 'Tag deleted',
+				deleteTagFail: 'Failed to delete tag',
+
+				tagRequire: 'Please create a tag',
+				tagNoSpaces: 'Tag must not contain spaces',
+				tagLabel: 'New Tag',
+				tagSubmit: 'Create',
 			},
 		},
 
