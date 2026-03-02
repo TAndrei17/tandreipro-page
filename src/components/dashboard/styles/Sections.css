@@ -110,4 +110,8 @@
 	.admin-card {
 		width: 100%;
 	}
+
+	.delete-questions-button {
+		justify-content: center;
+	}
 }
