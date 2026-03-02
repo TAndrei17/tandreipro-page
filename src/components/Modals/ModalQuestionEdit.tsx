@@ -5,6 +5,9 @@ import type { Styles } from 'react-modal';
 
 import type { Question } from '@models/Question';
 import './styles/ModalQuestionElit.css';
+import { useAppDispatch } from '@store/index';
+import createAlert from '@utils/createAlert';
+import updateQuestionData from '@utils/updateQuestionData';
 
 const customStyles: Styles = {
 	overlay: {
@@ -34,17 +37,44 @@ type ModalQuestionEditProps = {
 };
 
 const ModalQuestionEdit = ({ question, onClose }: ModalQuestionEditProps) => {
+	const dispatch = useAppDispatch();
 	const { t: tForm } = useTranslation('translation', { keyPrefix: 'contact.form' });
 	const { t: tModal } = useTranslation('translation', { keyPrefix: 'contact.modal' });
-	const onSubmit = () => {};
+	const { t: tDashboard } = useTranslation('translation', { keyPrefix: 'dashboard.questions' });
 
 	if (!question) {
 		return null;
 	}
 
+	const onSubmit = async (values: Question, { setSubmitting }: any) => {
+		try {
+			const result = await updateQuestionData(question.id, question, values, dispatch);
+
+			switch (result) {
+				case 'success':
+					createAlert('success', tDashboard('updateDataTrue', { count: values.id }));
+					onClose();
+					return;
+				case 'noChanges':
+					createAlert('info', tDashboard('nothingChanged'));
+					return;
+				case 'fail':
+					throw new Error();
+			}
+		} catch {
+			createAlert('error', tDashboard('updateDataFail', { count: values.id }));
+		} finally {
+			setSubmitting(false);
+		}
+	};
+
 	return (
 		<Modal isOpen={question !== null} onRequestClose={onClose} style={customStyles}>
-			<Formik<Question> initialValues={question} onSubmit={onSubmit}>
+			<Formik<Question>
+				initialValues={question}
+				onSubmit={(values, setSubmitting) => {
+					onSubmit(values, setSubmitting);
+				}}>
 				{({ isSubmitting }) => (
 					<Form className="modal-question-form">
 						<section className="modal-question-header">
