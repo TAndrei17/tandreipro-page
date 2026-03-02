@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import icons from '@constants/icons';
 import type { QuestionDeleteRequest } from '@models/questionsAdmin';
 import { useAppDispatch } from '@store/index';
+import createAlert from '@utils/createAlert';
 import deleteQuestion from '@utils/deleteQuestion';
 import updateQuestionStatus from '@utils/updateQuestionStatus';
 import type { Question } from 'models/Question';
@@ -19,11 +20,31 @@ const QuestionAdminCard = ({ question, editQuestion }: QuestionCardProps) => {
 	const { t } = useTranslation('translation', { keyPrefix: 'dashboard.questions' });
 
 	const handleDelete = async (request: QuestionDeleteRequest) => {
-		await deleteQuestion(request, dispatch, t);
+		try {
+			const result = await deleteQuestion(request, dispatch);
+
+			if (result === 'fail') {
+				throw new Error();
+			}
+
+			createAlert('success', t('deleteSuccess', { count: request.id }));
+		} catch {
+			createAlert('error', t('deleteFail', { count: request.id }));
+		}
 	};
 
 	const handleStatus = async (id: number, status: boolean) => {
-		await updateQuestionStatus(id, status, dispatch, t);
+		try {
+			const result = await updateQuestionStatus(id, status, dispatch);
+
+			if (result === 'fail') {
+				throw new Error();
+			}
+
+			createAlert('success', t('updateStatusTrue', { count: id }));
+		} catch {
+			createAlert('info', t('updateStatusFalse', { count: id }));
+		}
 	};
 
 	return (

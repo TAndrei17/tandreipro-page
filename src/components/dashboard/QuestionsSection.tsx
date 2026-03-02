@@ -9,6 +9,7 @@ import icons from '@constants/icons';
 import type { Question } from '@models/Question';
 import { useAppDispatch, useAppSelector } from '@store/index';
 import { questionsAdminSelectors } from '@store/questionsAdmin/selectors';
+import createAlert from '@utils/createAlert';
 import deleteAllQuestions from '@utils/deleteAllQuestions';
 
 const QuestionsSection = () => {
@@ -20,7 +21,16 @@ const QuestionsSection = () => {
 	const [editingQuestion, setEditingQuestion] = useState<Question | null>(null);
 
 	const handleDeleteAll = async () => {
-		await deleteAllQuestions(dispatch, tQuestions);
+		try {
+			const result = await deleteAllQuestions(dispatch);
+
+			if (result === 'fail') {
+				throw new Error();
+			}
+			createAlert('success', tQuestions('deleteAllSuccess'));
+		} catch {
+			createAlert('error', tQuestions('deleteAllfail'));
+		}
 	};
 
 	return (
