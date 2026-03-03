@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import type { Styles } from 'react-modal';
 
 import type { Question } from '@models/Question';
-import './styles/ModalQuestionElit.css';
+import './styles/ModalQuestionEdit.css';
 import { useAppDispatch, useAppSelector } from '@store/index';
 import { tagsSelectors } from '@store/tags/selectors';
 import createAlert from '@utils/createAlert';
