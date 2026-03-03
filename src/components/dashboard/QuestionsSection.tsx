@@ -6,6 +6,7 @@ import QuestionAdminCard from './QuestionAdminCard';
 
 import ModalQuestionEdit from '@components/Modals/ModalQuestionEdit';
 import icons from '@constants/icons';
+import { useSiteHeaderHeight } from '@context/SettingsContext';
 import type { Question } from '@models/Question';
 import { useAppDispatch, useAppSelector } from '@store/index';
 import { questionsAdminSelectors } from '@store/questionsAdmin/selectors';
@@ -14,6 +15,7 @@ import deleteAllQuestions from '@utils/deleteAllQuestions';
 
 const QuestionsSection = () => {
 	const dispatch = useAppDispatch();
+	const { siteHeaderHeight } = useSiteHeaderHeight();
 	const { t: tNav } = useTranslation('translation', { keyPrefix: 'dashboard.nav' });
 	const { t: tQuestions } = useTranslation('translation', { keyPrefix: 'dashboard.questions' });
 	const questionsAdmin = useAppSelector(questionsAdminSelectors.selectAll);
@@ -35,7 +37,7 @@ const QuestionsSection = () => {
 
 	return (
 		<>
-			<section id={'questions'} className={'dashboard-section'}>
+			<section id={'questions'} style={{ paddingTop: siteHeaderHeight }}>
 				<div className={'dashboard-section-content'}>
 					<div className={'dashboard-section-header-container'}>
 						<h2 className={'dashboard-section-header'}>{tNav('questions')}</h2>

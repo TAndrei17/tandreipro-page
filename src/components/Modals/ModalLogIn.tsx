@@ -128,7 +128,13 @@ const ModalLogin = () => {
 
 							<div className="modal-window-group">
 								<label htmlFor="email">{tForm('email')}</label>
-								<Field id="email" type="email" name="email" className="modal-window-input" />
+								<Field
+									id="email"
+									type="email"
+									name="email"
+									autoFocus
+									className="modal-window-input"
+								/>
 								<ErrorMessage name="email">
 									{(msg) => (
 										<div className="modal-window-error" role="alert">

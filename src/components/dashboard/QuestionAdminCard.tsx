@@ -41,9 +41,12 @@ const QuestionAdminCard = ({ question, editQuestion }: QuestionCardProps) => {
 				throw new Error();
 			}
 
-			createAlert('success', t('updateStatusTrue', { count: id }));
+			createAlert(
+				status ? 'info' : 'success',
+				t(status ? 'updateStatusFalse' : 'updateStatusTrue', { count: id })
+			);
 		} catch {
-			createAlert('info', t('updateStatusFalse', { count: id }));
+			createAlert('error', t('updateStatusFail', { count: id }));
 		}
 	};
 

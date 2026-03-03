@@ -72,7 +72,7 @@ const ModalCreateTag = () => {
 
 							<div className="modal-window-group">
 								<label htmlFor="name">{tTags('tagLabel')}</label>
-								<Field id="name" type="text" name="name" className="modal-window-input" />
+								<Field id="name" type="text" name="name" autoFocus className="modal-window-input" />
 								<ErrorMessage name="name">
 									{(msg) => (
 										<div className="modal-window-error" role="alert">
