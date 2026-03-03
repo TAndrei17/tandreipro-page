@@ -223,6 +223,8 @@ const ru = {
 				updateDataTrue: 'Вопрос {{count}} обновлен',
 				nothingChanged: 'Данные не поменялись',
 				updateDataFail: 'Не удалось обновить вопрос {{count}}',
+
+				addRemoveTags: 'Добавить или удалить теги',
 			},
 
 			tags: {

@@ -218,6 +218,8 @@ const en = {
 				updateDataTrue: 'Question {{count}} updated',
 				nothingChanged: 'No changes were made',
 				updateDataFail: 'Failed to update question {{count}}',
+
+				addRemoveTags: 'Add or remove tags',
 			},
 
 			tags: {

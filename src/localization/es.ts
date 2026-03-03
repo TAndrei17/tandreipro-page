@@ -213,6 +213,8 @@ const es = {
 				updateDataTrue: 'Pregunta {{count}} actualizada',
 				nothingChanged: 'No se realizaron cambios',
 				updateDataFail: 'No se pudo actualizar la pregunta {{count}}',
+
+				addRemoveTags: 'Agregar o eliminar etiquetas',
 			},
 
 			tags: {
