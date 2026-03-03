@@ -115,6 +115,40 @@
 	box-shadow: none;
 }
 
+/* tags */
+.modal-question-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+.modal-question-tag-item {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	padding: 6px 10px;
+	border-radius: 20px;
+	background: rgba(255, 255, 255, 0.1);
+	cursor: pointer;
+	transition: all 0.2s ease;
+	font-size: 14px;
+}
+
+.modal-question-tag-item:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.modal-question-tag-item input {
+	accent-color: #7a7eff;
+	cursor: pointer;
+}
+
+.modal-question-form .form-error {
+	color: #ff6b6b;
+	font-size: 0.875rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
 	.modal-question-actions {

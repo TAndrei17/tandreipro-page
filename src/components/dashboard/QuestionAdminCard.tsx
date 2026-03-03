@@ -3,7 +3,8 @@ import { useTranslation } from 'react-i18next';
 
 import icons from '@constants/icons';
 import type { QuestionDeleteRequest } from '@models/questionsAdmin';
-import { useAppDispatch } from '@store/index';
+import { useAppDispatch, useAppSelector } from '@store/index';
+import { selectTagsByIds } from '@store/tags/selectors';
 import createAlert from '@utils/createAlert';
 import deleteQuestion from '@utils/deleteQuestion';
 import updateQuestionStatus from '@utils/updateQuestionStatus';
@@ -18,6 +19,7 @@ type QuestionCardProps = {
 const QuestionAdminCard = ({ question, editQuestion }: QuestionCardProps) => {
 	const dispatch = useAppDispatch();
 	const { t } = useTranslation('translation', { keyPrefix: 'dashboard.questions' });
+	const tags = useAppSelector((state) => selectTagsByIds(state, question.tags));
 
 	const handleDelete = async (request: QuestionDeleteRequest) => {
 		try {
@@ -92,11 +94,11 @@ const QuestionAdminCard = ({ question, editQuestion }: QuestionCardProps) => {
 
 			<p className="question-content">{question.content}</p>
 
-			{question.tags && question.tags.length > 0 && (
+			{tags && tags.length > 0 && (
 				<div className="question-tags">
-					{question.tags.map((tag) => (
-						<span key={tag} className="question-tag">
-							#{tag}
+					{tags.map((tag) => (
+						<span key={tag.id} className="question-tag">
+							#{tag.name}
 						</span>
 					))}
 				</div>

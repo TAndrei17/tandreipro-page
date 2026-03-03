@@ -1,13 +1,15 @@
-import { Formik, Form, Field } from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useTranslation } from 'react-i18next';
 import Modal from 'react-modal';
 import type { Styles } from 'react-modal';
 
 import type { Question } from '@models/Question';
 import './styles/ModalQuestionElit.css';
-import { useAppDispatch } from '@store/index';
+import { useAppDispatch, useAppSelector } from '@store/index';
+import { tagsSelectors } from '@store/tags/selectors';
 import createAlert from '@utils/createAlert';
 import updateQuestionData from '@utils/updateQuestionData';
+import { createUpdateQuestionValidationSchema } from '@utils/validation/createUpdateQuestionValidation';
 
 const customStyles: Styles = {
 	overlay: {
@@ -41,10 +43,15 @@ const ModalQuestionEdit = ({ question, onClose }: ModalQuestionEditProps) => {
 	const { t: tForm } = useTranslation('translation', { keyPrefix: 'contact.form' });
 	const { t: tModal } = useTranslation('translation', { keyPrefix: 'contact.modal' });
 	const { t: tDashboard } = useTranslation('translation', { keyPrefix: 'dashboard.questions' });
+	const { t: tvalidation } = useTranslation('translation', { keyPrefix: 'contact.errors' });
+
+	const tags = useAppSelector(tagsSelectors.selectAll);
 
 	if (!question) {
 		return null;
 	}
+
+	const validationSchema = createUpdateQuestionValidationSchema(tvalidation);
 
 	const onSubmit = async (values: Question, { setSubmitting }: any) => {
 		try {
@@ -71,7 +78,11 @@ const ModalQuestionEdit = ({ question, onClose }: ModalQuestionEditProps) => {
 	return (
 		<Modal isOpen={question !== null} onRequestClose={onClose} style={customStyles}>
 			<Formik<Question>
-				initialValues={question}
+				initialValues={{
+					...question,
+					tags: question.tags || [],
+				}}
+				validationSchema={validationSchema}
 				onSubmit={(values, setSubmitting) => {
 					onSubmit(values, setSubmitting);
 				}}>
@@ -84,11 +95,25 @@ const ModalQuestionEdit = ({ question, onClose }: ModalQuestionEditProps) => {
 						<div className="modal-question-group">
 							<label htmlFor="name">{tForm('name')}</label>
 							<Field id="name" type="text" name="name" className="modal-question-input" />
+							<ErrorMessage name="name">
+								{(msg) => (
+									<div className="form-error" role="alert">
+										{msg}
+									</div>
+								)}
+							</ErrorMessage>
 						</div>
 
 						<div className="modal-question-group">
 							<label htmlFor="email">{tForm('email')}</label>
 							<Field id="email" type="email" name="email" className="modal-question-input" />
+							<ErrorMessage name="email">
+								{(msg) => (
+									<div className="form-error" role="alert">
+										{msg}
+									</div>
+								)}
+							</ErrorMessage>
 						</div>
 
 						<div className="modal-question-group">
@@ -100,6 +125,45 @@ const ModalQuestionEdit = ({ question, onClose }: ModalQuestionEditProps) => {
 								className="modal-question-textarea"
 								rows={12}
 							/>
+							<ErrorMessage name="content">
+								{(msg) => (
+									<div className="form-error" role="alert">
+										{msg}
+									</div>
+								)}
+							</ErrorMessage>
+						</div>
+
+						<div className="modal-question-group">
+							<label>{tDashboard('addRemoveTags')}</label>
+
+							<div className="modal-question-tags">
+								{tags.map((tag) => (
+									<label key={tag.id} className="modal-question-tag-item">
+										<Field name="tags">
+											{({ field, form }: any) => {
+												const selectedTags: number[] = field.value || [];
+												const isChecked = selectedTags.includes(tag.id);
+
+												const toggleTag = () => {
+													if (isChecked) {
+														form.setFieldValue(
+															'tags',
+															selectedTags.filter((id) => id !== tag.id)
+														);
+													} else {
+														form.setFieldValue('tags', [...selectedTags, tag.id]);
+													}
+												};
+
+												return <input type="checkbox" checked={isChecked} onChange={toggleTag} />;
+											}}
+										</Field>
+
+										<span>{tag.name}</span>
+									</label>
+								))}
+							</div>
 						</div>
 
 						<div className="modal-question-actions">
