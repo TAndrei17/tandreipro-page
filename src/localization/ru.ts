@@ -13,6 +13,7 @@ const ru = {
 			browserTabServices: 'Андрей Трунькин | Услуги',
 			browserTabAboutMe: 'Андрей Трунькин | Обо мне',
 			browserTabContact: 'Андрей Трунькин | Контакты',
+			browserTabQuestionsPublic: 'Андрей Трунькин | Ваши вопросы',
 			browserTabLegal: 'Андрей Трунькин | Правовая информация',
 			browserTabDashboard: 'AT| Панель управления',
 		},
@@ -29,6 +30,7 @@ const ru = {
 			services: 'Услуги',
 			aboutMe: 'Обо мне',
 			contact: 'Контакты',
+			questionsPublic: 'Ваши вопросы',
 			dashboard: 'Панель управления',
 			changeLngAlt: 'Изменить язык сайта',
 			openNavAlt: 'Открыть навигацию сайта',
@@ -225,6 +227,11 @@ const ru = {
 				updateDataFail: 'Не удалось обновить вопрос {{count}}',
 
 				addRemoveTags: 'Добавить или удалить теги',
+			},
+
+			answers: {
+				question: 'Вопрос',
+				answer: 'Ответ',
 			},
 
 			tags: {

@@ -13,6 +13,7 @@ const en = {
 			browserTabServices: 'Andrei Trunkin | Services',
 			browserTabAboutMe: 'Andrei Trunkin | About Me',
 			browserTabContact: 'Andrei Trunkin | Contact',
+			browserTabQuestionsPublic: 'Andrey Trunkin | Your Questions',
 			browserTabLegal: 'Andrei Trunkin | Legal & Privacy',
 			browserTabDashboard: 'AT | Dashboard',
 		},
@@ -29,6 +30,7 @@ const en = {
 			services: 'Services',
 			aboutMe: 'About me',
 			contact: 'Contact',
+			questionsPublic: 'Your Questions',
 			dashboard: 'Dashboard',
 			changeLngAlt: 'Change website language',
 			openNavAlt: 'Open website navigation',
@@ -220,6 +222,11 @@ const en = {
 				updateDataFail: 'Failed to update question {{count}}',
 
 				addRemoveTags: 'Add or remove tags',
+			},
+
+			answers: {
+				question: 'Question',
+				answer: 'Answer',
 			},
 
 			tags: {
