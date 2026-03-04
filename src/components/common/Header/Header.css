@@ -75,6 +75,7 @@
 	color: white;
 	font-size: 20px;
 	text-decoration: none;
+	text-align: center;
 	transition:
 		color 0.3s ease,
 		transform 0.25s ease;
@@ -86,6 +87,8 @@
 
 .header__nav_mobile a {
 	padding: 5px 20px 5px 0;
+	font-size: 16px;
+	text-align: right;
 }
 
 .header__nav a:hover,
