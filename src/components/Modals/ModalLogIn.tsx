@@ -4,7 +4,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import { useTranslation } from 'react-i18next';
 import Modal from 'react-modal';
 import './styles/ModalWindow.css';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 import useAuthStatus from '@hooks/useAuthStatus';
 import useDeviceType from '@hooks/useDeviceType';

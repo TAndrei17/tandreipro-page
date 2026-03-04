@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import AboutMeSection from '@components/aboutMe/AboutMeSection';
 import IconsList from '@components/aboutMe/IconsList';

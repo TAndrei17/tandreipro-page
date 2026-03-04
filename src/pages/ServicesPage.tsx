@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 
 import ServiceSection from '@components/services/ServiceSection';
 import ServicesList from '@components/services/ServicesList';

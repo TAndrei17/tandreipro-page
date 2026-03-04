@@ -81,7 +81,7 @@ const ContactForm = () => {
 
 					<div className="form-group">
 						<label htmlFor="name">{t('name')}</label>
-						<Field id="name" type="text" name="name" autoFocus className="form-input" />
+						<Field id="name" type="text" name="name" className="form-input" />
 						<ErrorMessage name="name">
 							{(msg) => (
 								<div className="form-error" role="alert">
