@@ -19,13 +19,7 @@ const QuestionCard = ({ name, content, created_at, tags }: QuestionCardProps) =>
 		<div className="qp-card">
 			<div className="qp-card-header">
 				<div className="qp-card-name">{name}</div>
-				<div className="qp-card-date">
-					{new Date(created_at).toLocaleDateString(undefined, {
-						year: 'numeric',
-						month: 'short',
-						day: 'numeric',
-					})}
-				</div>
+				<div className="qp-card-date">{new Date(created_at).toLocaleString()}</div>
 			</div>
 
 			<div className="qp-card-content">
