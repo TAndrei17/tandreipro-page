@@ -1,10 +1,10 @@
 import { createListenerMiddleware, isAnyOf } from '@reduxjs/toolkit';
-import { getQuestionsAdmin } from '@store/questionsAdmin/services';
 
 import type { AppDispatch, RootState } from '../index';
 
 import { startApp } from '@store/app/appSlice';
 import { removedAdminQuestions } from '@store/questionsAdmin/questionsAdminSlice';
+import { getQuestionsAdmin } from '@store/questionsAdmin/services';
 import { getQuestionsPublic } from '@store/questionsPublic/services';
 import { getTags } from '@store/tags/services';
 import { checkAuth, login, logout } from '@store/user/services';

@@ -54,6 +54,7 @@ const Header = () => {
 		{ to: '/services', label: t('appHeader.services') },
 		{ to: '/about', label: t('appHeader.aboutMe') },
 		{ to: '/contact', label: t('appHeader.contact') },
+		{ to: '/questionsPublic', label: t('appHeader.questionsPublic') },
 		{ to: '/dashboard', label: t('appHeader.dashboard') },
 	];
 

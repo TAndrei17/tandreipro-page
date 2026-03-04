@@ -7,6 +7,7 @@ import ContactPage from '@pages/ContactPage';
 import HomePage from '@pages/HomePage';
 import LegalPage from '@pages/LegalPage';
 import NotFoundPage from '@pages/NotFoundPage';
+import QuestionsPublicPage from '@pages/QuestionsPublic';
 import ServicesPage from '@pages/ServicesPage';
 
 // Protects the /dashboard route and lazy-loads the admin page for authorized users only
@@ -20,6 +21,7 @@ export default function AppRoutes() {
 			<Route path="/services" element={<ServicesPage />} />
 			<Route path="/about" element={<AboutMePage />} />
 			<Route path="/contact" element={<ContactPage />} />
+			<Route path="/questionsPublic" element={<QuestionsPublicPage />} />
 			<Route path="/legal" element={<LegalPage />} />
 			<Route path="*" element={<NotFoundPage />} />
 
