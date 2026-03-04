@@ -122,4 +122,10 @@
 	.modal-window-checkbox-wrapper label {
 		font-size: 0.8em;
 	}
+
+	.modal-window-input,
+	.modal-window-textarea {
+		border-radius: 6px;
+		font-size: 0.9rem;
+	}
 }

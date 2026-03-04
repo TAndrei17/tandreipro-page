@@ -55,6 +55,14 @@ const ModalLogin = () => {
 	const [captchaValue, setCaptchaValue] = useState<string | null>(null);
 	const [isOpen, setIsOpen] = useState(false);
 
+	const modalStyles = {
+		overlay: customStyles.overlay,
+		content: {
+			...customStyles.content,
+			width: isMobile ? '80%' : '50%',
+		},
+	};
+
 	const initialValues: AuthRequest = {
 		email: '',
 		password: '',
@@ -115,7 +123,7 @@ const ModalLogin = () => {
 				{whoami === 'guest' ? tModal('login') : tModal('logout')}
 			</span>
 
-			<Modal isOpen={isOpen} onRequestClose={() => setIsOpen(false)} style={customStyles}>
+			<Modal isOpen={isOpen} onRequestClose={() => setIsOpen(false)} style={modalStyles}>
 				<Formik
 					initialValues={initialValues}
 					validationSchema={validationSchema}
