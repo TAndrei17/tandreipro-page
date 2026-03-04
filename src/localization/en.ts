@@ -13,7 +13,7 @@ const en = {
 			browserTabServices: 'Andrei Trunkin | Services',
 			browserTabAboutMe: 'Andrei Trunkin | About Me',
 			browserTabContact: 'Andrei Trunkin | Contact',
-			browserTabQuestionsPublic: 'Andrey Trunkin | Your Questions',
+			browserTabQuestionsPublic: 'Andrei Trunkin | Your Questions',
 			browserTabLegal: 'Andrei Trunkin | Legal & Privacy',
 			browserTabDashboard: 'AT | Dashboard',
 		},

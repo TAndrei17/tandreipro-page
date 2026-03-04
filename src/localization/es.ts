@@ -13,7 +13,7 @@ const es = {
 			browserTabServices: 'Andrei Trunkin | Servicios',
 			browserTabAboutMe: 'Andrei Trunkin | Sobre mí',
 			browserTabContact: 'Andrei Trunkin | Contacto',
-			browserTabQuestionsPublic: 'Andrey Trunkin | Sus Preguntas',
+			browserTabQuestionsPublic: 'Andrei Trunkin | Sus Preguntas',
 			browserTabLegal: 'Andrei Trunkin | Aviso Legal',
 			browserTabDashboard: 'AT | Panel de control',
 		},
