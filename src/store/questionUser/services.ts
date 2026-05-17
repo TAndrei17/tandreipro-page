@@ -1,9 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import type { RootState } from 'store';
 
 import api from '../../api';
 
 import type { QuestionUser, QuestionUserRequest, QuestionUserResponse } from '@models/Question';
+import type { RootState } from 'store';
 
 export const postQuestionUser = createAsyncThunk<
 	QuestionUser[],

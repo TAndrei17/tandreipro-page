@@ -1,4 +1,3 @@
-import type { Question } from 'models/Question';
 import React, { type Dispatch, type SetStateAction } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -9,6 +8,7 @@ import { selectTagsByIds } from '@store/tags/selectors';
 import createAlert from '@utils/createAlert';
 import deleteQuestion from '@utils/deleteQuestion';
 import updateQuestionStatus from '@utils/updateQuestionStatus';
+import type { Question } from 'models/Question';
 import './styles/QuestionAdminCard.css';
 
 type QuestionCardProps = {
