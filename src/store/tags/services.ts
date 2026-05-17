@@ -1,4 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import type { RootState } from 'store';
 
 import api from '../../api';
 
@@ -10,7 +11,6 @@ import type {
 	TagDeleteAdminRequest,
 	TagDeleteAdminResponse,
 } from '@models/Tag';
-import type { RootState } from 'store';
 
 export const getTags = createAsyncThunk<Tag[], void, { state: RootState }>(
 	'tags/getTags',

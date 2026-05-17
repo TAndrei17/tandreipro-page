@@ -1,5 +1,6 @@
 import { createEntityAdapter, createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction, SerializedError } from '@reduxjs/toolkit';
+import type { Question } from 'models/Question';
 
 import {
 	deleteAllQuestionsAdmin,
@@ -7,8 +8,6 @@ import {
 	getQuestionsAdmin,
 	updateQuestionAdmin,
 } from './services';
-
-import type { Question } from 'models/Question';
 
 export const questionsAdminAdapter = createEntityAdapter<Question>();
 
