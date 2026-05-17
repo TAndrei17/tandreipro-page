@@ -2,18 +2,19 @@
 	"files": [],
 	"references": [{ "path": "./tsconfig.app.json" }, { "path": "./tsconfig.node.json" }],
 	"compilerOptions": {
+		"baseUrl": "src",
 		"paths": {
-			"@assets/*": ["./src/assets/*"],
-			"@components/*": ["./src/components/*"],
-			"@context/*": ["./src/context/*"],
-			"@constants/*": ["./src/constants/*"],
-			"@hooks/*": ["./src/hooks/*"],
-			"@localization/*": ["./src/localization/*"],
-			"@models/*": ["./src/models/*"],
-			"@pages/*": ["./src/pages/*"],
-			"@routes/*": ["./src/routes/*"],
-			"@store/*": ["./src/store/*"],
-			"@utils/*": ["./src/utils/*"]
+			"@assets/*": ["assets/*"],
+			"@components/*": ["components/*"],
+			"@context/*": ["context/*"],
+			"@constants/*": ["constants/*"],
+			"@hooks/*": ["hooks/*"],
+			"@localization/*": ["localization/*"],
+			"@models/*": ["models/*"],
+			"@pages/*": ["pages/*"],
+			"@routes/*": ["routes/*"],
+			"@store/*": ["store/*"],
+			"@utils/*": ["utils/*"]
 		}
 	}
 }
