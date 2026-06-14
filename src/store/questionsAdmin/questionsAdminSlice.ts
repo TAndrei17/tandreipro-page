@@ -38,7 +38,7 @@ const questionsAdminSlice = createSlice({
 	},
 	extraReducers: (builder) => {
 		builder
-			// GET ONE
+			// GET ALL QUESTIONS
 			.addCase(getQuestionsAdmin.pending, (state) => {
 				state.loadingStatus = 'loading';
 				state.error = null;
@@ -52,7 +52,6 @@ const questionsAdminSlice = createSlice({
 				state.loadingStatus = 'failed';
 				state.error = action.error;
 			})
-
 			// DELETE ONE
 			.addCase(deleteQuestionAdmin.pending, (state) => {
 				state.deletingStatus = 'loading';
