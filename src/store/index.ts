@@ -1,6 +1,8 @@
 import { configureStore /* Tuple */ } from '@reduxjs/toolkit';
 import { useDispatch, useSelector } from 'react-redux';
 
+import answersAdminReducer from './answersAdmin/answersAdminSlice';
+import answersPublicReducer from './answersPublic/answersPublicSlice';
 import appReducer from './app/appSlice';
 import { listenerMiddleware } from './middlewares/listenerMiddleware';
 import logger from './middlewares/logger';
@@ -25,6 +27,8 @@ const store = configureStore({
 		questionUser: questionUserReducer,
 		tags: tagsReducer,
 		user: userReducer,
+		answersAdmin: answersAdminReducer,
+		answersPublic: answersPublicReducer,
 	},
 
 	// https://redux-toolkit.js.org/api/getDefaultMiddleware#intended-usage

@@ -2,6 +2,9 @@ import { createListenerMiddleware, isAnyOf } from '@reduxjs/toolkit';
 
 import type { AppDispatch, RootState } from '../index';
 
+import { removedAdminAnswers } from '@store/answersAdmin/answersAdminSlice';
+import { getAnswersAdmin } from '@store/answersAdmin/service';
+import { getAnswersPublic } from '@store/answersPublic/service';
 import { startApp } from '@store/app/appSlice';
 import { removedAdminQuestions } from '@store/questionsAdmin/questionsAdminSlice';
 import { getQuestionsAdmin } from '@store/questionsAdmin/services';
@@ -21,6 +24,7 @@ startAppListening({
 	effect: async (_, { dispatch }) => {
 		dispatch(checkAuth());
 		dispatch(getQuestionsPublic());
+		dispatch(getAnswersPublic());
 		dispatch(getTags());
 	},
 });
@@ -30,6 +34,7 @@ startAppListening({
 	matcher: isAnyOf(login.fulfilled, checkAuth.fulfilled),
 	effect: async (_, { dispatch }) => {
 		dispatch(getQuestionsAdmin());
+		dispatch(getAnswersAdmin());
 	},
 });
 
@@ -38,5 +43,6 @@ startAppListening({
 	actionCreator: logout.fulfilled,
 	effect: async (_, { dispatch }) => {
 		dispatch(removedAdminQuestions());
+		dispatch(removedAdminAnswers());
 	},
 });
