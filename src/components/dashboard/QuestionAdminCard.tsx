@@ -57,6 +57,9 @@ const QuestionAdminCard = ({ question, editQuestion }: QuestionCardProps) => {
 			<div className="question-header">
 				<span className="question-id">#{question.id}</span>
 				<div className={'question-status-container'}>
+					<span onClick={() => {}} className={'question-status pending'}>
+						{t('answer')}
+					</span>
 					<span onClick={() => editQuestion(question)} className={'question-status pending'}>
 						{t('edit')}
 					</span>

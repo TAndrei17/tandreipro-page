@@ -220,6 +220,7 @@ const ru = {
 				deleteAll: 'Удалить все вопросы',
 				deleteAllSuccess: 'Все вопросы успешно удалены',
 				deleteAllFail: 'Не удалось удалить вопросы',
+				answer: 'Ответить',
 				edit: 'Редактировать',
 				pending: 'В ожидании',
 				approved: 'Одобрено',

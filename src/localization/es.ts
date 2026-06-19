@@ -210,6 +210,7 @@ const es = {
 				deleteAll: 'Eliminar todas las preguntas',
 				deleteAllSuccess: 'Todas las preguntas se eliminaron correctamente',
 				deleteAllFail: 'No se pudieron eliminar las preguntas',
+				answer: 'Responder',
 				edit: 'Editar',
 				pending: 'Pendiente',
 				approved: 'Aprobado',

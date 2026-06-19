@@ -215,6 +215,7 @@ const en = {
 				deleteAll: 'Delete all questions',
 				deleteAllSuccess: 'All questions deleted successfully',
 				deleteAllFail: 'Failed to delete questions',
+				answer: 'Answer',
 				edit: 'Edit',
 				pending: 'Pending',
 				approved: 'Approved',
