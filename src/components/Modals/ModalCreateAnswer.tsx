@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import './styles/ModalWindow.css';
 
 import type { Question } from '@models/Question';
-import { postAnswerAdmin } from '@store/answersAdmin/service';
+import { postAnswerAdmin, getAnswersAdmin } from '@store/answersAdmin/service';
 import { useAppDispatch } from '@store/index';
 import createAlert from '@utils/createAlert';
 import { createAnswerValidationSchema } from '@utils/validation/createAnswerValidation';
@@ -49,6 +49,8 @@ const ModalCreateAnswer = ({ question, onClose }: ModalAnswerCreateProps) => {
 	) => {
 		try {
 			await dispatch(postAnswerAdmin(values)).unwrap();
+			// refresh answers list to ensure UI shows the latest data immediately
+			await dispatch(getAnswersAdmin()).unwrap();
 			createAlert('success', tAnswers('createAnswerSuccess'));
 			resetForm();
 		} catch {

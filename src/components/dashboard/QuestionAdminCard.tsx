@@ -129,17 +129,20 @@ const QuestionAdminCard = ({ question, editQuestion, createAnswer }: QuestionCar
 						title={tAnswers('deleteAnswerSuccess')}>
 						<img src={icons.deleteIcon} alt="delete" />
 					</button>
-					<div className="question-tags">
-						{tags.map((tag) => (
-							<span key={tag.id} className="question-tag">
-								#{tag.name}
-							</span>
-						))}
-					</div>
 				</div>
 			)}
 
-			<div className="question-footer">{new Date(question.created_at).toLocaleString()}</div>
+			<div className="question-meta-row">
+				<div className="question-tags">
+					{tags.map((tag) => (
+						<span key={tag.id} className="question-tag">
+							#{tag.name}
+						</span>
+					))}
+				</div>
+
+				<div className="question-footer">{new Date(question.created_at).toLocaleString()}</div>
+			</div>
 		</div>
 	);
 };
