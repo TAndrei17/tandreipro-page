@@ -235,6 +235,13 @@ const ru = {
 			answers: {
 				question: 'Вопрос',
 				answer: 'Ответ',
+				answerLabel: 'Подумай над ответом и напиши его в поле ниже',
+				answerSubmit: 'Сохранить ответ',
+				answerRequire: 'Пожалуйста, напишите ответ',
+				createAnswerSuccess: 'Ответ успешно создан',
+				createAnswerFail: 'Не удалось создать ответ',
+				deleteAnswerSuccess: 'Ответ успешно удален',
+				deleteAnswerFail: 'Не удалось удалить ответ',
 			},
 
 			tags: {

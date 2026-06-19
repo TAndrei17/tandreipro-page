@@ -225,6 +225,13 @@ const es = {
 			answers: {
 				question: 'Pregunta',
 				answer: 'Respuesta',
+				answerLabel: 'Piensa en la respuesta y escríbela en el campo de abajo',
+				answerSubmit: 'Guardar respuesta',
+				answerRequire: 'Por favor, escribe una respuesta',
+				createAnswerSuccess: 'Respuesta creada correctamente',
+				createAnswerFail: 'No se pudo crear la respuesta',
+				deleteAnswerSuccess: 'Respuesta eliminada correctamente',
+				deleteAnswerFail: 'No se pudo eliminar la respuesta',
 			},
 
 			tags: {

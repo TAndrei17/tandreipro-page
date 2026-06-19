@@ -230,6 +230,13 @@ const en = {
 			answers: {
 				question: 'Question',
 				answer: 'Answer',
+				answerLabel: 'Think about the answer and write it in the field below',
+				answerSubmit: 'Save Answer',
+				answerRequire: 'Please write an answer',
+				createAnswerSuccess: 'Answer created successfully',
+				createAnswerFail: 'Failed to create answer',
+				deleteAnswerSuccess: 'Answer deleted successfully',
+				deleteAnswerFail: 'Failed to delete answer',
 			},
 
 			tags: {
