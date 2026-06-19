@@ -1,19 +1,24 @@
 import { useTranslation } from 'react-i18next';
 
+import { answersPublicSelectors } from '@store/answersPublic/selectors';
 import { useAppSelector } from '@store/index';
 import { selectTagsByIds } from '@store/tags/selectors';
 import './QuestionPiblicCardStyles.css';
 
 type QuestionCardProps = {
+	id: number;
 	name: string;
 	content: string;
 	created_at: string;
 	tags?: number[];
 };
 
-const QuestionCard = ({ name, content, created_at, tags }: QuestionCardProps) => {
+const QuestionCard = ({ id, name, content, created_at, tags }: QuestionCardProps) => {
 	const { t } = useTranslation('translation', { keyPrefix: 'dashboard.answers' });
 	const questionTags = useAppSelector((state) => selectTagsByIds(state, tags));
+	const answer = useAppSelector((state) =>
+		answersPublicSelectors.selectAll(state).find((item) => item.question_id === id)
+	);
 
 	return (
 		<div className="qp-card">
@@ -29,13 +34,14 @@ const QuestionCard = ({ name, content, created_at, tags }: QuestionCardProps) =>
 				{content}
 			</div>
 
-			<div className="qp-card-answer">
-				<div className="qp-card-answer-header">
-					<span className="qp-card-answer-label">{t('answer')}</span>
+			{answer && (
+				<div className="qp-card-content">
+					<div className="qp-card-answer-header">
+						<span className="qp-card-answer-label">{t('answer')}</span>
+					</div>
+					{answer.content}
 				</div>
-
-				<textarea className="qp-card-answer-textarea" value={''} readOnly rows={6} />
-			</div>
+			)}
 
 			{tags && tags.length > 0 && (
 				<div className="qp-card-tags">

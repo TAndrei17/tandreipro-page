@@ -22,8 +22,14 @@ const QuestionsPublicPage = () => {
 	}, [t, language]);
 
 	return (
-		<div style={{ paddingTop: siteHeaderHeight }}>
-			<main>
+		<div
+			style={{
+				paddingTop: siteHeaderHeight,
+				minHeight: `calc(100vh - ${siteHeaderHeight}px)`,
+				display: 'flex',
+				flexDirection: 'column',
+			}}>
+			<main style={{ flex: 1 }}>
 				<section className={'page-header'}>
 					<h1>{t('appHeader.questionsPublic')}</h1>
 				</section>
@@ -33,6 +39,7 @@ const QuestionsPublicPage = () => {
 						{questions.map((question) => (
 							<QuestionPublicCard
 								key={question.id}
+								id={question.id}
 								name={question.name}
 								content={question.content}
 								created_at={question.created_at}
