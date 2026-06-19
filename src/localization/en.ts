@@ -233,6 +233,8 @@ const en = {
 				answerLabel: 'Think about the answer and write it in the field below',
 				answerSubmit: 'Save Answer',
 				answerRequire: 'Please write an answer',
+				answerMin: 'The answer is too short (minimum {{count}} characters)',
+				answerMax: 'The answer is too long (maximum {{count}} characters)',
 				createAnswerSuccess: 'Answer created successfully',
 				createAnswerFail: 'Failed to create answer',
 				deleteAnswerSuccess: 'Answer deleted successfully',

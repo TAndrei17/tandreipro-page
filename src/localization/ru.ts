@@ -238,6 +238,8 @@ const ru = {
 				answerLabel: 'Подумай над ответом и напиши его в поле ниже',
 				answerSubmit: 'Сохранить ответ',
 				answerRequire: 'Пожалуйста, напишите ответ',
+				answerMin: 'Ответ слишком короткий (минимум {{count}} символов)',
+				answerMax: 'Ответ слишком длинный (максимум {{count}} символов)',
 				createAnswerSuccess: 'Ответ успешно создан',
 				createAnswerFail: 'Не удалось создать ответ',
 				deleteAnswerSuccess: 'Ответ успешно удален',

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import icons from '@constants/icons';
 import type { QuestionDeleteRequest } from '@models/questionsAdmin';
+import { answersAdminSelectors } from '@store/answersAdmin/selectors';
 import { useAppDispatch, useAppSelector } from '@store/index';
 import { selectTagsByIds } from '@store/tags/selectors';
 import createAlert from '@utils/createAlert';
@@ -20,7 +21,11 @@ type QuestionCardProps = {
 const QuestionAdminCard = ({ question, editQuestion, createAnswer }: QuestionCardProps) => {
 	const dispatch = useAppDispatch();
 	const { t } = useTranslation('translation', { keyPrefix: 'dashboard.questions' });
+	const { t: tAnswers } = useTranslation('translation', { keyPrefix: 'dashboard.answers' });
 	const tags = useAppSelector((state) => selectTagsByIds(state, question.tags));
+	const answer = useAppSelector((state) =>
+		answersAdminSelectors.selectAll(state).find((item) => item.question_id === question.id)
+	);
 
 	const handleDelete = async (request: QuestionDeleteRequest) => {
 		try {
@@ -56,7 +61,13 @@ const QuestionAdminCard = ({ question, editQuestion, createAnswer }: QuestionCar
 	return (
 		<div className="question-card">
 			<div className="question-header">
-				<span className="question-id">#{question.id}</span>
+				<div className="question-header-left">
+					<span className="question-id">#{question.id}</span>
+					<div className="question-meta">
+						<span className="question-name">{question.name}</span>
+						{question.email && <span className="question-email">{question.email}</span>}
+					</div>
+				</div>
 				<div className={'question-status-container'}>
 					<span onClick={() => createAnswer(question)} className={'question-status pending'}>
 						{t('answer')}
@@ -92,11 +103,17 @@ const QuestionAdminCard = ({ question, editQuestion, createAnswer }: QuestionCar
 				</div>
 			</div>
 
-			<h3 className="question-name">{question.name}</h3>
+			<div className="question-block">
+				<div className="question-block-label">{tAnswers('question')}</div>
+				<p className="question-block-content">{question.content}</p>
+			</div>
 
-			{question.email && <p className="question-email">{question.email}</p>}
-
-			<p className="question-content">{question.content}</p>
+			{answer && (
+				<div className="question-block question-answer-block">
+					<div className="question-block-label">{tAnswers('answer')}</div>
+					<p className="question-block-content">{answer.content}</p>
+				</div>
+			)}
 
 			{tags && tags.length > 0 && (
 				<div className="question-tags">

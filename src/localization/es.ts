@@ -228,6 +228,8 @@ const es = {
 				answerLabel: 'Piensa en la respuesta y escríbela en el campo de abajo',
 				answerSubmit: 'Guardar respuesta',
 				answerRequire: 'Por favor, escribe una respuesta',
+				answerMin: 'La respuesta es demasiado corta (mínimo {{count}} caracteres)',
+				answerMax: 'La respuesta es demasiado larga (máximo {{count}} caracteres)',
 				createAnswerSuccess: 'Respuesta creada correctamente',
 				createAnswerFail: 'No se pudo crear la respuesta',
 				deleteAnswerSuccess: 'Respuesta eliminada correctamente',
