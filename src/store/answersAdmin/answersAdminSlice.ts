@@ -4,6 +4,7 @@ import type { PayloadAction, SerializedError } from '@reduxjs/toolkit';
 import { deleteAnswerAdmin, getAnswersAdmin, postAnswerAdmin } from './service';
 
 import type { Answer } from '@models/AnswersAdmin';
+import { deleteAllQuestionsAdmin, deleteQuestionAdmin } from '@store/questionsAdmin/services';
 
 export const answersAdminAdapter = createEntityAdapter<Answer>();
 
@@ -72,6 +73,26 @@ const answersAdminSlice = createSlice({
 			.addCase(deleteAnswerAdmin.rejected, (state, action) => {
 				state.deletingStatus = 'failed';
 				state.error = action.error;
+			})
+
+			// DELETE ALL ANSWERS WHEN QUESTIONS ARE DELETING
+			.addCase(deleteAllQuestionsAdmin.fulfilled, (state) => {
+				answersAdminAdapter.removeAll(state);
+				state.deletingStatus = 'idle';
+				state.error = null;
+			})
+			// DELETE ONE ANSWER WHEN QUESTION IS DELETING
+			.addCase(deleteQuestionAdmin.fulfilled, (state, action: PayloadAction<number>) => {
+				const questionId = action.payload;
+
+				const idsToRemove = Object.values(state.entities)
+					.filter((answer) => answer?.question_id === questionId)
+					.map((answer) => answer!.id);
+
+				answersAdminAdapter.removeMany(state, idsToRemove);
+
+				state.deletingStatus = 'idle';
+				state.error = null;
 			});
 	},
 });
