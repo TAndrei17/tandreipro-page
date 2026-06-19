@@ -221,6 +221,8 @@ const ru = {
 				deleteAllSuccess: 'Все вопросы успешно удалены',
 				deleteAllFail: 'Не удалось удалить вопросы',
 				edit: 'Редактировать',
+				pending: 'В ожидании',
+				approved: 'Одобрено',
 
 				updateDataTrue: 'Вопрос {{count}} обновлен',
 				nothingChanged: 'Данные не поменялись',

@@ -63,7 +63,7 @@ const QuestionAdminCard = ({ question, editQuestion }: QuestionCardProps) => {
 					<span
 						onClick={() => handleStatus(question.id, question.approved)}
 						className={`question-status ${question.approved ? 'approved' : 'pending'}`}>
-						{question.approved ? 'Approved' : 'Pending'}
+						{question.approved ? t('approved') : t('pending')}
 					</span>
 					<span
 						role="button"

@@ -216,6 +216,8 @@ const en = {
 				deleteAllSuccess: 'All questions deleted successfully',
 				deleteAllFail: 'Failed to delete questions',
 				edit: 'Edit',
+				pending: 'Pending',
+				approved: 'Approved',
 
 				updateDataTrue: 'Question {{count}} updated',
 				nothingChanged: 'No changes were made',
