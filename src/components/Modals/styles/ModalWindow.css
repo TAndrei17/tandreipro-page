@@ -34,6 +34,31 @@
 	text-transform: uppercase;
 }
 
+.modal-window-question {
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	border-radius: 14px;
+	padding: 16px 18px;
+	color: #f5f7ff;
+	line-height: 1.65;
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.modal-window-question-label {
+	display: block;
+	margin-bottom: 8px;
+	font-size: 0.95rem;
+	font-weight: 600;
+	opacity: 0.85;
+}
+
+.modal-window-question-text {
+	margin: 0;
+	font-size: 1rem;
+	opacity: 0.92;
+}
+
 .modal-window-group {
 	display: flex;
 	flex-direction: column;
@@ -69,6 +94,8 @@
 .modal-window-textarea {
 	min-height: 120px;
 	resize: vertical;
+	line-height: 1.6;
+	vertical-align: top;
 }
 
 .modal-window-error {

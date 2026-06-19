@@ -14,9 +14,10 @@ import './styles/QuestionAdminCard.css';
 type QuestionCardProps = {
 	question: Question;
 	editQuestion: Dispatch<SetStateAction<Question | null>>;
+	createAnswer: Dispatch<SetStateAction<Question | null>>;
 };
 
-const QuestionAdminCard = ({ question, editQuestion }: QuestionCardProps) => {
+const QuestionAdminCard = ({ question, editQuestion, createAnswer }: QuestionCardProps) => {
 	const dispatch = useAppDispatch();
 	const { t } = useTranslation('translation', { keyPrefix: 'dashboard.questions' });
 	const tags = useAppSelector((state) => selectTagsByIds(state, question.tags));
@@ -57,7 +58,7 @@ const QuestionAdminCard = ({ question, editQuestion }: QuestionCardProps) => {
 			<div className="question-header">
 				<span className="question-id">#{question.id}</span>
 				<div className={'question-status-container'}>
-					<span onClick={() => {}} className={'question-status pending'}>
+					<span onClick={() => createAnswer(question)} className={'question-status pending'}>
 						{t('answer')}
 					</span>
 					<span onClick={() => editQuestion(question)} className={'question-status pending'}>

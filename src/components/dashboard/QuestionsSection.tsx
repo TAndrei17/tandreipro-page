@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import './styles/Sections.css';
 import QuestionAdminCard from './QuestionAdminCard';
 
+import ModalCreateAnswer from '@components/Modals/ModalCreateAnswer';
 import ModalQuestionEdit from '@components/Modals/ModalQuestionEdit';
 import icons from '@constants/icons';
 import type { Question } from '@models/Question';
@@ -19,6 +20,7 @@ const QuestionsSection = () => {
 	const questionsAdmin = useAppSelector(questionsAdminSelectors.selectAll);
 
 	const [editingQuestion, setEditingQuestion] = useState<Question | null>(null);
+	const [createAnswer, setCreateAnswer] = useState<Question | null>(null);
 
 	const handleDeleteAll = async () => {
 		try {
@@ -67,6 +69,7 @@ const QuestionsSection = () => {
 									key={item.id}
 									question={item}
 									editQuestion={setEditingQuestion}
+									createAnswer={setCreateAnswer}
 								/>
 							);
 						})}
@@ -76,6 +79,10 @@ const QuestionsSection = () => {
 
 			{editingQuestion && (
 				<ModalQuestionEdit question={editingQuestion} onClose={() => setEditingQuestion(null)} />
+			)}
+
+			{createAnswer && (
+				<ModalCreateAnswer question={createAnswer} onClose={() => setCreateAnswer(null)} />
 			)}
 		</>
 	);
