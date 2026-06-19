@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import icons from '@constants/icons';
 import type { QuestionDeleteRequest } from '@models/questionsAdmin';
 import { answersAdminSelectors } from '@store/answersAdmin/selectors';
+import { deleteAnswerAdmin } from '@store/answersAdmin/service';
 import { useAppDispatch, useAppSelector } from '@store/index';
 import { selectTagsByIds } from '@store/tags/selectors';
 import createAlert from '@utils/createAlert';
@@ -55,6 +56,15 @@ const QuestionAdminCard = ({ question, editQuestion, createAnswer }: QuestionCar
 			);
 		} catch {
 			createAlert('error', t('updateStatusFail', { count: id }));
+		}
+	};
+
+	const handleDeleteAnswer = async (answerId: number) => {
+		try {
+			await dispatch(deleteAnswerAdmin({ id: answerId })).unwrap();
+			createAlert('success', tAnswers('deleteAnswerSuccess'));
+		} catch {
+			createAlert('error', tAnswers('deleteAnswerFail'));
 		}
 	};
 
@@ -112,16 +122,20 @@ const QuestionAdminCard = ({ question, editQuestion, createAnswer }: QuestionCar
 				<div className="question-block question-answer-block">
 					<div className="question-block-label">{tAnswers('answer')}</div>
 					<p className="question-block-content">{answer.content}</p>
-				</div>
-			)}
-
-			{tags && tags.length > 0 && (
-				<div className="question-tags">
-					{tags.map((tag) => (
-						<span key={tag.id} className="question-tag">
-							#{tag.name}
-						</span>
-					))}
+					<button
+						type="button"
+						className="question-answer-delete"
+						onClick={() => handleDeleteAnswer(answer.id)}
+						title={tAnswers('deleteAnswerSuccess')}>
+						<img src={icons.deleteIcon} alt="delete" />
+					</button>
+					<div className="question-tags">
+						{tags.map((tag) => (
+							<span key={tag.id} className="question-tag">
+								#{tag.name}
+							</span>
+						))}
+					</div>
 				</div>
 			)}
 
