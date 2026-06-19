@@ -22,7 +22,7 @@ const customStyles = {
 		bottom: 'auto',
 		marginRight: '-50%',
 		transform: 'translate(-50%, -50%)',
-		width: '50%',
+		width: '80%',
 		borderRadius: '12px',
 		background: 'linear-gradient(135deg, #3a3a3a, #7a7eff)',
 	},
@@ -35,6 +35,7 @@ type ModalAnswerCreateProps = {
 
 const ModalCreateAnswer = ({ question, onClose }: ModalAnswerCreateProps) => {
 	const dispatch = useAppDispatch();
+	const { t } = useTranslation();
 	const { t: tAnswers } = useTranslation('translation', { keyPrefix: 'dashboard.answers' });
 
 	const initialValues: { question_id: number; content: string } = {
@@ -96,9 +97,22 @@ const ModalCreateAnswer = ({ question, onClose }: ModalAnswerCreateProps) => {
 								</ErrorMessage>
 							</div>
 
-							<button type="submit" className="modal-window-submit" disabled={isSubmitting}>
-								{tAnswers('answerSubmit')}
-							</button>
+							<div className="modal-question-actions">
+								<button
+									type="submit"
+									className="modal-question-btn modal-question-btn--save"
+									disabled={isSubmitting}>
+									{tAnswers('answerSubmit')}
+								</button>
+
+								<button
+									type="button"
+									onClick={onClose}
+									className="modal-question-btn modal-question-btn--cancel"
+									disabled={isSubmitting}>
+									{t('contact.form.cancel')}
+								</button>
+							</div>
 						</Form>
 					)}
 				</Formik>

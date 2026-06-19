@@ -156,3 +156,62 @@
 		font-size: 0.9rem;
 	}
 }
+
+/* Reused button styles from ModalQuestionEdit for consistent look */
+.modal-question-actions {
+	display: flex;
+	gap: 14px;
+	margin-top: 20px;
+}
+
+.modal-question-btn {
+	flex: 1;
+	padding: 14px 20px;
+	font-weight: 600;
+	font-size: 0.95rem;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	transition: all 0.25s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.modal-question-btn--save {
+	background: linear-gradient(135deg, #646cff, #7a7eff);
+	color: #fff;
+	box-shadow: 0 4px 14px rgba(100, 108, 255, 0.35);
+}
+.modal-question-btn--save:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 6px 20px rgba(100, 108, 255, 0.5);
+}
+
+.modal-question-btn--cancel {
+	background: rgba(255, 255, 255, 0.12);
+	backdrop-filter: blur(6px);
+	color: #fff;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+}
+.modal-question-btn--cancel:hover {
+	transform: translateY(-3px);
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.modal-question-btn:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+	transform: none;
+	box-shadow: none;
+}
+
+@media (max-width: 768px) {
+	.modal-question-actions {
+		flex-direction: column;
+	}
+
+	.modal-question-btn {
+		width: 100%;
+	}
+}
