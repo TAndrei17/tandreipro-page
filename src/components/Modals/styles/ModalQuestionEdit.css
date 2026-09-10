@@ -12,10 +12,11 @@
 }
 
 .modal-question-title {
+	font-family: var(--font-heading);
 	text-transform: uppercase;
-	letter-spacing: 1px;
+	letter-spacing: var(--tracking-wider);
 	font-size: 1.4rem;
-	font-weight: 600;
+	font-weight: var(--fw-semibold);
 }
 
 /* Groups */
@@ -26,7 +27,8 @@
 }
 
 .modal-question-group label {
-	font-weight: 500;
+	font-family: var(--font-heading);
+	font-weight: var(--fw-semibold);
 	font-size: 0.95rem;
 	opacity: 0.9;
 }
@@ -40,7 +42,7 @@
 	font-size: 1rem;
 	background: rgba(255, 255, 255, 0.06);
 	color: #fff;
-	font-family: 'Inter', sans-serif;
+	font-family: var(--font-body);
 	transition:
 		border 0.2s ease,
 		box-shadow 0.2s ease,

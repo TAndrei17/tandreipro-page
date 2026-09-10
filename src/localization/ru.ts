@@ -293,12 +293,24 @@ const ru = {
 
 		entites: {
 			webSectionTitle: 'Сайты',
+			webSectionSubtitle: 'Создаю',
+			webSectionDescription:
+				'Современные, быстрые и визуально выразительные сайты — от лаконичных лендингов до масштабных проектов.',
 
 			shopSectionTitle: 'Онлайн-магазины',
+			shopSectionSubtitle: 'Запускаю',
+			shopSectionDescription:
+				'Готовые к росту онлайн-магазины: управление товарами и складом, удобные платежи, база клиентов и инструменты, которые помогают увеличивать продажи.',
 
 			mobileSectionTitle: 'Мобильные приложения',
+			mobileSectionSubtitle: 'Разрабатываю',
+			mobileSectionDescription:
+				'Быстрые, стабильные и удобные приложения для iOS и Android — под любые задачи вашего бизнеса.',
 
 			maintainSectionTitle: 'Готовые проекты',
+			maintainSectionSubtitle: 'Поддерживаю',
+			maintainSectionDescription:
+				'Сайты на React и приложения на React Native — обновлю дизайн, исправлю ошибки и приведу проект в актуальную форму.',
 		},
 	},
 };

@@ -18,6 +18,8 @@ export type Service = {
 	title: string;
 	subtitle: string;
 	description: string;
+	homeSubtitle: string;
+	homeDescription: string;
 	content?: WebsiteContent | ShopContent | MobileContent | MaintenanceContent;
 	article?: {
 		help: string;
@@ -36,6 +38,8 @@ const getServiceList = (t: TFunction): Service[] => [
 		title: t('entites.webSectionTitle'),
 		subtitle: '',
 		description: '',
+		homeSubtitle: t('entites.webSectionSubtitle'),
+		homeDescription: t('entites.webSectionDescription'),
 		content: t('services.webContent', { returnObjects: true }) as unknown as WebsiteContent,
 		article: {
 			help: t('services.webHelp'),
@@ -53,6 +57,8 @@ const getServiceList = (t: TFunction): Service[] => [
 		title: t('entites.shopSectionTitle'),
 		subtitle: '',
 		description: '',
+		homeSubtitle: t('entites.shopSectionSubtitle'),
+		homeDescription: t('entites.shopSectionDescription'),
 		article: {
 			help: t('services.shopHelp'),
 			clients: t('services.shopClients'),
@@ -70,6 +76,8 @@ const getServiceList = (t: TFunction): Service[] => [
 		title: t('entites.mobileSectionTitle'),
 		subtitle: '',
 		description: '',
+		homeSubtitle: t('entites.mobileSectionSubtitle'),
+		homeDescription: t('entites.mobileSectionDescription'),
 		article: {
 			help: t('services.mobileHelp'),
 			clients: t('services.mobileClients'),
@@ -87,6 +95,8 @@ const getServiceList = (t: TFunction): Service[] => [
 		title: t('entites.maintainSectionTitle'),
 		subtitle: '',
 		description: '',
+		homeSubtitle: t('entites.maintainSectionSubtitle'),
+		homeDescription: t('entites.maintainSectionDescription'),
 		article: {
 			help: t('services.maintenanceHelp'),
 			clients: t('services.maintenanceClients'),

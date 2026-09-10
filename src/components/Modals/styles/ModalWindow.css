@@ -31,6 +31,9 @@
 
 .modal-window-title {
 	text-align: center;
+	font-family: var(--font-heading);
+	letter-spacing: var(--tracking-wider);
+	font-weight: var(--fw-semibold);
 	text-transform: uppercase;
 }
 
@@ -48,8 +51,9 @@
 .modal-window-question-label {
 	display: block;
 	margin-bottom: 8px;
+	font-family: var(--font-heading);
 	font-size: 0.95rem;
-	font-weight: 600;
+	font-weight: var(--fw-semibold);
 	opacity: 0.85;
 }
 
@@ -66,7 +70,8 @@
 }
 
 .modal-window-form label {
-	font-weight: 500;
+	font-family: var(--font-heading);
+	font-weight: var(--fw-semibold);
 	font-size: 1rem;
 }
 
@@ -78,7 +83,7 @@
 	font-size: 1.2rem;
 	background: rgba(255, 255, 255, 0.05);
 	color: #fff;
-	font-family: 'Inter', sans-serif;
+	font-family: var(--font-body);
 	transition:
 		border 0.2s ease,
 		box-shadow 0.2s ease;

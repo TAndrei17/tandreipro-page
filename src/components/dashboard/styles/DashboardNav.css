@@ -26,6 +26,9 @@
 .sidebar a,
 .sidebar span {
 	color: #ecf0f1;
+	font-family: var(--font-heading);
+	font-weight: var(--fw-medium);
+	letter-spacing: var(--tracking-wide);
 	text-decoration: none;
 	display: block;
 	padding: 20px;

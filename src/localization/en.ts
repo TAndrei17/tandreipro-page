@@ -288,12 +288,24 @@ const en = {
 
 		entites: {
 			webSectionTitle: 'Websites',
+			webSectionSubtitle: 'Creating',
+			webSectionDescription:
+				'Modern, fast, and visually striking websites — from sleek landing pages to large-scale projects.',
 
 			shopSectionTitle: 'Online Stores',
+			shopSectionSubtitle: 'Launching',
+			shopSectionDescription:
+				'Scalable online stores: manage products and inventory, easy payments, customer database, and tools that help boost sales.',
 
 			mobileSectionTitle: 'Mobile Apps',
+			mobileSectionSubtitle: 'Developing',
+			mobileSectionDescription:
+				'Fast, stable, and user-friendly apps for iOS and Android — tailored for any business needs.',
 
 			maintainSectionTitle: 'Existing Projects',
+			maintainSectionSubtitle: 'Maintaining',
+			maintainSectionDescription:
+				'React websites and React Native apps — refresh the design, fix issues, and bring the project up to date.',
 		},
 	},
 };

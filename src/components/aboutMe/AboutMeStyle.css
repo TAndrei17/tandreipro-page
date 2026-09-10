@@ -39,7 +39,7 @@
 
 .aboutMe-title {
 	margin: 0;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: var(--font-heading);
 	font-size: 22px;
 	font-weight: 600;
 	color: #ffffff;
@@ -47,7 +47,7 @@
 }
 
 .aboutMe-description {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: var(--font-body);
 	font-size: 18px;
 	font-weight: 400;
 	color: #e0e0e0;

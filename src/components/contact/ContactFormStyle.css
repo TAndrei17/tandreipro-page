@@ -26,7 +26,8 @@
 }
 
 .contact-form label {
-	font-weight: 500;
+	font-family: var(--font-heading);
+	font-weight: var(--fw-semibold);
 	font-size: 1rem;
 }
 
@@ -38,7 +39,7 @@
 	font-size: 1rem;
 	background: rgba(255, 255, 255, 0.05);
 	color: #fff;
-	font-family: 'Inter', sans-serif;
+	font-family: var(--font-body);
 	font-size: 1.2rem;
 	transition:
 		border 0.2s ease,

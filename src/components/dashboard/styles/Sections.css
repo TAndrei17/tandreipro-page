@@ -20,7 +20,9 @@
 	padding: 12px 20px;
 	background: #ffdd57;
 	color: #333;
-	font-weight: 600;
+	font-family: var(--font-heading);
+	font-weight: var(--fw-semibold);
+	letter-spacing: var(--tracking-wide);
 	font-size: 16px;
 	border: none;
 	border-radius: 12px;
@@ -90,10 +92,12 @@
 }
 
 .label {
+	font-family: var(--font-heading);
 	font-size: 12px;
+	font-weight: var(--fw-semibold);
 	color: #aaa;
 	text-transform: uppercase;
-	letter-spacing: 1px;
+	letter-spacing: var(--tracking-wider);
 }
 
 .value {

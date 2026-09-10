@@ -25,7 +25,8 @@
 
 .section-subtitle {
 	font-size: clamp(20px, 5vw, 32px);
-	font-weight: 500;
+	font-weight: var(--fw-semibold);
+	letter-spacing: var(--tracking-wide);
 	opacity: 0.8;
 	margin-bottom: 10px;
 }

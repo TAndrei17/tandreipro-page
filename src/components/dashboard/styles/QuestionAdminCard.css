@@ -30,8 +30,9 @@
 }
 
 .question-id {
+	font-family: var(--font-heading);
 	color: #ffdd57;
-	font-weight: bold;
+	font-weight: var(--fw-bold);
 }
 
 .question-status-container {
@@ -43,8 +44,10 @@
 
 /* Базовая анимация для статуса */
 .question-status {
+	font-family: var(--font-heading);
 	font-size: 12px;
-	font-weight: 600;
+	font-weight: var(--fw-semibold);
+	letter-spacing: var(--tracking-wider);
 	padding: 4px 10px;
 	border-radius: 12px;
 	text-transform: uppercase;
@@ -215,10 +218,11 @@
 }
 
 .question-block-label {
+	font-family: var(--font-heading);
 	font-size: 12px;
-	font-weight: 700;
+	font-weight: var(--fw-bold);
 	text-transform: uppercase;
-	letter-spacing: 0.08em;
+	letter-spacing: var(--tracking-wider);
 	color: #ffdd57;
 	margin-bottom: 10px;
 }

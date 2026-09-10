@@ -283,12 +283,24 @@ const es = {
 
 		entites: {
 			webSectionTitle: 'Sitios web',
+			webSectionSubtitle: 'Creando',
+			webSectionDescription:
+				'Sitios web modernos, rápidos y visualmente impactantes — desde landing pages elegantes hasta proyectos a gran escala.',
 
 			shopSectionTitle: 'Tiendas en línea',
+			shopSectionSubtitle: 'Lanzando',
+			shopSectionDescription:
+				'Tiendas en línea escalables: gestión de productos e inventario, pagos sencillos, base de clientes y herramientas que ayudan a aumentar las ventas.',
 
 			mobileSectionTitle: 'Aplicaciones móviles',
+			mobileSectionSubtitle: 'Desarrollando',
+			mobileSectionDescription:
+				'Aplicaciones rápidas, estables y fáciles de usar para iOS y Android — adaptadas a cualquier necesidad de tu negocio.',
 
 			maintainSectionTitle: 'Proyectos existentes',
+			maintainSectionSubtitle: 'Manteniendo',
+			maintainSectionDescription:
+				'Sitios web en React y aplicaciones en React Native — actualizo el diseño, corrijo errores y pongo el proyecto al día.',
 		},
 	},
 };

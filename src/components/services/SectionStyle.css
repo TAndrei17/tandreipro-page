@@ -12,10 +12,10 @@
 	align-items: stretch;
 	text-align: left;
 
-	background: linear-gradient(135deg, rgba(11, 15, 38, 0.96), rgba(31, 28, 66, 0.9));
-	border: 1px solid rgba(158, 163, 255, 0.28);
+	background: linear-gradient(135deg, rgba(96, 100, 158, 0.55), rgba(120, 116, 184, 0.4));
+	border: 1px solid rgba(200, 202, 255, 0.32);
 	backdrop-filter: blur(10px);
-	box-shadow: 0 16px 44px rgba(3, 5, 20, 0.42);
+	box-shadow: 0 16px 40px rgba(40, 36, 90, 0.2);
 
 	opacity: 0;
 	transform: translateY(30px);
@@ -29,8 +29,8 @@
 
 .service-article:hover {
 	transform: translateY(-5px);
-	border-color: rgba(100, 108, 255, 0.6);
-	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+	border-color: rgba(150, 155, 255, 0.65);
+	box-shadow: 0 20px 50px rgba(45, 42, 100, 0.28);
 }
 
 .service-heading {
@@ -55,9 +55,9 @@
 	justify-content: center;
 	border-radius: 50%;
 
-	background: linear-gradient(145deg, rgba(255, 221, 87, 0.2), rgba(100, 108, 255, 0.2));
-	border: 1px solid rgba(255, 221, 87, 0.32);
-	box-shadow: 0 8px 24px rgba(5, 8, 30, 0.35);
+	background: linear-gradient(145deg, rgba(255, 221, 87, 0.3), rgba(140, 145, 255, 0.28));
+	border: 1px solid rgba(255, 221, 87, 0.38);
+	box-shadow: 0 8px 20px rgba(60, 55, 110, 0.2);
 	transition: transform 0.3s ease;
 }
 
@@ -87,7 +87,7 @@
 .service-image-wrapper {
 	flex-shrink: 0;
 	border-radius: 8px;
-	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 8px 24px rgba(45, 40, 90, 0.22);
 	transition:
 		transform 0.3s ease,
 		box-shadow 0.3s ease;
@@ -128,7 +128,7 @@
 /* hover effects */
 .service-icon-container:hover .service-icon {
 	transform: translateY(-5px);
-	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 12px 32px rgba(50, 45, 100, 0.28);
 }
 
 .service-icon-container:hover .service-image {
@@ -155,8 +155,10 @@
 	max-width: 680px;
 	margin: 0.2rem 0 0;
 	color: rgba(255, 255, 255, 0.68);
+	font-family: var(--font-heading);
 	font-size: 0.95em;
-	letter-spacing: 0.04em;
+	font-weight: var(--fw-semibold);
+	letter-spacing: var(--tracking-wider);
 	text-transform: uppercase;
 }
 
@@ -164,9 +166,9 @@
 	width: 100%;
 	box-sizing: border-box;
 	padding: clamp(1.1rem, 3vw, 2rem);
-	border: 1px solid rgba(255, 255, 255, 0.16);
+	border: 1px solid rgba(255, 255, 255, 0.18);
 	border-radius: 14px;
-	background: rgba(5, 8, 25, 0.52);
+	background: rgba(255, 255, 255, 0.07);
 	text-align: left;
 }
 
@@ -206,14 +208,14 @@
 
 .service-shop-option {
 	padding: 1.35rem;
-	border: 1px solid rgba(255, 221, 87, 0.28);
+	border: 1px solid rgba(255, 221, 87, 0.32);
 	border-radius: 10px;
-	background: linear-gradient(145deg, rgba(91, 73, 35, 0.4), rgba(28, 27, 54, 0.8));
+	background: linear-gradient(145deg, rgba(140, 112, 55, 0.34), rgba(70, 66, 98, 0.5));
 }
 
 .service-shop-option:nth-child(2) {
 	border-color: rgba(143, 147, 255, 0.42);
-	background: linear-gradient(145deg, rgba(59, 61, 118, 0.48), rgba(22, 27, 61, 0.8));
+	background: linear-gradient(145deg, rgba(90, 93, 160, 0.4), rgba(62, 66, 104, 0.5));
 }
 
 .service-shop-option h4 {
@@ -249,19 +251,19 @@
 .service-mobile-use-case {
 	min-height: 220px;
 	padding: 1.25rem;
-	border: 1px solid rgba(87, 220, 194, 0.3);
+	border: 1px solid rgba(114, 224, 199, 0.35);
 	border-radius: 10px;
-	background: linear-gradient(145deg, rgba(29, 91, 94, 0.48), rgba(19, 34, 61, 0.82));
+	background: linear-gradient(145deg, rgba(52, 114, 116, 0.4), rgba(55, 76, 96, 0.5));
 }
 
 .service-mobile-use-case:nth-child(2) {
-	border-color: rgba(255, 221, 87, 0.32);
-	background: linear-gradient(145deg, rgba(91, 73, 35, 0.4), rgba(28, 27, 54, 0.8));
+	border-color: rgba(255, 221, 87, 0.35);
+	background: linear-gradient(145deg, rgba(140, 112, 55, 0.34), rgba(70, 66, 98, 0.5));
 }
 
 .service-mobile-use-case:nth-child(3) {
-	border-color: rgba(143, 147, 255, 0.4);
-	background: linear-gradient(145deg, rgba(59, 61, 118, 0.48), rgba(22, 27, 61, 0.8));
+	border-color: rgba(143, 147, 255, 0.42);
+	background: linear-gradient(145deg, rgba(90, 93, 160, 0.4), rgba(62, 66, 104, 0.5));
 }
 
 .service-mobile-use-case h4,
@@ -303,9 +305,9 @@
 .service-mobile-capability {
 	min-height: 160px;
 	padding: 1.2rem;
-	border: 1px solid rgba(87, 220, 194, 0.22);
+	border: 1px solid rgba(114, 224, 199, 0.28);
 	border-radius: 10px;
-	background: linear-gradient(180deg, rgba(87, 220, 194, 0.13), rgba(20, 25, 56, 0.74));
+	background: linear-gradient(180deg, rgba(114, 224, 199, 0.18), rgba(58, 66, 100, 0.5));
 }
 
 .service-maintenance-support {
@@ -318,20 +320,20 @@
 	min-height: 170px;
 	box-sizing: border-box;
 	padding: 1.2rem;
-	border: 1px solid rgba(255, 255, 255, 0.13);
+	border: 1px solid rgba(255, 255, 255, 0.16);
 	border-radius: 10px;
-	background: linear-gradient(145deg, rgba(67, 72, 112, 0.44), rgba(22, 27, 61, 0.78));
+	background: linear-gradient(145deg, rgba(96, 100, 148, 0.4), rgba(62, 66, 104, 0.5));
 	transition:
 		transform 0.25s ease,
 		border-color 0.25s ease;
 }
 
 .service-maintenance-card:nth-child(3n + 2) {
-	background: linear-gradient(145deg, rgba(82, 65, 97, 0.42), rgba(28, 25, 61, 0.76));
+	background: linear-gradient(145deg, rgba(120, 96, 130, 0.38), rgba(70, 63, 100, 0.48));
 }
 
 .service-maintenance-card:nth-child(3n + 3) {
-	background: linear-gradient(145deg, rgba(29, 91, 94, 0.4), rgba(19, 34, 61, 0.8));
+	background: linear-gradient(145deg, rgba(52, 114, 116, 0.38), rgba(55, 76, 96, 0.5));
 }
 
 .service-maintenance-card:hover {
@@ -364,19 +366,19 @@
 	min-height: 150px;
 	box-sizing: border-box;
 	padding: 1.2rem;
-	border-top: 2px solid rgba(255, 221, 87, 0.62);
+	border-top: 2px solid rgba(255, 221, 87, 0.68);
 	border-radius: 0 0 10px 10px;
-	background: linear-gradient(180deg, rgba(255, 221, 87, 0.12), rgba(20, 25, 56, 0.76));
+	background: linear-gradient(180deg, rgba(255, 221, 87, 0.18), rgba(58, 66, 100, 0.5));
 }
 
 .service-maintenance-format:nth-child(2) {
-	border-top-color: rgba(87, 220, 194, 0.65);
-	background: linear-gradient(180deg, rgba(87, 220, 194, 0.12), rgba(20, 25, 56, 0.76));
+	border-top-color: rgba(114, 224, 199, 0.7);
+	background: linear-gradient(180deg, rgba(114, 224, 199, 0.18), rgba(58, 66, 100, 0.5));
 }
 
 .service-maintenance-format:nth-child(3) {
-	border-top-color: rgba(143, 147, 255, 0.65);
-	background: linear-gradient(180deg, rgba(143, 147, 255, 0.16), rgba(20, 25, 56, 0.76));
+	border-top-color: rgba(150, 154, 255, 0.7);
+	background: linear-gradient(180deg, rgba(150, 154, 255, 0.22), rgba(58, 66, 100, 0.5));
 }
 
 .service-maintenance-facts {
@@ -387,9 +389,9 @@
 	min-height: 150px;
 	box-sizing: border-box;
 	padding: 1.2rem;
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.14);
 	border-radius: 10px;
-	background: linear-gradient(145deg, rgba(57, 64, 116, 0.46), rgba(22, 27, 61, 0.72));
+	background: linear-gradient(145deg, rgba(94, 100, 155, 0.42), rgba(62, 66, 104, 0.48));
 	transition:
 		transform 0.25s ease,
 		border-color 0.25s ease,
@@ -398,12 +400,12 @@
 
 .service-benefit-card:hover {
 	transform: translateY(-4px);
-	border-color: rgba(143, 147, 255, 0.55);
-	background: rgba(143, 147, 255, 0.09);
+	border-color: rgba(150, 154, 255, 0.6);
+	background: rgba(150, 154, 255, 0.16);
 }
 
 .service-benefit-card:nth-child(even) {
-	background: linear-gradient(145deg, rgba(82, 65, 97, 0.42), rgba(28, 25, 61, 0.76));
+	background: linear-gradient(145deg, rgba(120, 96, 130, 0.38), rgba(70, 63, 100, 0.48));
 }
 
 .service-card-mark {
@@ -441,16 +443,17 @@
 	min-height: 190px;
 	box-sizing: border-box;
 	padding: 1.2rem;
-	border-top: 2px solid rgba(143, 147, 255, 0.65);
+	border-top: 2px solid rgba(150, 154, 255, 0.7);
 	border-radius: 0 0 10px 10px;
-	background: linear-gradient(180deg, rgba(143, 147, 255, 0.2), rgba(20, 25, 56, 0.72));
+	background: linear-gradient(180deg, rgba(150, 154, 255, 0.26), rgba(58, 66, 100, 0.5));
 }
 .service-step-number {
 	display: block;
 	margin-bottom: 2rem;
 	color: #9da0ff;
+	font-family: var(--font-heading);
 	font-size: 0.78rem;
-	font-weight: 700;
+	font-weight: var(--fw-bold);
 	letter-spacing: 0.12em;
 }
 .service-facts {
@@ -462,7 +465,7 @@
 .service-facts > div {
 	padding: 1.25rem;
 	border-radius: 10px;
-	background: rgba(255, 255, 255, 0.08);
+	background: rgba(255, 255, 255, 0.1);
 }
 .service-facts dt {
 	color: rgba(255, 255, 255, 0.62);
@@ -501,7 +504,9 @@
 	border-radius: 8px;
 	background: #8f93ff;
 	color: #171936;
-	font-weight: 700;
+	font-family: var(--font-heading);
+	font-weight: var(--fw-bold);
+	letter-spacing: var(--tracking-wide);
 	transition:
 		background 0.2s ease,
 		transform 0.2s ease;

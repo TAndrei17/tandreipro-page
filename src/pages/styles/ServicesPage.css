@@ -23,8 +23,10 @@
 
 	padding: 14px 6px;
 
+	font-family: var(--font-heading);
 	font-size: 18px;
-	font-weight: 500;
+	font-weight: var(--fw-semibold);
+	letter-spacing: var(--tracking-wide);
 	text-align: center;
 
 	color: rgba(255, 255, 255, 0.6);

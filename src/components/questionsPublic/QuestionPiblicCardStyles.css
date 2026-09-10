@@ -60,9 +60,10 @@
 }
 
 .qp-card-answer-label {
+	font-family: var(--font-heading);
 	font-size: 14px;
-	font-weight: 600;
-	letter-spacing: 0.5px;
+	font-weight: var(--fw-semibold);
+	letter-spacing: var(--tracking-wider);
 	text-transform: uppercase;
 	color: #ffdd57;
 	margin-bottom: 4px;

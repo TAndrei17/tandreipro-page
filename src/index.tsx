@@ -4,6 +4,8 @@ import Modal from 'react-modal';
 import { Provider as StoreProvider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
+import '@fontsource-variable/inter';
+import '@fontsource-variable/space-grotesk';
 import './index.css';
 import App from './App.tsx';
 
