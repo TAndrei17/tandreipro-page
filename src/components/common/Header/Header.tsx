@@ -73,11 +73,9 @@ const Header = () => {
 				}
 
 				return (
-					<>
-						<NavLink key={to} to={to} onClick={onLinkClick}>
-							{label}
-						</NavLink>
-					</>
+					<NavLink key={to} to={to} onClick={onLinkClick}>
+						{label}
+					</NavLink>
 				);
 			})}
 		</nav>
