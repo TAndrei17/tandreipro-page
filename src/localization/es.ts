@@ -4,7 +4,7 @@ import { positionTextEs } from '@assets/articles/position';
 import { skillsTextEs } from '@assets/articles/skills';
 import { summaryTextEs } from '@assets/articles/summary';
 import { teamWorkTextEs } from '@assets/articles/team';
-import { shopsContentEs, websitesContentEs } from '@assets/articles/websites';
+import { mobileContentEs, shopsContentEs, websitesContentEs } from '@assets/articles/websites';
 
 const es = {
 	translation: {
@@ -64,6 +64,7 @@ const es = {
 		services: {
 			webContent: websitesContentEs,
 			shopContent: shopsContentEs,
+			mobileContent: mobileContentEs,
 			web: 'Sitios web',
 			shop: 'Tiendas en línea',
 			mobile: 'Aplicaciones móviles',
@@ -279,10 +280,7 @@ const es = {
 
 			shopSectionTitle: 'Tiendas en línea',
 
-			mobileSectionSubtitle: 'Desarrollando',
 			mobileSectionTitle: 'Aplicaciones móviles',
-			mobileSectionDescription:
-				'Aplicaciones rápidas, estables y fáciles de usar para iOS y Android — adaptadas a cualquier necesidad de tu negocio.',
 
 			maintainSectionSubtitle: 'Manteniendo',
 			maintainSectionTitle: 'Proyectos existentes',

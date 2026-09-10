@@ -30,7 +30,60 @@ const ServiceSection = ({ service }: { service: Service }) => {
 				<div className={'service-content'}>
 					<div className={'service-intro'}>{service.content.intro}</div>
 
-					{isShop && 'options' in service.content ? (
+					{'useCases' in service.content ? (
+						<>
+							<section aria-labelledby={`${service.anchor}-use-cases`}>
+								<h3 id={`${service.anchor}-use-cases`}>{service.content.useCasesTitle}</h3>
+								<div className={'service-mobile-use-cases'}>
+									{service.content.useCases.map((useCase, index) => (
+										<article className={'service-mobile-use-case'} key={useCase.title}>
+											<span className={'service-step-number'}>0{index + 1}</span>
+											<h4>{useCase.title}</h4>
+											<strong>{useCase.label}</strong>
+											<p>{useCase.text}</p>
+										</article>
+									))}
+								</div>
+							</section>
+
+							<section aria-labelledby={`${service.anchor}-capabilities`}>
+								<h3 id={`${service.anchor}-capabilities`}>{service.content.capabilitiesTitle}</h3>
+								<div className={'service-mobile-capabilities'}>
+									{service.content.capabilities.map((capability) => (
+										<article className={'service-mobile-capability'} key={capability.title}>
+											<span className={'service-card-mark'} aria-hidden="true">
+												+
+											</span>
+											<h4>{capability.title}</h4>
+											<p>{capability.text}</p>
+										</article>
+									))}
+								</div>
+							</section>
+
+							<dl className={'service-facts'}>
+								<div>
+									<dt>{service.content.timeline.label}</dt>
+									<dd>{service.content.timeline.value}</dd>
+								</div>
+								<div>
+									<dt>{service.content.pricing.label}</dt>
+									<dd>{service.content.pricing.value}</dd>
+								</div>
+							</dl>
+
+							<div className={'service-cta'}>
+								<div>
+									<h3>{service.content.ctaTitle}</h3>
+									<p>{service.content.ctaText}</p>
+								</div>
+								<Link className={'service-cta-link'} to={CONTACT_PAGE_PATH}>
+									{service.content.ctaButton}
+									<span aria-hidden="true">→</span>
+								</Link>
+							</div>
+						</>
+					) : isShop && 'options' in service.content ? (
 						<>
 							<section aria-labelledby={`${service.anchor}-options`}>
 								<h3 id={`${service.anchor}-options`}>{service.content.optionsTitle}</h3>

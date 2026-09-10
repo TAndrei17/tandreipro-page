@@ -87,6 +87,149 @@ export type ShopContent = {
 	ctaButton: string;
 };
 
+export type MobileContent = {
+	intro: string;
+	useCasesTitle: string;
+	useCases: Array<{ title: string; label: string; text: string }>;
+	capabilitiesTitle: string;
+	capabilities: Array<{ title: string; text: string }>;
+	timeline: { label: string; value: string };
+	pricing: { label: string; value: string };
+	ctaTitle: string;
+	ctaText: string;
+	ctaButton: string;
+};
+
+export const mobileContentRu: MobileContent = {
+	intro:
+		'Мобильное приложение — это не инструмент для привлечения первичного холодного трафика, а мощный канал работы с вашей текущей аудиторией. Оно создается тогда, когда важен быстрый доступ к услугам со смартфона и максимальный уровень вовлеченности.',
+	useCasesTitle: 'Кому и зачем нужно мобильное приложение',
+	useCases: [
+		{
+			title: 'Постоянные клиенты',
+			label: 'Для повторных продаж и лояльности',
+			text: 'Приложение всегда под рукой: отправляйте PUSH-уведомления, храните историю заказов, открывайте личный кабинет и удерживайте аудиторию.',
+		},
+		{
+			title: 'Внутренние процессы',
+			label: 'Для сотрудников и выездных команд',
+			text: 'Закрытые сервисы для курьеров, мастеров и специалистов: таск-трекеры, чаты, отчеты, заявки и управление объектами.',
+		},
+		{
+			title: 'Цифровой продукт',
+			label: 'Для стартапов и уникальных сервисов',
+			text: 'Площадки объявлений, специализированные калькуляторы, маркетплейсы услуг и другие продукты под вашу бизнес-модель.',
+		},
+	],
+	capabilitiesTitle: 'Что я делаю',
+	capabilities: [
+		{
+			title: 'iOS и Android',
+			text: 'Создаю кроссплатформенное приложение сразу для двух основных операционных систем, экономя время и бюджет.',
+		},
+		{
+			title: 'Backend и API',
+			text: 'Настраиваю серверную часть, базу данных и безопасный обмен данными с сайтом или CRM.',
+		},
+		{
+			title: 'Публикация в сторах',
+			text: 'Беру на себя аккаунты разработчика, модерацию и публикацию в App Store и Google Play.',
+		},
+	],
+	timeline: { label: 'Сроки', value: '1,5–3 месяца' },
+	pricing: { label: 'Стоимость', value: 'Индивидуальный расчет' },
+	ctaTitle: 'Есть идея мобильного продукта?',
+	ctaText: 'Обсудим аудиторию, ключевые сценарии и состав функций для первой версии приложения.',
+	ctaButton: 'Обсудить приложение',
+};
+
+export const mobileContentEn: MobileContent = {
+	intro:
+		'A mobile app is not a tool for attracting initial cold traffic, but a powerful channel for working with your existing audience. It makes sense when fast smartphone access to your services and maximum engagement matter.',
+	useCasesTitle: 'Who needs a mobile app and why',
+	useCases: [
+		{
+			title: 'Returning customers',
+			label: 'For repeat sales and loyalty',
+			text: 'The app is always at hand: send push notifications, keep order history, provide an account, and retain your audience.',
+		},
+		{
+			title: 'Internal processes',
+			label: 'For employees and field teams',
+			text: 'Private tools for couriers, technicians, and specialists: task trackers, chats, reports, requests, and field management.',
+		},
+		{
+			title: 'Digital products',
+			label: 'For startups and unique services',
+			text: 'Classified platforms, specialized calculators, service marketplaces, and other products built around your business model.',
+		},
+	],
+	capabilitiesTitle: 'What I do',
+	capabilities: [
+		{
+			title: 'iOS and Android',
+			text: 'I build a cross-platform app for both major operating systems, saving time and development budget.',
+		},
+		{
+			title: 'Backend and API',
+			text: 'I set up the server side, database, and secure data exchange with your website or CRM.',
+		},
+		{
+			title: 'Store publishing',
+			text: 'I handle developer accounts, review, and publishing on the App Store and Google Play.',
+		},
+	],
+	timeline: { label: 'Timeline', value: '1.5–3 months' },
+	pricing: { label: 'Pricing', value: 'Individual estimate' },
+	ctaTitle: 'Have an idea for a mobile product?',
+	ctaText:
+		'Let’s discuss your audience, key scenarios, and the feature set for the first version of the app.',
+	ctaButton: 'Discuss the app',
+};
+
+export const mobileContentEs: MobileContent = {
+	intro:
+		'Una aplicación móvil no es una herramienta para atraer tráfico frío inicial, sino un canal potente para trabajar con tu audiencia actual. Tiene sentido cuando son importantes el acceso rápido a tus servicios desde el teléfono y el máximo nivel de interacción.',
+	useCasesTitle: 'A quién y para qué sirve una aplicación móvil',
+	useCases: [
+		{
+			title: 'Clientes habituales',
+			label: 'Para compras recurrentes y fidelización',
+			text: 'La aplicación está siempre a mano: permite enviar notificaciones push, guardar pedidos, ofrecer una cuenta personal y retener a la audiencia.',
+		},
+		{
+			title: 'Procesos internos',
+			label: 'Para empleados y equipos de campo',
+			text: 'Servicios privados para repartidores, técnicos y especialistas: tareas, chats, informes, solicitudes y gestión de objetos.',
+		},
+		{
+			title: 'Productos digitales',
+			label: 'Para startups y servicios únicos',
+			text: 'Plataformas de anuncios, calculadoras especializadas, marketplaces de servicios y otros productos adaptados a tu modelo de negocio.',
+		},
+	],
+	capabilitiesTitle: 'Qué hago',
+	capabilities: [
+		{
+			title: 'iOS y Android',
+			text: 'Creo una aplicación multiplataforma para los dos sistemas principales, ahorrando tiempo y presupuesto de desarrollo.',
+		},
+		{
+			title: 'Backend y API',
+			text: 'Configuro el servidor, la base de datos y el intercambio seguro de datos con tu sitio o CRM.',
+		},
+		{
+			title: 'Publicación en stores',
+			text: 'Me encargo de las cuentas de desarrollador, la moderación y la publicación en App Store y Google Play.',
+		},
+	],
+	timeline: { label: 'Plazos', value: '1,5–3 meses' },
+	pricing: { label: 'Precio', value: 'Presupuesto individual' },
+	ctaTitle: '¿Tienes una idea para un producto móvil?',
+	ctaText: 'Hablemos de tu audiencia, los escenarios clave y las funciones de la primera versión.',
+	ctaButton: 'Hablar de la aplicación',
+};
+
 export const shopsContentRu: ShopContent = {
 	intro:
 		'Интернет-магазин — это точка продаж, которая принимает заказы и платежи без вашего прямого участия. Чтобы не переплачивать и запуститься вовремя, важно правильно выбрать подход к разработке.',
