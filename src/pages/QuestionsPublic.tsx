@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
@@ -12,15 +11,10 @@ import './styles/CommonStyles.css';
 import './styles/QuestionsPublic.css';
 
 const QuestionsPublicPage = () => {
-	const { t, i18n } = useTranslation();
-	const language = i18n.language;
+	const { t } = useTranslation();
 	const { siteHeaderHeight } = useSiteHeaderHeight();
 
 	const questions = useAppSelector(questionsPublicSelectors.selectAll);
-
-	useEffect(() => {
-		document.title = t('browserTabs.browserTabQuestionsPublic');
-	}, [t, language]);
 
 	return (
 		<div

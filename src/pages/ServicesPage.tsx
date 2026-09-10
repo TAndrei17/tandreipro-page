@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
@@ -10,15 +9,10 @@ import { useSiteHeaderHeight } from '@context/SettingsContext';
 import useDeviceType from '@hooks/useDeviceType';
 
 const ServicesPage = () => {
-	const { t, i18n } = useTranslation();
-	const language = i18n.language;
+	const { t } = useTranslation();
 	const { isMobile } = useDeviceType();
 	const { siteHeaderHeight } = useSiteHeaderHeight();
 	const services: Service[] = getServiceList(t);
-
-	useEffect(() => {
-		document.title = t('browserTabs.browserTabServices');
-	}, [t, language]);
 
 	return (
 		<div style={{ paddingTop: siteHeaderHeight + (isMobile ? 5 : 0) }}>

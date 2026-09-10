@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 import './styles/ContactPage.css';
 
 import AdminSection from '@components/dashboard/AdminSection';
@@ -11,14 +10,7 @@ import './styles/Dashboard.css';
 
 const DashboardPage = () => {
 	const { siteHeaderHeight } = useSiteHeaderHeight();
-	const { t, i18n } = useTranslation();
-	const language = i18n.language;
-
 	const [active, setActive] = useState<number>(0);
-
-	useEffect(() => {
-		document.title = t('browserTabs.browserTabDashboard');
-	}, [t, language]);
 
 	const sections = [
 		{ component: <AdminSection /> },

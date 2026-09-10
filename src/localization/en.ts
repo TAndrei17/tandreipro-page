@@ -18,6 +18,21 @@ const en = {
 			browserTabDashboard: 'AT | Dashboard',
 		},
 
+		seoDescriptions: {
+			home: 'Frontend development for modern websites and mobile applications with React, React Native and TypeScript.',
+			services:
+				'Websites, online stores, mobile applications and project support built with modern technologies.',
+			about:
+				'Learn more about Andrei Trunkin, a frontend developer specializing in React, React Native and TypeScript.',
+			contact:
+				'Contact Andrei Trunkin to discuss frontend development, a new website or a mobile application.',
+			questions:
+				'Public questions and answers about frontend development, websites and mobile applications.',
+			legal: 'Legal information and privacy terms for the Andrei Trunkin website.',
+			dashboard: 'Website administration dashboard.',
+			notFound: 'The page you are looking for does not exist or has been moved.',
+		},
+
 		pageNotFoundDescription: 'The page you are looking for does not exist or has been moved',
 		toHome: 'Back to Home',
 

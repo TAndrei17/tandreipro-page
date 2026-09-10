@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
@@ -11,14 +10,9 @@ import useDeviceType from '@hooks/useDeviceType';
 
 const HomePage = () => {
 	const { isMobile } = useDeviceType();
-	const { t, i18n } = useTranslation();
-	const language = i18n.language;
+	const { t } = useTranslation();
 	const { siteHeaderHeight } = useSiteHeaderHeight();
 	const services = getServiceList(t);
-
-	useEffect(() => {
-		document.title = t('browserTabs.browserTabDefault');
-	}, [t, language]);
 
 	useAlertCookie();
 

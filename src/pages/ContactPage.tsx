@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './styles/ContactPage.css';
 import { Link } from 'react-router-dom';
@@ -19,12 +18,7 @@ const LINKEDIN = import.meta.env.VITE_LINKEDIN;
 
 const ContactPage = () => {
 	const { siteHeaderHeight } = useSiteHeaderHeight();
-	const { t, i18n } = useTranslation();
-	const language = i18n.language;
-
-	useEffect(() => {
-		document.title = t('browserTabs.browserTabContact');
-	}, [t, language]);
+	const { t } = useTranslation();
 
 	return (
 		<div style={{ paddingTop: siteHeaderHeight }}>

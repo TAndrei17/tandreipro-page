@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
@@ -12,16 +11,11 @@ import { useSiteHeaderHeight } from '@context/SettingsContext';
 import './styles/CommonStyles.css';
 
 const AboutMePage = () => {
-	const { t, i18n } = useTranslation();
-	const language = i18n.language;
+	const { t } = useTranslation();
 	const { siteHeaderHeight } = useSiteHeaderHeight();
 	const personalDataList = getPersonalSections(t);
 	const techStackIconList = getTechStackIcons();
 	const toolsIconsList = getToolIcons();
-
-	useEffect(() => {
-		document.title = t('browserTabs.browserTabAboutMe');
-	}, [t, language]);
 
 	return (
 		<div style={{ paddingTop: siteHeaderHeight }}>

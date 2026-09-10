@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router';
 import './styles/NotFoundPage.css';
@@ -8,10 +7,6 @@ import { LEGAL_PAGE_PATH } from '@constants/routes';
 
 const NotFoundPage = () => {
 	const { t } = useTranslation();
-
-	useEffect(() => {
-		document.title = t('browserTabs.browserTabPageNotFound');
-	}, []);
 
 	return (
 		<div>
