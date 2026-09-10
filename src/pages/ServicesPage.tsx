@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import ServiceSection from '@components/services/ServiceSection';
 import './styles/ServicesPage.css';
 import getServiceList, { type Service } from '@constants/getServiceList';
+import { LEGAL_PAGE_PATH } from '@constants/routes';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
 import useDeviceType from '@hooks/useDeviceType';
 
@@ -36,7 +37,7 @@ const ServicesPage = () => {
 			</main>
 
 			<div className="legal-micro-link">
-				<Link to="/legal">{t('legal.title')}</Link>
+				<Link to={LEGAL_PAGE_PATH}>{t('legal.title')}</Link>
 			</div>
 		</div>
 	);

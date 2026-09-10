@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { ToastContainer } from 'react-toastify';
 
 import Header from '@components/common/Header/Header';
+import SeoMetadata from '@components/common/SeoMetadata';
 import SettingsProvider from '@context/SettingsContext';
 import AppRoutes from '@routes/AppRoutes';
 import { startApp } from '@store/app/appSlice';
@@ -19,6 +20,7 @@ function App() {
 
 	return (
 		<SettingsProvider>
+			<SeoMetadata />
 			<Header />
 			<AppRoutes />
 			<ToastContainer />

@@ -8,6 +8,7 @@ import ContactItem from '@components/contact/ContactItem';
 import ModalLogin from '@components/Modals/ModalLogIn';
 import images from '@constants/images';
 import logos from '@constants/logos';
+import { LEGAL_PAGE_PATH } from '@constants/routes';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
 
 const PHONE = import.meta.env.VITE_PHONE;
@@ -87,7 +88,7 @@ const ContactPage = () => {
 			</main>
 
 			<div className="legal-micro-link">
-				<Link to="/legal">{t('legal.title')}</Link>
+				<Link to={LEGAL_PAGE_PATH}>{t('legal.title')}</Link>
 				<ModalLogin />
 			</div>
 		</div>

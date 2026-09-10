@@ -7,6 +7,7 @@ import IconsList from '@components/aboutMe/IconsList';
 import getPersonalSections from '@constants/getPersonalSections';
 import getTechStackIcons from '@constants/getTechStackIcons';
 import getToolIcons from '@constants/getToolIcons';
+import { LEGAL_PAGE_PATH } from '@constants/routes';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
 import './styles/CommonStyles.css';
 
@@ -55,7 +56,7 @@ const AboutMePage = () => {
 			</main>
 
 			<div className="legal-micro-link">
-				<Link to="/legal">{t('legal.title')}</Link>
+				<Link to={LEGAL_PAGE_PATH}>{t('legal.title')}</Link>
 			</div>
 		</div>
 	);

@@ -6,6 +6,7 @@ import Modal from 'react-modal';
 import './styles/ModalWindow.css';
 import { useNavigate } from 'react-router-dom';
 
+import { DASHBOARD_PAGE_PATH } from '@constants/routes';
 import useAuthStatus from '@hooks/useAuthStatus';
 import useDeviceType from '@hooks/useDeviceType';
 import type { AuthRequest } from '@models/Auth';
@@ -103,7 +104,7 @@ const ModalLogin = () => {
 			createAlert('success', tForm('loginSuccess'));
 			resetForm();
 
-			navigate('/dashboard');
+			navigate(DASHBOARD_PAGE_PATH);
 		} catch {
 			createAlert('error', tErrors('loginFail'));
 		} finally {

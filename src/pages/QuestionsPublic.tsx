@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 import QuestionPublicCard from '@components/questionsPublic/QuestionPublicCard';
+import { LEGAL_PAGE_PATH } from '@constants/routes';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
 import { useAppSelector } from '@store/index';
 import { questionsPublicSelectors } from '@store/questionsPublic/selectors';
@@ -51,7 +52,7 @@ const QuestionsPublicPage = () => {
 			</main>
 
 			<div className="legal-micro-link">
-				<Link to="/legal">{t('legal.title')}</Link>
+				<Link to={LEGAL_PAGE_PATH}>{t('legal.title')}</Link>
 			</div>
 		</div>
 	);

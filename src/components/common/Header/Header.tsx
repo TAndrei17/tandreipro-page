@@ -7,7 +7,13 @@ import Languages from './Languages';
 
 import icons from '@constants/icons';
 import logos from '@constants/logos';
-import { SERVICES_PAGE_PATH } from '@constants/routes';
+import {
+	ABOUT_PAGE_PATH,
+	CONTACT_PAGE_PATH,
+	DASHBOARD_PAGE_PATH,
+	QUESTIONS_PAGE_PATH,
+	SERVICES_PAGE_PATH,
+} from '@constants/routes';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
 import useAuthStatus from '@hooks/useAuthStatus';
 import useDeviceType from '@hooks/useDeviceType';
@@ -53,16 +59,16 @@ const Header = () => {
 
 	const navLinks = [
 		{ to: SERVICES_PAGE_PATH, label: t('appHeader.services') },
-		{ to: '/about', label: t('appHeader.aboutMe') },
-		{ to: '/contact', label: t('appHeader.contact') },
-		{ to: '/questionsPublic', label: t('appHeader.questionsPublic') },
-		{ to: '/dashboard', label: t('appHeader.dashboard') },
+		{ to: ABOUT_PAGE_PATH, label: t('appHeader.aboutMe') },
+		{ to: CONTACT_PAGE_PATH, label: t('appHeader.contact') },
+		{ to: QUESTIONS_PAGE_PATH, label: t('appHeader.questionsPublic') },
+		{ to: DASHBOARD_PAGE_PATH, label: t('appHeader.dashboard') },
 	];
 
 	const renderNav = (className: string, onLinkClick?: () => void) => (
 		<nav className={className} aria-label={t('appHeader.navAria')}>
 			{navLinks.map(({ to, label }) => {
-				if (to === '/dashboard' && auth !== 'admin') {
+				if (to === DASHBOARD_PAGE_PATH && auth !== 'admin') {
 					return;
 				}
 

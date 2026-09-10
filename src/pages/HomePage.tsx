@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import HomeSection from '@components/home/HomeSection';
 import getServiceList from '@constants/getServiceList';
+import { LEGAL_PAGE_PATH } from '@constants/routes';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
 import { useAlertCookie } from '@hooks/useAlertCookie';
 import useDeviceType from '@hooks/useDeviceType';
@@ -41,7 +42,7 @@ const HomePage = () => {
 			</main>
 
 			<div className="legal-micro-link">
-				<Link to="/legal">{t('legal.title')}</Link>
+				<Link to={LEGAL_PAGE_PATH}>{t('legal.title')}</Link>
 			</div>
 		</div>
 	);

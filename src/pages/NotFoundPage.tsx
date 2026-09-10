@@ -4,6 +4,8 @@ import { NavLink } from 'react-router';
 import './styles/NotFoundPage.css';
 import { Link } from 'react-router-dom';
 
+import { LEGAL_PAGE_PATH } from '@constants/routes';
+
 const NotFoundPage = () => {
 	const { t } = useTranslation();
 
@@ -30,7 +32,7 @@ const NotFoundPage = () => {
 			</main>
 
 			<div className="legal-micro-link">
-				<Link to="/legal">{t('legal.title')}</Link>
+				<Link to={LEGAL_PAGE_PATH}>{t('legal.title')}</Link>
 			</div>
 		</div>
 	);
