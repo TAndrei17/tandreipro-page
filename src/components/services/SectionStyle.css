@@ -308,6 +308,81 @@
 	background: linear-gradient(180deg, rgba(87, 220, 194, 0.13), rgba(20, 25, 56, 0.74));
 }
 
+.service-maintenance-support {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 0.85rem;
+}
+
+.service-maintenance-card {
+	min-height: 170px;
+	box-sizing: border-box;
+	padding: 1.2rem;
+	border: 1px solid rgba(255, 255, 255, 0.13);
+	border-radius: 10px;
+	background: linear-gradient(145deg, rgba(67, 72, 112, 0.44), rgba(22, 27, 61, 0.78));
+	transition:
+		transform 0.25s ease,
+		border-color 0.25s ease;
+}
+
+.service-maintenance-card:nth-child(3n + 2) {
+	background: linear-gradient(145deg, rgba(82, 65, 97, 0.42), rgba(28, 25, 61, 0.76));
+}
+
+.service-maintenance-card:nth-child(3n + 3) {
+	background: linear-gradient(145deg, rgba(29, 91, 94, 0.4), rgba(19, 34, 61, 0.8));
+}
+
+.service-maintenance-card:hover {
+	transform: translateY(-4px);
+	border-color: rgba(143, 147, 255, 0.55);
+}
+
+.service-maintenance-card h4,
+.service-maintenance-format h4 {
+	margin: 0;
+	color: #fff;
+	font-size: 1rem;
+}
+
+.service-maintenance-card p,
+.service-maintenance-format p {
+	margin: 0.65rem 0 0;
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 0.92rem;
+	line-height: 1.6;
+}
+
+.service-maintenance-formats {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 0.85rem;
+}
+
+.service-maintenance-format {
+	min-height: 150px;
+	box-sizing: border-box;
+	padding: 1.2rem;
+	border-top: 2px solid rgba(255, 221, 87, 0.62);
+	border-radius: 0 0 10px 10px;
+	background: linear-gradient(180deg, rgba(255, 221, 87, 0.12), rgba(20, 25, 56, 0.76));
+}
+
+.service-maintenance-format:nth-child(2) {
+	border-top-color: rgba(87, 220, 194, 0.65);
+	background: linear-gradient(180deg, rgba(87, 220, 194, 0.12), rgba(20, 25, 56, 0.76));
+}
+
+.service-maintenance-format:nth-child(3) {
+	border-top-color: rgba(143, 147, 255, 0.65);
+	background: linear-gradient(180deg, rgba(143, 147, 255, 0.16), rgba(20, 25, 56, 0.76));
+}
+
+.service-maintenance-facts {
+	grid-template-columns: minmax(0, 1fr);
+}
+
 .service-benefit-card {
 	min-height: 150px;
 	box-sizing: border-box;
@@ -512,6 +587,11 @@
 	.service-mobile-capability {
 		min-width: min(78vw, 270px);
 		scroll-snap-align: start;
+	}
+
+	.service-maintenance-support,
+	.service-maintenance-formats {
+		grid-template-columns: 1fr;
 	}
 
 	.service-steps {

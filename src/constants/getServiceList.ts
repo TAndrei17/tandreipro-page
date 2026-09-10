@@ -4,6 +4,7 @@ import icons from './icons';
 import images from './images';
 
 import {
+	type MaintenanceContent,
 	type MobileContent,
 	type ShopContent,
 	type WebsiteContent,
@@ -17,7 +18,7 @@ export type Service = {
 	title: string;
 	subtitle: string;
 	description: string;
-	content?: WebsiteContent | ShopContent | MobileContent;
+	content?: WebsiteContent | ShopContent | MobileContent | MaintenanceContent;
 	article?: {
 		help: string;
 		clients: string;
@@ -84,14 +85,17 @@ const getServiceList = (t: TFunction): Service[] => [
 		id: 3,
 		anchor: 'maintain',
 		title: t('entites.maintainSectionTitle'),
-		subtitle: t('entites.maintainSectionSubtitle'),
-		description: t('entites.maintainSectionDescription'),
+		subtitle: '',
+		description: '',
 		article: {
 			help: t('services.maintenanceHelp'),
 			clients: t('services.maintenanceClients'),
 			tasks: t('services.maintenanceTasks'),
 			me: t('services.maintenanceWhyMe'),
 		},
+		content: t('services.maintenanceContent', {
+			returnObjects: true,
+		}) as unknown as MaintenanceContent,
 		icon: icons.maintenance,
 		image: images.webSite,
 	},

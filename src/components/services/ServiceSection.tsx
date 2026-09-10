@@ -30,7 +30,55 @@ const ServiceSection = ({ service }: { service: Service }) => {
 				<div className={'service-content'}>
 					<div className={'service-intro'}>{service.content.intro}</div>
 
-					{'useCases' in service.content ? (
+					{'support' in service.content ? (
+						<>
+							<section aria-labelledby={`${service.anchor}-support`}>
+								<h3 id={`${service.anchor}-support`}>{service.content.supportTitle}</h3>
+								<div className={'service-maintenance-support'}>
+									{service.content.support.map((item) => (
+										<article className={'service-maintenance-card'} key={item.title}>
+											<span className={'service-card-mark'} aria-hidden="true">
+												+
+											</span>
+											<h4>{item.title}</h4>
+											<p>{item.text}</p>
+										</article>
+									))}
+								</div>
+							</section>
+
+							<section aria-labelledby={`${service.anchor}-format`}>
+								<h3 id={`${service.anchor}-format`}>{service.content.formatTitle}</h3>
+								<div className={'service-maintenance-formats'}>
+									{service.content.formats.map((format, index) => (
+										<article className={'service-maintenance-format'} key={format.title}>
+											<span className={'service-step-number'}>0{index + 1}</span>
+											<h4>{format.title}</h4>
+											<p>{format.text}</p>
+										</article>
+									))}
+								</div>
+							</section>
+
+							<dl className={'service-facts service-maintenance-facts'}>
+								<div>
+									<dt>{service.content.pricing.label}</dt>
+									<dd>{service.content.pricing.value}</dd>
+								</div>
+							</dl>
+
+							<div className={'service-cta'}>
+								<div>
+									<h3>{service.content.ctaTitle}</h3>
+									<p>{service.content.ctaText}</p>
+								</div>
+								<Link className={'service-cta-link'} to={CONTACT_PAGE_PATH}>
+									{service.content.ctaButton}
+									<span aria-hidden="true">→</span>
+								</Link>
+							</div>
+						</>
+					) : 'useCases' in service.content ? (
 						<>
 							<section aria-labelledby={`${service.anchor}-use-cases`}>
 								<h3 id={`${service.anchor}-use-cases`}>{service.content.useCasesTitle}</h3>

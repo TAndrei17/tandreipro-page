@@ -4,7 +4,12 @@ import { positionTextRu } from '@assets/articles/position';
 import { skillsTextRu } from '@assets/articles/skills';
 import { summaryTextRu } from '@assets/articles/summary';
 import { teamWorkTextRu } from '@assets/articles/team';
-import { mobileContentRu, shopsContentRu, websitesContentRu } from '@assets/articles/websites';
+import {
+	maintenanceContentRu,
+	mobileContentRu,
+	shopsContentRu,
+	websitesContentRu,
+} from '@assets/articles/websites';
 
 const ru = {
 	translation: {
@@ -65,6 +70,7 @@ const ru = {
 			webContent: websitesContentRu,
 			shopContent: shopsContentRu,
 			mobileContent: mobileContentRu,
+			maintenanceContent: maintenanceContentRu,
 			web: 'Сайты',
 			shop: 'Онлайн-магазины',
 			mobile: 'Мобильные приложения',
@@ -292,10 +298,7 @@ const ru = {
 
 			mobileSectionTitle: 'Мобильные приложения',
 
-			maintainSectionSubtitle: 'Поддерживаю',
 			maintainSectionTitle: 'Готовые проекты',
-			maintainSectionDescription:
-				'Сайты на React и приложения на React Native — обновлю дизайн, исправлю ошибки и приведу проект в актуальную форму.',
 		},
 	},
 };

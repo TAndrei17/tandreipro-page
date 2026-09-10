@@ -4,7 +4,12 @@ import { positionTextEn } from '@assets/articles/position';
 import { skillsTextEn } from '@assets/articles/skills';
 import { summaryTextEn } from '@assets/articles/summary';
 import { teamWorkTextEn } from '@assets/articles/team';
-import { mobileContentEn, shopsContentEn, websitesContentEn } from '@assets/articles/websites';
+import {
+	maintenanceContentEn,
+	mobileContentEn,
+	shopsContentEn,
+	websitesContentEn,
+} from '@assets/articles/websites';
 
 const en = {
 	translation: {
@@ -65,6 +70,7 @@ const en = {
 			webContent: websitesContentEn,
 			shopContent: shopsContentEn,
 			mobileContent: mobileContentEn,
+			maintenanceContent: maintenanceContentEn,
 			web: 'Websites',
 			shop: 'Online Stores',
 			mobile: 'Mobile Apps',
@@ -287,10 +293,7 @@ const en = {
 
 			mobileSectionTitle: 'Mobile Apps',
 
-			maintainSectionSubtitle: 'Maintaining',
 			maintainSectionTitle: 'Existing Projects',
-			maintainSectionDescription:
-				'React websites and React Native apps — refresh the design, fix issues, and bring the project up to date.',
 		},
 	},
 };

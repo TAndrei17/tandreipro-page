@@ -100,6 +100,173 @@ export type MobileContent = {
 	ctaButton: string;
 };
 
+export type MaintenanceContent = {
+	intro: string;
+	supportTitle: string;
+	support: Array<{ title: string; text: string }>;
+	formatTitle: string;
+	formats: Array<{ title: string; text: string }>;
+	pricing: { label: string; value: string };
+	ctaTitle: string;
+	ctaText: string;
+	ctaButton: string;
+};
+
+export const maintenanceContentRu: MaintenanceContent = {
+	intro:
+		'Если у вас уже есть сайт или мобильное приложение, но они устарели, работают с ошибками или перестали отвечать задачам бизнеса — их не обязательно переписывать с нуля. Я могу взять на себя доработку, обновление и регулярное обслуживание.',
+	supportTitle: 'Чем я могу помочь',
+	support: [
+		{
+			title: 'Оживление и доработка',
+			text: 'Исправлю ошибки в React или React Native, обновлю старый сайт или приложение и приведу проект в порядок.',
+		},
+		{
+			title: 'Обновление дизайна',
+			text: 'Освежу внешний вид и сделаю интерфейс современным, удобным и понятным для пользователей.',
+		},
+		{
+			title: 'Новые страницы и функции',
+			text: 'Добавлю разделы, страницы, формы заявок, калькуляторы и другие необходимые возможности.',
+		},
+		{
+			title: 'Подключение сервисов',
+			text: 'Настрою интеграции с онлайн-оплатой, CRM-системами, сервисами рассылок и аналитикой.',
+		},
+		{
+			title: 'Техническая помощь',
+			text: 'Перенесу сайт на новый хостинг или домен, настрою SSL и защищу формы от спама.',
+		},
+		{
+			title: 'Обслуживание проектов',
+			text: 'Буду дорабатывать, обновлять и поддерживать продукты, которые разрабатывал для вас ранее.',
+		},
+	],
+	formatTitle: 'Формат работы и стоимость',
+	formats: [
+		{
+			title: 'Разовые задачи',
+			text: 'Оценка под конкретный запрос: исправить баг, сделать страницу или подключить оплату.',
+		},
+		{
+			title: 'Постоянная поддержка',
+			text: 'Регулярное обслуживание и доработки по мере необходимости.',
+		},
+		{
+			title: 'Прозрачная оценка',
+			text: 'Перед стартом я смотрю проект и называю точные сроки и стоимость с учетом его состояния и объема задач.',
+		},
+	],
+	pricing: { label: 'Стоимость', value: 'После оценки проекта' },
+	ctaTitle: 'Проект требует внимания?',
+	ctaText:
+		'Расскажите, что нужно исправить или улучшить, и вместе найдем подходящий формат работы.',
+	ctaButton: 'Обсудить проект',
+};
+
+export const maintenanceContentEn: MaintenanceContent = {
+	intro:
+		'If you already have a website or mobile app but it is outdated, has bugs, or no longer meets your business needs, you do not have to rebuild it from scratch. I can handle improvements, updates, and ongoing maintenance.',
+	supportTitle: 'How I can help',
+	support: [
+		{
+			title: 'Fixes and improvements',
+			text: 'I fix React or React Native issues, update an older website or app, and bring the project back into shape.',
+		},
+		{
+			title: 'Design updates',
+			text: 'I refresh the visual style and make the interface modern, convenient, and clear for users.',
+		},
+		{
+			title: 'New pages and features',
+			text: 'I add sections, pages, request forms, calculators, and other functionality you need.',
+		},
+		{
+			title: 'Service integrations',
+			text: 'I connect online payments, CRM systems, mailing services, analytics, and other external tools.',
+		},
+		{
+			title: 'Technical assistance',
+			text: 'I move the website to a new host or domain, configure SSL, and protect forms from spam.',
+		},
+		{
+			title: 'Maintenance for my projects',
+			text: 'I continue improving, updating, and supporting products I previously developed for you.',
+		},
+	],
+	formatTitle: 'Work format and pricing',
+	formats: [
+		{
+			title: 'One-off tasks',
+			text: 'An estimate for a specific request: fix a bug, create a page, or connect payments.',
+		},
+		{
+			title: 'Ongoing support',
+			text: 'Regular maintenance and improvements whenever they are needed.',
+		},
+		{
+			title: 'Clear estimate',
+			text: 'Before we start, I review the project and provide exact timing and pricing based on its condition and scope.',
+		},
+	],
+	pricing: { label: 'Pricing', value: 'After project assessment' },
+	ctaTitle: 'Does your project need attention?',
+	ctaText:
+		'Tell me what needs to be fixed or improved, and we will find the right way to move forward.',
+	ctaButton: 'Discuss the project',
+};
+
+export const maintenanceContentEs: MaintenanceContent = {
+	intro:
+		'Si ya tienes un sitio web o una aplicación móvil, pero está desactualizado, tiene errores o ya no responde a las necesidades de tu negocio, no tienes que rehacerlo desde cero. Puedo encargarme de las mejoras, las actualizaciones y el mantenimiento continuo.',
+	supportTitle: 'Cómo puedo ayudarte',
+	support: [
+		{
+			title: 'Correcciones y mejoras',
+			text: 'Corrijo errores en React o React Native, actualizo tu sitio o aplicación y pongo el proyecto en orden.',
+		},
+		{
+			title: 'Actualización del diseño',
+			text: 'Renuevo el aspecto visual y hago que la interfaz sea moderna, cómoda y clara para los usuarios.',
+		},
+		{
+			title: 'Nuevas páginas y funciones',
+			text: 'Añado secciones, páginas, formularios de solicitud, calculadoras y otras funciones necesarias.',
+		},
+		{
+			title: 'Integración de servicios',
+			text: 'Configuro pagos online, CRM, servicios de correo, analítica y otras herramientas externas.',
+		},
+		{
+			title: 'Ayuda técnica',
+			text: 'Traslado el sitio a un nuevo hosting o dominio, configuro SSL y protejo los formularios contra el spam.',
+		},
+		{
+			title: 'Mantenimiento de mis proyectos',
+			text: 'Sigo mejorando, actualizando y manteniendo los productos que desarrollé anteriormente para ti.',
+		},
+	],
+	formatTitle: 'Formato de trabajo y precio',
+	formats: [
+		{
+			title: 'Tareas puntuales',
+			text: 'Presupuesto para una solicitud concreta: corregir un error, crear una página o conectar pagos.',
+		},
+		{
+			title: 'Soporte continuo',
+			text: 'Mantenimiento y mejoras periódicas cuando sean necesarias.',
+		},
+		{
+			title: 'Presupuesto claro',
+			text: 'Antes de empezar reviso el proyecto y doy plazos y precio exactos según su estado y alcance.',
+		},
+	],
+	pricing: { label: 'Precio', value: 'Después de evaluar el proyecto' },
+	ctaTitle: '¿Tu proyecto necesita atención?',
+	ctaText: 'Cuéntame qué hay que corregir o mejorar y encontraremos la forma adecuada de avanzar.',
+	ctaButton: 'Hablar del proyecto',
+};
+
 export const mobileContentRu: MobileContent = {
 	intro:
 		'Мобильное приложение — это не инструмент для привлечения первичного холодного трафика, а мощный канал работы с вашей текущей аудиторией. Оно создается тогда, когда важен быстрый доступ к услугам со смартфона и максимальный уровень вовлеченности.',

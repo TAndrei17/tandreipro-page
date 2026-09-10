@@ -4,7 +4,12 @@ import { positionTextEs } from '@assets/articles/position';
 import { skillsTextEs } from '@assets/articles/skills';
 import { summaryTextEs } from '@assets/articles/summary';
 import { teamWorkTextEs } from '@assets/articles/team';
-import { mobileContentEs, shopsContentEs, websitesContentEs } from '@assets/articles/websites';
+import {
+	maintenanceContentEs,
+	mobileContentEs,
+	shopsContentEs,
+	websitesContentEs,
+} from '@assets/articles/websites';
 
 const es = {
 	translation: {
@@ -65,6 +70,7 @@ const es = {
 			webContent: websitesContentEs,
 			shopContent: shopsContentEs,
 			mobileContent: mobileContentEs,
+			maintenanceContent: maintenanceContentEs,
 			web: 'Sitios web',
 			shop: 'Tiendas en línea',
 			mobile: 'Aplicaciones móviles',
@@ -282,10 +288,7 @@ const es = {
 
 			mobileSectionTitle: 'Aplicaciones móviles',
 
-			maintainSectionSubtitle: 'Manteniendo',
 			maintainSectionTitle: 'Proyectos existentes',
-			maintainSectionDescription:
-				'Sitios web en React y aplicaciones en React Native — actualizo el diseño, corrijo errores y pongo el proyecto al día.',
 		},
 	},
 };
