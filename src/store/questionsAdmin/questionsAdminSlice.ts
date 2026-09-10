@@ -8,7 +8,7 @@ import {
 	updateQuestionAdmin,
 } from './services';
 
-import type { Question } from 'models/Question';
+import type { Question } from '@models/Question';
 
 export const questionsAdminAdapter = createEntityAdapter<Question>();
 

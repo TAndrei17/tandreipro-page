@@ -11,7 +11,7 @@ import type {
 	QuestionDeleteResponse,
 } from '@models/questionsAdmin';
 import type { QuestionsPublicResponse } from '@models/QuestionsPublic';
-import type { RootState } from 'store';
+import type { RootState } from '@store/index';
 
 export const getQuestionsAdmin = createAsyncThunk<Question[], void, { state: RootState }>(
 	'questionsAdmin/getQuestionsAdmin',

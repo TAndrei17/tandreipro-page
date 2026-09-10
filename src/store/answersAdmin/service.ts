@@ -10,7 +10,7 @@ import type {
 	AnswerAdminDeleteResponse,
 	AnswersAdminResponse,
 } from '@models/AnswersAdmin';
-import type { RootState } from 'store';
+import type { RootState } from '@store/index';
 
 export const getAnswersAdmin = createAsyncThunk<Answer[], void, { state: RootState }>(
 	'answersAdmin/getAnswersAdmin',

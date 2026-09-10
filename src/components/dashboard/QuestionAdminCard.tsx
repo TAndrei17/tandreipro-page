@@ -2,6 +2,7 @@ import React, { type Dispatch, type SetStateAction } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import icons from '@constants/icons';
+import type { Question } from '@models/Question';
 import type { QuestionDeleteRequest } from '@models/questionsAdmin';
 import { answersAdminSelectors } from '@store/answersAdmin/selectors';
 import { deleteAnswerAdmin } from '@store/answersAdmin/service';
@@ -10,7 +11,6 @@ import { selectTagsByIds } from '@store/tags/selectors';
 import createAlert from '@utils/createAlert';
 import deleteQuestion from '@utils/deleteQuestion';
 import updateQuestionStatus from '@utils/updateQuestionStatus';
-import type { Question } from 'models/Question';
 import './styles/QuestionAdminCard.css';
 
 type QuestionCardProps = {

@@ -3,7 +3,7 @@ import type { PayloadAction, SerializedError } from '@reduxjs/toolkit';
 
 import { postQuestionUser } from './services';
 
-import type { QuestionUser } from 'models/Question';
+import type { QuestionUser } from '@models/Question';
 
 export const questionUserAdapter = createEntityAdapter<QuestionUser>();
 

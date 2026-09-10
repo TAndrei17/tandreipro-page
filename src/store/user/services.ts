@@ -4,7 +4,7 @@ import api from '../../api';
 
 import type { AuthRequest, AuthResponse } from '@models/Auth';
 import type { User } from '@models/User';
-import type { RootState } from 'store';
+import type { RootState } from '@store/index';
 
 export const login = createAsyncThunk<User[], AuthRequest, { state: RootState }>(
 	'user/login',

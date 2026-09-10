@@ -10,7 +10,7 @@ import type {
 	TagDeleteAdminRequest,
 	TagDeleteAdminResponse,
 } from '@models/Tag';
-import type { RootState } from 'store';
+import type { RootState } from '@store/index';
 
 export const getTags = createAsyncThunk<Tag[], void, { state: RootState }>(
 	'tags/getTags',

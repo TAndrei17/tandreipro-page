@@ -4,7 +4,7 @@ import api from '../../api';
 
 import type { Answer } from '@models/AnswersAdmin';
 import type { AnswersAdminResponse } from '@models/AnswersAdmin';
-import type { RootState } from 'store';
+import type { RootState } from '@store/index';
 
 export const getAnswersPublic = createAsyncThunk<Answer[], void, { state: RootState }>(
 	'answersPublic/getAnswersPublic',
