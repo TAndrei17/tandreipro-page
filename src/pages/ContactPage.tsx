@@ -74,7 +74,10 @@ const ContactPage = () => {
 							</dl>
 						</address>
 
-						<div className="contact-form-container">
+						<div
+							id="contact-form"
+							className="contact-form-container"
+							style={{ scrollMarginTop: siteHeaderHeight + 24 }}>
 							<ContactForm />
 						</div>
 					</div>

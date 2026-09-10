@@ -67,6 +67,11 @@ const ru = {
 		},
 
 		services: {
+			previousSlide: 'Предыдущий слайд',
+			nextSlide: 'Следующий слайд',
+			slides: 'Слайды',
+			showMore: 'Подробнее',
+			hideMore: 'Скрыть',
 			webContent: websitesContentRu,
 			shopContent: shopsContentRu,
 			mobileContent: mobileContentRu,

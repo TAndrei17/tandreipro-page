@@ -34,10 +34,23 @@
 }
 
 .service-heading {
+	position: relative;
 	display: flex;
 	align-items: center;
 	gap: 1rem;
+	padding-right: 2rem;
 	margin-bottom: 0.8rem;
+}
+
+.service-number {
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #9da0ff;
+	font-family: var(--font-heading);
+	font-size: 0.78rem;
+	font-weight: var(--fw-bold);
+	letter-spacing: var(--tracking-wide);
 }
 
 .service-heading-copy {
@@ -172,6 +185,55 @@
 	text-align: left;
 }
 
+.service-summary {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.55rem;
+	margin: 0 0 1.5rem;
+}
+
+.service-summary span {
+	padding: 0.35rem 0.65rem;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.1);
+	color: rgba(255, 255, 255, 0.76);
+	font-size: 0.76rem;
+	font-weight: var(--fw-semibold);
+}
+
+.service-web .service-number,
+.service-web .service-summary span:first-child {
+	color: #b7b9ff;
+}
+
+.service-shop .service-number,
+.service-shop .service-summary span:first-child {
+	color: #ffdd57;
+}
+
+.service-mobile .service-number,
+.service-mobile .service-summary span:first-child {
+	color: #72e0c7;
+}
+
+.service-maintain .service-number,
+.service-maintain .service-summary span:first-child {
+	color: #ffb7c5;
+}
+
+.service-shop .service-icon-badge {
+	border-color: rgba(255, 221, 87, 0.56);
+}
+
+.service-mobile .service-icon-badge {
+	border-color: rgba(114, 224, 199, 0.5);
+}
+
+.service-maintain .service-icon-badge {
+	border-color: rgba(255, 183, 197, 0.5);
+}
+
 .service-intro {
 	margin: 0 0 2rem;
 	color: rgba(255, 255, 255, 0.86);
@@ -183,6 +245,48 @@
 	margin: 2rem 0 1rem;
 	color: #fff;
 	font-size: 1.2em;
+}
+
+.service-expand-button {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35rem;
+	margin: 0 0 0.8rem;
+	padding: 0.45rem 0;
+	border: 0;
+	background: transparent;
+	color: #d4d5ff;
+	font-family: var(--font-heading);
+	font-size: 0.86rem;
+	font-weight: var(--fw-semibold);
+	letter-spacing: var(--tracking-wide);
+	cursor: pointer;
+}
+
+.service-expand-button:hover,
+.service-expand-button:focus-visible {
+	color: #fff;
+}
+
+.service-details {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.45s ease;
+}
+
+.service-details.is-expanded {
+	max-height: 5000px;
+}
+
+.service-carousel {
+	position: relative;
+	min-width: 0;
+}
+
+.service-carousel-viewport {
+	position: relative;
+	width: 100%;
+	overflow: visible;
 }
 
 .service-content > section:first-of-type h3 {
@@ -420,6 +524,26 @@
 	font-size: 1.25rem;
 }
 
+.service-card-mark-1 {
+	background: rgba(114, 224, 199, 0.18);
+	color: #72e0c7;
+}
+
+.service-card-mark-2 {
+	background: rgba(255, 221, 87, 0.18);
+	color: #ffdd57;
+}
+
+.service-card-mark-3 {
+	background: rgba(183, 185, 255, 0.2);
+	color: #b7b9ff;
+}
+
+.service-card-mark-4 {
+	background: rgba(255, 183, 197, 0.18);
+	color: #ffb7c5;
+}
+
 .service-benefit-card h4,
 .service-step-card h4 {
 	margin: 0;
@@ -434,7 +558,7 @@
 	line-height: 1.55;
 }
 .service-steps {
-	grid-template-columns: repeat(4, minmax(190px, 1fr));
+	grid-template-columns: repeat(4, minmax(0, 1fr));
 	gap: 0.85rem;
 	padding: 0;
 	list-style: none;
@@ -526,6 +650,20 @@
 	overflow-wrap: anywhere;
 }
 
+.service-article + .service-article {
+	position: relative;
+}
+
+.service-article + .service-article::before {
+	position: absolute;
+	top: -1.65rem;
+	left: 10%;
+	right: 10%;
+	height: 1px;
+	background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+	content: '';
+}
+
 /* mobile */
 @media (max-width: 768px) {
 	.service-article {
@@ -539,6 +677,11 @@
 	.service-heading {
 		align-items: flex-start;
 		gap: 0.75rem;
+	}
+
+	.service-number {
+		top: 0;
+		right: 0;
 	}
 
 	.service-icon-badge {
@@ -559,6 +702,17 @@
 		padding: 1.2rem;
 	}
 
+	.service-carousel-viewport {
+		margin-inline: 0.2rem;
+		overflow-x: auto;
+		scroll-behavior: smooth;
+		scrollbar-width: none;
+	}
+
+	.service-carousel-viewport::-webkit-scrollbar {
+		display: none;
+	}
+
 	.service-benefits,
 	.service-facts {
 		grid-template-columns: 1fr;
@@ -568,48 +722,41 @@
 		grid-template-columns: 1fr;
 	}
 
-	.service-mobile-use-cases {
+	.service-mobile-use-cases,
+	.service-mobile-capabilities,
+	.service-maintenance-support,
+	.service-maintenance-formats,
+	.service-benefits,
+	.service-steps {
 		display: flex;
 		gap: 0.75rem;
-		overflow-x: auto;
-		padding-bottom: 0.6rem;
+		width: 100%;
 		scroll-snap-type: x mandatory;
 	}
 
 	.service-mobile-use-case {
-		min-width: min(78vw, 270px);
+		flex: 0 0 100%;
+		min-width: 0;
 		scroll-snap-align: start;
-	}
-
-	.service-mobile-capabilities {
-		display: flex;
-		gap: 0.75rem;
-		overflow-x: auto;
-		padding-bottom: 0.6rem;
-		scroll-snap-type: x mandatory;
 	}
 
 	.service-mobile-capability {
-		min-width: min(78vw, 270px);
+		flex: 0 0 100%;
+		min-width: 0;
 		scroll-snap-align: start;
 	}
 
-	.service-maintenance-support,
-	.service-maintenance-formats {
-		grid-template-columns: 1fr;
-	}
-
-	.service-steps {
-		display: flex;
-		gap: 0.75rem;
-		overflow-x: auto;
-		padding-bottom: 0.6rem;
-		scroll-snap-type: x mandatory;
-		overscroll-behavior-inline: contain;
-	}
+	.service-maintenance-card,
+	.service-maintenance-format,
+	.service-benefit-card,
 	.service-step-card {
-		min-width: min(78vw, 270px);
+		flex: 0 0 100%;
+		min-width: 0;
 		scroll-snap-align: start;
+	}
+
+	.service-step-card {
+		min-height: 190px;
 	}
 	.service-cta {
 		align-items: flex-start;
@@ -621,12 +768,6 @@
 		justify-content: center;
 	}
 
-	@media (prefers-reduced-motion: reduce) {
-		.service-benefit-card,
-		.service-cta-link {
-			transition: none;
-		}
-	}
 	.service-icon-container {
 		flex-direction: column-reverse;
 		gap: 1.5em;
@@ -643,6 +784,17 @@
 	.service-image-wrapper {
 		width: 100%;
 		height: 220px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.service-details,
+	.service-carousel-viewport,
+	.service-benefit-card,
+	.service-maintenance-card,
+	.service-cta-link {
+		scroll-behavior: auto;
+		transition: none;
 	}
 }
 

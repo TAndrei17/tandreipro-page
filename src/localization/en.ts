@@ -67,6 +67,11 @@ const en = {
 		},
 
 		services: {
+			previousSlide: 'Previous slide',
+			nextSlide: 'Next slide',
+			slides: 'Slides',
+			showMore: 'Show more',
+			hideMore: 'Hide',
 			webContent: websitesContentEn,
 			shopContent: shopsContentEn,
 			mobileContent: mobileContentEn,

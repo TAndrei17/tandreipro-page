@@ -67,6 +67,11 @@ const es = {
 		},
 
 		services: {
+			previousSlide: 'Diapositiva anterior',
+			nextSlide: 'Siguiente diapositiva',
+			slides: 'Diapositivas',
+			showMore: 'Ver más',
+			hideMore: 'Ocultar',
 			webContent: websitesContentEs,
 			shopContent: shopsContentEs,
 			mobileContent: mobileContentEs,
