@@ -4,7 +4,7 @@ import { positionTextEs } from '@assets/articles/position';
 import { skillsTextEs } from '@assets/articles/skills';
 import { summaryTextEs } from '@assets/articles/summary';
 import { teamWorkTextEs } from '@assets/articles/team';
-import { websitesContentEs } from '@assets/articles/websites';
+import { shopsContentEs, websitesContentEs } from '@assets/articles/websites';
 
 const es = {
 	translation: {
@@ -63,6 +63,7 @@ const es = {
 
 		services: {
 			webContent: websitesContentEs,
+			shopContent: shopsContentEs,
 			web: 'Sitios web',
 			shop: 'Tiendas en línea',
 			mobile: 'Aplicaciones móviles',
@@ -276,10 +277,7 @@ const es = {
 		entites: {
 			webSectionTitle: 'Sitios web',
 
-			shopSectionSubtitle: 'Lanzando',
 			shopSectionTitle: 'Tiendas en línea',
-			shopSectionDescription:
-				'Tiendas en línea escalables: gestión de productos e inventario, pagos sencillos, base de clientes y herramientas que ayudan a aumentar las ventas.',
 
 			mobileSectionSubtitle: 'Desarrollando',
 			mobileSectionTitle: 'Aplicaciones móviles',

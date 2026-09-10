@@ -74,6 +74,162 @@ export type WebsiteContent = {
 	ctaButton: string;
 };
 
+export type ShopContent = {
+	intro: string;
+	optionsTitle: string;
+	options: Array<{ title: string; label: string; audience: string; advantage: string }>;
+	benefitsTitle: string;
+	benefits: Array<{ title: string; text: string }>;
+	timeline: { label: string; value: string };
+	pricing: { label: string; value: string };
+	ctaTitle: string;
+	ctaText: string;
+	ctaButton: string;
+};
+
+export const shopsContentRu: ShopContent = {
+	intro:
+		'Интернет-магазин — это точка продаж, которая принимает заказы и платежи без вашего прямого участия. Чтобы не переплачивать и запуститься вовремя, важно правильно выбрать подход к разработке.',
+	optionsTitle: 'Какой вариант выбрать',
+	options: [
+		{
+			title: 'Готовая платформа',
+			label: 'Быстро, доступно и надежно',
+			audience:
+				'Малому бизнесу, стартапам и брендам, которым нужен быстрый запуск при ограниченном бюджете.',
+			advantage:
+				'Платформа берет на себя каталог, склад и корзину. Вы получаете полноценный магазин в короткие сроки без лишних расходов на поддержку.',
+		},
+		{
+			title: 'Индивидуальная разработка',
+			label: 'Для сложных задач',
+			audience:
+				'Проектам с нетипичным каталогом, сложной логикой продаж или специфическими требованиями к интеграциям.',
+			advantage:
+				'Полная свобода в функциях, но потребуется собственный бэкенд, больше времени и существенно больший бюджет.',
+		},
+	],
+	benefitsTitle: 'Что вы получаете в итоге',
+	benefits: [
+		{
+			title: 'Удобный каталог',
+			text: 'Фильтры, вариации товаров, размеры и цвета помогают покупателю быстро найти нужный продукт.',
+		},
+		{ title: 'Безопасная оплата', text: 'Подключаем прием онлайн-платежей прямо на сайте.' },
+		{
+			title: 'Доставка и склад',
+			text: 'Автоматический расчет доставки и актуальный учет остатков.',
+		},
+		{
+			title: 'Клиенты и уведомления',
+			text: 'База клиентов и уведомления о заказах на почту или напрямую в CRM.',
+		},
+	],
+	timeline: { label: 'Сроки', value: 'от 2–3 недель' },
+	pricing: { label: 'Стоимость', value: 'Платформа выгоднее' },
+	ctaTitle: 'Готовы запустить продажи онлайн?',
+	ctaText: 'Обсудим ассортимент, подходящую платформу и нужные интеграции для вашего магазина.',
+	ctaButton: 'Обсудить магазин',
+};
+
+export const shopsContentEn: ShopContent = {
+	intro:
+		'An online store is a sales point that accepts orders and payments without your direct involvement. To avoid overpaying and launch on time, it is important to choose the right development approach.',
+	optionsTitle: 'Which option to choose',
+	options: [
+		{
+			title: 'Ready-made platform',
+			label: 'Fast, affordable, and reliable',
+			audience:
+				'Small businesses, startups, and brands that need a quick launch with a limited budget.',
+			advantage:
+				'The platform handles the catalog, inventory, and cart. You get a complete store quickly, without unnecessary maintenance costs.',
+		},
+		{
+			title: 'Custom development',
+			label: 'For complex requirements',
+			audience:
+				'Projects with unusual catalogs, complex sales logic, or specific integration requirements.',
+			advantage:
+				'Complete freedom of functionality, but it requires a custom backend, more time, and a significantly larger budget.',
+		},
+	],
+	benefitsTitle: 'What you get in the end',
+	benefits: [
+		{
+			title: 'Convenient catalog',
+			text: 'Filters and product variations such as sizes and colors help customers find the right product quickly.',
+		},
+		{
+			title: 'Secure payments',
+			text: 'We connect online payment processing directly on the website.',
+		},
+		{
+			title: 'Delivery and inventory',
+			text: 'Automatic delivery calculation and up-to-date stock tracking.',
+		},
+		{
+			title: 'Customers and notifications',
+			text: 'A customer database and order notifications by email or directly in your CRM.',
+		},
+	],
+	timeline: { label: 'Timeline', value: 'from 2–3 weeks' },
+	pricing: { label: 'Pricing', value: 'Platform is more affordable' },
+	ctaTitle: 'Ready to start selling online?',
+	ctaText:
+		'Let’s discuss your products, the right platform, and the integrations your store needs.',
+	ctaButton: 'Discuss the store',
+};
+
+export const shopsContentEs: ShopContent = {
+	intro:
+		'Una tienda online es un punto de venta que recibe pedidos y pagos sin tu participación directa. Para no pagar de más y lanzar el proyecto a tiempo, es importante elegir el enfoque adecuado.',
+	optionsTitle: 'Qué opción elegir',
+	options: [
+		{
+			title: 'Plataforma preparada',
+			label: 'Rápida, accesible y fiable',
+			audience:
+				'Pequeñas empresas, startups y marcas que necesitan un lanzamiento rápido con un presupuesto limitado.',
+			advantage:
+				'La plataforma se encarga del catálogo, el inventario y el carrito. Obtienes una tienda completa en poco tiempo y con menos costes de mantenimiento.',
+		},
+		{
+			title: 'Desarrollo personalizado',
+			label: 'Para necesidades complejas',
+			audience:
+				'Proyectos con catálogos poco habituales, una lógica de ventas compleja o integraciones específicas.',
+			advantage:
+				'Ofrece total libertad de funciones, pero requiere un backend propio, más tiempo y un presupuesto considerablemente mayor.',
+		},
+	],
+	benefitsTitle: 'Qué obtienes al final',
+	benefits: [
+		{
+			title: 'Catálogo cómodo',
+			text: 'Filtros y variaciones como tallas y colores ayudan a encontrar rápidamente el producto adecuado.',
+		},
+		{
+			title: 'Pagos seguros',
+			text: 'Conectamos el procesamiento de pagos online directamente en el sitio.',
+		},
+		{
+			title: 'Envíos e inventario',
+			text: 'Cálculo automático del envío y control actualizado de las existencias.',
+		},
+		{
+			title: 'Clientes y notificaciones',
+			text: 'Base de clientes y avisos de pedidos por correo o directamente en tu CRM.',
+		},
+	],
+	timeline: { label: 'Plazos', value: 'desde 2–3 semanas' },
+	pricing: { label: 'Precio', value: 'La plataforma es más económica' },
+	ctaTitle: '¿Listo para empezar a vender online?',
+	ctaText:
+		'Hablemos de tus productos, la plataforma adecuada y las integraciones que necesita tu tienda.',
+	ctaButton: 'Hablar de la tienda',
+};
+
 export const websitesContentRu: WebsiteContent = {
 	intro:
 		'Сайт — это ваше собственное цифровое пространство в интернете, которое работает на вас 24/7. В отличие от соцсетей, здесь вы полностью контролируете подачу информации, базу клиентов и всю логику работы.',

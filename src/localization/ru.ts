@@ -4,7 +4,7 @@ import { positionTextRu } from '@assets/articles/position';
 import { skillsTextRu } from '@assets/articles/skills';
 import { summaryTextRu } from '@assets/articles/summary';
 import { teamWorkTextRu } from '@assets/articles/team';
-import { websitesContentRu } from '@assets/articles/websites';
+import { shopsContentRu, websitesContentRu } from '@assets/articles/websites';
 
 const ru = {
 	translation: {
@@ -63,6 +63,7 @@ const ru = {
 
 		services: {
 			webContent: websitesContentRu,
+			shopContent: shopsContentRu,
 			web: 'Сайты',
 			shop: 'Онлайн-магазины',
 			mobile: 'Мобильные приложения',
@@ -286,10 +287,7 @@ const ru = {
 		entites: {
 			webSectionTitle: 'Сайты',
 
-			shopSectionSubtitle: 'Запускаю',
 			shopSectionTitle: 'Онлайн-магазины',
-			shopSectionDescription:
-				'Готовые к росту онлайн-магазины: управление товарами и складом, удобные платежи, база клиентов и инструменты, которые помогают увеличивать продажи.',
 
 			mobileSectionSubtitle: 'Разрабатываю',
 			mobileSectionTitle: 'Мобильные приложения',

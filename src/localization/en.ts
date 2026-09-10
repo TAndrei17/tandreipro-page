@@ -4,7 +4,7 @@ import { positionTextEn } from '@assets/articles/position';
 import { skillsTextEn } from '@assets/articles/skills';
 import { summaryTextEn } from '@assets/articles/summary';
 import { teamWorkTextEn } from '@assets/articles/team';
-import { websitesContentEn } from '@assets/articles/websites';
+import { shopsContentEn, websitesContentEn } from '@assets/articles/websites';
 
 const en = {
 	translation: {
@@ -63,6 +63,7 @@ const en = {
 
 		services: {
 			webContent: websitesContentEn,
+			shopContent: shopsContentEn,
 			web: 'Websites',
 			shop: 'Online Stores',
 			mobile: 'Mobile Apps',
@@ -281,10 +282,7 @@ const en = {
 		entites: {
 			webSectionTitle: 'Websites',
 
-			shopSectionSubtitle: 'Launching',
 			shopSectionTitle: 'Online Stores',
-			shopSectionDescription:
-				'Scalable online stores: manage products and inventory, easy payments, customer database, and tools that help boost sales.',
 
 			mobileSectionSubtitle: 'Developing',
 			mobileSectionTitle: 'Mobile Apps',

@@ -8,6 +8,7 @@ import { useSiteHeaderHeight } from '@context/SettingsContext';
 
 const ServiceSection = ({ service }: { service: Service }) => {
 	const { siteHeaderHeight } = useSiteHeaderHeight();
+	const isShop = service.anchor === 'shop';
 
 	return (
 		<article
@@ -29,55 +30,113 @@ const ServiceSection = ({ service }: { service: Service }) => {
 				<div className={'service-content'}>
 					<div className={'service-intro'}>{service.content.intro}</div>
 
-					<section aria-labelledby={`${service.anchor}-benefits`}>
-						<h3 id={`${service.anchor}-benefits`}>{service.content.benefitsTitle}</h3>
-						<div className={'service-benefits'}>
-							{service.content.benefits.map((benefit) => (
-								<div className={'service-benefit-card'} key={benefit.title}>
-									<span className={'service-card-mark'} aria-hidden="true">
-										+
-									</span>
-									<h4>{benefit.title}</h4>
-									<p>{benefit.text}</p>
+					{isShop && 'options' in service.content ? (
+						<>
+							<section aria-labelledby={`${service.anchor}-options`}>
+								<h3 id={`${service.anchor}-options`}>{service.content.optionsTitle}</h3>
+								<div className={'service-shop-options'}>
+									{service.content.options.map((option, index) => (
+										<article className={'service-shop-option'} key={option.title}>
+											<span className={'service-step-number'}>0{index + 1}</span>
+											<h4>{option.title}</h4>
+											<strong>{option.label}</strong>
+											<p>{option.audience}</p>
+											<p>{option.advantage}</p>
+										</article>
+									))}
 								</div>
-							))}
-						</div>
-					</section>
+							</section>
 
-					<section aria-labelledby={`${service.anchor}-steps`}>
-						<h3 id={`${service.anchor}-steps`}>{service.content.stepsTitle}</h3>
-						<ol className={'service-steps'}>
-							{service.content.steps.map((step, index) => (
-								<li className={'service-step-card'} key={step.title}>
-									<span className={'service-step-number'}>0{index + 1}</span>
-									<h4>{step.title}</h4>
-									<p>{step.text}</p>
-								</li>
-							))}
-						</ol>
-					</section>
+							<section aria-labelledby={`${service.anchor}-benefits`}>
+								<h3 id={`${service.anchor}-benefits`}>{service.content.benefitsTitle}</h3>
+								<div className={'service-benefits'}>
+									{service.content.benefits.map((benefit) => (
+										<div className={'service-benefit-card'} key={benefit.title}>
+											<span className={'service-card-mark'} aria-hidden="true">
+												+
+											</span>
+											<h4>{benefit.title}</h4>
+											<p>{benefit.text}</p>
+										</div>
+									))}
+								</div>
+							</section>
 
-					<dl className={'service-facts'}>
-						<div>
-							<dt>{service.content.timeline.label}</dt>
-							<dd>{service.content.timeline.value}</dd>
-						</div>
-						<div>
-							<dt>{service.content.pricing.label}</dt>
-							<dd>{service.content.pricing.value}</dd>
-						</div>
-					</dl>
+							<dl className={'service-facts'}>
+								<div>
+									<dt>{service.content.timeline.label}</dt>
+									<dd>{service.content.timeline.value}</dd>
+								</div>
+								<div>
+									<dt>{service.content.pricing.label}</dt>
+									<dd>{service.content.pricing.value}</dd>
+								</div>
+							</dl>
 
-					<div className={'service-cta'}>
-						<div>
-							<h3>{service.content.ctaTitle}</h3>
-							<p>{service.content.ctaText}</p>
-						</div>
-						<Link className={'service-cta-link'} to={CONTACT_PAGE_PATH}>
-							{service.content.ctaButton}
-							<span aria-hidden="true">→</span>
-						</Link>
-					</div>
+							<div className={'service-cta'}>
+								<div>
+									<h3>{service.content.ctaTitle}</h3>
+									<p>{service.content.ctaText}</p>
+								</div>
+								<Link className={'service-cta-link'} to={CONTACT_PAGE_PATH}>
+									{service.content.ctaButton}
+									<span aria-hidden="true">→</span>
+								</Link>
+							</div>
+						</>
+					) : 'steps' in service.content ? (
+						<>
+							<section aria-labelledby={`${service.anchor}-benefits`}>
+								<h3 id={`${service.anchor}-benefits`}>{service.content.benefitsTitle}</h3>
+								<div className={'service-benefits'}>
+									{service.content.benefits.map((benefit) => (
+										<div className={'service-benefit-card'} key={benefit.title}>
+											<span className={'service-card-mark'} aria-hidden="true">
+												+
+											</span>
+											<h4>{benefit.title}</h4>
+											<p>{benefit.text}</p>
+										</div>
+									))}
+								</div>
+							</section>
+
+							<section aria-labelledby={`${service.anchor}-steps`}>
+								<h3 id={`${service.anchor}-steps`}>{service.content.stepsTitle}</h3>
+								<ol className={'service-steps'}>
+									{service.content.steps.map((step, index) => (
+										<li className={'service-step-card'} key={step.title}>
+											<span className={'service-step-number'}>0{index + 1}</span>
+											<h4>{step.title}</h4>
+											<p>{step.text}</p>
+										</li>
+									))}
+								</ol>
+							</section>
+
+							<dl className={'service-facts'}>
+								<div>
+									<dt>{service.content.timeline.label}</dt>
+									<dd>{service.content.timeline.value}</dd>
+								</div>
+								<div>
+									<dt>{service.content.pricing.label}</dt>
+									<dd>{service.content.pricing.value}</dd>
+								</div>
+							</dl>
+
+							<div className={'service-cta'}>
+								<div>
+									<h3>{service.content.ctaTitle}</h3>
+									<p>{service.content.ctaText}</p>
+								</div>
+								<Link className={'service-cta-link'} to={CONTACT_PAGE_PATH}>
+									{service.content.ctaButton}
+									<span aria-hidden="true">→</span>
+								</Link>
+							</div>
+						</>
+					) : null}
 				</div>
 			)}
 		</article>
