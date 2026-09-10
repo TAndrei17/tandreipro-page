@@ -5,7 +5,7 @@ import { postQuestionUser } from './services';
 
 import type { QuestionUser } from '@models/Question';
 
-export const questionUserAdapter = createEntityAdapter<QuestionUser>();
+const questionUserAdapter = createEntityAdapter<QuestionUser>();
 
 const initialState = questionUserAdapter.getInitialState<{
 	loadingStatus: 'idle' | 'loading' | 'failed';

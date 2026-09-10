@@ -31,7 +31,7 @@ const QuestionsSection = () => {
 			}
 			createAlert('success', tQuestions('deleteAllSuccess'));
 		} catch {
-			createAlert('error', tQuestions('deleteAllfail'));
+			createAlert('error', tQuestions('deleteAllFail'));
 		}
 	};
 
