@@ -7,6 +7,7 @@ import Languages from './Languages';
 
 import icons from '@constants/icons';
 import logos from '@constants/logos';
+import { SERVICES_PAGE_PATH } from '@constants/routes';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
 import useAuthStatus from '@hooks/useAuthStatus';
 import useDeviceType from '@hooks/useDeviceType';
@@ -51,7 +52,7 @@ const Header = () => {
 	}, [menu]);
 
 	const navLinks = [
-		{ to: '/services', label: t('appHeader.services') },
+		{ to: SERVICES_PAGE_PATH, label: t('appHeader.services') },
 		{ to: '/about', label: t('appHeader.aboutMe') },
 		{ to: '/contact', label: t('appHeader.contact') },
 		{ to: '/questionsPublic', label: t('appHeader.questionsPublic') },

@@ -3,10 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 import ServiceSection from '@components/services/ServiceSection';
-import ServicesList from '@components/services/ServicesList';
 import './styles/ServicesPage.css';
 import getServiceList, { type Service } from '@constants/getServiceList';
-import { useActiveServiceBookmark, useSiteHeaderHeight } from '@context/SettingsContext';
+import { useSiteHeaderHeight } from '@context/SettingsContext';
 import useDeviceType from '@hooks/useDeviceType';
 
 const ServicesPage = () => {
@@ -14,7 +13,6 @@ const ServicesPage = () => {
 	const language = i18n.language;
 	const { isMobile } = useDeviceType();
 	const { siteHeaderHeight } = useSiteHeaderHeight();
-	const { activeServiceBookmark, setActiveServiceBookmark } = useActiveServiceBookmark();
 	const services: Service[] = getServiceList(t);
 
 	useEffect(() => {
@@ -28,14 +26,12 @@ const ServicesPage = () => {
 					<h1>{t('appHeader.services')}</h1>
 				</section>
 
-				<ServicesList bookmark={activeServiceBookmark} setBookmark={setActiveServiceBookmark} />
-
 				<section className={'page-section'}>
-					{services.map((service) => {
-						return (
-							<ServiceSection key={service.id} service={service} bookmark={activeServiceBookmark} />
-						);
-					})}
+					<div className={'services-content'}>
+						{services.map((service) => {
+							return <ServiceSection key={service.id} service={service} />;
+						})}
+					</div>
 				</section>
 			</main>
 

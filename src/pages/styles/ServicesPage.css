@@ -8,6 +8,15 @@
 	width: 100%;
 }
 
+/* Vertical list of all service blocks on the services page */
+.services-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 3em;
+	width: 100%;
+}
+
 /* Base tab styles */
 .services-bookmark {
 	position: relative;

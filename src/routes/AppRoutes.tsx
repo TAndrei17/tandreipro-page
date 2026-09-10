@@ -2,6 +2,7 @@ import { lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import AdminRoute from '@components/common/AdminRoute';
+import { SERVICES_PAGE_PATH } from '@constants/routes';
 import AboutMePage from '@pages/AboutMePage';
 import ContactPage from '@pages/ContactPage';
 import HomePage from '@pages/HomePage';
@@ -18,7 +19,7 @@ export default function AppRoutes() {
 	return (
 		<Routes>
 			<Route path="/" element={<HomePage />} />
-			<Route path="/services" element={<ServicesPage />} />
+			<Route path={SERVICES_PAGE_PATH} element={<ServicesPage />} />
 			<Route path="/about" element={<AboutMePage />} />
 			<Route path="/contact" element={<ContactPage />} />
 			<Route path="/questionsPublic" element={<QuestionsPublicPage />} />

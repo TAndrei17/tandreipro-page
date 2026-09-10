@@ -3,8 +3,11 @@ import { type TFunction } from 'i18next';
 import icons from './icons';
 import images from './images';
 
+export type ServiceAnchor = 'web' | 'shop' | 'mobile' | 'maintain';
+
 export type Service = {
 	id: number;
+	anchor: ServiceAnchor;
 	title: string;
 	subtitle: string;
 	description: string;
@@ -21,6 +24,7 @@ export type Service = {
 const getServiceList = (t: TFunction): Service[] => [
 	{
 		id: 0,
+		anchor: 'web',
 		title: t('entites.webSectionTitle'),
 		subtitle: t('entites.webSectionSubtitle'),
 		description: t('entites.webSectionDescription'),
@@ -36,6 +40,7 @@ const getServiceList = (t: TFunction): Service[] => [
 
 	{
 		id: 1,
+		anchor: 'shop',
 		title: t('entites.shopSectionTitle'),
 		subtitle: t('entites.shopSectionSubtitle'),
 		description: t('entites.shopSectionDescription'),
@@ -51,6 +56,7 @@ const getServiceList = (t: TFunction): Service[] => [
 
 	{
 		id: 2,
+		anchor: 'mobile',
 		title: t('entites.mobileSectionTitle'),
 		subtitle: t('entites.mobileSectionSubtitle'),
 		description: t('entites.mobileSectionDescription'),
@@ -66,6 +72,7 @@ const getServiceList = (t: TFunction): Service[] => [
 
 	{
 		id: 3,
+		anchor: 'maintain',
 		title: t('entites.maintainSectionTitle'),
 		subtitle: t('entites.maintainSectionSubtitle'),
 		description: t('entites.maintainSectionDescription'),

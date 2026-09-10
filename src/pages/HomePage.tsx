@@ -28,7 +28,7 @@ const HomePage = () => {
 					return (
 						<HomeSection
 							key={service.id}
-							id={service.id}
+							anchor={service.anchor}
 							title={service.title}
 							subtitle={service.subtitle}
 							description={service.description}

@@ -4,10 +4,11 @@ import './SectionStyles.css';
 import { useNavigate } from 'react-router';
 
 import ButtonRight from '@components/common/UI/ButtonRight';
-import { useActiveServiceBookmark } from '@context/SettingsContext';
+import { type ServiceAnchor } from '@constants/getServiceList';
+import { SERVICES_PAGE_PATH } from '@constants/routes';
 
 type SectionType = {
-	id: number;
+	anchor: ServiceAnchor;
 	title: string;
 	subtitle: string;
 	description: string;
@@ -18,7 +19,7 @@ type SectionType = {
 };
 
 const HomeSection = ({
-	id,
+	anchor,
 	title,
 	subtitle,
 	description,
@@ -30,11 +31,9 @@ const HomeSection = ({
 	const { t } = useTranslation('translation', { keyPrefix: 'home' });
 	const navigate = useNavigate();
 	const buttonTitle = buttonText ? buttonText : t('sectionButton');
-	const { setActiveServiceBookmark } = useActiveServiceBookmark();
 
 	const navigateToServices: VoidFunction = () => {
-		setActiveServiceBookmark(id);
-		navigate('/services');
+		navigate(`${SERVICES_PAGE_PATH}#${anchor}`);
 	};
 
 	return (

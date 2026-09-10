@@ -1,10 +1,17 @@
 /* article */
 .service-article {
 	max-width: 900px;
+	width: 100%;
 	padding: 2.5em 2em;
 	border-radius: 16px;
 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
 	background: rgba(0, 0, 0, 0.4);
+	border: 1px solid rgba(100, 108, 255, 0.25);
 	backdrop-filter: blur(10px);
 	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
 
@@ -14,12 +21,43 @@
 
 	transition:
 		transform 0.3s ease,
-		box-shadow 0.3s ease;
+		box-shadow 0.3s ease,
+		border-color 0.3s ease;
 }
 
 .service-article:hover {
 	transform: translateY(-5px);
+	border-color: rgba(100, 108, 255, 0.6);
 	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* icon badge */
+.service-icon-badge {
+	width: 96px;
+	height: 96px;
+	margin-bottom: 1.2em;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+
+	background: radial-gradient(
+		circle at 30% 30%,
+		rgba(100, 108, 255, 0.35),
+		rgba(100, 108, 255, 0.08)
+	);
+	box-shadow: 0 8px 30px rgba(100, 108, 255, 0.35);
+	transition: transform 0.3s ease;
+}
+
+.service-article:hover .service-icon-badge {
+	transform: translateY(-4px);
+}
+
+.service-icon-badge .service-icon {
+	width: 52px;
+	box-shadow: none;
 }
 
 /* flex container */
@@ -101,19 +139,20 @@
 	white-space: pre-line;
 }
 
-.service-header-2 {
-	font-size: 2em;
+.service-title {
+	font-size: 2.2em;
 	margin-bottom: 0.6em;
 	color: #fff;
 	display: inline-block;
 	position: relative;
 }
 
-.service-header-2::after {
+.service-title::after {
 	content: '';
 	display: block;
 	height: 4px;
-	margin-top: 8px;
+	margin: 8px auto 0;
+	width: 60px;
 	border-radius: 2px;
 	background: #646cff;
 }
@@ -124,7 +163,7 @@
 		padding: 2em 1.5em;
 	}
 
-	.service-header-2 {
+	.service-title {
 		font-size: 1.7em;
 	}
 
