@@ -4,6 +4,7 @@ import { positionTextEs } from '@assets/articles/position';
 import { skillsTextEs } from '@assets/articles/skills';
 import { summaryTextEs } from '@assets/articles/summary';
 import { teamWorkTextEs } from '@assets/articles/team';
+import { websitesContentEs } from '@assets/articles/websites';
 
 const es = {
 	translation: {
@@ -61,6 +62,7 @@ const es = {
 		},
 
 		services: {
+			webContent: websitesContentEs,
 			web: 'Sitios web',
 			shop: 'Tiendas en línea',
 			mobile: 'Aplicaciones móviles',
@@ -272,10 +274,7 @@ const es = {
 		},
 
 		entites: {
-			webSectionSubtitle: 'Creando',
 			webSectionTitle: 'Sitios web',
-			webSectionDescription:
-				'Sitios web modernos, rápidos y visualmente impactantes — desde landing pages elegantes hasta proyectos a gran escala.',
 
 			shopSectionSubtitle: 'Lanzando',
 			shopSectionTitle: 'Tiendas en línea',

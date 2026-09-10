@@ -4,6 +4,7 @@ import { positionTextEn } from '@assets/articles/position';
 import { skillsTextEn } from '@assets/articles/skills';
 import { summaryTextEn } from '@assets/articles/summary';
 import { teamWorkTextEn } from '@assets/articles/team';
+import { websitesContentEn } from '@assets/articles/websites';
 
 const en = {
 	translation: {
@@ -61,6 +62,7 @@ const en = {
 		},
 
 		services: {
+			webContent: websitesContentEn,
 			web: 'Websites',
 			shop: 'Online Stores',
 			mobile: 'Mobile Apps',
@@ -277,10 +279,7 @@ const en = {
 		},
 
 		entites: {
-			webSectionSubtitle: 'Creating',
 			webSectionTitle: 'Websites',
-			webSectionDescription:
-				'Modern, fast, and visually striking websites — from sleek landing pages to large-scale projects.',
 
 			shopSectionSubtitle: 'Launching',
 			shopSectionTitle: 'Online Stores',

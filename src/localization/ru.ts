@@ -4,6 +4,7 @@ import { positionTextRu } from '@assets/articles/position';
 import { skillsTextRu } from '@assets/articles/skills';
 import { summaryTextRu } from '@assets/articles/summary';
 import { teamWorkTextRu } from '@assets/articles/team';
+import { websitesContentRu } from '@assets/articles/websites';
 
 const ru = {
 	translation: {
@@ -61,6 +62,7 @@ const ru = {
 		},
 
 		services: {
+			webContent: websitesContentRu,
 			web: 'Сайты',
 			shop: 'Онлайн-магазины',
 			mobile: 'Мобильные приложения',
@@ -282,10 +284,7 @@ const ru = {
 		},
 
 		entites: {
-			webSectionSubtitle: 'Создаю',
 			webSectionTitle: 'Сайты',
-			webSectionDescription:
-				'Современные, быстрые и визуально выразительные сайты — от лаконичных лендингов до масштабных проектов.',
 
 			shopSectionSubtitle: 'Запускаю',
 			shopSectionTitle: 'Онлайн-магазины',

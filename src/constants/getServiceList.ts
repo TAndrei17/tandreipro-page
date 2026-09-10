@@ -3,6 +3,8 @@ import { type TFunction } from 'i18next';
 import icons from './icons';
 import images from './images';
 
+import { type WebsiteContent } from '@assets/articles/websites';
+
 export type ServiceAnchor = 'web' | 'shop' | 'mobile' | 'maintain';
 
 export type Service = {
@@ -11,6 +13,7 @@ export type Service = {
 	title: string;
 	subtitle: string;
 	description: string;
+	content?: WebsiteContent;
 	article?: {
 		help: string;
 		clients: string;
@@ -26,8 +29,9 @@ const getServiceList = (t: TFunction): Service[] => [
 		id: 0,
 		anchor: 'web',
 		title: t('entites.webSectionTitle'),
-		subtitle: t('entites.webSectionSubtitle'),
-		description: t('entites.webSectionDescription'),
+		subtitle: '',
+		description: '',
+		content: t('services.webContent', { returnObjects: true }) as unknown as WebsiteContent,
 		article: {
 			help: t('services.webHelp'),
 			clients: t('services.webClients'),
