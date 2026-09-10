@@ -12,6 +12,11 @@ These instructions apply only to the `page-atrunkin` repository.
 - Add or remove dependencies with `yarn add`, `yarn add -D`, or `yarn remove`.
 - Before committing, run the relevant checks from `package.json`, usually `yarn lint` and `yarn build`.
 
+## Validation
+
+- Do not run `yarn lint` or `yarn build` automatically after every small change.
+- Run them when the user explicitly asks, or after a large change only after asking the user for confirmation and receiving the command.
+
 ## Git
 
 - Run `git commit` and `git push` only with explicit user permission.
