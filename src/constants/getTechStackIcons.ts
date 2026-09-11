@@ -1,6 +1,6 @@
 import logos from './logos';
 
-export type StackIcon = { id: number; title: string; logo: string };
+export type StackIcon = { id: number; title: string; logo?: string };
 
 const getTechStackIcons = (): StackIcon[] => {
 	return [

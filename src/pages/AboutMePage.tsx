@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 import AboutMeSection from '@components/aboutMe/AboutMeSection';
 import IconsList from '@components/aboutMe/IconsList';
 import getPersonalSections from '@constants/getPersonalSections';
-import getTechStackIcons from '@constants/getTechStackIcons';
+import getTechStackIcons, { type StackIcon } from '@constants/getTechStackIcons';
 import getToolIcons from '@constants/getToolIcons';
-import { LEGAL_PAGE_PATH } from '@constants/routes';
+import images from '@constants/images';
+import { CONTACT_PAGE_PATH, LEGAL_PAGE_PATH } from '@constants/routes';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
 import './styles/CommonStyles.css';
 
@@ -16,36 +17,88 @@ const AboutMePage = () => {
 	const personalDataList = getPersonalSections(t);
 	const techStackIconList = getTechStackIcons();
 	const toolsIconsList = getToolIcons();
+	const unifiedTechStack: StackIcon[] = [
+		...techStackIconList,
+		{ id: 5, title: 'React Native' },
+		{ id: 6, title: 'Redux / Redux Toolkit' },
+		{ id: 7, title: 'Node.js' },
+		{ id: 8, title: 'PostgreSQL' },
+		...toolsIconsList.map((icon, index) => ({ ...icon, id: 9 + index })),
+	];
+	const summary = personalDataList.find((item) => item.id === 0);
+	const skills = personalDataList.find((item) => item.id === 1);
+	const milestones = personalDataList.filter((item) => item.id >= 2 && item.description.length > 0);
+	const stats = personalDataList.filter((item) => item.description.length > 0);
 
 	return (
-		<div style={{ paddingTop: siteHeaderHeight }}>
+		<div className="about-page" style={{ paddingTop: siteHeaderHeight }}>
 			<main>
-				<section className={'page-header'}>
-					<h1>{t('appHeader.aboutMe')}</h1>
+				<section className="about-hero">
+					<div className="about-hero-content">
+						<span className="about-eyebrow">{t('appHeader.aboutMe')}</span>
+						<h1>{t('appHeader.aboutMe')}</h1>
+						{summary && <AboutMeSection data={summary} />}
+						<Link className="about-hero-link" to={`${CONTACT_PAGE_PATH}#contact-form`}>
+							{t('appHeader.contact')}
+							<span aria-hidden="true">→</span>
+						</Link>
+					</div>
+					<div className="about-portrait-frame">
+						<img src={images.tandrei} alt={t('appHeader.logoAlt')} />
+					</div>
 				</section>
 
-				<section className={'page-section'}>
-					<article className={'service-article'}>
-						{personalDataList.map((item) => {
-							if (item.title === t('personal.summaryTitle')) {
-								return (
-									<AboutMeSection key={item.id} data={item}>
-										<IconsList icons={techStackIconList} />
-									</AboutMeSection>
-								);
-							}
+				<section className="about-stats" aria-label={t('appHeader.aboutMe')}>
+					{stats.map((item, index) => (
+						<article className="about-stat-card" key={item.id}>
+							<span>0{index + 1}</span>
+							<strong>{item.title}</strong>
+							<p>{item.description.split('\n')[0]}</p>
+						</article>
+					))}
+				</section>
 
-							if (item.title === t('personal.skillsTitle')) {
-								return (
-									<AboutMeSection key={item.id} data={item}>
-										<IconsList icons={toolsIconsList} />
-									</AboutMeSection>
-								);
-							}
+				<section className="about-bento">
+					<div className="about-section-heading">
+						<span className="about-eyebrow">{skills?.title}</span>
+						<h2>{t('personal.skillsTitle')}</h2>
+					</div>
+					<div className="about-bento-grid">
+						<article className="about-bento-card about-bento-card-wide">
+							<h3>{t('personal.skillsTitle')}</h3>
+							{skills && <AboutMeSection data={skills} />}
+						</article>
+						<article className="about-bento-card">
+							<h3>{t('personal.summaryTitle')}</h3>
+							<IconsList icons={unifiedTechStack} />
+						</article>
+					</div>
+				</section>
 
-							return <AboutMeSection key={item.id} data={item} />;
-						})}
-					</article>
+				<section className="about-timeline">
+					<div className="about-section-heading">
+						<span className="about-eyebrow">{t('personal.positionTitle')}</span>
+						<h2>{t('personal.teamTitle')}</h2>
+					</div>
+					<div className="about-timeline-list">
+						{milestones.map((item, index) => (
+							<div className="about-timeline-item" key={item.id}>
+								<span className="about-timeline-marker">0{index + 1}</span>
+								<AboutMeSection data={item} />
+							</div>
+						))}
+					</div>
+				</section>
+
+				<section className="about-closing-cta">
+					<div>
+						<span className="about-eyebrow">{t('appHeader.contact')}</span>
+						<h2>{t('personal.positionTitle')}</h2>
+					</div>
+					<Link to={`${CONTACT_PAGE_PATH}#contact-form`}>
+						{t('appHeader.contact')}
+						<span aria-hidden="true">→</span>
+					</Link>
 				</section>
 			</main>
 
