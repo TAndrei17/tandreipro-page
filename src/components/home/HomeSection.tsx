@@ -37,7 +37,9 @@ const HomeSection = ({
 	};
 
 	return (
-		<section className={`section ${reverse ? 'section-reverse' : ''}`} style={style}>
+		<section
+			className={`section section-${anchor} ${reverse ? 'section-reverse' : ''}`}
+			style={style}>
 			<div className={reverse ? 'section-content-reverse' : 'section-content'}>
 				<h3 className="section-subtitle">{subtitle}</h3>
 				<h2
@@ -58,7 +60,7 @@ const HomeSection = ({
 			</div>
 
 			<div className="section-image-wrapper">
-				<img src={image} className="section-image" />
+				<img src={image} className="section-image" alt={title} />
 			</div>
 		</section>
 	);
