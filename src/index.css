@@ -1,6 +1,14 @@
 :root {
-	--background-gray: #3a3a3a;
-	--background-color: #7a7eff;
+	--color-background: #f8f9fa;
+	--color-surface: #ffffff;
+	--color-surface-muted: #f1f5f9;
+	--color-text: #0f172a;
+	--color-text-muted: #475569;
+	--color-border: #e2e8f0;
+	--color-primary: #2563eb;
+	--color-primary-soft: #eff6ff;
+	--background-gray: var(--color-surface-muted);
+	--background-color: var(--color-background);
 	--font-body: 'Inter Variable', system-ui, Avenir, Helvetica, Arial, sans-serif;
 	--font-heading:
 		'Space Grotesk Variable', 'Inter Variable', system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -29,9 +37,9 @@
 	line-height: 1.5;
 	font-weight: 400;
 
-	color-scheme: light dark;
-	color: rgba(255, 255, 255, 0.87);
-	background-color: var(--background-gray);
+	color-scheme: light;
+	color: var(--color-text);
+	background-color: var(--color-background);
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -41,18 +49,20 @@
 
 a {
 	font-weight: 500;
-	color: #646cff;
+	color: var(--color-primary);
 	text-decoration: inherit;
 }
 a:hover {
-	color: #535bf2;
+	color: #1d4ed8;
 }
 
 body {
 	margin: 0;
 	padding: 0;
 	min-height: 100vh;
-	background: linear-gradient(135deg, var(--background-color), var(--background-gray));
+	background:
+		radial-gradient(circle at 8% 0%, rgba(37, 99, 235, 0.08), transparent 28rem),
+		var(--color-background);
 }
 
 h1,
@@ -82,12 +92,13 @@ button {
 	padding: 0.6em 1.2em;
 	font-size: 1em;
 	font-weight: var(--fw-medium);
-	background-color: #1a1a1a;
+	background-color: var(--color-text);
+	color: #fff;
 	cursor: pointer;
 	transition: border-color 0.25s;
 }
 .btn:hover {
-	border-color: #646cff;
+	border-color: var(--color-primary);
 }
 .btn:focus,
 .btn:focus-visible {
@@ -96,12 +107,34 @@ button {
 
 @media (prefers-color-scheme: light) {
 	:root {
-		color: #ffffff;
+		color-scheme: light;
 	}
 	a:hover {
-		color: #747bff;
+		color: #1d4ed8;
 	}
 	.btn {
-		background-color: #f9f9f9;
+		background-color: var(--color-surface);
+		color: var(--color-text);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-background: #090d16;
+		--color-surface: #111827;
+		--color-surface-muted: #172033;
+		--color-text: #f8fafc;
+		--color-text-muted: #cbd5e1;
+		--color-border: #1e293b;
+		--color-primary-soft: #172554;
+		--background-gray: var(--color-surface-muted);
+		--background-color: var(--color-background);
+		color-scheme: dark;
+	}
+
+	body {
+		background:
+			radial-gradient(circle at 8% 0%, rgba(37, 99, 235, 0.14), transparent 28rem),
+			var(--color-background);
 	}
 }
