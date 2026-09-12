@@ -1,145 +1,137 @@
 .qp-card {
-	width: 75%;
-	margin-bottom: 16px;
-	padding: 20px;
-
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
-
-	background: rgba(0, 0, 0, 0.35);
-	border: 1px solid #ffdd57;
-	border-radius: 14px;
-
+	box-sizing: border-box;
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 24px;
+	border: 1px solid #e2e8f0;
+	border-radius: 16px;
+	background: #ffffff;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+	color: #0f172a;
 	transition:
 		transform 0.2s ease,
 		box-shadow 0.2s ease;
 }
 
 .qp-card:hover {
-	transform: translateY(-4px);
-	box-shadow: 0 8px 24px rgba(255, 221, 87, 0.3);
+	box-shadow: 0 10px 18px -8px rgba(15, 23, 42, 0.14);
+	transform: translateY(-2px);
 }
 
 .qp-card-header {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 16px;
 }
 
 .qp-card-name {
-	font-size: 18px;
+	color: #0f172a;
+	font-size: 16px;
 	font-weight: 600;
-	color: #fff;
 }
 
 .qp-card-date {
+	padding: 4px 8px;
+	border-radius: 6px;
+	background: #f1f5f9;
+	color: #64748b;
 	font-size: 12px;
-	color: #aaa;
+	white-space: nowrap;
 }
 
 .qp-card-content {
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
+	font-size: 15px;
+	line-height: 1.6;
+}
 
-	font-size: 16px;
-	line-height: 1.4;
-	color: #fff;
-	padding: 12px;
-	background: rgba(255, 255, 255, 0.04);
-	border: 1px solid rgba(255, 221, 87, 0.2);
-	border-radius: 12px;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-	backdrop-filter: blur(4px);
+.qp-card-question {
+	color: #334155;
+}
+
+.qp-card-answer-block {
+	margin-top: 16px;
+	padding: 16px;
+	border-left: 3px solid #2563eb;
+	border-radius: 0 12px 12px 0;
+	background: #f8fafc;
+	color: #0f172a;
 }
 
 .qp-card-answer-header {
 	display: flex;
 	align-items: center;
-}
-
-.qp-card-answer-label {
-	font-family: var(--font-heading);
-	font-size: 14px;
-	font-weight: var(--fw-semibold);
-	letter-spacing: var(--tracking-wider);
-	text-transform: uppercase;
-	color: #ffdd57;
 	margin-bottom: 4px;
 }
 
-.qp-card-answer {
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
-	padding: 14px;
-
-	background: rgba(255, 255, 255, 0.06);
-	border: 1px solid rgba(255, 221, 87, 0.14);
-	border-radius: 12px;
-
-	transition:
-		border-color 0.15s ease,
-		box-shadow 0.15s ease;
+.qp-card-answer-label {
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	line-height: 1.4;
+	text-transform: uppercase;
 }
 
-.qp-card-answer:hover {
-	border-color: #ffdd57;
-	box-shadow: 0 6px 20px rgba(255, 221, 87, 0.25);
+.qp-card-question .qp-card-answer-label {
+	color: #2563eb;
 }
 
-.qp-card-answer-body {
-	padding: 8px 0 4px 0;
-}
-
-.qp-card-answer-text {
-	margin: 0;
-	font-size: 15px;
-	line-height: 1.7;
-	color: #fff; /* white text to match question */
-	background: rgba(255, 255, 255, 0.02);
-	padding: 8px 12px;
-	border-radius: 8px;
-	border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.qp-card-answer:focus-within {
-	border-color: rgba(255, 221, 87, 0.25);
-	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+.qp-card-answer-block .qp-card-answer-label {
+	color: #16a34a;
 }
 
 .qp-card-tags {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 8px;
+	margin-top: 16px;
 }
 
 .qp-card-tag {
-	padding: 2px 6px;
-
-	font-size: 12px;
-	color: #ffdd57;
-
-	background: rgba(255, 221, 87, 0.1);
+	padding: 4px 8px;
+	border: 1px solid #e2e8f0;
 	border-radius: 6px;
+	background: #f1f5f9;
+	color: #64748b;
+	font-size: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+	.qp-card {
+		border-color: #1e293b;
+		background: #111827;
+		color: #f8fafc;
+	}
+
+	.qp-card-name,
+	.qp-card-answer-block {
+		color: #f8fafc;
+	}
+
+	.qp-card-date,
+	.qp-card-tag {
+		background: #172033;
+		color: #94a3b8;
+	}
+
+	.qp-card-question {
+		color: #cbd5e1;
+	}
+
+	.qp-card-answer-block {
+		background: #172033;
+	}
 }
 
 @media (max-width: 768px) {
 	.qp-card {
-		width: 100%;
-		padding: 16px;
+		padding: 20px;
 	}
 
-	.qp-card-name {
-		font-size: 16px;
-	}
-
-	.qp-card-content {
-		font-size: 14px;
-	}
-
-	.qp-card-answer-textarea {
-		font-size: 13px;
+	.qp-card-header {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 0.5rem;
 	}
 }

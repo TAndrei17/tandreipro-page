@@ -65,13 +65,18 @@ const ModalCreateAnswer = ({ question, onClose }: ModalAnswerCreateProps) => {
 
 	return (
 		<>
-			<Modal isOpen={question !== null} onRequestClose={onClose} style={customStyles}>
+			<Modal
+				isOpen={question !== null}
+				onRequestClose={onClose}
+				style={customStyles}
+				className="dashboard-modal-content"
+				overlayClassName="dashboard-modal-overlay">
 				<Formik
 					initialValues={initialValues}
 					validationSchema={validationSchema}
 					onSubmit={onSubmit}>
 					{({ isSubmitting }) => (
-						<Form className="modal-window-form">
+						<Form className="modal-window-form dashboard-modal-form">
 							<section className="page-header">
 								<h2 className="modal-window-title">{tAnswers('answer')}</h2>
 							</section>

@@ -1,20 +1,33 @@
+.dashboard-page {
+	background: #f8fafc;
+	color: #0f172a;
+	min-height: 100vh;
+}
 .dashboard-layout {
 	display: flex;
+	min-height: calc(100vh - var(--header-height, 0px));
+	padding-top: 64px;
+	box-sizing: border-box;
 }
 
 /* Main content */
 .content {
 	margin-left: 220px;
 	width: 100%;
+	padding: 2rem 2rem 4rem;
+	box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
 	.dashboard-layout {
 		flex-direction: column;
+		padding-top: 48px;
 	}
 
 	.content {
 		margin-left: 0;
+		padding-top: 1rem;
 		padding-bottom: 80px;
+		padding-inline: 1rem;
 	}
 }

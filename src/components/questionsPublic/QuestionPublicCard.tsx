@@ -27,7 +27,7 @@ const QuestionCard = ({ id, name, content, created_at, tags }: QuestionCardProps
 				<div className="qp-card-date">{new Date(created_at).toLocaleString()}</div>
 			</div>
 
-			<div className="qp-card-content">
+			<div className="qp-card-content qp-card-question">
 				<div className="qp-card-answer-header">
 					<span className="qp-card-answer-label">{t('question')}</span>
 				</div>
@@ -35,7 +35,7 @@ const QuestionCard = ({ id, name, content, created_at, tags }: QuestionCardProps
 			</div>
 
 			{answer && (
-				<div className="qp-card-content">
+				<div className="qp-card-content qp-card-answer-block">
 					<div className="qp-card-answer-header">
 						<span className="qp-card-answer-label">{t('answer')}</span>
 					</div>

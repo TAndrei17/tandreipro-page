@@ -76,7 +76,12 @@ const ModalQuestionEdit = ({ question, onClose }: ModalQuestionEditProps) => {
 	};
 
 	return (
-		<Modal isOpen={question !== null} onRequestClose={onClose} style={customStyles}>
+		<Modal
+			isOpen={question !== null}
+			onRequestClose={onClose}
+			style={customStyles}
+			className="dashboard-modal-content"
+			overlayClassName="dashboard-modal-overlay">
 			<Formik<Question>
 				initialValues={{
 					...question,

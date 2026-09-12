@@ -2,120 +2,107 @@
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	padding: 0 20px;
 	box-sizing: border-box;
 }
-
 .dashboard-section-header-container {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
+	gap: 1rem;
+	margin-bottom: 1.5rem;
 }
-
-.delete-questions-button {
+.dashboard-section-header {
+	margin: 0;
+	color: #0f172a;
+	font-size: 1.75rem;
+	line-height: 1.2;
+}
+.delete-questions-button,
+.create-tag-button {
 	display: inline-flex;
 	align-items: center;
-	gap: 12px;
-	padding: 12px 20px;
-	background: #ffdd57;
-	color: #333;
+	justify-content: center;
+	gap: 0.6rem;
+	padding: 0.7rem 1rem;
+	border: 0;
+	border-radius: 8px;
+	background: #dc2626;
+	color: #ffffff;
 	font-family: var(--font-heading);
 	font-weight: var(--fw-semibold);
-	letter-spacing: var(--tracking-wide);
-	font-size: 16px;
-	border: none;
-	border-radius: 12px;
 	cursor: pointer;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 	transition:
-		transform 0.1s ease,
-		box-shadow 0.1s ease,
-		background 0.2s ease;
+		background 0.2s ease,
+		transform 0.2s ease;
 }
-
-.delete-questions-button:hover {
-	background: #ffcf33;
-	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+.delete-questions-button:hover,
+.create-tag-button:hover {
+	background: #b91c1c;
 	transform: translateY(-1px);
 }
-
-.delete-questions-button:active {
-	transform: translateY(1px) scale(0.97);
-	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
-}
-
-.delete-questions-button:focus-visible {
-	outline: 3px solid #4c9ffe;
+.delete-questions-button:focus-visible,
+.create-tag-button:focus-visible {
+	outline: 3px solid rgba(37, 99, 235, 0.3);
 	outline-offset: 3px;
 }
-
 .delete-questions-trash {
-	width: 35px;
-	height: 35px;
-	padding: 0;
-	transition: transform 0.2s ease;
+	width: 24px;
+	height: 24px;
 }
-
-.delete-questions-button:hover .delete-questions-trash {
-	transform: rotate(-20deg) scale(1.1);
-}
-
-.dashboard-section-header {
-	line-height: 0;
-}
-
-/* Admin Card */
 .admin-card {
-	width: 50%;
-	border: 1px solid #ffdd57;
-	border-radius: 12px;
-	padding: 24px;
-	display: flex;
-	gap: 24px;
-	align-items: center;
 	box-sizing: border-box;
-	margin-top: 12px;
+	width: 100%;
+	max-width: 620px;
+	padding: 1.5rem;
+	border: 1px solid #e2e8f0;
+	border-radius: 16px;
+	background: #ffffff;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
-
-/* Info */
 .admin-info {
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
+	display: grid;
+	gap: 1.25rem;
 	width: 100%;
 }
-
 .admin-field {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	gap: 0.35rem;
 }
-
 .label {
-	font-family: var(--font-heading);
-	font-size: 12px;
+	color: #64748b;
+	font-size: 0.75rem;
 	font-weight: var(--fw-semibold);
-	color: #aaa;
+	letter-spacing: 0.08em;
 	text-transform: uppercase;
-	letter-spacing: var(--tracking-wider);
 }
-
 .value {
-	font-size: 18px;
-	color: #ecf0f1;
+	color: #0f172a;
+	font-size: 1.05rem;
 	font-weight: 500;
 }
 
-@media (max-width: 768px) {
-	.dashboard-section-header {
-		line-height: 1.2;
+@media (prefers-color-scheme: dark) {
+	.dashboard-section-header,
+	.value {
+		color: #f8fafc;
 	}
-
 	.admin-card {
-		width: 100%;
+		border-color: #1e293b;
+		background: #111827;
 	}
+	.label {
+		color: #94a3b8;
+	}
+}
 
-	.delete-questions-button {
-		justify-content: center;
+@media (max-width: 768px) {
+	.dashboard-section-header-container {
+		align-items: stretch;
+		flex-direction: column;
+	}
+	.delete-questions-button,
+	.create-tag-button {
+		width: 100%;
 	}
 }

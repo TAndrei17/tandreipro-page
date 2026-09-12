@@ -19,7 +19,7 @@ const DashboardPage = () => {
 	];
 
 	return (
-		<div style={{ paddingTop: siteHeaderHeight }}>
+		<div className="dashboard-page" style={{ paddingTop: siteHeaderHeight }}>
 			<div className="dashboard-layout">
 				<DashboardNav active={active} setActive={setActive} />
 

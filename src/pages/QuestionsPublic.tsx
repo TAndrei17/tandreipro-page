@@ -18,6 +18,7 @@ const QuestionsPublicPage = () => {
 
 	return (
 		<div
+			className="questions-page"
 			style={{
 				paddingTop: siteHeaderHeight,
 				minHeight: `calc(100vh - ${siteHeaderHeight}px)`,
@@ -25,7 +26,7 @@ const QuestionsPublicPage = () => {
 				flexDirection: 'column',
 			}}>
 			<main style={{ flex: 1 }}>
-				<section className={'page-header'}>
+				<section className={'questions-header'}>
 					<h1>{t('appHeader.questionsPublic')}</h1>
 				</section>
 
