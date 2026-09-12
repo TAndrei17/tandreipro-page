@@ -354,14 +354,21 @@
 		margin-top: 1.7rem;
 	}
 	.service-carousel-viewport {
-		margin-inline: 0.15rem;
+		box-sizing: border-box;
+		width: calc(100% + 40px);
+		max-width: none;
+		margin-inline: -20px;
 		overflow-x: auto;
-		padding-bottom: 0.65rem;
-		scrollbar-color: var(--service-accent) var(--services-surface-muted);
-		scrollbar-width: thin;
+		padding: 0 20px 0.65rem;
+		-webkit-overflow-scrolling: touch;
+		scroll-padding-left: 20px;
+		scroll-padding-right: 20px;
+		scrollbar-width: none;
+	}
+	.service-carousel-viewport::-webkit-scrollbar {
+		display: none;
 	}
 	.service-benefits,
-	.service-shop-options,
 	.service-mobile-use-cases,
 	.service-mobile-capabilities,
 	.service-maintenance-support,
@@ -373,6 +380,13 @@
 		gap: 0.75rem;
 		scroll-snap-type: x mandatory;
 	}
+	.service-shop-options {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		width: 100%;
+		min-width: 0;
+		gap: 0.75rem;
+	}
 	.service-shop-option,
 	.service-mobile-use-case,
 	.service-mobile-capability,
@@ -382,6 +396,10 @@
 	.service-step-card {
 		flex: 0 0 min(84vw, 300px);
 		scroll-snap-align: start;
+	}
+	.service-shop-options .service-shop-option {
+		width: 100%;
+		min-width: 0;
 	}
 	.service-cta {
 		align-items: flex-start;

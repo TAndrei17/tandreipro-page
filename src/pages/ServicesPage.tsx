@@ -1,4 +1,4 @@
-import { type MouseEvent, useEffect, useState } from 'react';
+import { type MouseEvent, useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
@@ -13,11 +13,12 @@ const ServicesPage = () => {
 	const { t } = useTranslation();
 	const { isMobile } = useDeviceType();
 	const { siteHeaderHeight } = useSiteHeaderHeight();
-	const services: Service[] = getServiceList(t);
+	const services: Service[] = useMemo(() => getServiceList(t), [t]);
 	const [activeAnchor, setActiveAnchor] = useState(services[0]?.anchor);
 
 	const navigateToService = (event: MouseEvent<HTMLAnchorElement>, anchor: string) => {
 		event.preventDefault();
+		setActiveAnchor(anchor as Service['anchor']);
 		const target = document.getElementById(anchor);
 		const navigation = event.currentTarget.closest('nav');
 		if (!target || !(navigation instanceof HTMLElement)) return;

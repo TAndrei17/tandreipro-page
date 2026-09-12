@@ -344,6 +344,10 @@
 	.section-mobile .section-title,
 	.section-maintain .section-title {
 		font-size: clamp(2.8rem, 15vw, 5rem);
+		max-width: 100%;
+		min-width: 0;
+		overflow-wrap: anywhere;
+		word-break: break-word;
 	}
 	.section-desc {
 		margin-top: 1.25rem;
