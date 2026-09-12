@@ -35,7 +35,7 @@
 .legal-micro-link a:hover,
 .legal-micro-link a:focus {
 	transform: translateY(-3px);
-	color: #ffdd57;
+	color: var(--color-primary);
 }
 
 @media (max-width: 768px) {

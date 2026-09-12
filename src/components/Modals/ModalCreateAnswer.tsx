@@ -11,7 +11,7 @@ import { createAnswerValidationSchema } from '@utils/validation/createAnswerVali
 
 const customStyles = {
 	overlay: {
-		backgroundColor: 'rgba(0,0,0,0.5)',
+		backgroundColor: 'rgba(15, 23, 42, 0.4)',
 		zIndex: 2000,
 	},
 
@@ -23,8 +23,8 @@ const customStyles = {
 		marginRight: '-50%',
 		transform: 'translate(-50%, -50%)',
 		width: '80%',
-		borderRadius: '12px',
-		background: 'linear-gradient(135deg, #3a3a3a, #7a7eff)',
+		borderRadius: '16px',
+		background: '#FFFFFF',
 	},
 };
 

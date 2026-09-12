@@ -13,7 +13,7 @@
 .modal-window-link:focus {
 	cursor: pointer;
 	transform: translateY(-3px);
-	color: #ffdd57;
+	color: var(--color-primary);
 }
 
 /* Modal Form */
@@ -22,7 +22,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
-	color: #fff;
+	color: var(--color-text);
 	animation: fadeInUp 0.8s forwards 0.4s;
 	transition:
 		transform 0.3s ease,
@@ -38,11 +38,11 @@
 }
 
 .modal-window-question {
-	background: rgba(255, 255, 255, 0.08);
-	border: 1px solid rgba(255, 255, 255, 0.18);
+	background: #f8fafc;
+	border: 1px solid #e2e8f0;
 	border-radius: 14px;
 	padding: 16px 18px;
-	color: #f5f7ff;
+	color: #334155;
 	line-height: 1.65;
 	white-space: pre-wrap;
 	word-break: break-word;
@@ -81,8 +81,8 @@
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	border-radius: 12px;
 	font-size: 1.2rem;
-	background: rgba(255, 255, 255, 0.05);
-	color: #fff;
+	background: #f8fafc;
+	color: #0f172a;
 	font-family: var(--font-body);
 	transition:
 		border 0.2s ease,
@@ -91,8 +91,9 @@
 
 .modal-window-input:focus,
 .modal-window-textarea:focus {
-	border-color: #646cff;
-	box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.2);
+	border-color: #2563eb;
+	background: #ffffff;
+	box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 	outline: none;
 }
 
@@ -104,7 +105,7 @@
 }
 
 .modal-window-error {
-	color: #ff6b6b;
+	color: #dc2626;
 	font-size: 0.875rem;
 }
 
@@ -115,8 +116,7 @@
 	font-weight: 600;
 	border-radius: 8px;
 	border: none;
-	background: rgba(255, 255, 255, 0.12);
-	backdrop-filter: blur(6px);
+	background: #2563eb;
 	color: #fff;
 	cursor: pointer;
 	display: flex;
@@ -128,9 +128,9 @@
 
 .modal-window-submit:hover,
 .modal-window-submit:focus {
-	background: rgba(255, 255, 255, 0.25);
+	background: #1d4ed8;
 	transform: translateY(-3px);
-	color: #ffdd57;
+	color: #fff;
 }
 
 .modal-window-submit:disabled {
@@ -288,24 +288,22 @@
 }
 
 .modal-question-btn--save {
-	background: linear-gradient(135deg, #646cff, #7a7eff);
+	background: #2563eb;
 	color: #fff;
-	box-shadow: 0 4px 14px rgba(100, 108, 255, 0.35);
 }
 .modal-question-btn--save:hover {
-	transform: translateY(-3px);
-	box-shadow: 0 6px 20px rgba(100, 108, 255, 0.5);
+	background: #1d4ed8;
 }
 
 .modal-question-btn--cancel {
-	background: rgba(255, 255, 255, 0.12);
-	backdrop-filter: blur(6px);
-	color: #fff;
-	border: 1px solid rgba(255, 255, 255, 0.25);
+	background: #ffffff;
+	color: #475569;
+	border: 1px solid #cbd5e1;
 }
 .modal-question-btn--cancel:hover {
-	transform: translateY(-3px);
-	background: rgba(255, 255, 255, 0.2);
+	transform: none;
+	background: #f1f5f9;
+	color: #0f172a;
 }
 
 .modal-question-btn:disabled {

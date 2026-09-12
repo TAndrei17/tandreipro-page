@@ -13,8 +13,8 @@
 	font-family: var(--font-heading);
 	font-size: 6rem;
 	font-weight: var(--fw-bold);
-	color: #ffdd57;
-	text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+	color: var(--color-primary);
+	text-shadow: none;
 }
 
 .not-found__code span {
@@ -42,7 +42,7 @@
 .not-found__title {
 	text-align: center;
 	font-size: 2.5rem;
-	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+	color: var(--color-text);
 }
 
 .not-found__desc {
@@ -54,8 +54,8 @@
 
 .not-found__button {
 	padding: 14px 28px;
-	background: #ffdd57;
-	color: #000;
+	background: var(--color-primary);
+	color: #fff;
 	border-radius: 8px;
 	text-decoration: none;
 	font-weight: 500;
@@ -66,7 +66,7 @@
 }
 
 .not-found__button:hover {
-	background: #f0c000;
+	background: #1d4ed8;
 	color: #fff;
 	transform: translateY(-2px);
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
