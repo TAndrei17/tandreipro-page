@@ -119,6 +119,9 @@
 .header__nav a[aria-current='page'] {
 	color: var(--color-primary);
 	font-weight: var(--fw-semibold);
+	border: 0;
+	background: transparent;
+	box-shadow: none;
 }
 
 .header__nav a:hover,
@@ -143,8 +146,60 @@
 .header__nav a:focus,
 .header__nav_mobile a:focus {
 	color: var(--color-primary);
-	outline: 2px solid var(--color-primary);
-	outline-offset: 2px;
+	outline: none;
+}
+
+.header__nav a:focus-visible::after,
+.header__nav_mobile a:focus-visible::after {
+	opacity: 1;
+	transform: scaleX(1);
+}
+
+/* Primary page tabs: active page is blue without an underline until hovered. */
+.header__nav a[href='/desarrollo-web-aplicaciones'][aria-current='page'],
+.header__nav a[href='/sobre-mi'][aria-current='page'],
+.header__nav a[href='/contacto'][aria-current='page'],
+.header__nav a[href='/preguntas'][aria-current='page'],
+.header__nav_mobile a[href='/desarrollo-web-aplicaciones'][aria-current='page'],
+.header__nav_mobile a[href='/sobre-mi'][aria-current='page'],
+.header__nav_mobile a[href='/contacto'][aria-current='page'],
+.header__nav_mobile a[href='/preguntas'][aria-current='page'] {
+	color: var(--color-primary);
+}
+
+.header__nav a[href='/desarrollo-web-aplicaciones'][aria-current='page']::after,
+.header__nav a[href='/sobre-mi'][aria-current='page']::after,
+.header__nav a[href='/contacto'][aria-current='page']::after,
+.header__nav a[href='/preguntas'][aria-current='page']::after,
+.header__nav_mobile a[href='/desarrollo-web-aplicaciones'][aria-current='page']::after,
+.header__nav_mobile a[href='/sobre-mi'][aria-current='page']::after,
+.header__nav_mobile a[href='/contacto'][aria-current='page']::after,
+.header__nav_mobile a[href='/preguntas'][aria-current='page']::after {
+	opacity: 0;
+	transform: scaleX(0.35);
+}
+
+.header__nav a[href='/desarrollo-web-aplicaciones']:hover,
+.header__nav a[href='/sobre-mi']:hover,
+.header__nav a[href='/contacto']:hover,
+.header__nav a[href='/preguntas']:hover,
+.header__nav_mobile a[href='/desarrollo-web-aplicaciones']:hover,
+.header__nav_mobile a[href='/sobre-mi']:hover,
+.header__nav_mobile a[href='/contacto']:hover,
+.header__nav_mobile a[href='/preguntas']:hover {
+	color: var(--color-text);
+}
+
+.header__nav a[href='/desarrollo-web-aplicaciones']:hover::after,
+.header__nav a[href='/sobre-mi']:hover::after,
+.header__nav a[href='/contacto']:hover::after,
+.header__nav a[href='/preguntas']:hover::after,
+.header__nav_mobile a[href='/desarrollo-web-aplicaciones']:hover::after,
+.header__nav_mobile a[href='/sobre-mi']:hover::after,
+.header__nav_mobile a[href='/contacto']:hover::after,
+.header__nav_mobile a[href='/preguntas']:hover::after {
+	opacity: 1;
+	transform: scaleX(1);
 }
 
 .icons__container_mobile {
