@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import ContactForm from '@components/contact/ContactForm';
 import ContactItem from '@components/contact/ContactItem';
 import ModalLogin from '@components/Modals/ModalLogIn';
-import images from '@constants/images';
 import logos from '@constants/logos';
 import { LEGAL_PAGE_PATH } from '@constants/routes';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
@@ -21,65 +20,59 @@ const ContactPage = () => {
 	const { t } = useTranslation();
 
 	return (
-		<div style={{ paddingTop: siteHeaderHeight }}>
+		<div className="contacts-page" style={{ paddingTop: siteHeaderHeight }}>
 			<main>
-				<section className="page-header">
+				<section className="contacts-header">
 					<h1>{t('appHeader.contact')}</h1>
+					<p>{t('contact.contactIntro')}</p>
 				</section>
 
-				<section className={'page-section'}>
-					<div className={'service-article'}>
-						<div className="contact-intro-container">
-							<img src={images.tandrei} alt="Tandrei" className={'contact-image'} />
-							<p className={'contact-intro'}>{t('contact.contactIntro')}</p>
-						</div>
+				<section className="contacts-grid">
+					<address className="contact-card" itemScope itemType="https://schema.org/Person">
+						<dl className={'contact-container'}>
+							<ContactItem
+								label={t('contact.phone')}
+								value={PHONE}
+								type="phone"
+								logo={logos.phoneLogo}
+								itemProp="telephone"
+							/>
+							<ContactItem
+								label={t('contact.whatsApp')}
+								value={WHATSAPP}
+								type="whatsApp"
+								logo={logos.whatsAppLogo}
+								itemProp="sameAs"
+							/>
+							<ContactItem
+								label={t('contact.telegram')}
+								value={TELEGRAM}
+								type="telegram"
+								logo={logos.telegramLogo}
+								itemProp="sameAs"
+							/>
+							<ContactItem
+								label={t('contact.email')}
+								value={EMAIL}
+								type="email"
+								logo={logos.emailLogo}
+								itemProp="email"
+							/>
+							<ContactItem
+								label={t('contact.linkedIn')}
+								value={LINKEDIN}
+								type="linkedIn"
+								logo={logos.linkedInLogo}
+								itemProp="sameAs"
+							/>
+						</dl>
+					</address>
 
-						<address itemScope itemType="https://schema.org/Person">
-							<dl className={'contact-container'}>
-								<ContactItem
-									label={t('contact.phone')}
-									value={PHONE}
-									type="phone"
-									logo={logos.phoneLogo}
-									itemProp="telephone"
-								/>
-								<ContactItem
-									label={t('contact.whatsApp')}
-									value={WHATSAPP}
-									type="whatsApp"
-									logo={logos.whatsAppLogo}
-									itemProp="sameAs"
-								/>
-								<ContactItem
-									label={t('contact.telegram')}
-									value={TELEGRAM}
-									type="telegram"
-									logo={logos.telegramLogo}
-									itemProp="sameAs"
-								/>
-								<ContactItem
-									label={t('contact.email')}
-									value={EMAIL}
-									type="email"
-									logo={logos.emailLogo}
-									itemProp="email"
-								/>
-								<ContactItem
-									label={t('contact.linkedIn')}
-									value={LINKEDIN}
-									type="linkedIn"
-									logo={logos.linkedInLogo}
-									itemProp="sameAs"
-								/>
-							</dl>
-						</address>
-
-						<div
-							id="contact-form"
-							className="contact-form-container"
-							style={{ scrollMarginTop: siteHeaderHeight + 24 }}>
-							<ContactForm />
-						</div>
+					<div
+						id="contact-form"
+						className="contact-form-card contact-form-container"
+						style={{ scrollMarginTop: siteHeaderHeight + 24 }}>
+						<ContactForm />
 					</div>
 				</section>
 			</main>

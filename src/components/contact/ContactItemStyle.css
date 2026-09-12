@@ -1,85 +1,91 @@
-.contact-row {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 16px;
-	width: 100%;
-	transition:
-		transform 0.2s ease,
-		box-shadow 0.2s ease;
-}
-
-.contact-row a {
-	font-size: 1.2rem;
-	font-style: normal;
-	color: aquamarine;
-	text-decoration: none;
-	transition:
-		transform 0.2s ease,
-		color 0.2s ease;
-}
-
-.contact-row a:hover,
-.contact-row a:focus {
-	color: #0077ff;
-	transform: scale(1.05);
-	outline: none;
-}
-
-.contact-logo {
-	width: 50px;
-	height: 50px;
-	cursor: pointer;
-	transition:
-		transform 0.2s ease,
-		filter 0.2s ease;
-	border-radius: 8px;
-}
-
-.contact-logo:hover {
-	transform: scale(1.15);
-	filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
-}
-
-.contact-logo:focus {
-	transform: scale(1.15);
-	filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
-	outline: 2px solid #0077ff;
-	outline-offset: 2px;
-	border-radius: 2px;
-	padding: 0 10px;
-}
-
 .contact-label {
+	padding-top: 0.9rem;
+	border-top: 1px solid #f1f5f9;
+	color: #64748b;
 	font-family: var(--font-heading);
-	font-size: 1rem;
+	font-size: 0.8rem;
 	font-style: normal;
 	font-weight: var(--fw-semibold);
-	letter-spacing: var(--tracking-wide);
-	margin-bottom: 4px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
 }
 
 .contact-data {
 	margin: 0;
-	margin-inline-start: 0;
+	padding: 0.35rem 0 0.9rem;
+}
+
+.contact-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	width: 100%;
+}
+
+.contact-row a {
+	min-width: 0;
+	overflow-wrap: anywhere;
+	color: #0f172a;
+	font-size: 1rem;
+	font-style: normal;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.contact-row a:hover,
+.contact-row a:focus-visible {
+	color: #2563eb;
+	outline: none;
+}
+
+.contact-row > span {
+	display: grid;
+	width: 40px;
+	height: 40px;
+	flex: 0 0 40px;
+	place-items: center;
+	border-radius: 10px;
+	background: #f1f5f9;
+	cursor: pointer;
+}
+
+.contact-logo {
+	width: 24px;
+	height: 24px;
+	object-fit: contain;
+	transition:
+		transform 0.2s ease,
+		filter 0.2s ease;
+}
+
+.contact-row > span:hover .contact-logo,
+.contact-row > span:focus-within .contact-logo {
+	filter: saturate(1.15) contrast(1.08);
+	transform: scale(1.1);
+}
+
+@media (prefers-color-scheme: dark) {
+	.contact-label {
+		border-top-color: #1e293b;
+		color: #94a3b8;
+	}
+
+	.contact-row a {
+		color: #f8fafc;
+	}
+
+	.contact-row > span {
+		background: #172033;
+	}
 }
 
 @media (max-width: 768px) {
-	.contact-row {
-		gap: 4px;
-	}
-
-	.contact-logo {
-		width: 40px;
-		height: 40px;
-	}
-
 	.contact-row a {
 		font-size: 0.95rem;
 	}
 
 	.contact-label {
-		white-space: pre-line;
-		font-size: 0.95rem;
+		font-size: 0.75rem;
 	}
 }

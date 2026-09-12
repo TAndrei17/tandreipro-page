@@ -138,6 +138,110 @@
 	cursor: not-allowed;
 }
 
+.modal-login-form {
+	box-sizing: border-box;
+	gap: 18px;
+	color: #0f172a;
+	animation: none;
+}
+
+.modal-login-form .page-header {
+	margin: 0 0 6px;
+	text-align: left;
+}
+
+.modal-login-form .modal-window-title {
+	margin: 0;
+	color: #0f172a;
+	font-size: 22px;
+	font-weight: 700;
+	letter-spacing: 0;
+	text-align: left;
+	text-transform: none;
+}
+
+.modal-close-btn {
+	position: absolute;
+	top: 16px;
+	right: 16px;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: #64748b;
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 1;
+	cursor: pointer;
+	transition: color 0.2s ease;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus-visible {
+	background: transparent;
+	color: #0f172a;
+	outline: none;
+}
+
+.modal-login-form .modal-window-group {
+	gap: 6px;
+}
+
+.modal-login-form label {
+	color: #334155;
+	font-family: var(--font-body);
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.modal-login-form .modal-window-input {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px 14px;
+	border: 1px solid #cbd5e1;
+	border-radius: 8px;
+	background: #f8fafc;
+	color: #0f172a;
+	font-family: var(--font-body);
+	font-size: 15px;
+	transition: all 0.2s ease;
+}
+
+.modal-login-form .modal-window-input:focus {
+	border-color: #2563eb;
+	background: #ffffff;
+	box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+	outline: none;
+}
+
+.modal-login-form .modal-window-error {
+	color: #dc2626;
+	font-size: 0.8125rem;
+}
+
+.modal-login-form .modal-window-submit {
+	width: 100%;
+	margin-top: 8px;
+	padding: 12px;
+	border: none;
+	border-radius: 8px;
+	background: #2563eb;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: 600;
+	transition: background 0.2s ease;
+}
+
+.modal-login-form .modal-window-submit:hover,
+.modal-login-form .modal-window-submit:focus-visible {
+	background: #1d4ed8;
+	color: #ffffff;
+	transform: none;
+}
+
+.modal-login-form .modal-window-submit:disabled {
+	background: #94a3b8;
+}
+
 .modal-window-checkbox-wrapper {
 	display: flex;
 	flex-direction: row;

@@ -11,6 +11,14 @@ import { CONTACT_PAGE_PATH, LEGAL_PAGE_PATH } from '@constants/routes';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
 import './styles/CommonStyles.css';
 
+const cleanMarkdownPreview = (text: string) =>
+	text
+		.replace(/^\s{0,3}#{1,6}\s+/gm, '')
+		.replace(/^\s*[-*+]\s+/gm, '')
+		.replace(/[*_`~]/g, '')
+		.replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+		.trim();
+
 const AboutMePage = () => {
 	const { t } = useTranslation();
 	const { siteHeaderHeight } = useSiteHeaderHeight();
@@ -53,7 +61,7 @@ const AboutMePage = () => {
 						<article className="about-stat-card" key={item.id}>
 							<span>0{index + 1}</span>
 							<strong>{item.title}</strong>
-							<p>{item.description.split('\n')[0]}</p>
+							<p>{cleanMarkdownPreview(item.description.split('\n')[0])}</p>
 						</article>
 					))}
 				</section>

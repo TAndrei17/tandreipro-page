@@ -3,6 +3,7 @@ import { useRef, useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { useTranslation } from 'react-i18next';
 import Modal from 'react-modal';
+import type { Styles } from 'react-modal';
 import './styles/ModalWindow.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -15,9 +16,10 @@ import { login, logout } from '@store/user/services';
 import createAlert from '@utils/createAlert';
 import { createLoginValidationSchema } from '@utils/validation/createLoginFormValidation';
 
-const customStyles = {
+const customStyles: Styles = {
 	overlay: {
-		backgroundColor: 'rgba(0,0,0,0.5)',
+		backgroundColor: 'rgba(15, 23, 42, 0.4)',
+		backdropFilter: 'blur(4px)',
 		zIndex: 2000,
 	},
 
@@ -28,9 +30,14 @@ const customStyles = {
 		bottom: 'auto',
 		marginRight: '-50%',
 		transform: 'translate(-50%, -50%)',
-		width: '50%',
-		borderRadius: '12px',
-		background: 'linear-gradient(135deg, #3a3a3a, #7a7eff)',
+		width: '100%',
+		maxWidth: '420px',
+		padding: '32px',
+		border: '1px solid #E2E8F0',
+		borderRadius: '16px',
+		background: '#FFFFFF',
+		boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+		position: 'relative',
 	},
 };
 
@@ -130,7 +137,14 @@ const ModalLogin = () => {
 					validationSchema={validationSchema}
 					onSubmit={onSubmit}>
 					{({ isSubmitting }) => (
-						<Form className="modal-window-form">
+						<Form className="modal-window-form modal-login-form">
+							<button
+								type="button"
+								className="modal-close-btn"
+								aria-label={tModal('login')}
+								onClick={() => setIsOpen(false)}>
+								×
+							</button>
 							<section className="page-header">
 								<h2 className="modal-window-title">{tModal('login')}</h2>
 							</section>

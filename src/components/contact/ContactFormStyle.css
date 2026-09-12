@@ -1,120 +1,131 @@
 .contact-form {
-	width: 100%;
-	padding: 2em;
-	border-radius: 16px;
-	background: rgba(255, 255, 255, 0.05);
-	backdrop-filter: blur(12px);
-	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
-	color: #fff;
-	animation: fadeInUp 0.8s forwards 0.4s;
-	transition:
-		transform 0.3s ease,
-		box-shadow 0.3s ease;
+	gap: 1.25rem;
+	width: 100%;
+	color: var(--contacts-text, #0f172a);
 }
 
-.contact-form .form-title {
-	text-align: center;
+.contact-form .page-header {
+	margin: 0 0 0.5rem;
+	text-align: left;
+}
+
+.contact-form .page-header h2 {
+	margin: 0;
+	color: var(--contacts-text, #0f172a);
+	font-size: 1.5rem;
 }
 
 .contact-form .form-group {
 	display: flex;
 	flex-direction: column;
-	gap: 6px;
+	gap: 0.4rem;
+	margin: 0;
 }
 
 .contact-form label {
+	color: #334155;
 	font-family: var(--font-heading);
+	font-size: 0.875rem;
 	font-weight: var(--fw-semibold);
-	font-size: 1rem;
 }
 
 .contact-form .form-input,
 .contact-form .form-textarea {
-	padding: 12px 16px;
-	border: 1px solid rgba(255, 255, 255, 0.3);
-	border-radius: 12px;
-	font-size: 1rem;
-	background: rgba(255, 255, 255, 0.05);
-	color: #fff;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px 14px;
+	border: 1px solid #cbd5e1;
+	border-radius: 8px;
+	background: var(--contacts-input, #f8fafc);
+	color: var(--contacts-text, #0f172a);
 	font-family: var(--font-body);
-	font-size: 1.2rem;
+	font-size: 15px;
 	transition:
-		border 0.2s ease,
-		box-shadow 0.2s ease;
+		border-color 0.2s ease,
+		box-shadow 0.2s ease,
+		background 0.2s ease;
 }
 
 .contact-form .form-input:focus,
 .contact-form .form-textarea:focus {
-	border-color: #646cff;
-	box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.2);
+	border-color: #2563eb;
+	background: #ffffff;
+	box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
 	outline: none;
 }
 
 .contact-form .form-textarea {
-	min-height: 120px;
+	min-height: 160px;
 	resize: vertical;
 }
 
 .contact-form .form-error {
-	color: #ff6b6b;
-	font-size: 0.875rem;
-}
-
-.contact-form .form-submit {
-	margin-top: 40px;
-	padding: 16px 32px;
-	font-size: clamp(14px, 1.5vw, 20px);
-	font-weight: 600;
-	border-radius: 8px;
-	border: none;
-	background: rgba(255, 255, 255, 0.12);
-	backdrop-filter: blur(6px);
-	color: #fff;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 5px;
-	transition: 0.3s;
-}
-
-.contact-form .form-submit:hover,
-.contact-form .form-submit:focus {
-	background: rgba(255, 255, 255, 0.25);
-	transform: translateY(-3px);
-	color: #ffdd57;
-}
-
-.contact-form .form-submit:disabled {
-	background-color: #999;
-	cursor: not-allowed;
+	color: #dc2626;
+	font-size: 0.8125rem;
 }
 
 .checkbox-wrapper {
 	display: flex;
 	flex-direction: row;
-	align-items: center;
-	gap: 8px;
+	align-items: flex-start;
+	gap: 0.6rem;
 }
 
-@media (max-width: 768px) {
-	.parent-container {
-		padding: 0 1em;
-	}
+.checkbox-wrapper input {
+	flex: 0 0 auto;
+	width: 1rem;
+	height: 1rem;
+	margin-top: 0.15rem;
+	accent-color: #2563eb;
+}
 
-	.contact-form {
-		padding: 1.5em;
-	}
+.checkbox-wrapper label {
+	color: #475569;
+	font-family: var(--font-body);
+	font-size: 0.875rem;
+	font-weight: 400;
+	line-height: 1.45;
+}
 
-	.contact-form .form-submit {
-		width: 100%;
-		text-align: center;
-	}
+.contact-form .form-submit {
+	width: 100%;
+	margin-top: 0.5rem;
+	padding: 12px;
+	border: 0;
+	border-radius: 8px;
+	background: #2563eb;
+	color: #ffffff;
+	font-size: 0.95rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition:
+		background 0.2s ease,
+		transform 0.2s ease;
+}
 
+.contact-form .form-submit:hover,
+.contact-form .form-submit:focus-visible {
+	background: #1d4ed8;
+	color: #ffffff;
+	transform: translateY(-1px);
+}
+
+.contact-form .form-submit:disabled {
+	background: #94a3b8;
+	cursor: not-allowed;
+	transform: none;
+}
+
+@media (prefers-color-scheme: dark) {
+	.contact-form label,
 	.checkbox-wrapper label {
-		font-size: 0.8em;
+		color: #cbd5e1;
+	}
+
+	.contact-form .form-input:focus,
+	.contact-form .form-textarea:focus {
+		background: #111827;
 	}
 }
