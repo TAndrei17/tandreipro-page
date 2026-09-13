@@ -28,7 +28,7 @@ const HomePage = () => {
 							title={service.title}
 							subtitle={service.homeSubtitle}
 							description={service.homeDescription}
-							image={index === 0 ? images.tandrei : service.image}
+							image={index === 0 ? images.code : service.image}
 							reverse={index % 2 !== 0 && !isMobile}
 							style={index > 0 ? { marginTop: 50 } : {}}
 						/>

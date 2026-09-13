@@ -122,77 +122,11 @@
 	transition: transform 0.6s ease;
 }
 
-.section-web .section-image-wrapper {
-	min-height: 0;
-	padding: 0;
-	border: none;
-	border-radius: 0;
-	background: transparent;
-	box-shadow: none;
-	mask-image:
-		linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%),
-		linear-gradient(to bottom, black 92%, transparent 100%);
-	mask-composite: intersect;
-	-webkit-mask-image:
-		linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%),
-		linear-gradient(to bottom, black 92%, transparent 100%);
-	-webkit-mask-composite: source-in;
-}
-
-.section-web .section-image-wrapper::after {
-	display: none;
-}
-
-.section-web .section-image {
-	display: block;
-	width: 100%;
-	height: auto;
-	min-height: 0;
-	border-radius: 0;
-	background: transparent;
-	object-fit: cover;
-	object-position: center top;
-}
-
-.section-web {
-	grid-template-columns: 1.2fr 0.8fr;
-	align-items: center;
-	gap: 48px;
-	padding: 48px;
-	border-radius: 24px;
-	background: #ffffff;
-}
-
-.section-web .section-subtitle {
-	color: #2563eb;
-}
-
-.section-web .section-title {
-	font-size: clamp(2.5rem, 5vw, 4rem);
-	font-weight: 800;
-	line-height: 1.05;
-	color: #0f172a;
-}
-
-.section-web .section-desc {
-	color: #334155;
-	line-height: 1.6;
-}
-
-.section-web .section-btn {
-	padding: 14px 28px;
-	border-radius: 12px;
-	border-color: transparent;
-	background: #0f172a;
-	color: #ffffff;
-	font-weight: 600;
-	transition: all 0.2s ease;
-}
-
 .section-image-wrapper:hover .section-image {
 	transform: scale(1.035);
 }
 
+.section-web,
 .section-shop,
 .section-mobile,
 .section-maintain {
@@ -204,9 +138,11 @@
 	padding-bottom: 2rem;
 }
 
+.section-web .section-content,
 .section-shop .section-content,
 .section-mobile .section-content,
 .section-maintain .section-content,
+.section-web .section-content-reverse,
 .section-shop .section-content-reverse,
 .section-mobile .section-content-reverse,
 .section-maintain .section-content-reverse {
@@ -215,21 +151,25 @@
 	max-width: none;
 }
 
+.section-web.section-reverse .section-content,
 .section-shop.section-reverse .section-content,
 .section-mobile.section-reverse .section-content,
 .section-maintain.section-reverse .section-content,
+.section-web.section-reverse .section-content-reverse,
 .section-shop.section-reverse .section-content-reverse,
 .section-mobile.section-reverse .section-content-reverse,
 .section-maintain.section-reverse .section-content-reverse {
 	grid-column: 2;
 }
 
+.section-web .section-title,
 .section-shop .section-title,
 .section-mobile .section-title,
 .section-maintain .section-title {
 	font-size: clamp(2.3rem, 5vw, 5rem);
 }
 
+.section-web .section-image-wrapper,
 .section-shop .section-image-wrapper,
 .section-mobile .section-image-wrapper,
 .section-maintain .section-image-wrapper {
@@ -238,12 +178,14 @@
 	min-height: 320px;
 }
 
+.section-web.section-reverse .section-image-wrapper,
 .section-shop.section-reverse .section-image-wrapper,
 .section-mobile.section-reverse .section-image-wrapper,
 .section-maintain.section-reverse .section-image-wrapper {
 	grid-column: 1;
 }
 
+.section-web .section-image,
 .section-shop .section-image,
 .section-mobile .section-image,
 .section-maintain .section-image {
@@ -312,6 +254,7 @@
 @media (max-width: 768px) {
 	.section,
 	.section-reverse,
+	.section-web,
 	.section-shop,
 	.section-mobile,
 	.section-maintain {
@@ -326,9 +269,11 @@
 
 	.section-content,
 	.section-content-reverse,
+	.section-web .section-content,
 	.section-shop .section-content,
 	.section-mobile .section-content,
 	.section-maintain .section-content,
+	.section-web .section-content-reverse,
 	.section-shop .section-content-reverse,
 	.section-mobile .section-content-reverse,
 	.section-maintain .section-content-reverse {
@@ -340,6 +285,7 @@
 	}
 
 	.section-title,
+	.section-web .section-title,
 	.section-shop .section-title,
 	.section-mobile .section-title,
 	.section-maintain .section-title {
@@ -369,15 +315,6 @@
 	.section-mobile .section-image,
 	.section-maintain .section-image {
 		min-height: 300px;
-	}
-	.section-web {
-		gap: 2rem;
-		padding: 2rem;
-		border-radius: 20px;
-	}
-	.section-web .section-image {
-		height: auto;
-		min-height: 0;
 	}
 	.home-contact-cta {
 		align-items: flex-start;
