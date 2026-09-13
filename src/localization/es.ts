@@ -14,7 +14,7 @@ import {
 const es = {
 	translation: {
 		browserTabs: {
-			browserTabDefault: 'Andrei Trunkin | Frontend Desarrollador',
+			browserTabDefault: 'Andrei Trunkin | Desarrollador Frontend',
 			browserTabPageNotFound: 'Esta página no existe',
 			browserTabServices: 'Andrei Trunkin | Servicios',
 			browserTabAboutMe: 'Andrei Trunkin | Sobre mí',
@@ -25,15 +25,15 @@ const es = {
 		},
 
 		seoDescriptions: {
-			home: 'Desarrollo frontend de sitios web y aplicaciones móviles modernas con React, React Native y TypeScript.',
+			home: 'Desarrollo frontend, lógica backend e integración con PostgreSQL para sitios web y aplicaciones con React, React Native y TypeScript.',
 			services:
-				'Sitios web, tiendas online, aplicaciones móviles y soporte de proyectos con tecnologías modernas.',
+				'Sitios web, tiendas online, aplicaciones móviles y soporte técnico con tecnologías actuales.',
 			about:
-				'Conoce a Andrei Trunkin, desarrollador frontend especializado en React, React Native y TypeScript.',
+				'Conoce a Andrei Trunkin, desarrollador frontend con experiencia práctica en lógica backend, APIs y PostgreSQL.',
 			contact:
-				'Contacta con Andrei Trunkin para hablar sobre desarrollo frontend, un nuevo sitio web o una aplicación móvil.',
+				'Contacta con Andrei Trunkin para hablar sobre un sitio web, una aplicación móvil o una integración backend.',
 			questions:
-				'Preguntas y respuestas públicas sobre desarrollo frontend, sitios web y aplicaciones móviles.',
+				'Preguntas y respuestas públicas sobre desarrollo frontend, backend, sitios web y aplicaciones móviles.',
 			legal: 'Información legal y condiciones de privacidad del sitio web de Andrei Trunkin.',
 			dashboard: 'Panel de administración del sitio web.',
 			notFound: 'La página que buscas no existe o ha sido movida.',
@@ -51,7 +51,7 @@ const es = {
 			services: 'Servicios',
 			aboutMe: 'Sobre mí',
 			contact: 'Contacto',
-			questionsPublic: 'Sus Preguntas',
+			questionsPublic: 'Tus preguntas',
 			dashboard: 'Panel de control',
 			changeLngAlt: 'Cambiar el idioma del sitio web',
 			openNavAlt: 'Abrir la navegación del sitio web',
@@ -76,15 +76,15 @@ const es = {
 			web: 'Sitios web',
 			shop: 'Tiendas en línea',
 			mobile: 'Aplicaciones móviles',
-			maintain: 'Apoyo a proyectos',
+			maintain: 'Soporte de proyectos',
 
 			webHelp:
 				'Creo sitios web para negocios y profesionales: landing pages, sitios de presentación y portafolios.\n' +
-				'Los visitantes ven a qué te dedicas, consultan ejemplos de tu trabajo y pueden ponerse en contacto contigo.',
+				'Los visitantes entienden lo que ofreces, consultan ejemplos de tu trabajo y pueden ponerse en contacto contigo.',
 
 			webClients:
-				'Trabajo con especialistas independientes, emprendedores y empresas.\n' +
-				'Si ofreces servicios, desarrollas una marca personal o estás iniciando un negocio — crearé un sitio web para ayudar a atraer clientes.',
+				'Trabajo con profesionales, emprendedores y empresas.\n' +
+				'Si ofreces servicios, desarrollas una marca personal o estás iniciando un negocio, creo un sitio web que presenta tu trabajo con claridad.',
 
 			webTasks:
 				'Resolvemos tareas relacionadas con la captación y gestión de tu audiencia.\n' +
@@ -146,7 +146,7 @@ const es = {
 			skillsTitle: 'Habilidades',
 			skillsDesc: skillsTextEs,
 			projectsTitle: 'Proyectos personales',
-			positionTitle: 'Colaboración en contratación',
+			positionTitle: 'Desarrollo independiente',
 			positionDesc: positionTextEs,
 			teamTitle: 'Trabajo en equipo',
 			teamDesc: teamWorkTextEs,
@@ -282,7 +282,7 @@ const es = {
 			webSectionTitle: 'Sitios web',
 			webSectionSubtitle: 'Creando',
 			webSectionDescription:
-				'Sitios web modernos, rápidos y visualmente impactantes — desde landing pages elegantes hasta proyectos a gran escala.',
+				'Sitios web modernos, rápidos y claros — desde landing pages hasta proyectos de mayor alcance.',
 
 			shopSectionTitle: 'Tiendas en línea',
 			shopSectionSubtitle: 'Lanzando',

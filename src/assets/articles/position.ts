@@ -1,13 +1,13 @@
-const positionTextRu = `Работаю на фрилансе и веду собственные проекты, но я открыт для сотрудничества и готов присоединиться к команде разработчиков. Интересуют проекты, где могу применить свои навыки фронтенд-разработки, а также работать в связке с другими специалистами для достижения общих целей.
+const positionTextRu = `Веду собственные проекты как независимый разработчик. Основное направление — frontend-разработка, также занимаюсь серверной логикой, API и интеграцией баз данных.
 
-Ценю командную работу, ответственность и прозрачное взаимодействие, поэтому легко интегрируюсь в существующие процессы и могу приносить пользу с первых дней работы.`;
+Ценю ясные процессы, ответственность и прозрачное взаимодействие. При необходимости подключаюсь к командной разработке и беру на себя задачи в рамках своей технической специализации.`;
 
-const positionTextEn = `At the moment, I work as a freelancer and run my own projects, but I am open to collaboration and ready to join a team of developers. I am interested in projects where I can apply my frontend development skills and work closely with other specialists to achieve common goals.
+const positionTextEn = `I run my own projects as an independent developer. My main focus is frontend development, with practical work in backend logic, APIs, and database integration.
 
-I value teamwork, responsibility, and transparent communication, which allows me to integrate easily into existing processes and contribute effectively from day one.`;
+I value clear processes, responsibility, and transparent communication. When needed, I contribute to team projects and take ownership of tasks within my technical focus.`;
 
-const positionTextEs = `Actualmente trabajo como freelancer y manejo mis propios proyectos, pero estoy abierto a colaborar y listo para unirme a un equipo de desarrolladores. Me interesan proyectos en los que pueda aplicar mis habilidades en desarrollo frontend y trabajar estrechamente con otros especialistas para lograr objetivos comunes.
+const positionTextEs = `Gestiono mis propios proyectos como desarrollador independiente. Mi enfoque principal es el desarrollo frontend, con experiencia práctica en lógica backend, APIs e integración de bases de datos.
 
-Valoro el trabajo en equipo, la responsabilidad y la comunicación transparente, lo que me permite integrarme fácilmente en los procesos existentes y aportar valor desde el primer día.`;
+Valoro los procesos claros, la responsabilidad y la comunicación transparente. Cuando es necesario, participo en proyectos de equipo y asumo tareas dentro de mi especialización técnica.`;
 
 export { positionTextRu, positionTextEn, positionTextEs };

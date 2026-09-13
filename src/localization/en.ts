@@ -25,15 +25,15 @@ const en = {
 		},
 
 		seoDescriptions: {
-			home: 'Frontend development for modern websites and mobile applications with React, React Native and TypeScript.',
+			home: 'Frontend development, backend logic, and PostgreSQL integration for websites and mobile applications with React, React Native, and TypeScript.',
 			services:
-				'Websites, online stores, mobile applications and project support built with modern technologies.',
+				'Websites, online stores, mobile applications, and technical support built with current technologies.',
 			about:
-				'Learn more about Andrei Trunkin, a frontend developer specializing in React, React Native and TypeScript.',
+				'Learn more about Andrei Trunkin, a frontend developer with practical experience in backend logic, APIs, and PostgreSQL.',
 			contact:
-				'Contact Andrei Trunkin to discuss frontend development, a new website or a mobile application.',
+				'Contact Andrei Trunkin to discuss a website, mobile application, or backend integration.',
 			questions:
-				'Public questions and answers about frontend development, websites and mobile applications.',
+				'Public questions and answers about frontend, backend, websites, and mobile applications.',
 			legal: 'Legal information and privacy terms for the Andrei Trunkin website.',
 			dashboard: 'Website administration dashboard.',
 			notFound: 'The page you are looking for does not exist or has been moved.',
@@ -51,7 +51,7 @@ const en = {
 			services: 'Services',
 			aboutMe: 'About me',
 			contact: 'Contact',
-			questionsPublic: 'Your Questions',
+			questionsPublic: 'Your questions',
 			dashboard: 'Dashboard',
 			changeLngAlt: 'Change website language',
 			openNavAlt: 'Open website navigation',
@@ -76,15 +76,15 @@ const en = {
 			web: 'Websites',
 			shop: 'Online Stores',
 			mobile: 'Mobile Apps',
-			maintain: 'Project Support',
+			maintain: 'Project support',
 
 			webHelp:
 				'I create websites for businesses and professionals: landing pages, business card sites, and portfolios.\n' +
 				'Visitors see what you do, view examples of your work, and can get in touch with you.',
 
 			webClients:
-				'I work with independent specialists, entrepreneurs, and companies.\n' +
-				'If you provide services, develop a personal brand, or are starting a business — I will create a website to help attract clients.',
+				'I work with professionals, entrepreneurs, and companies.\n' +
+				'If you provide services, develop a personal brand, or are starting a business, I create a website that presents your work clearly.',
 
 			webTasks:
 				'We solve tasks related to attracting and managing your audience.\n' +
@@ -134,7 +134,7 @@ const en = {
 				'Launching a project is only the beginning. Like any home, a website or app needs care: fixing small issues, making updates, and improving how it looks or works. I make sure everything runs smoothly, stays up to date, and does not break over time.',
 
 			maintenanceClients:
-				'I help freelancers, entrepreneurs, and companies take care of their websites and apps.\n' +
+				'I help professionals, entrepreneurs, and companies take care of their websites and apps.\n' +
 				'If you already have a project, I will look at how it works and honestly tell you if I can take it on for support and further development.',
 
 			maintenanceTasks:
@@ -151,7 +151,7 @@ const en = {
 			skillsTitle: 'Skills',
 			skillsDesc: skillsTextEn,
 			projectsTitle: 'Personal Projects',
-			positionTitle: 'Employment Collaboration',
+			positionTitle: 'Independent Development',
 			positionDesc: positionTextEn,
 			teamTitle: 'Teamwork',
 			teamDesc: teamWorkTextEn,
@@ -287,7 +287,7 @@ const en = {
 			webSectionTitle: 'Websites',
 			webSectionSubtitle: 'Creating',
 			webSectionDescription:
-				'Modern, fast, and visually striking websites — from sleek landing pages to large-scale projects.',
+				'Modern, fast, and clear websites — from landing pages to larger projects.',
 
 			shopSectionTitle: 'Online Stores',
 			shopSectionSubtitle: 'Launching',
