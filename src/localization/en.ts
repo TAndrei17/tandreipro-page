@@ -67,9 +67,6 @@ const en = {
 		},
 
 		services: {
-			previousSlide: 'Previous slide',
-			nextSlide: 'Next slide',
-			slides: 'Slides',
 			showMore: 'Show more',
 			hideMore: 'Hide',
 			webContent: websitesContentEn,
@@ -80,11 +77,6 @@ const en = {
 			shop: 'Online Stores',
 			mobile: 'Mobile Apps',
 			maintain: 'Project Support',
-
-			helpTitle: 'How I Help',
-			targetClientsTitle: 'Who I Can Help',
-			tasksTitle: 'What We Can Solve Together',
-			whyWorkWithMeTitle: 'Why Choose Me',
 
 			webHelp:
 				'I create websites for businesses and professionals: landing pages, business card sites, and portfolios.\n' +

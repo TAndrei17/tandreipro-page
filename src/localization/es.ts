@@ -67,9 +67,6 @@ const es = {
 		},
 
 		services: {
-			previousSlide: 'Diapositiva anterior',
-			nextSlide: 'Siguiente diapositiva',
-			slides: 'Diapositivas',
 			showMore: 'Ver más',
 			hideMore: 'Ocultar',
 			webContent: websitesContentEs,
@@ -80,11 +77,6 @@ const es = {
 			shop: 'Tiendas en línea',
 			mobile: 'Aplicaciones móviles',
 			maintain: 'Apoyo a proyectos',
-
-			helpTitle: 'Cómo Ayudo',
-			targetClientsTitle: 'A Quién Puedo Ayudar',
-			tasksTitle: 'Qué Podemos Resolver Juntos',
-			whyWorkWithMeTitle: 'Por Qué Elegirme',
 
 			webHelp:
 				'Creo sitios web para negocios y profesionales: landing pages, sitios de presentación y portafolios.\n' +

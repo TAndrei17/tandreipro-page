@@ -37,5 +37,4 @@ const questionUserSlice = createSlice({
 	},
 });
 
-// export const {} = questionsPublicSlice.actions;
 export default questionUserSlice.reducer;

@@ -70,5 +70,4 @@ const tagsSlice = createSlice({
 	},
 });
 
-// export const {} = questionsPublicSlice.actions;
 export default tagsSlice.reducer;

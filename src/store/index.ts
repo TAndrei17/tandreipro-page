@@ -1,4 +1,4 @@
-import { configureStore /* Tuple */ } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch, useSelector } from 'react-redux';
 
 import answersAdminReducer from './answersAdmin/answersAdminSlice';
@@ -31,8 +31,6 @@ const store = configureStore({
 		answersPublic: answersPublicReducer,
 	},
 
-	// https://redux-toolkit.js.org/api/getDefaultMiddleware#intended-usage
-	// middleware: () => new Tuple(logger),
 	middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(middlewares),
 });
 

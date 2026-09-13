@@ -67,9 +67,6 @@ const ru = {
 		},
 
 		services: {
-			previousSlide: 'Предыдущий слайд',
-			nextSlide: 'Следующий слайд',
-			slides: 'Слайды',
 			showMore: 'Подробнее',
 			hideMore: 'Скрыть',
 			webContent: websitesContentRu,
@@ -80,11 +77,6 @@ const ru = {
 			shop: 'Онлайн-магазины',
 			mobile: 'Мобильные приложения',
 			maintain: 'Поддержка проектов',
-
-			helpTitle: 'Как помогаю',
-			targetClientsTitle: 'Кому буду полезен',
-			tasksTitle: 'Какие задачи решим вместе',
-			whyWorkWithMeTitle: 'Почему выбирают меня',
 
 			webHelp:
 				'Делаю сайты для бизнеса и специалистов: лендинги, сайты-визитки и портфолио.\n' +

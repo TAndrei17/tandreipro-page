@@ -65,5 +65,4 @@ const userSlice = createSlice({
 	},
 });
 
-// export const {} = questionsPublicSlice.actions;
 export default userSlice.reducer;
