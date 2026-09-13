@@ -32,17 +32,20 @@ const ServiceSection = ({ service }: { service: Service }) => {
 				</div>
 			</header>
 
-			{service.content && 'timeline' in service.content && (
-				<div className={'service-summary'} aria-label={service.title}>
-					<span>{service.content.timeline.value}</span>
-					<span>{service.content.pricing.value}</span>
-				</div>
-			)}
-
-			{service.description && <p className={'service-info'}>{service.description}</p>}
 			{service.content && (
 				<div className={'service-content'}>
-					<div className={'service-intro'}>{service.content.intro}</div>
+					<div className={'service-content-header'}>
+						<div className={'service-text-block'}>
+							{service.description && <p className={'service-info'}>{service.description}</p>}
+							<div className={'service-intro'}>{service.content.intro}</div>
+						</div>
+						{service.content && 'timeline' in service.content && (
+							<div className={'service-summary'} aria-label={service.title}>
+								<span>{service.content.timeline.value}</span>
+								<span>{service.content.pricing.value}</span>
+							</div>
+						)}
+					</div>
 					<button
 						className={'service-expand-button'}
 						type="button"

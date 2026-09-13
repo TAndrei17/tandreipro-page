@@ -78,9 +78,11 @@ body:has(.services-navigation) {
 }
 
 .services-navigation-link.is-active {
-	color: #fff;
-	background: var(--services-accent);
-	box-shadow: 0 5px 14px color-mix(in srgb, var(--services-accent) 25%, transparent);
+	border: 1px solid var(--services-accent);
+	border-radius: 6px;
+	color: var(--services-accent);
+	background: transparent;
+	box-shadow: none;
 }
 
 .services-navigation-number {
@@ -88,7 +90,7 @@ body:has(.services-navigation) {
 	font-size: 0.72rem;
 }
 .services-navigation-link.is-active .services-navigation-number {
-	color: rgba(255, 255, 255, 0.72);
+	color: var(--services-accent);
 }
 
 .services-list {

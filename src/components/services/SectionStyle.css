@@ -106,9 +106,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.5rem;
-	grid-column: 4;
-	grid-row: 1;
-	justify-content: flex-end;
 }
 .service-summary span {
 	padding: 0.42rem 0.7rem;
@@ -137,6 +134,12 @@
 .service-content {
 	width: 100%;
 }
+.service-content-header {
+	min-width: 0;
+}
+.service-text-block {
+	min-width: 0;
+}
 .service-content h3 {
 	margin: 2rem 0 1rem;
 	color: var(--services-ink);
@@ -147,6 +150,24 @@
 }
 .service-expand-button {
 	display: none;
+}
+
+@media (min-width: 768px) {
+	.service-content-header {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 24px;
+	}
+	.service-text-block {
+		flex: 1;
+		max-width: 680px;
+	}
+	.service-summary {
+		flex-shrink: 0;
+		align-items: flex-start;
+		justify-content: flex-end;
+	}
 }
 .service-details {
 	max-height: none;
