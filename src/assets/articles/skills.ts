@@ -1,4 +1,6 @@
-const skillsTextRu = `### Frontend-разработка
+const skillsTextRu = `Frontend, backend и мобильная разработка
+
+### Frontend-разработка
 
 - Разработка пользовательских интерфейсов на React
 - Уверенная работа с TypeScript и JavaScript
@@ -19,11 +21,12 @@ const skillsTextRu = `### Frontend-разработка
 - Написание и запуск тестов (Jest)
 - Работа с системами контроля версий (Git)
 - Командная разработка с использованием GitHub и Bitbucket
+- Использование Claude для ускорения разработки и код-ревью
 
-### Backend (базовый уровень)
+### Backend
 
-- Разработка серверной логики на Node.js и Express
-- Работа с базами данных (SQL, PostgreSQL)
+- Разработка серверной логики и API на Node.js и Express
+- Работа с PostgreSQL и Redis
 - Использование WebSocket для работы с real-time функциональностью
 
 ### DevOps и деплой
@@ -36,7 +39,9 @@ const skillsTextRu = `### Frontend-разработка
 - Публикация и обновление мобильных приложений в Google Play
 - Работа с TestFlight и Transporter для iOS-приложений`;
 
-const skillsTextEn = `### Frontend Development
+const skillsTextEn = `Frontend, backend, and mobile development
+
+### Frontend Development
 
 - Development of user interfaces with React
 - Confident use of TypeScript and JavaScript
@@ -57,11 +62,12 @@ const skillsTextEn = `### Frontend Development
 - Writing and running tests (Jest)
 - Working with version control systems (Git)
 - Team development using GitHub and Bitbucket
+- Using Claude to speed up development and code review
 
-### Backend (Basic Level)
+### Backend Development
 
-- Server-side logic development with Node.js and Express
-- Working with databases (SQL, PostgreSQL)
+- Server-side logic and API development with Node.js and Express
+- Working with PostgreSQL and Redis
 - Using WebSocket for real-time functionality
 
 ### DevOps and Deployment
@@ -75,13 +81,21 @@ const skillsTextEn = `### Frontend Development
 - Working with TestFlight and Transporter for iOS applications
 `;
 
-const skillsTextEs = `### Desarrollo Frontend
+const skillsTextEs = `Desarrollo frontend, backend y aplicaciones móviles
+
+### Desarrollo Frontend
 
 - Desarrollo de interfaces de usuario con React
 - Uso sólido de TypeScript y JavaScript
 - Gestión del estado de aplicaciones (Redux Toolkit)
 - Trabajo con navegación y animaciones en aplicaciones
 - Herramientas modernas de compilación y optimización (Vite)
+
+### Desarrollo Backend
+
+- Desarrollo de lógica de servidor y APIs con Node.js y Express
+- Trabajo con PostgreSQL y Redis
+- Uso de WebSocket para funcionalidades en tiempo real
 
 ### Desarrollo Móvil
 
@@ -96,12 +110,7 @@ const skillsTextEs = `### Desarrollo Frontend
 - Escritura y ejecución de pruebas (Jest)
 - Trabajo con sistemas de control de versiones (Git)
 - Desarrollo en equipo utilizando GitHub y Bitbucket
-
-### Backend (Nivel Básico)
-
-- Desarrollo de lógica del lado del servidor con Node.js y Express
-- Trabajo con bases de datos (SQL, PostgreSQL)
-- Uso de WebSocket para funcionalidades en tiempo real
+- Uso de Claude para acelerar el desarrollo y la revisión de código
 
 ### DevOps y Despliegue
 

@@ -7,6 +7,7 @@ import getPersonalSections from '@constants/getPersonalSections';
 import getTechStackIcons, { type StackIcon } from '@constants/getTechStackIcons';
 import getToolIcons from '@constants/getToolIcons';
 import images from '@constants/images';
+import logos from '@constants/logos';
 import { CONTACT_PAGE_PATH, LEGAL_PAGE_PATH } from '@constants/routes';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
 import './styles/CommonStyles.css';
@@ -27,11 +28,13 @@ const AboutMePage = () => {
 	const toolsIconsList = getToolIcons();
 	const unifiedTechStack: StackIcon[] = [
 		...techStackIconList,
-		{ id: 5, title: 'React Native' },
-		{ id: 6, title: 'Redux / Redux Toolkit' },
-		{ id: 7, title: 'Node.js' },
-		{ id: 8, title: 'PostgreSQL' },
-		...toolsIconsList.map((icon, index) => ({ ...icon, id: 9 + index })),
+		{ id: 5, title: 'React Native', logo: logos.reactLogo },
+		{ id: 6, title: 'Redux / Redux Toolkit', logo: logos.reduxLogo },
+		{ id: 7, title: 'Node.js', logo: logos.nodeLogo },
+		{ id: 8, title: 'PostgreSQL', logo: logos.postgresqlLogo },
+		{ id: 9, title: 'Redis', logo: logos.redisLogo },
+		{ id: 10, title: 'Claude', logo: logos.claudeLogo },
+		...toolsIconsList.map((icon, index) => ({ ...icon, id: 11 + index })),
 	];
 	const summary = personalDataList.find((item) => item.id === 0);
 	const skills = personalDataList.find((item) => item.id === 1);
@@ -42,6 +45,10 @@ const AboutMePage = () => {
 		<div className="about-page" style={{ paddingTop: siteHeaderHeight }}>
 			<main>
 				<section className="about-hero">
+					<div className="about-hero-media">
+						<img src={images.andreiOffice} alt={t('personal.heroPhotoAlt')} />
+						<div className="about-hero-scrim" aria-hidden="true" />
+					</div>
 					<div className="about-hero-content">
 						<span className="about-eyebrow">{t('appHeader.aboutMe')}</span>
 						<h1>{t('appHeader.aboutMe')}</h1>
@@ -50,9 +57,6 @@ const AboutMePage = () => {
 							{t('appHeader.contact')}
 							<span aria-hidden="true">→</span>
 						</Link>
-					</div>
-					<div className="about-portrait-frame">
-						<img src={images.tandrei} alt={t('appHeader.logoAlt')} />
 					</div>
 				</section>
 

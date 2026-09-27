@@ -1,4 +1,6 @@
 const legalTextEn = `
+**Last updated:** January 27, 2026
+
 ## Website Owner
 
 This website is owned by:
@@ -9,7 +11,7 @@ This website is owned by:
 
 ## Purpose
 
-This website is intended to provide information about the professional services of the owner, as well as to facilitate contact with them.
+This website has an informational and professional portfolio nature. Its purpose is to present the owner's experience, projects, and skills, and to facilitate professional contact with them. This website does not constitute a commercial offer and does not imply the provision of paid services.
 
 ## Terms of Use
 
@@ -40,6 +42,10 @@ Your name and question may be published on the website **only with your explicit
 
 By submitting the form, you give your **explicit consent for the processing of your personal data** and for the **publication of your name and question** via the required checkbox in the form. Without your active consent, the data **will not be submitted**.
 
+The legal basis for this processing is your **explicit consent**, in accordance with Article **6.1.a of the General Data Protection Regulation (GDPR)**.
+
+Your data is kept only for as long as necessary to respond to your inquiry and, where applicable, for as long as your question remains published on the website, unless you request its deletion earlier.
+
 No data is **shared with third parties** and **is not used for marketing purposes**.
 
 You may request the **deletion or correction of your data** at any time by contacting [tandreipro@outlook.com](mailto:tandreipro@outlook.com).
@@ -66,7 +72,7 @@ Users may exercise their rights of access, rectification, erasure, and other rig
 
 ## Applicable Law
 
-The relationship between the owner and the user shall be governed by the applicable legislation of Spain.
+The relationship between the owner and the user shall be governed by the applicable legislation of Spain, including Regulation (EU) 2016/679 (GDPR) and Organic Law 3/2018, of December 5, on the Protection of Personal Data and guarantee of digital rights (LOPDGDD).
 
 ## Copyright
 
@@ -89,6 +95,8 @@ All materials are used in accordance with the terms of the licenses of the afore
 `;
 
 const legalTextEs = `
+**Última actualización:** 27 de enero de 2026
+
 ## Titular del sitio web
 
 Este sitio web es titularidad de:
@@ -99,7 +107,7 @@ Este sitio web es titularidad de:
 
 ## Objeto
 
-El presente sitio web tiene como finalidad ofrecer información sobre los servicios profesionales del titular, así como facilitar sus datos de contacto.
+Este sitio web tiene carácter informativo y de portfolio profesional. Su finalidad es mostrar la experiencia, los proyectos y las habilidades del titular, así como facilitar el contacto profesional con él. Este sitio web no constituye una oferta comercial ni implica la prestación de servicios remunerados.
 
 ## Condiciones de uso
 
@@ -130,6 +138,10 @@ Su nombre y pregunta pueden publicarse en el sitio web **solo con su consentimie
 
 Al enviar el formulario, usted otorga su **consentimiento explícito para el tratamiento de sus datos personales** y para la **publicación de su nombre y pregunta** a través de la casilla de verificación obligatoria en el formulario. Sin su consentimiento activo, los datos **no se enviarán**.
 
+La base legal de este tratamiento es su **consentimiento explícito**, conforme al artículo **6.1.a del Reglamento General de Protección de Datos (RGPD)**.
+
+Sus datos se conservan únicamente durante el tiempo necesario para responder a su consulta y, en su caso, mientras su pregunta permanezca publicada en el sitio web, salvo que solicite su eliminación con anterioridad.
+
 Ningún dato se **comparte con terceros** y **no se utiliza con fines de marketing**.
 
 Puede solicitar en cualquier momento la **eliminación o corrección de sus datos** escribiendo a [tandreipro@outlook.com](mailto:tandreipro@outlook.com).
@@ -156,7 +168,7 @@ Los usuarios pueden ejercer sus derechos de acceso, rectificación, supresión y
 
 ## Legislación aplicable
 
-La relación entre el titular y el usuario se regirá por la normativa vigente en España.
+La relación entre el titular y el usuario se regirá por la normativa vigente en España, incluyendo el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDGDD).
 
 ## Derechos de autor
 
@@ -179,6 +191,8 @@ Todos los materiales se utilizan de conformidad con las condiciones de las licen
 `;
 
 const legalTextRu = `
+**Дата обновления:** 27 января 2026 года
+
 ## Владелец сайта
 
 Данный сайт является собственностью:
@@ -189,7 +203,7 @@ const legalTextRu = `
 
 ## Цель
 
-Настоящий сайт предназначен для предоставления информации о профессиональных услугах владельца, а также для облегчения связи с ним.
+Данный сайт носит информационный характер и является профессиональным портфолио. Его цель — представить опыт, проекты и навыки владельца, а также облегчить профессиональный контакт с ним. Сайт не является коммерческим предложением и не подразумевает оказание платных услуг.
 
 ## Условия использования
 
@@ -220,6 +234,10 @@ const legalTextRu = `
 
 Вы даете ваше явное согласие на **обработку персональных данных** и на **публикацию имени и вопроса** через обязательный чекбокс в форме. Без вашего активного согласия данные **не отправляются**.
 
+Правовым основанием для этой обработки является ваше **явное согласие**, в соответствии со статьёй **6.1.a Общего регламента по защите данных (GDPR)**.
+
+Ваши данные хранятся только в течение времени, необходимого для ответа на ваш запрос, и, если применимо, пока ваш вопрос опубликован на сайте, если вы не запросите его удаление раньше.
+
 Никакие данные **не передаются третьим лицам** и **не используются для рассылок или маркетинга**.
 
 Вы можете в любой момент запросить **удаление или исправление своих данных**, написав на [tandreipro@outlook.com](mailto:tandreipro@outlook.com).
@@ -246,7 +264,7 @@ Cloudflare может обрабатывать технические данны
 
 ## Применимое законодательство
 
-Отношения между владельцем и пользователем регулируются действующим законодательством Испании.
+Отношения между владельцем и пользователем регулируются действующим законодательством Испании, включая Регламент (ЕС) 2016/679 (GDPR) и Органический закон 3/2018 от 5 декабря о защите персональных данных и гарантии цифровых прав (LOPDGDD).
 
 ## Авторские права
 

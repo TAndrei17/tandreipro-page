@@ -1,7 +1,7 @@
 import apps from '@assets/images/apps.jpg';
 import code from '@assets/images/code.jpg';
 import shop from '@assets/images/shop.jpg';
-import tandrei from '@assets/images/tandrei-photo.png';
+import andreiOffice from '@assets/images/tandrei-photo.jpeg';
 import webSite from '@assets/images/web-site.jpg';
 
 const images = {
@@ -9,7 +9,7 @@ const images = {
 	shop,
 	apps,
 	code,
-	tandrei,
+	andreiOffice,
 };
 
 export default images;
