@@ -142,26 +142,25 @@ export const maintenanceContentRu: MaintenanceContent = {
 			text: 'Буду дорабатывать, обновлять и поддерживать продукты, которые разрабатывал для вас ранее.',
 		},
 	],
-	formatTitle: 'Формат работы и стоимость',
+	formatTitle: 'Как я подхожу к таким задачам',
 	formats: [
 		{
 			title: 'Разовые задачи',
-			text: 'Оценка под конкретный запрос: исправить баг, сделать страницу или подключить оплату.',
+			text: 'Точечные правки и доработки: исправить баг, добавить страницу или интеграцию.',
 		},
 		{
 			title: 'Постоянная поддержка',
 			text: 'Регулярное обслуживание и доработки по мере необходимости.',
 		},
 		{
-			title: 'Прозрачная оценка',
-			text: 'Перед стартом я смотрю проект и называю точные сроки и стоимость с учетом его состояния и объема задач.',
+			title: 'Понятный процесс',
+			text: 'Перед стартом смотрю на проект и предлагаю реалистичные сроки с учетом его состояния и объема задач.',
 		},
 	],
-	pricing: { label: 'Стоимость', value: 'После оценки проекта' },
+	pricing: { label: 'Формат участия', value: 'Обсуждаем под задачу' },
 	ctaTitle: 'Проект требует внимания?',
-	ctaText:
-		'Расскажите, что нужно исправить или улучшить, и вместе найдем подходящий формат работы.',
-	ctaButton: 'Обсудить проект',
+	ctaText: 'Расскажите, что нужно исправить или обновить, и обсудим, чем я могу помочь.',
+	ctaButton: 'Написать мне',
 };
 
 export const maintenanceContentEn: MaintenanceContent = {
@@ -194,26 +193,25 @@ export const maintenanceContentEn: MaintenanceContent = {
 			text: 'I continue improving, updating, and supporting products I previously developed for you.',
 		},
 	],
-	formatTitle: 'Work format and pricing',
+	formatTitle: 'How I approach this kind of work',
 	formats: [
 		{
 			title: 'One-off tasks',
-			text: 'An estimate for a specific request: fix a bug, create a page, or connect payments.',
+			text: 'Targeted fixes and improvements: fix a bug, add a page, or connect an integration.',
 		},
 		{
 			title: 'Ongoing support',
 			text: 'Regular maintenance and improvements whenever they are needed.',
 		},
 		{
-			title: 'Clear estimate',
-			text: 'Before we start, I review the project and provide exact timing and pricing based on its condition and scope.',
+			title: 'Clear process',
+			text: 'Before we start, I review the project and suggest realistic timing based on its condition and scope.',
 		},
 	],
-	pricing: { label: 'Pricing', value: 'After project assessment' },
+	pricing: { label: 'Collaboration', value: 'Discussed per task' },
 	ctaTitle: 'Does your project need attention?',
-	ctaText:
-		'Tell me what needs to be fixed or improved, and we will find the right way to move forward.',
-	ctaButton: 'Discuss the project',
+	ctaText: 'Tell me what needs to be fixed or updated, and we will discuss how I can help.',
+	ctaButton: 'Get in touch',
 };
 
 export const maintenanceContentEs: MaintenanceContent = {
@@ -246,25 +244,25 @@ export const maintenanceContentEs: MaintenanceContent = {
 			text: 'Sigo mejorando, actualizando y manteniendo los productos que desarrollé anteriormente para ti.',
 		},
 	],
-	formatTitle: 'Formato de trabajo y precio',
+	formatTitle: 'Cómo abordo este tipo de trabajo',
 	formats: [
 		{
 			title: 'Tareas puntuales',
-			text: 'Presupuesto para una solicitud concreta: corregir un error, crear una página o conectar pagos.',
+			text: 'Ajustes y mejoras concretas: corregir un error, añadir una página o conectar una integración.',
 		},
 		{
 			title: 'Soporte continuo',
 			text: 'Mantenimiento y mejoras periódicas cuando sean necesarias.',
 		},
 		{
-			title: 'Presupuesto claro',
-			text: 'Antes de empezar reviso el proyecto y doy plazos y precio exactos según su estado y alcance.',
+			title: 'Proceso claro',
+			text: 'Antes de empezar reviso el proyecto y propongo plazos realistas según su estado y alcance.',
 		},
 	],
-	pricing: { label: 'Precio', value: 'Después de evaluar el proyecto' },
+	pricing: { label: 'Colaboración', value: 'Se define según la tarea' },
 	ctaTitle: '¿Tu proyecto necesita atención?',
-	ctaText: 'Cuéntame qué hay que corregir o mejorar y encontraremos la forma adecuada de avanzar.',
-	ctaButton: 'Hablar del proyecto',
+	ctaText: 'Cuéntame qué hay que corregir o actualizar y hablamos de cómo puedo ayudarte.',
+	ctaButton: 'Escríbeme',
 };
 
 export const mobileContentRu: MobileContent = {
@@ -304,10 +302,10 @@ export const mobileContentRu: MobileContent = {
 		},
 	],
 	timeline: { label: 'Сроки', value: '1,5–3 месяца' },
-	pricing: { label: 'Стоимость', value: 'Индивидуальный расчет' },
+	pricing: { label: 'Формат участия', value: 'Обсуждаем под задачу' },
 	ctaTitle: 'Есть идея мобильного продукта?',
 	ctaText: 'Обсудим аудиторию, ключевые сценарии и состав функций для первой версии приложения.',
-	ctaButton: 'Обсудить приложение',
+	ctaButton: 'Написать мне',
 };
 
 export const mobileContentEn: MobileContent = {
@@ -347,11 +345,11 @@ export const mobileContentEn: MobileContent = {
 		},
 	],
 	timeline: { label: 'Timeline', value: '1.5–3 months' },
-	pricing: { label: 'Pricing', value: 'Individual estimate' },
+	pricing: { label: 'Collaboration', value: 'Discussed per task' },
 	ctaTitle: 'Have an idea for a mobile product?',
 	ctaText:
 		'Let’s discuss your audience, key scenarios, and the feature set for the first version of the app.',
-	ctaButton: 'Discuss the app',
+	ctaButton: 'Get in touch',
 };
 
 export const mobileContentEs: MobileContent = {
@@ -391,10 +389,10 @@ export const mobileContentEs: MobileContent = {
 		},
 	],
 	timeline: { label: 'Plazos', value: '1,5–3 meses' },
-	pricing: { label: 'Precio', value: 'Presupuesto individual' },
+	pricing: { label: 'Colaboración', value: 'Se define según la tarea' },
 	ctaTitle: '¿Tienes una idea para un producto móvil?',
 	ctaText: 'Hablemos de tu audiencia, los escenarios clave y las funciones de la primera versión.',
-	ctaButton: 'Hablar de la aplicación',
+	ctaButton: 'Escríbeme',
 };
 
 export const shopsContentRu: ShopContent = {
@@ -436,10 +434,10 @@ export const shopsContentRu: ShopContent = {
 		},
 	],
 	timeline: { label: 'Сроки', value: 'от 2–3 недель' },
-	pricing: { label: 'Стоимость', value: 'Платформа выгоднее' },
+	pricing: { label: 'Подход', value: 'Платформа запускается быстрее' },
 	ctaTitle: 'Готовы запустить продажи онлайн?',
 	ctaText: 'Обсудим ассортимент, подходящую платформу и нужные интеграции для вашего магазина.',
-	ctaButton: 'Обсудить магазин',
+	ctaButton: 'Написать мне',
 };
 
 export const shopsContentEn: ShopContent = {
@@ -484,11 +482,11 @@ export const shopsContentEn: ShopContent = {
 		},
 	],
 	timeline: { label: 'Timeline', value: 'from 2–3 weeks' },
-	pricing: { label: 'Pricing', value: 'Platform is more affordable' },
+	pricing: { label: 'Approach', value: 'The platform launches faster' },
 	ctaTitle: 'Ready to start selling online?',
 	ctaText:
 		'Let’s discuss your products, the right platform, and the integrations your store needs.',
-	ctaButton: 'Discuss the store',
+	ctaButton: 'Get in touch',
 };
 
 export const shopsContentEs: ShopContent = {
@@ -533,11 +531,11 @@ export const shopsContentEs: ShopContent = {
 		},
 	],
 	timeline: { label: 'Plazos', value: 'desde 2–3 semanas' },
-	pricing: { label: 'Precio', value: 'La plataforma es más económica' },
+	pricing: { label: 'Enfoque', value: 'La plataforma se lanza más rápido' },
 	ctaTitle: '¿Listo para empezar a vender online?',
 	ctaText:
 		'Hablemos de tus productos, la plataforma adecuada y las integraciones que necesita tu tienda.',
-	ctaButton: 'Hablar de la tienda',
+	ctaButton: 'Escríbeme',
 };
 
 export const websitesContentRu: WebsiteContent = {
@@ -582,10 +580,10 @@ export const websitesContentRu: WebsiteContent = {
 		},
 	],
 	timeline: { label: 'Средний срок разработки', value: '2–6 недель' },
-	pricing: { label: 'Стоимость', value: 'Индивидуальный расчет' },
+	pricing: { label: 'Формат участия', value: 'Обсуждаем под задачу' },
 	ctaTitle: 'Есть идея или задача?',
 	ctaText: 'Обсудим, каким должен быть ваш сайт и какие задачи он будет решать.',
-	ctaButton: 'Обсудить проект',
+	ctaButton: 'Написать мне',
 };
 
 export const websitesContentEn: WebsiteContent = {
@@ -630,10 +628,10 @@ export const websitesContentEn: WebsiteContent = {
 		},
 	],
 	timeline: { label: 'Average development time', value: '2–6 weeks' },
-	pricing: { label: 'Pricing', value: 'Individual estimate' },
+	pricing: { label: 'Collaboration', value: 'Discussed per task' },
 	ctaTitle: 'Have an idea or a business task?',
 	ctaText: 'Let’s discuss what your website should look like and which tasks it should solve.',
-	ctaButton: 'Discuss the project',
+	ctaButton: 'Get in touch',
 };
 
 export const websitesContentEs: WebsiteContent = {
@@ -678,8 +676,8 @@ export const websitesContentEs: WebsiteContent = {
 		},
 	],
 	timeline: { label: 'Tiempo medio de desarrollo', value: '2–6 semanas' },
-	pricing: { label: 'Precio', value: 'Presupuesto individual' },
+	pricing: { label: 'Colaboración', value: 'Se define según la tarea' },
 	ctaTitle: '¿Tienes una idea o una tarea?',
 	ctaText: 'Hablemos de cómo debe ser tu sitio y qué objetivos debe resolver.',
-	ctaButton: 'Hablar del proyecto',
+	ctaButton: 'Escríbeme',
 };
