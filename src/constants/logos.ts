@@ -1,3 +1,4 @@
+import claudeLogo from '@assets/logos/claude-logo.svg';
 import cssLogo from '@assets/logos/css-logo.png';
 import emailLogo from '@assets/logos/email-logo.png';
 import eslintLogo from '@assets/logos/eslint-logo.svg';
@@ -40,6 +41,7 @@ const logos = {
 	postgresqlLogo,
 	reduxLogo,
 	redisLogo,
+	claudeLogo,
 };
 
 export default logos;

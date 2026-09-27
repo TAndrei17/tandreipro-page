@@ -21,6 +21,7 @@ const skillsTextRu = `Frontend, backend и мобильная разработк
 - Написание и запуск тестов (Jest)
 - Работа с системами контроля версий (Git)
 - Командная разработка с использованием GitHub и Bitbucket
+- Использование Claude для ускорения разработки и код-ревью
 
 ### Backend
 
@@ -61,6 +62,7 @@ const skillsTextEn = `Frontend, backend, and mobile development
 - Writing and running tests (Jest)
 - Working with version control systems (Git)
 - Team development using GitHub and Bitbucket
+- Using Claude to speed up development and code review
 
 ### Backend Development
 
@@ -102,6 +104,7 @@ const skillsTextEs = `Desarrollo frontend, backend y aplicaciones móviles
 - Escritura y ejecución de pruebas (Jest)
 - Trabajo con sistemas de control de versiones (Git)
 - Desarrollo en equipo utilizando GitHub y Bitbucket
+- Uso de Claude para acelerar el desarrollo y la revisión de código
 
 ### Desarrollo Backend
 

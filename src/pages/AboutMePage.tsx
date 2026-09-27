@@ -33,7 +33,8 @@ const AboutMePage = () => {
 		{ id: 7, title: 'Node.js', logo: logos.nodeLogo },
 		{ id: 8, title: 'PostgreSQL', logo: logos.postgresqlLogo },
 		{ id: 9, title: 'Redis', logo: logos.redisLogo },
-		...toolsIconsList.map((icon, index) => ({ ...icon, id: 10 + index })),
+		{ id: 10, title: 'Claude', logo: logos.claudeLogo },
+		...toolsIconsList.map((icon, index) => ({ ...icon, id: 11 + index })),
 	];
 	const summary = personalDataList.find((item) => item.id === 0);
 	const skills = personalDataList.find((item) => item.id === 1);
