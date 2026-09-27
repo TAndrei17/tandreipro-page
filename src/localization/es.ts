@@ -14,7 +14,7 @@ import {
 const es = {
 	translation: {
 		browserTabs: {
-			browserTabDefault: 'Andrei Trunkin | Desarrollador Frontend',
+			browserTabDefault: 'Andrei Trunkin | Desarrollador Full Stack',
 			browserTabPageNotFound: 'Esta página no existe',
 			browserTabServices: 'Andrei Trunkin | Servicios',
 			browserTabAboutMe: 'Andrei Trunkin | Sobre mí',
@@ -25,11 +25,11 @@ const es = {
 		},
 
 		seoDescriptions: {
-			home: 'Desarrollo frontend, lógica backend e integración con PostgreSQL para sitios web y aplicaciones con React, React Native y TypeScript.',
+			home: 'Desarrollador Full Stack: sitios web y aplicaciones con React, servidores con Node.js y Express e integración con PostgreSQL y Redis.',
 			services:
 				'Sitios web, tiendas online, aplicaciones móviles y soporte técnico con tecnologías actuales.',
 			about:
-				'Conoce a Andrei Trunkin, desarrollador frontend con experiencia práctica en lógica backend, APIs y PostgreSQL.',
+				'Conoce a Andrei Trunkin, desarrollador Full Stack que trabaja con React, Node.js, Express, PostgreSQL y Redis.',
 			contact:
 				'Contacta con Andrei Trunkin para hablar sobre un sitio web, una aplicación móvil o una integración backend.',
 			questions:

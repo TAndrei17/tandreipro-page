@@ -14,7 +14,7 @@ import {
 const ru = {
 	translation: {
 		browserTabs: {
-			browserTabDefault: 'Андрей Трунькин | Фронтенд Разработчик',
+			browserTabDefault: 'Андрей Трунькин | Full Stack-разработчик',
 			browserTabPageNotFound: 'Эта страница не существует',
 			browserTabServices: 'Андрей Трунькин | Услуги',
 			browserTabAboutMe: 'Андрей Трунькин | Обо мне',
@@ -25,11 +25,11 @@ const ru = {
 		},
 
 		seoDescriptions: {
-			home: 'Frontend-разработка, серверная логика и интеграция с PostgreSQL для сайтов и мобильных приложений на React, React Native и TypeScript.',
+			home: 'Full Stack-разработчик: сайты и приложения на React, серверная логика на Node.js и Express, работа с PostgreSQL и Redis.',
 			services:
 				'Сайты, интернет-магазины, мобильные приложения и техническая поддержка на актуальных технологиях.',
 			about:
-				'Подробнее об Андрее Трунькине, frontend-разработчике с практическим опытом серверной логики, API и PostgreSQL.',
+				'Подробнее об Андрее Трунькине, Full Stack-разработчике, работающем с React, Node.js, Express, PostgreSQL и Redis.',
 			contact:
 				'Свяжитесь с Андреем Трунькиным, чтобы обсудить сайт, мобильное приложение или серверную интеграцию.',
 			questions: 'Публичные вопросы и ответы о frontend, backend, сайтах и мобильных приложениях.',
