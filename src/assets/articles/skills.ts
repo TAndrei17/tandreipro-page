@@ -91,6 +91,12 @@ const skillsTextEs = `Desarrollo frontend, backend y aplicaciones móviles
 - Trabajo con navegación y animaciones en aplicaciones
 - Herramientas modernas de compilación y optimización (Vite)
 
+### Desarrollo Backend
+
+- Desarrollo de lógica de servidor y APIs con Node.js y Express
+- Trabajo con PostgreSQL y Redis
+- Uso de WebSocket para funcionalidades en tiempo real
+
 ### Desarrollo Móvil
 
 - Desarrollo de aplicaciones móviles multiplataforma con React Native
@@ -105,12 +111,6 @@ const skillsTextEs = `Desarrollo frontend, backend y aplicaciones móviles
 - Trabajo con sistemas de control de versiones (Git)
 - Desarrollo en equipo utilizando GitHub y Bitbucket
 - Uso de Claude para acelerar el desarrollo y la revisión de código
-
-### Desarrollo Backend
-
-- Desarrollo de lógica de servidor y APIs con Node.js y Express
-- Trabajo con PostgreSQL y Redis
-- Uso de WebSocket para funcionalidades en tiempo real
 
 ### DevOps y Despliegue
 
