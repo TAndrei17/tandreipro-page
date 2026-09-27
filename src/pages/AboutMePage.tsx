@@ -45,6 +45,10 @@ const AboutMePage = () => {
 		<div className="about-page" style={{ paddingTop: siteHeaderHeight }}>
 			<main>
 				<section className="about-hero">
+					<div className="about-hero-media">
+						<img src={images.andreiOffice} alt={t('personal.heroPhotoAlt')} />
+						<div className="about-hero-scrim" aria-hidden="true" />
+					</div>
 					<div className="about-hero-content">
 						<span className="about-eyebrow">{t('appHeader.aboutMe')}</span>
 						<h1>{t('appHeader.aboutMe')}</h1>
@@ -53,9 +57,6 @@ const AboutMePage = () => {
 							{t('appHeader.contact')}
 							<span aria-hidden="true">→</span>
 						</Link>
-					</div>
-					<div className="about-portrait-frame">
-						<img src={images.tandrei} alt={t('appHeader.logoAlt')} />
 					</div>
 				</section>
 

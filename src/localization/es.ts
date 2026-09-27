@@ -141,6 +141,7 @@ const es = {
 		},
 
 		personal: {
+			heroPhotoAlt: 'Andrei Trunkin trabajando con un portátil en la oficina',
 			summaryTitle: 'Resumen profesional',
 			summaryDesc: summaryTextEs,
 			skillsTitle: 'Habilidades',

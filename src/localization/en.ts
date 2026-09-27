@@ -146,6 +146,7 @@ const en = {
 		},
 
 		personal: {
+			heroPhotoAlt: 'Andrei Trunkin working on a laptop in the office',
 			summaryTitle: 'Professional Summary',
 			summaryDesc: summaryTextEn,
 			skillsTitle: 'Skills',

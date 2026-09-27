@@ -150,6 +150,7 @@ const ru = {
 		},
 
 		personal: {
+			heroPhotoAlt: 'Андрей Трунькин работает за ноутбуком в офисе',
 			summaryTitle: 'Профессиональное резюме',
 			summaryDesc: summaryTextRu,
 			skillsTitle: 'Навыки',
