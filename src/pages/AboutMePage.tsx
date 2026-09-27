@@ -7,6 +7,7 @@ import getPersonalSections from '@constants/getPersonalSections';
 import getTechStackIcons, { type StackIcon } from '@constants/getTechStackIcons';
 import getToolIcons from '@constants/getToolIcons';
 import images from '@constants/images';
+import logos from '@constants/logos';
 import { CONTACT_PAGE_PATH, LEGAL_PAGE_PATH } from '@constants/routes';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
 import './styles/CommonStyles.css';
@@ -27,11 +28,12 @@ const AboutMePage = () => {
 	const toolsIconsList = getToolIcons();
 	const unifiedTechStack: StackIcon[] = [
 		...techStackIconList,
-		{ id: 5, title: 'React Native' },
-		{ id: 6, title: 'Redux / Redux Toolkit' },
-		{ id: 7, title: 'Node.js' },
-		{ id: 8, title: 'PostgreSQL' },
-		...toolsIconsList.map((icon, index) => ({ ...icon, id: 9 + index })),
+		{ id: 5, title: 'React Native', logo: logos.reactLogo },
+		{ id: 6, title: 'Redux / Redux Toolkit', logo: logos.reduxLogo },
+		{ id: 7, title: 'Node.js', logo: logos.nodeLogo },
+		{ id: 8, title: 'PostgreSQL', logo: logos.postgresqlLogo },
+		{ id: 9, title: 'Redis', logo: logos.redisLogo },
+		...toolsIconsList.map((icon, index) => ({ ...icon, id: 10 + index })),
 	];
 	const summary = personalDataList.find((item) => item.id === 0);
 	const skills = personalDataList.find((item) => item.id === 1);
