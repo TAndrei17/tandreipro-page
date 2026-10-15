@@ -6,7 +6,7 @@ applyTo: "src/**/*.tsx, src/**/*.css"
 
 # React UI
 
-- Follow nearby component, import, naming, and CSS organization patterns. Search the relevant feature area before adding a component or hook.
+- Before adding a component or hook, search `src/` for existing implementations to reuse or extend. Follow nearby component, import, naming, and CSS organization patterns.
 - Preserve existing responsive behavior. Keep styles in the project's CSS files; do not add CSS-in-JS or Tailwind.
 - Give each form control an associated visible label or accessible name. Add descriptive `alt` text to meaningful images and `alt=""` to decorative images.
 - Keep TypeScript types precise and avoid introducing `any`. Use English camelCase for variables/functions and PascalCase for React components.
