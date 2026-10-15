@@ -1,9 +1,7 @@
 ---
 name: Localization
 description: 'Use when adding or changing user-facing text, translation keys, or supported languages.'
-applyTo:
-  - src/localization/**
-  - src/**/*.tsx
+applyTo: "src/localization/**, src/**/*.tsx"
 ---
 
 # Localization

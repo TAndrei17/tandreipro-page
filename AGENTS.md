@@ -15,6 +15,15 @@ These instructions apply only to the `page-atrunkin` repository.
 - Preserve user changes. Do not commit, push, or create branches unless explicitly requested.
 - Do not run global lint/build checks for small changes. Use scripts defined in `package.json`; ask before running them after a large change unless the user requested validation.
 - Keep repository documentation in English unless the user requests another language.
+- Before adding a component, hook, utility, or Redux slice, search `src/` for existing code to reuse or extend.
+
+## Security
+
+- Treat all `VITE_*` values as public: never put secrets, credentials, private API keys, or server-only configuration in frontend code, environment variables, logs, or build output.
+- Never store authentication tokens or sensitive session data in `localStorage` or `sessionStorage`. For cookie-based authentication, rely on server-managed cookies with appropriate `HttpOnly`, `Secure`, and `SameSite` protections; do not weaken the existing API client's credential behavior.
+- Do not render untrusted content as HTML. Avoid `dangerouslySetInnerHTML`; if HTML rendering is necessary, sanitize it with an established sanitizer before rendering.
+- Validate form input with the project's existing Formik/Yup patterns for usability, but never treat client-side validation as a security boundary. The server must validate input and enforce authorization.
+- Keep dependency changes on Yarn and check dependencies for known vulnerabilities using the project's available Yarn audit workflow, especially after dependency changes and before releases.
 
 ## Focused Guidance
 
