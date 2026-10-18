@@ -1,6 +1,6 @@
 import { Form, Formik, Field, ErrorMessage } from 'formik';
-import { useRef, useState } from 'react';
-import ReCAPTCHA from 'react-google-recaptcha';
+import { lazy, Suspense, useRef, useState } from 'react';
+import type ReCAPTCHAType from 'react-google-recaptcha';
 import { useTranslation } from 'react-i18next';
 
 import type { QuestionUserRequest } from '@models/Question';
@@ -10,6 +10,8 @@ import createAlert from '@utils/createAlert';
 import { createQuestionValidationSchema } from '@utils/validation/createContactFormValidation';
 import './ContactFormStyle.css';
 
+const ReCAPTCHA = lazy(() => import('react-google-recaptcha'));
+
 const ENV_DEV = import.meta.env.VITE_APP_ENV === 'development';
 
 const SITE_KEY = ENV_DEV
@@ -18,7 +20,7 @@ const SITE_KEY = ENV_DEV
 
 const ContactForm = () => {
 	const dispatch = useAppDispatch();
-	const recaptchaRef = useRef<ReCAPTCHA>(null);
+	const recaptchaRef = useRef<ReCAPTCHAType>(null);
 	const { t, i18n } = useTranslation('translation', { keyPrefix: 'contact.form' });
 	const { t: tvalidation } = useTranslation('translation', { keyPrefix: 'contact.errors' });
 	const lng = i18n.language;
@@ -152,15 +154,17 @@ const ContactForm = () => {
 
 					<div className="form-group">
 						{showCaptcha && (
-							<ReCAPTCHA
-								key={lng}
-								ref={recaptchaRef}
-								sitekey={SITE_KEY}
-								size="normal"
-								hl={lng}
-								badge={'bottomleft'}
-								onChange={handleCaptchaChange}
-							/>
+							<Suspense fallback={null}>
+								<ReCAPTCHA
+									key={lng}
+									ref={recaptchaRef}
+									sitekey={SITE_KEY}
+									size="normal"
+									hl={lng}
+									badge={'bottomleft'}
+									onChange={handleCaptchaChange}
+								/>
+							</Suspense>
 						)}
 					</div>
 				</Form>

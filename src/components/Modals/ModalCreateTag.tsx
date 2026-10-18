@@ -9,6 +9,8 @@ import { createTag } from '@store/tags/services';
 import createAlert from '@utils/createAlert';
 import { createTagsCreateValidationSchema } from '@utils/validation/createTagsCreateValidation';
 
+Modal.setAppElement('#root');
+
 const customStyles = {
 	overlay: {
 		backgroundColor: 'rgba(15, 23, 42, 0.4)',

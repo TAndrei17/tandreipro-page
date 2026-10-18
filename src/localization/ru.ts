@@ -4,12 +4,6 @@ import { positionTextRu } from '@assets/articles/position';
 import { skillsTextRu } from '@assets/articles/skills';
 import { summaryTextRu } from '@assets/articles/summary';
 import { teamWorkTextRu } from '@assets/articles/team';
-import {
-	maintenanceContentRu,
-	mobileContentRu,
-	shopsContentRu,
-	websitesContentRu,
-} from '@assets/articles/websites';
 
 const ru = {
 	translation: {
@@ -40,6 +34,7 @@ const ru = {
 
 		pageNotFoundDescription: 'Страница, которую вы ищете, не существует или перемещена',
 		toHome: 'Вернуться на главную',
+		loading: 'Загрузка...',
 
 		open: 'Открыть',
 
@@ -68,10 +63,6 @@ const ru = {
 		services: {
 			showMore: 'Подробнее',
 			hideMore: 'Скрыть',
-			webContent: websitesContentRu,
-			shopContent: shopsContentRu,
-			mobileContent: mobileContentRu,
-			maintenanceContent: maintenanceContentRu,
 			web: 'Сайты',
 			shop: 'Онлайн-магазины',
 			mobile: 'Мобильные приложения',

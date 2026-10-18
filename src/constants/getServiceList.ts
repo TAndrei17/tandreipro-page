@@ -31,7 +31,7 @@ export type Service = {
 	image?: string;
 };
 
-const getServiceList = (t: TFunction): Service[] => [
+const getServiceList = (t: TFunction, includeDetailedContent = true): Service[] => [
 	{
 		id: 0,
 		anchor: 'web',
@@ -40,7 +40,9 @@ const getServiceList = (t: TFunction): Service[] => [
 		description: '',
 		homeSubtitle: t('entites.webSectionSubtitle'),
 		homeDescription: t('entites.webSectionDescription'),
-		content: t('services.webContent', { returnObjects: true }) as unknown as WebsiteContent,
+		content: includeDetailedContent
+			? (t('services.webContent', { returnObjects: true }) as unknown as WebsiteContent)
+			: undefined,
 		article: {
 			help: t('services.webHelp'),
 			clients: t('services.webClients'),
@@ -65,7 +67,9 @@ const getServiceList = (t: TFunction): Service[] => [
 			tasks: t('services.shopTasks'),
 			me: t('services.shopWhyMe'),
 		},
-		content: t('services.shopContent', { returnObjects: true }) as unknown as ShopContent,
+		content: includeDetailedContent
+			? (t('services.shopContent', { returnObjects: true }) as unknown as ShopContent)
+			: undefined,
 		icon: icons.onlineStore,
 		image: images.shop,
 	},
@@ -84,7 +88,9 @@ const getServiceList = (t: TFunction): Service[] => [
 			tasks: t('services.mobileTasks'),
 			me: t('services.mobileWhyMe'),
 		},
-		content: t('services.mobileContent', { returnObjects: true }) as unknown as MobileContent,
+		content: includeDetailedContent
+			? (t('services.mobileContent', { returnObjects: true }) as unknown as MobileContent)
+			: undefined,
 		icon: icons.smartphone,
 		image: images.apps,
 	},
@@ -103,9 +109,11 @@ const getServiceList = (t: TFunction): Service[] => [
 			tasks: t('services.maintenanceTasks'),
 			me: t('services.maintenanceWhyMe'),
 		},
-		content: t('services.maintenanceContent', {
-			returnObjects: true,
-		}) as unknown as MaintenanceContent,
+		content: includeDetailedContent
+			? (t('services.maintenanceContent', {
+					returnObjects: true,
+				}) as unknown as MaintenanceContent)
+			: undefined,
 		icon: icons.maintenance,
 		image: images.webSite,
 	},

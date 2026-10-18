@@ -4,12 +4,6 @@ import { positionTextEn } from '@assets/articles/position';
 import { skillsTextEn } from '@assets/articles/skills';
 import { summaryTextEn } from '@assets/articles/summary';
 import { teamWorkTextEn } from '@assets/articles/team';
-import {
-	maintenanceContentEn,
-	mobileContentEn,
-	shopsContentEn,
-	websitesContentEn,
-} from '@assets/articles/websites';
 
 const en = {
 	translation: {
@@ -41,6 +35,7 @@ const en = {
 
 		pageNotFoundDescription: 'The page you are looking for does not exist or has been moved',
 		toHome: 'Back to Home',
+		loading: 'Loading...',
 
 		open: 'Open',
 
@@ -69,10 +64,6 @@ const en = {
 		services: {
 			showMore: 'Show more',
 			hideMore: 'Hide',
-			webContent: websitesContentEn,
-			shopContent: shopsContentEn,
-			mobileContent: mobileContentEn,
-			maintenanceContent: maintenanceContentEn,
 			web: 'Websites',
 			shop: 'Online Stores',
 			mobile: 'Mobile Apps',

@@ -15,7 +15,7 @@ const HomePage = () => {
 	const { t } = useTranslation();
 	const { siteHeaderHeight } = useSiteHeaderHeight();
 	const localizedPath = useLocalizedPath();
-	const services = getServiceList(t);
+	const services = getServiceList(t, false);
 
 	useAlertCookie();
 

@@ -4,12 +4,6 @@ import { positionTextEs } from '@assets/articles/position';
 import { skillsTextEs } from '@assets/articles/skills';
 import { summaryTextEs } from '@assets/articles/summary';
 import { teamWorkTextEs } from '@assets/articles/team';
-import {
-	maintenanceContentEs,
-	mobileContentEs,
-	shopsContentEs,
-	websitesContentEs,
-} from '@assets/articles/websites';
 
 const es = {
 	translation: {
@@ -41,6 +35,7 @@ const es = {
 
 		pageNotFoundDescription: 'La página que buscas no existe o ha sido movida',
 		toHome: 'Volver al inicio',
+		loading: 'Cargando...',
 
 		open: 'Abrir',
 
@@ -69,10 +64,6 @@ const es = {
 		services: {
 			showMore: 'Ver más',
 			hideMore: 'Ocultar',
-			webContent: websitesContentEs,
-			shopContent: shopsContentEs,
-			mobileContent: mobileContentEs,
-			maintenanceContent: maintenanceContentEs,
 			web: 'Sitios web',
 			shop: 'Tiendas en línea',
 			mobile: 'Aplicaciones móviles',
