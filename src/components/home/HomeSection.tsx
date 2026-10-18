@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router';
 import ButtonRight from '@components/common/UI/ButtonRight';
 import { type ServiceAnchor } from '@constants/getServiceList';
 import { SERVICES_PAGE_PATH } from '@constants/routes';
+import useLocalizedPath from '@hooks/useLocalizedPath';
 
 type SectionType = {
 	anchor: ServiceAnchor;
@@ -30,10 +31,11 @@ const HomeSection = ({
 }: SectionType) => {
 	const { t } = useTranslation('translation', { keyPrefix: 'home' });
 	const navigate = useNavigate();
+	const localizedPath = useLocalizedPath();
 	const buttonTitle = buttonText ? buttonText : t('sectionButton');
 
 	const navigateToServices: VoidFunction = () => {
-		navigate(`${SERVICES_PAGE_PATH}#${anchor}`);
+		navigate(`${localizedPath(SERVICES_PAGE_PATH)}#${anchor}`);
 	};
 
 	return (

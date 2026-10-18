@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import QuestionPublicCard from '@components/questionsPublic/QuestionPublicCard';
 import { LEGAL_PAGE_PATH } from '@constants/routes';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
+import useLocalizedPath from '@hooks/useLocalizedPath';
 import { useAppSelector } from '@store/index';
 import { questionsPublicSelectors } from '@store/questionsPublic/selectors';
 
@@ -13,6 +14,7 @@ import './styles/QuestionsPublic.css';
 const QuestionsPublicPage = () => {
 	const { t } = useTranslation();
 	const { siteHeaderHeight } = useSiteHeaderHeight();
+	const localizedPath = useLocalizedPath();
 
 	const questions = useAppSelector(questionsPublicSelectors.selectAll);
 
@@ -47,7 +49,7 @@ const QuestionsPublicPage = () => {
 			</main>
 
 			<div className="legal-micro-link">
-				<Link to={LEGAL_PAGE_PATH}>{t('legal.title')}</Link>
+				<Link to={localizedPath(LEGAL_PAGE_PATH)}>{t('legal.title')}</Link>
 			</div>
 		</div>
 	);

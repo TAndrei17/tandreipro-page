@@ -1,7 +1,9 @@
 import { useEffect, type Dispatch, type SetStateAction } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import icons from '@constants/icons';
+import { getLocalizedPath, type Language } from '@constants/routes';
 import './Header.css';
 import useDeviceType from '@hooks/useDeviceType';
 
@@ -12,8 +14,10 @@ const Languages = ({
 	lngButtons: 'open' | 'closed';
 	setLngButtons: Dispatch<SetStateAction<'open' | 'closed'>>;
 }) => {
-	const { t, i18n } = useTranslation();
+	const { t } = useTranslation();
 	const { isMobile } = useDeviceType();
+	const location = useLocation();
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		if (lngButtons === 'open') {
@@ -22,9 +26,9 @@ const Languages = ({
 		}
 	}, [lngButtons]);
 
-	const changeLanguage = (lng: string) => {
-		localStorage.setItem('userLang', lng);
-		i18n.changeLanguage(lng);
+	const changeLanguage = (lng: Language) => {
+		const localizedPath = getLocalizedPath(location.pathname, lng);
+		navigate(`${localizedPath}${location.search}${location.hash}`);
 		setLngButtons('closed');
 	};
 

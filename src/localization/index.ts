@@ -3,21 +3,12 @@ import { initReactI18next } from 'react-i18next';
 
 import resources from './resources';
 
-const SUPPORTED_LANGS = new Set(['es', 'en', 'ru']);
+import { getLanguageFromPath } from '@constants/routes';
+
 const DEFAULT_LANG = 'es';
 
-const getInitialLang = (): string => {
-	const userLang = localStorage.getItem('userLang');
-	const systemLang = navigator.language.slice(0, 2);
-
-	if (userLang && SUPPORTED_LANGS.has(userLang)) {
-		return userLang;
-	}
-	if (SUPPORTED_LANGS.has(systemLang)) {
-		return systemLang;
-	}
-	return DEFAULT_LANG;
-};
+const getInitialLang = () =>
+	typeof window === 'undefined' ? DEFAULT_LANG : getLanguageFromPath(window.location.pathname);
 
 const i18n = i18next.createInstance();
 

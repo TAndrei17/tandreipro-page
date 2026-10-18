@@ -8,11 +8,13 @@ import { CONTACT_PAGE_PATH, LEGAL_PAGE_PATH } from '@constants/routes';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
 import { useAlertCookie } from '@hooks/useAlertCookie';
 import useDeviceType from '@hooks/useDeviceType';
+import useLocalizedPath from '@hooks/useLocalizedPath';
 
 const HomePage = () => {
 	const { isMobile } = useDeviceType();
 	const { t } = useTranslation();
 	const { siteHeaderHeight } = useSiteHeaderHeight();
+	const localizedPath = useLocalizedPath();
 	const services = getServiceList(t);
 
 	useAlertCookie();
@@ -39,7 +41,7 @@ const HomePage = () => {
 						<span className="home-contact-kicker">{t('appHeader.contact')}</span>
 						<h2>{t('home.sectionButton')}</h2>
 					</div>
-					<Link to={CONTACT_PAGE_PATH} className="home-contact-link">
+					<Link to={localizedPath(CONTACT_PAGE_PATH)} className="home-contact-link">
 						{t('appHeader.contact')}
 						<span aria-hidden="true">→</span>
 					</Link>
@@ -47,7 +49,7 @@ const HomePage = () => {
 			</main>
 
 			<div className="legal-micro-link">
-				<Link to={LEGAL_PAGE_PATH}>{t('legal.title')}</Link>
+				<Link to={localizedPath(LEGAL_PAGE_PATH)}>{t('legal.title')}</Link>
 			</div>
 		</div>
 	);

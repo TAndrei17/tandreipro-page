@@ -8,6 +8,7 @@ import ModalLogin from '@components/Modals/ModalLogIn';
 import logos from '@constants/logos';
 import { LEGAL_PAGE_PATH } from '@constants/routes';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
+import useLocalizedPath from '@hooks/useLocalizedPath';
 
 const PHONE = import.meta.env.VITE_PHONE;
 const EMAIL = import.meta.env.VITE_EMAIL;
@@ -18,6 +19,7 @@ const LINKEDIN = import.meta.env.VITE_LINKEDIN;
 const ContactPage = () => {
 	const { siteHeaderHeight } = useSiteHeaderHeight();
 	const { t } = useTranslation();
+	const localizedPath = useLocalizedPath();
 
 	return (
 		<div className="contacts-page" style={{ paddingTop: siteHeaderHeight }}>
@@ -78,7 +80,7 @@ const ContactPage = () => {
 			</main>
 
 			<div className="legal-micro-link">
-				<Link to={LEGAL_PAGE_PATH}>{t('legal.title')}</Link>
+				<Link to={localizedPath(LEGAL_PAGE_PATH)}>{t('legal.title')}</Link>
 				<ModalLogin />
 			</div>
 		</div>

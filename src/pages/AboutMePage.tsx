@@ -10,6 +10,7 @@ import images from '@constants/images';
 import logos from '@constants/logos';
 import { CONTACT_PAGE_PATH, LEGAL_PAGE_PATH } from '@constants/routes';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
+import useLocalizedPath from '@hooks/useLocalizedPath';
 import './styles/CommonStyles.css';
 
 const cleanMarkdownPreview = (text: string) =>
@@ -23,6 +24,7 @@ const cleanMarkdownPreview = (text: string) =>
 const AboutMePage = () => {
 	const { t } = useTranslation();
 	const { siteHeaderHeight } = useSiteHeaderHeight();
+	const localizedPath = useLocalizedPath();
 	const personalDataList = getPersonalSections(t);
 	const techStackIconList = getTechStackIcons();
 	const toolsIconsList = getToolIcons();
@@ -53,7 +55,9 @@ const AboutMePage = () => {
 						<span className="about-eyebrow">{t('appHeader.aboutMe')}</span>
 						<h1>{t('appHeader.aboutMe')}</h1>
 						{summary && <AboutMeSection data={summary} />}
-						<Link className="about-hero-link" to={`${CONTACT_PAGE_PATH}#contact-form`}>
+						<Link
+							className="about-hero-link"
+							to={`${localizedPath(CONTACT_PAGE_PATH)}#contact-form`}>
 							{t('appHeader.contact')}
 							<span aria-hidden="true">→</span>
 						</Link>
@@ -107,7 +111,7 @@ const AboutMePage = () => {
 						<span className="about-eyebrow">{t('appHeader.contact')}</span>
 						<h2>{t('personal.positionTitle')}</h2>
 					</div>
-					<Link to={`${CONTACT_PAGE_PATH}#contact-form`}>
+					<Link to={`${localizedPath(CONTACT_PAGE_PATH)}#contact-form`}>
 						{t('appHeader.contact')}
 						<span aria-hidden="true">→</span>
 					</Link>
@@ -115,7 +119,7 @@ const AboutMePage = () => {
 			</main>
 
 			<div className="legal-micro-link">
-				<Link to={LEGAL_PAGE_PATH}>{t('legal.title')}</Link>
+				<Link to={localizedPath(LEGAL_PAGE_PATH)}>{t('legal.title')}</Link>
 			</div>
 		</div>
 	);

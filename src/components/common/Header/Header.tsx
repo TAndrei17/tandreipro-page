@@ -17,6 +17,7 @@ import {
 import { useSiteHeaderHeight } from '@context/SettingsContext';
 import useAuthStatus from '@hooks/useAuthStatus';
 import useDeviceType from '@hooks/useDeviceType';
+import useLocalizedPath from '@hooks/useLocalizedPath';
 
 const Header = () => {
 	const { t } = useTranslation();
@@ -24,6 +25,7 @@ const Header = () => {
 	const { isMobile } = useDeviceType();
 	const auth = useAuthStatus();
 	const { setSiteHeaderHeight } = useSiteHeaderHeight();
+	const localizedPath = useLocalizedPath();
 
 	const [menu, setMenu] = useState<'open' | 'closed'>('closed');
 	const closeMenu = () => setMenu('closed');
@@ -58,10 +60,10 @@ const Header = () => {
 	}, [menu]);
 
 	const navLinks = [
-		{ to: SERVICES_PAGE_PATH, label: t('appHeader.services') },
-		{ to: ABOUT_PAGE_PATH, label: t('appHeader.aboutMe') },
-		{ to: CONTACT_PAGE_PATH, label: t('appHeader.contact') },
-		{ to: QUESTIONS_PAGE_PATH, label: t('appHeader.questionsPublic') },
+		{ to: localizedPath(SERVICES_PAGE_PATH), label: t('appHeader.services') },
+		{ to: localizedPath(ABOUT_PAGE_PATH), label: t('appHeader.aboutMe') },
+		{ to: localizedPath(CONTACT_PAGE_PATH), label: t('appHeader.contact') },
+		{ to: localizedPath(QUESTIONS_PAGE_PATH), label: t('appHeader.questionsPublic') },
 		{ to: DASHBOARD_PAGE_PATH, label: t('appHeader.dashboard') },
 	];
 
@@ -88,7 +90,7 @@ const Header = () => {
 				aria-label={t('appHeader.logoAria')}
 				title={t('appHeader.logoAria')}
 				onClick={(e) => {
-					navigate('/', { replace: true });
+					navigate(localizedPath('/'), { replace: true });
 					closeMenu();
 					e.currentTarget.blur();
 				}}>

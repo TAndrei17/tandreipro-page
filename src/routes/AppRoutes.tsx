@@ -1,19 +1,17 @@
-import { lazy } from 'react';
+import { lazy, type ReactElement } from 'react';
 import { Navigate, Routes, Route } from 'react-router-dom';
 
 import AdminRoute from '@components/common/AdminRoute';
 import {
-	ABOUT_PAGE_PATH,
-	CONTACT_PAGE_PATH,
 	DASHBOARD_PAGE_PATH,
-	LEGAL_PAGE_PATH,
 	LEGACY_ABOUT_PAGE_PATH,
 	LEGACY_CONTACT_PAGE_PATH,
 	LEGACY_LEGAL_PAGE_PATH,
 	LEGACY_QUESTIONS_PAGE_PATH,
 	LEGACY_SERVICES_PAGE_PATH,
-	QUESTIONS_PAGE_PATH,
-	SERVICES_PAGE_PATH,
+	PAGE_PATHS,
+	type Language,
+	type PublicPage,
 } from '@constants/routes';
 import AboutMePage from '@pages/AboutMePage';
 import ContactPage from '@pages/ContactPage';
@@ -28,29 +26,47 @@ import ServicesPage from '@pages/ServicesPage';
 const DashboardPage = lazy(() => import('@pages/Dashboard'));
 
 export default function AppRoutes() {
+	const pageElements: Record<PublicPage, ReactElement> = {
+		home: <HomePage />,
+		services: <ServicesPage />,
+		about: <AboutMePage />,
+		contact: <ContactPage />,
+		questions: <QuestionsPublicPage />,
+		legal: <LegalPage />,
+	};
+
 	return (
 		<Routes>
-			<Route path="/" element={<HomePage />} />
-			<Route path={SERVICES_PAGE_PATH} element={<ServicesPage />} />
-			<Route path={ABOUT_PAGE_PATH} element={<AboutMePage />} />
-			<Route path={CONTACT_PAGE_PATH} element={<ContactPage />} />
-			<Route path={QUESTIONS_PAGE_PATH} element={<QuestionsPublicPage />} />
-			<Route path={LEGAL_PAGE_PATH} element={<LegalPage />} />
+			{(Object.keys(PAGE_PATHS) as Language[]).flatMap((language) =>
+				(Object.keys(PAGE_PATHS[language]) as PublicPage[]).map((page) => (
+					<Route
+						key={PAGE_PATHS[language][page]}
+						path={PAGE_PATHS[language][page]}
+						element={pageElements[page]}
+					/>
+				))
+			)}
 
 			<Route
 				path={LEGACY_SERVICES_PAGE_PATH}
-				element={<Navigate to={SERVICES_PAGE_PATH} replace />}
+				element={<Navigate to={PAGE_PATHS.es.services} replace />}
 			/>
-			<Route path={LEGACY_ABOUT_PAGE_PATH} element={<Navigate to={ABOUT_PAGE_PATH} replace />} />
+			<Route
+				path={LEGACY_ABOUT_PAGE_PATH}
+				element={<Navigate to={PAGE_PATHS.es.about} replace />}
+			/>
 			<Route
 				path={LEGACY_CONTACT_PAGE_PATH}
-				element={<Navigate to={CONTACT_PAGE_PATH} replace />}
+				element={<Navigate to={PAGE_PATHS.es.contact} replace />}
 			/>
 			<Route
 				path={LEGACY_QUESTIONS_PAGE_PATH}
-				element={<Navigate to={QUESTIONS_PAGE_PATH} replace />}
+				element={<Navigate to={PAGE_PATHS.es.questions} replace />}
 			/>
-			<Route path={LEGACY_LEGAL_PAGE_PATH} element={<Navigate to={LEGAL_PAGE_PATH} replace />} />
+			<Route
+				path={LEGACY_LEGAL_PAGE_PATH}
+				element={<Navigate to={PAGE_PATHS.es.legal} replace />}
+			/>
 			<Route path="*" element={<NotFoundPage />} />
 
 			<Route

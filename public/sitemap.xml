@@ -1,39 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://tandrei.pro/</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tandrei.pro/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tandrei.pro/en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tandrei.pro/ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tandrei.pro/" />
+  </url>
+  <url>
+    <loc>https://tandrei.pro/en</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tandrei.pro/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tandrei.pro/en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tandrei.pro/ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tandrei.pro/" />
+  </url>
+  <url>
+    <loc>https://tandrei.pro/ru</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tandrei.pro/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tandrei.pro/en" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tandrei.pro/ru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tandrei.pro/" />
   </url>
   <url>
     <loc>https://tandrei.pro/desarrollo-web-aplicaciones</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tandrei.pro/desarrollo-web-aplicaciones" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tandrei.pro/en/web-application-development" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tandrei.pro/ru/razrabotka-veb-prilozheniy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tandrei.pro/desarrollo-web-aplicaciones" />
+  </url>
+  <url>
+    <loc>https://tandrei.pro/en/web-application-development</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tandrei.pro/desarrollo-web-aplicaciones" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tandrei.pro/en/web-application-development" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tandrei.pro/ru/razrabotka-veb-prilozheniy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tandrei.pro/desarrollo-web-aplicaciones" />
+  </url>
+  <url>
+    <loc>https://tandrei.pro/ru/razrabotka-veb-prilozheniy</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tandrei.pro/desarrollo-web-aplicaciones" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tandrei.pro/en/web-application-development" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tandrei.pro/ru/razrabotka-veb-prilozheniy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tandrei.pro/desarrollo-web-aplicaciones" />
   </url>
   <url>
     <loc>https://tandrei.pro/sobre-mi</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tandrei.pro/sobre-mi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tandrei.pro/en/about-me" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tandrei.pro/ru/o-sebe" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tandrei.pro/sobre-mi" />
+  </url>
+  <url>
+    <loc>https://tandrei.pro/en/about-me</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tandrei.pro/sobre-mi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tandrei.pro/en/about-me" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tandrei.pro/ru/o-sebe" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tandrei.pro/sobre-mi" />
+  </url>
+  <url>
+    <loc>https://tandrei.pro/ru/o-sebe</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tandrei.pro/sobre-mi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tandrei.pro/en/about-me" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tandrei.pro/ru/o-sebe" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tandrei.pro/sobre-mi" />
   </url>
   <url>
     <loc>https://tandrei.pro/contacto</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tandrei.pro/contacto" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tandrei.pro/en/contact" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tandrei.pro/ru/kontakt" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tandrei.pro/contacto" />
   </url>
   <url>
-    <loc>https://tandrei.pro/aviso-legal</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://tandrei.pro/en/contact</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tandrei.pro/contacto" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tandrei.pro/en/contact" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tandrei.pro/ru/kontakt" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tandrei.pro/contacto" />
+  </url>
+  <url>
+    <loc>https://tandrei.pro/ru/kontakt</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tandrei.pro/contacto" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tandrei.pro/en/contact" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tandrei.pro/ru/kontakt" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tandrei.pro/contacto" />
   </url>
   <url>
     <loc>https://tandrei.pro/preguntas</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tandrei.pro/preguntas" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tandrei.pro/en/questions" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tandrei.pro/ru/voprosy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tandrei.pro/preguntas" />
+  </url>
+  <url>
+    <loc>https://tandrei.pro/en/questions</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tandrei.pro/preguntas" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tandrei.pro/en/questions" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tandrei.pro/ru/voprosy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tandrei.pro/preguntas" />
+  </url>
+  <url>
+    <loc>https://tandrei.pro/ru/voprosy</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tandrei.pro/preguntas" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tandrei.pro/en/questions" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tandrei.pro/ru/voprosy" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tandrei.pro/preguntas" />
   </url>
 </urlset>

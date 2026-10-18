@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 
 import { CONTACT_PAGE_PATH } from '@constants/routes';
+import useLocalizedPath from '@hooks/useLocalizedPath';
 
 type ServiceCtaProps = {
 	title: string;
@@ -8,17 +9,21 @@ type ServiceCtaProps = {
 	button: string;
 };
 
-const ServiceCta = ({ title, text, button }: ServiceCtaProps) => (
-	<div className={'service-cta'}>
-		<div>
-			<h3>{title}</h3>
-			<p>{text}</p>
+const ServiceCta = ({ title, text, button }: ServiceCtaProps) => {
+	const localizedPath = useLocalizedPath();
+
+	return (
+		<div className={'service-cta'}>
+			<div>
+				<h3>{title}</h3>
+				<p>{text}</p>
+			</div>
+			<Link className={'service-cta-link'} to={`${localizedPath(CONTACT_PAGE_PATH)}#contact-form`}>
+				{button}
+				<span aria-hidden="true">→</span>
+			</Link>
 		</div>
-		<Link className={'service-cta-link'} to={`${CONTACT_PAGE_PATH}#contact-form`}>
-			{button}
-			<span aria-hidden="true">→</span>
-		</Link>
-	</div>
-);
+	);
+};
 
 export default ServiceCta;

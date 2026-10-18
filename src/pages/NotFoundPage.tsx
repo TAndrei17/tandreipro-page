@@ -4,9 +4,11 @@ import './styles/NotFoundPage.css';
 import { Link } from 'react-router-dom';
 
 import { LEGAL_PAGE_PATH } from '@constants/routes';
+import useLocalizedPath from '@hooks/useLocalizedPath';
 
 const NotFoundPage = () => {
 	const { t } = useTranslation();
+	const localizedPath = useLocalizedPath();
 
 	return (
 		<div>
@@ -21,13 +23,13 @@ const NotFoundPage = () => {
 
 				<p className="not-found__desc">{t('pageNotFoundDescription')}</p>
 
-				<NavLink to="/" replace className="not-found__button">
+				<NavLink to={localizedPath('/')} replace className="not-found__button">
 					{t('toHome')}
 				</NavLink>
 			</main>
 
 			<div className="legal-micro-link">
-				<Link to={LEGAL_PAGE_PATH}>{t('legal.title')}</Link>
+				<Link to={localizedPath(LEGAL_PAGE_PATH)}>{t('legal.title')}</Link>
 			</div>
 		</div>
 	);

@@ -8,11 +8,13 @@ import getServiceList, { type Service } from '@constants/getServiceList';
 import { LEGAL_PAGE_PATH } from '@constants/routes';
 import { useSiteHeaderHeight } from '@context/SettingsContext';
 import useDeviceType from '@hooks/useDeviceType';
+import useLocalizedPath from '@hooks/useLocalizedPath';
 
 const ServicesPage = () => {
 	const { t } = useTranslation();
 	const { isMobile } = useDeviceType();
 	const { siteHeaderHeight } = useSiteHeaderHeight();
+	const localizedPath = useLocalizedPath();
 	const services: Service[] = useMemo(() => getServiceList(t), [t]);
 	const [activeAnchor, setActiveAnchor] = useState(services[0]?.anchor);
 
@@ -87,7 +89,7 @@ const ServicesPage = () => {
 			</main>
 
 			<div className="legal-micro-link">
-				<Link to={LEGAL_PAGE_PATH}>{t('legal.title')}</Link>
+				<Link to={localizedPath(LEGAL_PAGE_PATH)}>{t('legal.title')}</Link>
 			</div>
 		</div>
 	);
