@@ -47,6 +47,24 @@
 	font-weight: var(--fw-semibold);
 }
 
+.sidebar a .dashboard-nav-count {
+	display: inline;
+	padding: 0;
+	color: inherit;
+	font-size: 0.85em;
+	font-family: inherit;
+	font-weight: inherit;
+	letter-spacing: inherit;
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+	cursor: inherit;
+	transition: none;
+}
+
+.sidebar a[href='#questions'] {
+	white-space: nowrap;
+}
+
 @media (prefers-color-scheme: dark) {
 	.sidebar {
 		border-right-color: #1e293b;
@@ -92,5 +110,8 @@
 	.sidebar span {
 		padding: 0.5rem 0.25rem;
 		font-size: 0.8rem;
+	}
+	.sidebar a .dashboard-nav-count {
+		font-size: 0.72em;
 	}
 }

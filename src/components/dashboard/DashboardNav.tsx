@@ -3,7 +3,8 @@ import { useTranslation } from 'react-i18next';
 
 import { useSiteHeaderHeight } from '@context/SettingsContext';
 import './styles/DashboardNav.css';
-import { useAppDispatch } from '@store/index';
+import { useAppDispatch, useAppSelector } from '@store/index';
+import { questionsAdminSelectors } from '@store/questionsAdmin/selectors';
 import { logout } from '@store/user/services';
 import createAlert from '@utils/createAlert';
 
@@ -15,6 +16,7 @@ const DashboardNav = ({
 	setActive: Dispatch<SetStateAction<number>>;
 }) => {
 	const dispatch = useAppDispatch();
+	const questions = useAppSelector(questionsAdminSelectors.selectAll);
 	const { siteHeaderHeight } = useSiteHeaderHeight();
 	const { t } = useTranslation('translation', { keyPrefix: 'dashboard.nav' });
 	const { t: tContact } = useTranslation('translation', { keyPrefix: 'contact.modal' });
@@ -29,6 +31,7 @@ const DashboardNav = ({
 		{ to: '#tags', label: t('tags') },
 		{ to: 'logout', label: tContact('logout') },
 	];
+	const unapprovedQuestionsCount = questions.filter((question) => !question.approved).length;
 
 	const onLogout = async () => {
 		try {
@@ -59,6 +62,12 @@ const DashboardNav = ({
 								onClick={() => setActiveTab(index)}
 								className={active === index ? 'active' : ''}>
 								{item.label}
+								{item.to === '#questions' && (
+									<span className="dashboard-nav-count">
+										{' '}
+										{questions.length} ({unapprovedQuestionsCount})
+									</span>
+								)}
 							</a>
 						</li>
 					);
