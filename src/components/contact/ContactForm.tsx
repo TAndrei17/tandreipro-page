@@ -1,8 +1,9 @@
+import type { TurnstileInstance } from '@marsidev/react-turnstile';
 import { Form, Formik, Field, ErrorMessage } from 'formik';
-import { lazy, Suspense, useRef, useState } from 'react';
-import type ReCAPTCHAType from 'react-google-recaptcha';
+import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
+import TurnstileWidget from '@components/common/UI/TurnstileWidget';
 import type { QuestionUserRequest } from '@models/Question';
 import { useAppDispatch } from '@store/index';
 import { postQuestionUser } from '@store/questionUser/services';
@@ -10,23 +11,13 @@ import createAlert from '@utils/createAlert';
 import { createQuestionValidationSchema } from '@utils/validation/createContactFormValidation';
 import './ContactFormStyle.css';
 
-const ReCAPTCHA = lazy(() => import('react-google-recaptcha'));
-
-const ENV_DEV = import.meta.env.VITE_APP_ENV === 'development';
-
-const SITE_KEY = ENV_DEV
-	? (import.meta.env.VITE_SITE_KEY_DEV as string)
-	: (import.meta.env.VITE_SITE_KEY as string);
-
 const ContactForm = () => {
 	const dispatch = useAppDispatch();
-	const recaptchaRef = useRef<ReCAPTCHAType>(null);
-	const { t, i18n } = useTranslation('translation', { keyPrefix: 'contact.form' });
+	const turnstileRef = useRef<TurnstileInstance>(null);
+	const { t } = useTranslation('translation', { keyPrefix: 'contact.form' });
 	const { t: tvalidation } = useTranslation('translation', { keyPrefix: 'contact.errors' });
-	const lng = i18n.language;
 
-	const [showCaptcha, setShowCaptcha] = useState(false);
-	const [captchaValue, setCaptchaValue] = useState<string | null>(null);
+	const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
 	const initialValues: QuestionUserRequest = {
 		name: '',
@@ -37,14 +28,8 @@ const ContactForm = () => {
 
 	const validationSchema = createQuestionValidationSchema(tvalidation);
 
-	const handleCaptchaChange = (value: string | null) => {
-		setCaptchaValue(value);
-	};
-
 	const onSubmit = async (values: QuestionUserRequest, { setSubmitting, resetForm }: any) => {
-		if (!captchaValue) {
-			// Если капча ещё не пройдена, показать её
-			setShowCaptcha(true);
+		if (!turnstileToken) {
 			return;
 		}
 
@@ -57,7 +42,7 @@ const ContactForm = () => {
 			await dispatch(
 				postQuestionUser({
 					...values,
-					captchaToken: captchaValue,
+					turnstileToken,
 				})
 			).unwrap();
 
@@ -67,9 +52,8 @@ const ContactForm = () => {
 			createAlert('error', tvalidation('submitFail'));
 		} finally {
 			setSubmitting(false);
-			recaptchaRef.current?.reset();
-			setCaptchaValue(null);
-			setShowCaptcha(false);
+			turnstileRef.current?.reset();
+			setTurnstileToken(null);
 		}
 	};
 
@@ -148,25 +132,13 @@ const ContactForm = () => {
 						</Field>
 					</div>
 
-					<button type="submit" className="form-submit" disabled={isSubmitting}>
-						{showCaptcha ? t('submit') : t('check')}
-					</button>
-
 					<div className="form-group">
-						{showCaptcha && (
-							<Suspense fallback={null}>
-								<ReCAPTCHA
-									key={lng}
-									ref={recaptchaRef}
-									sitekey={SITE_KEY}
-									size="normal"
-									hl={lng}
-									badge={'bottomleft'}
-									onChange={handleCaptchaChange}
-								/>
-							</Suspense>
-						)}
+						<TurnstileWidget ref={turnstileRef} onTokenChange={setTurnstileToken} />
 					</div>
+
+					<button type="submit" className="form-submit" disabled={isSubmitting || !turnstileToken}>
+						{t('submit')}
+					</button>
 				</Form>
 			)}
 		</Formik>

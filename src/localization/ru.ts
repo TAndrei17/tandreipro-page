@@ -56,7 +56,7 @@ const ru = {
 
 		home: {
 			sectionButton: 'Узнать больше',
-			cookieAlert: 'Сайт использует cookies для защиты от ботов (reCAPTCHA)',
+			cookieAlert: 'Сайт использует cookies для защиты от ботов (Cloudflare Turnstile)',
 			cookieApprove: 'Хорошо',
 		},
 
@@ -169,7 +169,6 @@ const ru = {
 				question: 'Вопрос',
 				consent:
 					'Я даю согласие на обработку моих персональных данных и публикацию имени и вопроса на этом сайте',
-				check: 'Пройти проверку',
 
 				submit: 'Отправить',
 				submitSuccess: 'Ваш вопрос успешно отравлен',

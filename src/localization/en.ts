@@ -57,7 +57,7 @@ const en = {
 
 		home: {
 			sectionButton: 'Learn More',
-			cookieAlert: 'This site uses cookies to protect against bots (reCAPTCHA)',
+			cookieAlert: 'This site uses cookies to protect against bots (Cloudflare Turnstile)',
 			cookieApprove: 'Good',
 		},
 
@@ -165,7 +165,6 @@ const en = {
 				question: 'Question',
 				consent:
 					'I give my consent for the processing of my personal data and the publication of my name and question on this website',
-				check: "Verify I'm not a robot",
 
 				submit: 'Submit',
 				submitSuccess: 'Your question has been successfully submitted',

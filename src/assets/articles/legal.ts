@@ -52,9 +52,9 @@ You may request the **deletion or correction of your data** at any time by conta
 
 ## Cookies
 
-This website uses **Google reCAPTCHA v2** to protect the contact form from spam.
+This website uses **Cloudflare Turnstile** to protect the contact form and the login form from spam and automated abuse.
 
-reCAPTCHA may set cookies and collect technical data (IP, browser information) solely to verify that the form is submitted by a human.
+Turnstile may use cookies or similar browser storage and collect technical data (IP address, browser and device information) solely to verify that the form is submitted by a human. This data is processed by **Cloudflare, Inc.** on the basis of **legitimate interest** (Article **6.1.f GDPR**).
 
 Data is not used for marketing or newsletters.
 
@@ -148,9 +148,9 @@ Puede solicitar en cualquier momento la **eliminación o corrección de sus dato
 
 ## Cookies
 
-Este sitio web utiliza **Google reCAPTCHA v2** para proteger el formulario de contacto contra el spam.
+Este sitio web utiliza **Cloudflare Turnstile** para proteger el formulario de contacto y el formulario de inicio de sesión contra el spam y el uso automatizado abusivo.
 
-reCAPTCHA puede establecer cookies y recopilar datos técnicos (IP, información del navegador) únicamente para verificar que el formulario lo completa un ser humano.
+Turnstile puede utilizar cookies o almacenamiento similar del navegador y recopilar datos técnicos (dirección IP, información del navegador y del dispositivo) únicamente para verificar que el formulario lo completa un ser humano. Estos datos son tratados por **Cloudflare, Inc.** sobre la base del **interés legítimo** (artículo **6.1.f del GDPR**).
 
 Los datos no se utilizan para marketing o boletines.
 
@@ -244,9 +244,9 @@ const legalTextRu = `
 
 ## Cookies
 
-Этот сайт использует **Google reCAPTCHA v2** для защиты формы обратной связи от спама.
+Этот сайт использует **Cloudflare Turnstile** для защиты формы обратной связи и формы входа от спама и автоматических злоупотреблений.
 
-reCAPTCHA может устанавливать cookies и собирать технические данные (IP, браузерные данные) исключительно для проверки, что форму заполняет человек.
+Turnstile может использовать cookies или аналогичное хранилище браузера и собирать технические данные (IP-адрес, данные о браузере и устройстве) исключительно для проверки, что форму заполняет человек. Эти данные обрабатывает **Cloudflare, Inc.** на основании **законного интереса** (статья **6.1.f GDPR**).
 
 Данные не используются для маркетинга или рассылок.
 

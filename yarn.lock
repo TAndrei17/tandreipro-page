@@ -612,6 +612,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@marsidev/react-turnstile@npm:^1.6.3":
+  version: 1.6.3
+  resolution: "@marsidev/react-turnstile@npm:1.6.3"
+  peerDependencies:
+    react: ^17.0.2 || ^18.0.0 || ^19.0
+    react-dom: ^17.0.2 || ^18.0.0 || ^19.0
+  checksum: 10c0/814ed76639207b0841849d7e387730b93a606b88ec23046d6b94848627f5b28b360be3ebcb3b7ce60c722072fc0418dff2f7286dedde65b448ed4ac56b8d66e4
+  languageName: node
+  linkType: hard
+
 "@napi-rs/wasm-runtime@npm:^0.2.11":
   version: 0.2.12
   resolution: "@napi-rs/wasm-runtime@npm:0.2.12"
@@ -1017,15 +1027,6 @@ __metadata:
   peerDependencies:
     "@types/react": ^19.2.0
   checksum: 10c0/b486ebe0f4e2fb35e2e108df1d8fc0927ca5d6002d5771e8a739de11239fe62d0e207c50886185253c99eb9dedfeeb956ea7429e5ba17f6693c7acb4c02f8cd1
-  languageName: node
-  linkType: hard
-
-"@types/react-google-recaptcha@npm:^2.1.9":
-  version: 2.1.9
-  resolution: "@types/react-google-recaptcha@npm:2.1.9"
-  dependencies:
-    "@types/react": "npm:*"
-  checksum: 10c0/12b1806ef4083524cf108fb7c83f7438feb5746e672af2589a2645de26d2ac1ed0f4b687a1e7d482f51a92a75850c074a8696396c1024a3f80e8902a780d4f95
   languageName: node
   linkType: hard
 
@@ -4295,11 +4296,11 @@ __metadata:
     "@eslint/js": "npm:^9.39.4"
     "@fontsource-variable/inter": "npm:^5.3.0"
     "@fontsource-variable/space-grotesk": "npm:^5.3.0"
+    "@marsidev/react-turnstile": "npm:^1.6.3"
     "@reduxjs/toolkit": "npm:^2.11.2"
     "@types/node": "npm:^25.3.5"
     "@types/react": "npm:^19.2.14"
     "@types/react-dom": "npm:^19.2.3"
-    "@types/react-google-recaptcha": "npm:^2.1.9"
     "@types/react-modal": "npm:^3.16.3"
     "@types/react-redux": "npm:^7.1.34"
     "@typescript-eslint/eslint-plugin": "npm:^8.56.1"
@@ -4318,7 +4319,6 @@ __metadata:
     prettier: "npm:^3.8.1"
     react: "npm:^19.2.4"
     react-dom: "npm:^19.2.4"
-    react-google-recaptcha: "npm:^3.1.0"
     react-i18next: "npm:^16.5.6"
     react-markdown: "npm:^10.1.0"
     react-modal: "npm:^3.16.3"
@@ -4461,7 +4461,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.5.0, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -4500,18 +4500,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-async-script@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "react-async-script@npm:1.2.0"
-  dependencies:
-    hoist-non-react-statics: "npm:^3.3.0"
-    prop-types: "npm:^15.5.0"
-  peerDependencies:
-    react: ">=16.4.1"
-  checksum: 10c0/89450912110c380abc08258ce17d2fb18d31d6b7179a74f6bc504c0761a4ca271edb671e402fa8e5ea4250b5c17fa953af80a9f1c4ebb26c9e81caee8476c903
-  languageName: node
-  linkType: hard
-
 "react-dom@npm:^19.2.4":
   version: 19.2.4
   resolution: "react-dom@npm:19.2.4"
@@ -4527,18 +4515,6 @@ __metadata:
   version: 2.0.4
   resolution: "react-fast-compare@npm:2.0.4"
   checksum: 10c0/f0300c677e95198b5f993cbb8a983dab09586157dc678f9e2b5b29ff941b6677a8776fbbdc425ce102fad86937e36bb45cfcfd797f006270b97ccf287ebfb885
-  languageName: node
-  linkType: hard
-
-"react-google-recaptcha@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "react-google-recaptcha@npm:3.1.0"
-  dependencies:
-    prop-types: "npm:^15.5.0"
-    react-async-script: "npm:^1.2.0"
-  peerDependencies:
-    react: ">=16.4.1"
-  checksum: 10c0/5ecaa6b88f238defd939012cb2671b4cbda59fe03f059158994b8c5215db482412e905eae6a67d23cef220d77cfe0430ab91ce7849d476515cda72f3a8a0a746
   languageName: node
   linkType: hard
 

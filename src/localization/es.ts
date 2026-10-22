@@ -57,7 +57,7 @@ const es = {
 
 		home: {
 			sectionButton: 'Saber más',
-			cookieAlert: 'Este sitio utiliza cookies para proteger contra bots (reCAPTCHA)',
+			cookieAlert: 'Este sitio utiliza cookies para proteger contra bots (Cloudflare Turnstile)',
 			cookieApprove: 'Vale',
 		},
 
@@ -160,7 +160,6 @@ const es = {
 				question: 'Pregunta',
 				consent:
 					'Doy mi consentimiento para el tratamiento de mis datos personales y la publicación de mi nombre y pregunta en este sitio web',
-				check: 'Verificar que no soy un robot',
 
 				submit: 'Enviar',
 				submitSuccess: 'Tu pregunta ha sido enviada con éxito',

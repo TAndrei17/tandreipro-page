@@ -13,7 +13,7 @@ export interface QuestionUserRequest {
 	email: string;
 	question: string;
 	consent: boolean;
-	captchaToken?: string | null;
+	turnstileToken?: string | null;
 }
 
 export interface QuestionUserResponse {

@@ -1,12 +1,13 @@
+import type { TurnstileInstance } from '@marsidev/react-turnstile';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { lazy, Suspense, useRef, useState } from 'react';
-import type ReCAPTCHAType from 'react-google-recaptcha';
+import { useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import Modal from 'react-modal';
 import type { Styles } from 'react-modal';
 import './styles/ModalWindow.css';
 import { useNavigate } from 'react-router-dom';
 
+import TurnstileWidget from '@components/common/UI/TurnstileWidget';
 import { DASHBOARD_PAGE_PATH } from '@constants/routes';
 import useDeviceType from '@hooks/useDeviceType';
 import type { AuthRequest } from '@models/Auth';
@@ -14,8 +15,6 @@ import { useAppDispatch } from '@store/index';
 import { login } from '@store/user/services';
 import createAlert from '@utils/createAlert';
 import { createLoginValidationSchema } from '@utils/validation/createLoginFormValidation';
-
-const ReCAPTCHA = lazy(() => import('react-google-recaptcha'));
 
 Modal.setAppElement('#root');
 
@@ -44,12 +43,6 @@ const customStyles: Styles = {
 	},
 };
 
-const ENV_DEV = import.meta.env.VITE_APP_ENV === 'development';
-
-const SITE_KEY = ENV_DEV
-	? (import.meta.env.VITE_SITE_KEY_DEV as string)
-	: (import.meta.env.VITE_SITE_KEY as string);
-
 type LoginFormModalProps = {
 	onClose: () => void;
 };
@@ -57,16 +50,14 @@ type LoginFormModalProps = {
 const LoginFormModal = ({ onClose }: LoginFormModalProps) => {
 	const dispatch = useAppDispatch();
 	const navigate = useNavigate();
-	const { t: tModal, i18n } = useTranslation('translation', { keyPrefix: 'contact.modal' });
+	const { t: tModal } = useTranslation('translation', { keyPrefix: 'contact.modal' });
 	const { t: tForm } = useTranslation('translation', { keyPrefix: 'contact.form' });
 	const { t: tErrors } = useTranslation('translation', { keyPrefix: 'contact.errors' });
-	const lng = i18n.language;
 
-	const recaptchaRef = useRef<ReCAPTCHAType>(null);
+	const turnstileRef = useRef<TurnstileInstance>(null);
 	const { isMobile } = useDeviceType();
 
-	const [showCaptcha, setShowCaptcha] = useState(false);
-	const [captchaValue, setCaptchaValue] = useState<string | null>(null);
+	const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
 	const modalStyles = {
 		overlay: customStyles.overlay,
@@ -79,16 +70,11 @@ const LoginFormModal = ({ onClose }: LoginFormModalProps) => {
 	const initialValues: AuthRequest = {
 		email: '',
 		password: '',
-		captchaToken: null,
-	};
-
-	const handleCaptchaChange = (value: string | null) => {
-		setCaptchaValue(value);
+		turnstileToken: null,
 	};
 
 	const onSubmit = async (values: AuthRequest, { setSubmitting, resetForm }: any) => {
-		if (!captchaValue) {
-			setShowCaptcha(true);
+		if (!turnstileToken) {
 			return;
 		}
 
@@ -96,7 +82,7 @@ const LoginFormModal = ({ onClose }: LoginFormModalProps) => {
 			await dispatch(
 				login({
 					...values,
-					captchaToken: captchaValue,
+					turnstileToken,
 				})
 			).unwrap();
 			createAlert('success', tForm('loginSuccess'));
@@ -107,9 +93,8 @@ const LoginFormModal = ({ onClose }: LoginFormModalProps) => {
 			createAlert('error', tErrors('loginFail'));
 		} finally {
 			setSubmitting(false);
-			recaptchaRef.current?.reset();
-			setCaptchaValue(null);
-			setShowCaptcha(false);
+			turnstileRef.current?.reset();
+			setTurnstileToken(null);
 			onClose();
 		}
 	};
@@ -162,25 +147,20 @@ const LoginFormModal = ({ onClose }: LoginFormModalProps) => {
 							</ErrorMessage>
 						</div>
 
-						<button type="submit" className="modal-window-submit" disabled={isSubmitting}>
-							{showCaptcha ? tForm('submit') : tForm('check')}
-						</button>
-
 						<div className="modal-window-group">
-							{showCaptcha && (
-								<Suspense fallback={null}>
-									<ReCAPTCHA
-										key={lng}
-										ref={recaptchaRef}
-										sitekey={SITE_KEY}
-										size={isMobile ? 'compact' : 'normal'}
-										hl={lng}
-										badge="bottomleft"
-										onChange={handleCaptchaChange}
-									/>
-								</Suspense>
-							)}
+							<TurnstileWidget
+								ref={turnstileRef}
+								onTokenChange={setTurnstileToken}
+								compact={isMobile}
+							/>
 						</div>
+
+						<button
+							type="submit"
+							className="modal-window-submit"
+							disabled={isSubmitting || !turnstileToken}>
+							{tForm('submit')}
+						</button>
 					</Form>
 				)}
 			</Formik>
