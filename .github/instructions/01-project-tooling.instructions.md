@@ -1,7 +1,7 @@
 ---
 name: Project Tooling
 description: 'Use when changing dependencies, package scripts, environment variables, repository configuration, or deployment settings.'
-applyTo: "package.json, yarn.lock, .env*, .gitignore, vite.config.ts, public/_redirects, README.md"
+applyTo: 'package.json, yarn.lock, .env*, .gitignore, vite.config.ts, public/_redirects, README.md'
 ---
 
 # Project Tooling
@@ -10,5 +10,6 @@ applyTo: "package.json, yarn.lock, .env*, .gitignore, vite.config.ts, public/_re
 - Never commit secrets. Keep local values in ignored `.env`; add each new variable name to `.env.example` with a short English comment and no real secret value. Ensure `.env` and `.env.local` remain ignored.
 - Treat every `VITE_*` variable as public and embedded in the client build. Only use it for values safe to expose publicly; never place credentials, private API keys, or server-side secrets in frontend environment variables.
 - Review dependencies for known vulnerabilities with the available Yarn audit workflow after dependency changes and before releases.
-- Use only scripts defined in `package.json`. Do not run `yarn lint` or `yarn build` for small changes unless requested; ask before running them after a large change.
+- Use verification commands that exist in `package.json`; do not assume a test runner or a separate typecheck script is configured. Prefer focused checks for narrow changes.
+- Follow the root `AGENTS.md` for global checks: do not run `yarn lint` or `yarn build` for small changes unless requested, and ask before running them after a large change unless validation was requested. When Vite/build configuration changes, recommend a production build but ask before running it unless the user requested validation.
 - Preserve the SPA fallback in `public/_redirects` when changing client-side routing. The production build outputs to `dist`.

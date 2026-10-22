@@ -12,8 +12,10 @@ These instructions apply only to the `page-atrunkin` repository.
 
 ## Working Rules
 
-- Preserve user changes. Do not commit, push, or create branches unless explicitly requested.
-- Do not run global lint/build checks for small changes. Use scripts defined in `package.json`; ask before running them after a large change unless the user requested validation.
+- Preserve user changes. Do not commit, push, merge, rebase, or create branches unless explicitly requested.
+- When writing a commit message, use Conventional Commits in English: `<type>: <imperative description>`. Allowed types: `feat`, `fix`, `chore`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, and `revert`.
+- Before finishing, review the diff for scope, duplication, unused imports, hardcoded UI text, and applicable repository instructions.
+- Choose the cheapest relevant verification available in `package.json`. Do not assume test or typecheck tools exist, and do not run global lint/build checks for small changes. Ask before running them after a large change unless the user requested validation.
 - Keep repository documentation in English unless the user requests another language.
 
 ## Focused Guidance
