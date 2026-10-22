@@ -1,5 +1,5 @@
 const legalTextEn = `
-**Last updated:** January 27, 2026
+**Last updated:** October 22, 2026
 
 ## Website Owner
 
@@ -95,7 +95,7 @@ All materials are used in accordance with the terms of the licenses of the afore
 `;
 
 const legalTextEs = `
-**Última actualización:** 27 de enero de 2026
+**Última actualización:** 22 de octubre de 2026
 
 ## Titular del sitio web
 
@@ -191,7 +191,7 @@ Todos los materiales se utilizan de conformidad con las condiciones de las licen
 `;
 
 const legalTextRu = `
-**Дата обновления:** 27 января 2026 года
+**Дата обновления:** 22 октября 2026 года
 
 ## Владелец сайта
 
