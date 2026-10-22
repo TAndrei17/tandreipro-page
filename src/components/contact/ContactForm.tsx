@@ -132,8 +132,10 @@ const ContactForm = () => {
 						</Field>
 					</div>
 
-					<div className="form-group">
-						<TurnstileWidget ref={turnstileRef} onTokenChange={setTurnstileToken} />
+					<div className="form-group form-captcha">
+						<div className="form-captcha-scale">
+							<TurnstileWidget ref={turnstileRef} onTokenChange={setTurnstileToken} size="normal" />
+						</div>
 					</div>
 
 					<button type="submit" className="form-submit" disabled={isSubmitting || !turnstileToken}>

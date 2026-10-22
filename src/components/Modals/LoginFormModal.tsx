@@ -151,7 +151,7 @@ const LoginFormModal = ({ onClose }: LoginFormModalProps) => {
 							<TurnstileWidget
 								ref={turnstileRef}
 								onTokenChange={setTurnstileToken}
-								compact={isMobile}
+								size={isMobile ? 'compact' : 'flexible'}
 							/>
 						</div>
 

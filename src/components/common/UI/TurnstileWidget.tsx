@@ -12,11 +12,11 @@ const SITE_KEY = ENV_DEV
 
 type TurnstileWidgetProps = {
 	onTokenChange: Dispatch<string | null>;
-	compact?: boolean;
+	size?: 'normal' | 'compact' | 'flexible';
 };
 
 const TurnstileWidget = forwardRef<TurnstileInstance, TurnstileWidgetProps>(
-	({ onTokenChange, compact = false }, ref) => {
+	({ onTokenChange, size = 'flexible' }, ref) => {
 		const { i18n } = useTranslation();
 
 		return (
@@ -24,7 +24,7 @@ const TurnstileWidget = forwardRef<TurnstileInstance, TurnstileWidgetProps>(
 				key={i18n.language}
 				ref={ref}
 				siteKey={SITE_KEY}
-				options={{ language: i18n.language, size: compact ? 'compact' : 'normal' }}
+				options={{ language: i18n.language, size }}
 				onSuccess={onTokenChange}
 				onExpire={() => onTokenChange(null)}
 				onError={() => onTokenChange(null)}
