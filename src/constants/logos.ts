@@ -9,7 +9,7 @@ import htmlLogo from '@assets/logos/html-logo.png';
 import jsLogo from '@assets/logos/js-logo.png';
 import linkedInLogo from '@assets/logos/linkedIn-logo.png';
 import nodeLogo from '@assets/logos/node-logo.svg';
-import pageLogo from '@assets/logos/page-logo_40px.svg';
+import pageLogo from '@assets/logos/site-logo.png';
 import phoneLogo from '@assets/logos/phone-logo.png';
 import postgresqlLogo from '@assets/logos/postgresql-logo.svg';
 import prettierLogo from '@assets/logos/prettier-logo.svg';
