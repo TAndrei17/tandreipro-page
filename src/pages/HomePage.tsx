@@ -20,7 +20,7 @@ const HomePage = () => {
 	useAlertCookie();
 
 	return (
-		<div style={{ paddingTop: siteHeaderHeight + 10 }}>
+		<div style={{ paddingTop: siteHeaderHeight }}>
 			<main>
 				{services.map((service, index) => {
 					return (
@@ -32,7 +32,6 @@ const HomePage = () => {
 							description={service.homeDescription}
 							image={index === 0 ? images.code : service.image}
 							reverse={index % 2 !== 0 && !isMobile}
-							style={index > 0 ? { marginTop: 50 } : {}}
 						/>
 					);
 				})}
