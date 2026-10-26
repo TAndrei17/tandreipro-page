@@ -30,24 +30,24 @@
 	transform: translateY(-3px);
 }
 .service-web {
-	--service-accent: #2563eb;
-	--service-accent-soft: #eff6ff;
-	--service-accent-border: #bfdbfe;
+	--service-accent: #3b82f6;
+	--service-accent-soft: rgba(59, 130, 246, 0.14);
+	--service-accent-border: rgba(59, 130, 246, 0.45);
 }
 .service-shop {
-	--service-accent: #c2410c;
-	--service-accent-soft: #fff7ed;
-	--service-accent-border: #fed7aa;
+	--service-accent: #a855f7;
+	--service-accent-soft: rgba(168, 85, 247, 0.14);
+	--service-accent-border: rgba(168, 85, 247, 0.45);
 }
 .service-mobile {
-	--service-accent: #047857;
-	--service-accent-soft: #ecfdf5;
-	--service-accent-border: #a7f3d0;
+	--service-accent: #14b8a6;
+	--service-accent-soft: rgba(20, 184, 166, 0.14);
+	--service-accent-border: rgba(20, 184, 166, 0.45);
 }
 .service-maintain {
-	--service-accent: #9d174d;
-	--service-accent-soft: #fdf2f8;
-	--service-accent-border: #fbcfe8;
+	--service-accent: #f59e0b;
+	--service-accent-soft: rgba(245, 158, 11, 0.14);
+	--service-accent-border: rgba(245, 158, 11, 0.45);
 }
 
 .service-heading {
