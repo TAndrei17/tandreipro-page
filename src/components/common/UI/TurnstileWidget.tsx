@@ -1,6 +1,6 @@
 import { Turnstile } from '@marsidev/react-turnstile';
 import type { TurnstileInstance } from '@marsidev/react-turnstile';
-import { forwardRef } from 'react';
+import { forwardRef, useEffect } from 'react';
 import type { Dispatch } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -18,6 +18,10 @@ type TurnstileWidgetProps = {
 const TurnstileWidget = forwardRef<TurnstileInstance, TurnstileWidgetProps>(
 	({ onTokenChange, size = 'flexible' }, ref) => {
 		const { i18n } = useTranslation();
+
+		useEffect(() => {
+			onTokenChange(null);
+		}, [i18n.language, onTokenChange]);
 
 		return (
 			<Turnstile

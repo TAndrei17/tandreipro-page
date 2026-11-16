@@ -89,13 +89,13 @@ const LoginFormModal = ({ onClose }: LoginFormModalProps) => {
 			resetForm();
 
 			navigate(DASHBOARD_PAGE_PATH);
+			onClose();
 		} catch {
 			createAlert('error', tErrors('loginFail'));
 		} finally {
 			setSubmitting(false);
 			turnstileRef.current?.reset();
 			setTurnstileToken(null);
-			onClose();
 		}
 	};
 
